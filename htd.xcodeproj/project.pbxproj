@@ -8,22 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		B455A6BB200A6600000247BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6BA200A6600000247BC /* AppDelegate.swift */; };
-		B455A6BD200A6600000247BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6BC200A6600000247BC /* ViewController.swift */; };
 		B455A6C0200A6601000247BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B455A6BE200A6601000247BC /* Main.storyboard */; };
 		B455A6C3200A6601000247BC /* htd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B455A6C1200A6601000247BC /* htd.xcdatamodeld */; };
 		B455A6C5200A6601000247BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B455A6C4200A6601000247BC /* Assets.xcassets */; };
 		B455A6C8200A6601000247BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B455A6C6200A6601000247BC /* LaunchScreen.storyboard */; };
+		B455A6D1200AA240000247BC /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6D0200AA240000247BC /* MainScreenViewController.swift */; };
+		B455A6E2200AA502000247BC /* SF-Pro-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6D6200AA4FF000247BC /* SF-Pro-Text-BoldItalic.otf */; };
+		B455A6E3200AA502000247BC /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6D7200AA4FF000247BC /* SF-Pro-Text-Bold.otf */; };
+		B455A6E4200AA502000247BC /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6D8200AA500000247BC /* SF-Pro-Text-Heavy.otf */; };
+		B455A6E5200AA502000247BC /* SF-Pro-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6D9200AA500000247BC /* SF-Pro-Text-HeavyItalic.otf */; };
+		B455A6E6200AA502000247BC /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6DA200AA500000247BC /* SF-Pro-Text-Light.otf */; };
+		B455A6E7200AA502000247BC /* SF-Pro-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6DB200AA500000247BC /* SF-Pro-Text-LightItalic.otf */; };
+		B455A6E8200AA502000247BC /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6DC200AA500000247BC /* SF-Pro-Text-Semibold.otf */; };
+		B455A6E9200AA502000247BC /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6DD200AA501000247BC /* SF-Pro-Text-Medium.otf */; };
+		B455A6EA200AA502000247BC /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6DE200AA501000247BC /* SF-Pro-Text-MediumItalic.otf */; };
+		B455A6EB200AA502000247BC /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6DF200AA501000247BC /* SF-Pro-Text-Regular.otf */; };
+		B455A6EC200AA502000247BC /* SF-Pro-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6E0200AA501000247BC /* SF-Pro-Text-RegularItalic.otf */; };
+		B455A6ED200AA502000247BC /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B455A6E1200AA501000247BC /* SF-Pro-Text-SemiboldItalic.otf */; };
+		B455A6F2200AAF68000247BC /* LevelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6F1200AAF68000247BC /* LevelsTableViewCell.swift */; };
+		B455A6F4200AB5F2000247BC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6F3200AB5F2000247BC /* Level.swift */; };
+		B455A6F7200AB71A000247BC /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6F6200AB71A000247BC /* Levels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B455A6B7200A6600000247BC /* htd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = htd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B455A6BA200A6600000247BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B455A6BC200A6600000247BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B455A6BF200A6601000247BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B455A6C2200A6601000247BC /* htd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = htd.xcdatamodel; sourceTree = "<group>"; };
 		B455A6C4200A6601000247BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B455A6C7200A6601000247BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B455A6C9200A6601000247BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B455A6D0200AA240000247BC /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		B455A6D6200AA4FF000247BC /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
+		B455A6D7200AA4FF000247BC /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		B455A6D8200AA500000247BC /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		B455A6D9200AA500000247BC /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
+		B455A6DA200AA500000247BC /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		B455A6DB200AA500000247BC /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
+		B455A6DC200AA500000247BC /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		B455A6DD200AA501000247BC /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		B455A6DE200AA501000247BC /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
+		B455A6DF200AA501000247BC /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		B455A6E0200AA501000247BC /* SF-Pro-Text-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-RegularItalic.otf"; sourceTree = "<group>"; };
+		B455A6E1200AA501000247BC /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		B455A6F1200AAF68000247BC /* LevelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsTableViewCell.swift; sourceTree = "<group>"; };
+		B455A6F3200AB5F2000247BC /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		B455A6F6200AB71A000247BC /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +86,11 @@
 		B455A6B9200A6600000247BC /* htd */ = {
 			isa = PBXGroup;
 			children = (
+				B455A6F5200AB70F000247BC /* Data */,
+				B455A6EE200AAE76000247BC /* Components */,
+				B455A6D4200AA4E5000247BC /* Assets */,
+				B455A6CF200AA21F000247BC /* Screens */,
 				B455A6BA200A6600000247BC /* AppDelegate.swift */,
-				B455A6BC200A6600000247BC /* ViewController.swift */,
 				B455A6BE200A6601000247BC /* Main.storyboard */,
 				B455A6C4200A6601000247BC /* Assets.xcassets */,
 				B455A6C6200A6601000247BC /* LaunchScreen.storyboard */,
@@ -65,6 +98,58 @@
 				B455A6C1200A6601000247BC /* htd.xcdatamodeld */,
 			);
 			path = htd;
+			sourceTree = "<group>";
+		};
+		B455A6CF200AA21F000247BC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B455A6D0200AA240000247BC /* MainScreenViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B455A6D4200AA4E5000247BC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B455A6D5200AA4EA000247BC /* Fonts */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B455A6D5200AA4EA000247BC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B455A6D7200AA4FF000247BC /* SF-Pro-Text-Bold.otf */,
+				B455A6D6200AA4FF000247BC /* SF-Pro-Text-BoldItalic.otf */,
+				B455A6D8200AA500000247BC /* SF-Pro-Text-Heavy.otf */,
+				B455A6D9200AA500000247BC /* SF-Pro-Text-HeavyItalic.otf */,
+				B455A6DA200AA500000247BC /* SF-Pro-Text-Light.otf */,
+				B455A6DB200AA500000247BC /* SF-Pro-Text-LightItalic.otf */,
+				B455A6DD200AA501000247BC /* SF-Pro-Text-Medium.otf */,
+				B455A6DE200AA501000247BC /* SF-Pro-Text-MediumItalic.otf */,
+				B455A6DF200AA501000247BC /* SF-Pro-Text-Regular.otf */,
+				B455A6E0200AA501000247BC /* SF-Pro-Text-RegularItalic.otf */,
+				B455A6DC200AA500000247BC /* SF-Pro-Text-Semibold.otf */,
+				B455A6E1200AA501000247BC /* SF-Pro-Text-SemiboldItalic.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B455A6EE200AAE76000247BC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B455A6F1200AAF68000247BC /* LevelsTableViewCell.swift */,
+				B455A6F3200AB5F2000247BC /* Level.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B455A6F5200AB70F000247BC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B455A6F6200AB71A000247BC /* Levels.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +211,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B455A6EA200AA502000247BC /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				B455A6C8200A6601000247BC /* LaunchScreen.storyboard in Resources */,
+				B455A6E7200AA502000247BC /* SF-Pro-Text-LightItalic.otf in Resources */,
+				B455A6E8200AA502000247BC /* SF-Pro-Text-Semibold.otf in Resources */,
+				B455A6ED200AA502000247BC /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
+				B455A6EC200AA502000247BC /* SF-Pro-Text-RegularItalic.otf in Resources */,
+				B455A6E4200AA502000247BC /* SF-Pro-Text-Heavy.otf in Resources */,
+				B455A6E6200AA502000247BC /* SF-Pro-Text-Light.otf in Resources */,
+				B455A6E9200AA502000247BC /* SF-Pro-Text-Medium.otf in Resources */,
+				B455A6E3200AA502000247BC /* SF-Pro-Text-Bold.otf in Resources */,
 				B455A6C5200A6601000247BC /* Assets.xcassets in Resources */,
+				B455A6EB200AA502000247BC /* SF-Pro-Text-Regular.otf in Resources */,
+				B455A6E5200AA502000247BC /* SF-Pro-Text-HeavyItalic.otf in Resources */,
+				B455A6E2200AA502000247BC /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				B455A6C0200A6601000247BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B455A6BD200A6600000247BC /* ViewController.swift in Sources */,
+				B455A6F7200AB71A000247BC /* Levels.swift in Sources */,
+				B455A6D1200AA240000247BC /* MainScreenViewController.swift in Sources */,
 				B455A6C3200A6601000247BC /* htd.xcdatamodeld in Sources */,
+				B455A6F2200AAF68000247BC /* LevelsTableViewCell.swift in Sources */,
+				B455A6F4200AB5F2000247BC /* Level.swift in Sources */,
 				B455A6BB200A6600000247BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
