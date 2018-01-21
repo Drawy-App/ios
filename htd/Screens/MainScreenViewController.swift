@@ -21,7 +21,7 @@ class MainScreenViewController:
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 0 ? 32 : 20
+        return section == 0 ? 10 : 0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -31,7 +31,7 @@ class MainScreenViewController:
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 130
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,12 +41,20 @@ class MainScreenViewController:
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "showDetails":
+            let destVC = segue.destination as! DetailsViewController
+            destVC.level = Levels.data[self.LevelsList.indexPathForSelectedRow!.section]
+        default: ()
+        }
+        
+    }
 
     @IBOutlet weak var LevelsList: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSLog("asd")
         LevelsList.delegate = self
         LevelsList.dataSource = self
         // Do any additional setup after loading the view.

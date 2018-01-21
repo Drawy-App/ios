@@ -12,10 +12,12 @@ class Level {
     var preview: UIImage
     var title: String
     var duration: Int
+    var tutorials: [String]
     
-    init(preview: UIImage, title: String, duration: Int) {
+    init(preview: UIImage, title: String, duration: Int, tutorials: [String]) {
         self.preview = preview
         self.title = title
         self.duration = duration
+        self.tutorials = tutorials
     }
 }
