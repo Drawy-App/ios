@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		56ACFFAD0797B425BB22D836 /* Pods_htd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C472F0F787E5D6981E0F5C2F /* Pods_htd.framework */; };
-		B44EEC2E200DC4C400F53103 /* test.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B44EEC2D200DC4C400F53103 /* test.mlmodel */; };
-		B44EEC30200DCB8100F53103 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B44EEC2F200DCB8100F53103 /* MobileNet.mlmodel */; };
-		B44EEC32200DD46A00F53103 /* my_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B44EEC31200DD46A00F53103 /* my_model.mlmodel */; };
 		B455A6BB200A6600000247BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6BA200A6600000247BC /* AppDelegate.swift */; };
 		B455A6C0200A6601000247BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B455A6BE200A6601000247BC /* Main.storyboard */; };
 		B455A6C3200A6601000247BC /* htd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B455A6C1200A6601000247BC /* htd.xcdatamodeld */; };
@@ -40,13 +37,11 @@
 		B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F42D200BC55500C085C5 /* RecognizerViewController.swift */; };
 		B468F432200BC66E00C085C5 /* retrained_labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = B468F430200BC66D00C085C5 /* retrained_labels.txt */; };
 		B468F433200BC66E00C085C5 /* retrained_graph.pb in Resources */ = {isa = PBXBuildFile; fileRef = B468F431200BC66E00C085C5 /* retrained_graph.pb */; };
+		B4A2D92D201CB7F70089D181 /* realmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B4A2D92C201CB7F70089D181 /* realmodel.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53F04AC74C63E30B0182C1EC /* Pods-htd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.release.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.release.xcconfig"; sourceTree = "<group>"; };
-		B44EEC2D200DC4C400F53103 /* test.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = test.mlmodel; sourceTree = "<group>"; };
-		B44EEC2F200DCB8100F53103 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
-		B44EEC31200DD46A00F53103 /* my_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = my_model.mlmodel; sourceTree = "<group>"; };
 		B455A6B7200A6600000247BC /* htd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = htd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B455A6BA200A6600000247BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B455A6BF200A6601000247BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +73,7 @@
 		B468F42D200BC55500C085C5 /* RecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerViewController.swift; sourceTree = "<group>"; };
 		B468F430200BC66D00C085C5 /* retrained_labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = retrained_labels.txt; sourceTree = "<group>"; };
 		B468F431200BC66E00C085C5 /* retrained_graph.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = retrained_graph.pb; sourceTree = "<group>"; };
+		B4A2D92C201CB7F70089D181 /* realmodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = realmodel.mlmodel; path = ../../../../../Desktop/converter/realmodel.mlmodel; sourceTree = "<group>"; };
 		B977F043DCE51CBA137A8626 /* Pods-htd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.debug.xcconfig"; sourceTree = "<group>"; };
 		C472F0F787E5D6981E0F5C2F /* Pods_htd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_htd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -190,9 +186,7 @@
 		B455A6F5200AB70F000247BC /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B44EEC31200DD46A00F53103 /* my_model.mlmodel */,
-				B44EEC2F200DCB8100F53103 /* MobileNet.mlmodel */,
-				B44EEC2D200DC4C400F53103 /* test.mlmodel */,
+				B4A2D92C201CB7F70089D181 /* realmodel.mlmodel */,
 				B455A6F6200AB71A000247BC /* Levels.swift */,
 			);
 			path = Data;
@@ -366,17 +360,15 @@
 				B468F425200BA0C100C085C5 /* GalleryCollectionViewCell.swift in Sources */,
 				B455A6D1200AA240000247BC /* MainScreenViewController.swift in Sources */,
 				B468F42C200BAE0300C085C5 /* DismissingAnimator.swift in Sources */,
-				B44EEC30200DCB8100F53103 /* MobileNet.mlmodel in Sources */,
 				B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */,
 				B455A6C3200A6601000247BC /* htd.xcdatamodeld in Sources */,
 				B455A6F2200AAF68000247BC /* LevelsTableViewCell.swift in Sources */,
+				B4A2D92D201CB7F70089D181 /* realmodel.mlmodel in Sources */,
 				B468F42A200BADE300C085C5 /* PresentingAnimator.swift in Sources */,
 				B455A6F9200B9457000247BC /* DetailsViewController.swift in Sources */,
 				B455A6F4200AB5F2000247BC /* Level.swift in Sources */,
 				B455A6BB200A6600000247BC /* AppDelegate.swift in Sources */,
-				B44EEC2E200DC4C400F53103 /* test.mlmodel in Sources */,
 				B468F428200BADBC00C085C5 /* DimmingPresentationController.swift in Sources */,
-				B44EEC32200DD46A00F53103 /* my_model.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

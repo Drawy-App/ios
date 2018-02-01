@@ -18,11 +18,17 @@
         <array key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-Light</string>
         </array>
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
         <array key="SF-Pro-Text-Light.otf">
             <string>SFProText-Light</string>
         </array>
         <array key="SF-Pro-Text-Medium.otf">
             <string>SFProText-Medium</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -42,7 +48,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="Kmk-q2-Gpt"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="32"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -51,7 +57,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="MgU-JM-Lvx"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="32"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -210,8 +216,8 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Назад" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CS-6b-fXv">
-                                        <rect key="frame" x="28" y="5.5" width="52.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <rect key="frame" x="28" y="5.5" width="51.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -284,7 +290,7 @@
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V34-DM-0wE">
                                                         <rect key="frame" x="0.0" y="90" width="197" height="30"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="aIK-jr-1jz"/>
                                                         </constraints>
@@ -398,7 +404,7 @@
                                 <rect key="frame" x="15" y="592" width="345" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cделать фото" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SV-Ma-dfk">
-                                        <rect key="frame" x="113.5" y="20.5" width="117.5" height="20.5"/>
+                                        <rect key="frame" x="114" y="20" width="117.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -467,34 +473,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2X-d0-7Wm">
-                                <rect key="frame" x="0.0" y="120" width="375" height="447"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yo7-vk-kxa">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yo7-vk-kxa" secondAttribute="height" multiplier="1:1" id="ZfH-qC-Eoe"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKT-Cs-4W0">
+                                <rect key="frame" x="0.0" y="20" width="375" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фото" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-Ld-m9g">
+                                        <rect key="frame" x="155.5" y="8" width="64" height="29"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-sy-ZuY">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_icon" translatesAutoresizingMaskIntoConstraints="NO" id="bgx-v7-cmW">
+                                                <rect key="frame" x="8" y="12" width="12.5" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Cfe-z6-vWr"/>
+                                                    <constraint firstAttribute="width" constant="12" id="wcR-lW-CGc"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Назад" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7i-Vp-AkI">
+                                                <rect key="frame" x="28" y="12" width="53" height="21"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="6WV-Hs-utF"/>
+                                            <constraint firstItem="l7i-Vp-AkI" firstAttribute="leading" secondItem="bgx-v7-cmW" secondAttribute="trailing" constant="7.5" id="QMD-tL-FHh"/>
+                                            <constraint firstItem="bgx-v7-cmW" firstAttribute="centerY" secondItem="fcC-sy-ZuY" secondAttribute="centerY" id="RWz-a8-F3l"/>
+                                            <constraint firstItem="l7i-Vp-AkI" firstAttribute="centerY" secondItem="fcC-sy-ZuY" secondAttribute="centerY" id="UEB-Vs-n5m"/>
+                                            <constraint firstItem="bgx-v7-cmW" firstAttribute="leading" secondItem="fcC-sy-ZuY" secondAttribute="leading" constant="8" id="enN-g5-Rer"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="TtM-bp-mHW" appends="YES" id="wWv-Rf-bsR"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fcC-sy-ZuY" firstAttribute="leading" secondItem="ZKT-Cs-4W0" secondAttribute="leading" id="TaO-TS-jOO"/>
+                                    <constraint firstItem="ndC-Ld-m9g" firstAttribute="centerX" secondItem="ZKT-Cs-4W0" secondAttribute="centerX" id="VTT-cb-Mbb"/>
+                                    <constraint firstItem="fcC-sy-ZuY" firstAttribute="top" secondItem="ZKT-Cs-4W0" secondAttribute="top" id="VXD-jK-2qa"/>
+                                    <constraint firstAttribute="bottom" secondItem="fcC-sy-ZuY" secondAttribute="bottom" id="lmF-Fe-NQ8"/>
+                                    <constraint firstAttribute="height" constant="45" id="mcP-eE-rD0"/>
+                                    <constraint firstItem="ndC-Ld-m9g" firstAttribute="centerY" secondItem="ZKT-Cs-4W0" secondAttribute="centerY" id="oSH-pk-2Ch"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35L-eY-ZpZ">
-                                <rect key="frame" x="180" y="54" width="16" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наведите камеру на ваш рисунок" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWF-Wf-J7c">
+                                <rect key="frame" x="40" y="541" width="295" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vwu-dc-Bro"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.396078431372549" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="t2X-d0-7Wm" firstAttribute="trailing" secondItem="x2h-lZ-4YV" secondAttribute="trailing" id="Prh-MH-9AX"/>
-                            <constraint firstItem="t2X-d0-7Wm" firstAttribute="top" secondItem="x2h-lZ-4YV" secondAttribute="top" constant="100" id="T6t-CR-tLl"/>
-                            <constraint firstItem="t2X-d0-7Wm" firstAttribute="leading" secondItem="x2h-lZ-4YV" secondAttribute="leading" id="WXK-dE-koa"/>
-                            <constraint firstItem="x2h-lZ-4YV" firstAttribute="bottom" secondItem="t2X-d0-7Wm" secondAttribute="bottom" constant="100" id="Ysk-ci-d0F"/>
-                            <constraint firstItem="35L-eY-ZpZ" firstAttribute="top" secondItem="x2h-lZ-4YV" secondAttribute="top" constant="34" id="jjZ-Kr-Gph"/>
-                            <constraint firstItem="35L-eY-ZpZ" firstAttribute="centerX" secondItem="cCu-IH-Zqo" secondAttribute="centerX" id="vvh-qm-k0D"/>
+                            <constraint firstItem="mWF-Wf-J7c" firstAttribute="leading" secondItem="x2h-lZ-4YV" secondAttribute="leading" constant="40" id="37E-nt-F6S"/>
+                            <constraint firstItem="yo7-vk-kxa" firstAttribute="trailing" secondItem="x2h-lZ-4YV" secondAttribute="trailing" id="9uV-qy-gG6"/>
+                            <constraint firstItem="ZKT-Cs-4W0" firstAttribute="top" secondItem="x2h-lZ-4YV" secondAttribute="top" id="CdY-tV-Lel"/>
+                            <constraint firstItem="mWF-Wf-J7c" firstAttribute="top" secondItem="yo7-vk-kxa" secondAttribute="bottom" constant="20" id="Kot-29-gbv"/>
+                            <constraint firstItem="ZKT-Cs-4W0" firstAttribute="leading" secondItem="x2h-lZ-4YV" secondAttribute="leading" id="Q7X-Sg-rqj"/>
+                            <constraint firstItem="yo7-vk-kxa" firstAttribute="centerY" secondItem="cCu-IH-Zqo" secondAttribute="centerY" id="Ucw-hM-1pH"/>
+                            <constraint firstItem="yo7-vk-kxa" firstAttribute="leading" secondItem="x2h-lZ-4YV" secondAttribute="leading" id="p5h-ri-9ur"/>
+                            <constraint firstItem="ZKT-Cs-4W0" firstAttribute="trailing" secondItem="x2h-lZ-4YV" secondAttribute="trailing" id="swc-e9-7gb"/>
+                            <constraint firstItem="x2h-lZ-4YV" firstAttribute="trailing" secondItem="mWF-Wf-J7c" secondAttribute="trailing" constant="40" id="w6L-nz-cH4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x2h-lZ-4YV"/>
                     </view>
                     <connections>
-                        <outlet property="countLabel" destination="35L-eY-ZpZ" id="KLQ-HG-RZr"/>
-                        <outlet property="previewView" destination="t2X-d0-7Wm" id="OHM-zE-1lZ"/>
+                        <outlet property="previewView" destination="yo7-vk-kxa" id="TRH-OD-v5j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sO6-BC-xON" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TtM-bp-mHW"/>
             </objects>
             <point key="canvasLocation" x="2064.8000000000002" y="115.59220389805098"/>
         </scene>
