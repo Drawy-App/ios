@@ -10,8 +10,13 @@ import UIKit
 
 class Levels {
     static var data = [
-        Level.init(preview: UIImage.init(
-            named: "pug_preview")!, title: "Маленький мопс", duration: 3,
+        Level.init(
+            name: "pug",
+            preview: UIImage.init(
+                named: "pug_preview"
+            )!,
+            title: "Маленький мопс",
+            duration: 3,
             tutorials: [
                 "pug_00",
                 "pug_01",
@@ -22,6 +27,12 @@ class Levels {
                 "pug_06",
             ]
         ),
-        Level.init(preview: UIImage.init(named: "boat_preview")!, title: "Парусная лодка", duration: 2, tutorials: [])
+        Level.init(
+            name: "boat",
+            preview: UIImage.init(named: "boat_preview")!,
+            title: "Парусная лодка",
+            duration: 2,
+            tutorials: []
+        )
     ]
 }

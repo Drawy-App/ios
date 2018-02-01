@@ -71,7 +71,6 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         gallery.currentPageIndicatorTintColor = UIColor(red: 0.0, green: 0.66, blue: 0.875, alpha: 1.0)
         gallery.hidePageControl = false
         gallery.modalPresentationStyle = .custom
-        gallery.transitioningDelegate = self
         
         present(gallery, animated: true, completion: { () -> Void in
             gallery.currentPage = self.index
@@ -97,6 +96,13 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         return cell as UICollectionViewCell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "makePhoto" {
+            let dest = segue.destination as! RecognizerViewController
+            dest.level = self.level
+        }
+    }
+    
     
 
     override func didReceiveMemoryWarning() {
@@ -109,22 +115,4 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         return .lightContent
     }
 
-}
-
-// MARK: UIViewControllerTransitioningDelegate Methods
-extension DetailsViewController: UIViewControllerTransitioningDelegate {
-    
-//    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-//        return DimmingPresentationController(presentedViewController: presented, presenting: presenting)
-//    }
-//
-//    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        guard let selectedCellFrame = self.collectionView?.cellForItem(at: IndexPath(item: index, section: 0))?.frame else { return nil }
-//        return PresentingAnimator(pageIndex: index, originFrame: selectedCellFrame)
-//    }
-//
-//    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        guard let returnCellFrame = self.collectionView?.cellForItem(at: IndexPath(item: index, section: 0))?.frame else { return nil }
-//        return DismissingAnimator(pageIndex: index, finalFrame: returnCellFrame)
-//    }
 }

@@ -38,6 +38,7 @@
 		B468F432200BC66E00C085C5 /* retrained_labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = B468F430200BC66D00C085C5 /* retrained_labels.txt */; };
 		B468F433200BC66E00C085C5 /* retrained_graph.pb in Resources */ = {isa = PBXBuildFile; fileRef = B468F431200BC66E00C085C5 /* retrained_graph.pb */; };
 		B4A2D92D201CB7F70089D181 /* realmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B4A2D92C201CB7F70089D181 /* realmodel.mlmodel */; };
+		B4D931B42023A33F0071E283 /* SuccessScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D931B32023A33F0071E283 /* SuccessScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		B468F430200BC66D00C085C5 /* retrained_labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = retrained_labels.txt; sourceTree = "<group>"; };
 		B468F431200BC66E00C085C5 /* retrained_graph.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = retrained_graph.pb; sourceTree = "<group>"; };
 		B4A2D92C201CB7F70089D181 /* realmodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = realmodel.mlmodel; path = ../../../../../Desktop/converter/realmodel.mlmodel; sourceTree = "<group>"; };
+		B4D931B32023A33F0071E283 /* SuccessScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScreenViewController.swift; sourceTree = "<group>"; };
 		B977F043DCE51CBA137A8626 /* Pods-htd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.debug.xcconfig"; sourceTree = "<group>"; };
 		C472F0F787E5D6981E0F5C2F /* Pods_htd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_htd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 				B455A6D0200AA240000247BC /* MainScreenViewController.swift */,
 				B455A6F8200B9457000247BC /* DetailsViewController.swift */,
 				B468F42D200BC55500C085C5 /* RecognizerViewController.swift */,
+				B4D931B32023A33F0071E283 /* SuccessScreenViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				B455A6C3200A6601000247BC /* htd.xcdatamodeld in Sources */,
 				B455A6F2200AAF68000247BC /* LevelsTableViewCell.swift in Sources */,
 				B4A2D92D201CB7F70089D181 /* realmodel.mlmodel in Sources */,
+				B4D931B42023A33F0071E283 /* SuccessScreenViewController.swift in Sources */,
 				B468F42A200BADE300C085C5 /* PresentingAnimator.swift in Sources */,
 				B455A6F9200B9457000247BC /* DetailsViewController.swift in Sources */,
 				B455A6F4200AB5F2000247BC /* Level.swift in Sources */,

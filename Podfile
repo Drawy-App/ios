@@ -4,6 +4,5 @@ use_frameworks!
 
 target 'htd' do
 	pod 'SwiftPhotoGallery'
-	pod 'MetalBender', '~> 0.4'
 	pod 'RealmSwift'
 end

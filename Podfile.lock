@@ -1,31 +1,20 @@
 PODS:
-  - MetalBender (0.4.1):
-    - MetalPerformanceShadersProxy (= 0.2.0)
-    - SwiftProtobuf (= 1.0.0)
-  - MetalPerformanceShadersProxy (0.2.0):
-    - MetalPerformanceShadersProxy/Proxy (= 0.2.0)
-  - MetalPerformanceShadersProxy/Proxy (0.2.0)
   - Realm (3.0.2):
     - Realm/Headers (= 3.0.2)
   - Realm/Headers (3.0.2)
   - RealmSwift (3.0.2):
     - Realm (= 3.0.2)
   - SwiftPhotoGallery (3.3.0)
-  - SwiftProtobuf (1.0.0)
 
 DEPENDENCIES:
-  - MetalBender (~> 0.4)
   - RealmSwift
   - SwiftPhotoGallery
 
 SPEC CHECKSUMS:
-  MetalBender: 7e91ed88918c1d03c9c374ecc6ba33c1bf3cc348
-  MetalPerformanceShadersProxy: ef66b46f95a4c8573266a8580174d02bdbfd8866
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
   SwiftPhotoGallery: a4397a398500401e4737472bba72f11484e7f0d4
-  SwiftProtobuf: 1e1e11595316724935ffe16c18ed79363a8808ac
 
-PODFILE CHECKSUM: bfcc59aaec130494ac9c126cd8ce52b9e6ee8a34
+PODFILE CHECKSUM: 5387a0875be1d5caca2fae49f4be8e7bb4914b03
 
 COCOAPODS: 1.2.1.beta.1

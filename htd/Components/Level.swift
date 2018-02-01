@@ -9,12 +9,14 @@
 import UIKit
 
 class Level {
-    var preview: UIImage
-    var title: String
-    var duration: Int
-    var tutorials: [String]
+    let name: String
+    let preview: UIImage
+    let title: String
+    let duration: Int
+    let tutorials: [String]
     
-    init(preview: UIImage, title: String, duration: Int, tutorials: [String]) {
+    init(name: String, preview: UIImage, title: String, duration: Int, tutorials: [String]) {
+        self.name = name
         self.preview = preview
         self.title = title
         self.duration = duration
