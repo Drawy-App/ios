@@ -2,21 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>Pls</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>SF-Pro-Text-Medium.otf</string>
-		<string>SF-Pro-Text-Bold.otf</string>
-		<string>SF-Pro-Text-Heavy.otf</string>
-		<string>SF-Pro-Text-Light.otf</string>
-		<string>SF-Pro-Text-Regular.otf</string>
-		<string>SF-Pro-Text-Semibold.otf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>How to draw</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -33,6 +22,17 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Pls</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SF-Pro-Text-Medium.otf</string>
+		<string>SF-Pro-Text-Bold.otf</string>
+		<string>SF-Pro-Text-Heavy.otf</string>
+		<string>SF-Pro-Text-Light.otf</string>
+		<string>SF-Pro-Text-Regular.otf</string>
+		<string>SF-Pro-Text-Semibold.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

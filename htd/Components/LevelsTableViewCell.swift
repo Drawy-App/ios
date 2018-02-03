@@ -15,6 +15,8 @@ class LevelsTableViewCell: UITableViewCell {
     @IBOutlet weak var previewView: UIImageView!
     @IBOutlet weak var hasDrawnView: UIView!
     @IBOutlet weak var cellView: UIView!
+    var indexPath: IndexPath?
+    var tableView: UITableView?
     private var _level: Level?
     var level: Level? {
         set {
@@ -35,10 +37,6 @@ class LevelsTableViewCell: UITableViewCell {
         contentView.backgroundColor = .clear
         cellView.layer.cornerRadius = 5
         
-        let gr = UILongPressGestureRecognizer.init(target: self, action: #selector(self.handleLongPress))
-        gr.minimumPressDuration = 0.1
-        cellView.addGestureRecognizer(gr)
-        
         cellView.layer.shadowOffset = CGSize.init(width: 0, height: 0)
         cellView.layer.shadowOpacity = 0.5
         cellView.layer.shadowColor = UIColor.black.cgColor
@@ -46,24 +44,12 @@ class LevelsTableViewCell: UITableViewCell {
         
         hasDrawnView.layer.cornerRadius = 4
     }
-    
-    @objc func handleLongPress(gestureReconizer: UILongPressGestureRecognizer) {
-        if gestureReconizer.state == .began {
-            UIView.animate(withDuration: 5.0, animations: {
-                    self.cellView.layer.shadowRadius = 5
-                })
-        }
-        if gestureReconizer.state == .ended {
-            cellView.layer.shadowRadius = 0
-        }
-    }
 
     func updateLevel() {
         hasDrawnView.isHidden = level!.rating == 0
-        durationTitle.text = String.init(format: "%d минуты", level!.duration)
+        durationTitle.text = GramCase.getLocalizedString(number: level!.tutorials.count, key: "STEPS")
         title.text = level!.title
         previewView.image = UIImage.init(named: level!.preview)
-        print("Preview", level!.preview)
     }
 
 }

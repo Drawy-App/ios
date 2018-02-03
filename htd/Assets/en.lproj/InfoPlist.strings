@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  htd
+
+  Created by Alexey Landyrev on 03.02.2018.
+  Copyright © 2018 Alexey Landyrev. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "How to draw";
+"CFBundleName" = "How to draw";

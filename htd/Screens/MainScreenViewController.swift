@@ -38,6 +38,8 @@ class MainScreenViewController:
         let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell") as! LevelsTableViewCell
         let data = Levels.sharedInstance.data[indexPath.section]
         cell.level = data
+        cell.indexPath = indexPath
+        cell.tableView = tableView
         return cell
     }
     
@@ -45,7 +47,6 @@ class MainScreenViewController:
         if segue.identifier! == "showDetails" {
             let destVC = segue.destination as! DetailsViewController
             destVC.level = Levels.sharedInstance.data[self.LevelsList.indexPathForSelectedRow!.section]
-            print("test")
         }
         
     }

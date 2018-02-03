@@ -21,7 +21,6 @@ class Levels {
         let yaml = try! String.init(contentsOf: yamlUrl)
         let yamlLevels = try! Yams.load(yaml: yaml) as! [[String: Any]]
         for level in yamlLevels {
-            print(level["preview"] as! String)
             levels.append(Level.init(
                 name: level["name"] as! String,
                 preview: getUrl(level["preview"] as! String),

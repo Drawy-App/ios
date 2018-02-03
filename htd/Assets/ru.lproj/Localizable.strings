@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  htd
+
+  Created by Alexey Landyrev on 03.02.2018.
+  Copyright © 2018 Alexey Landyrev. All rights reserved.
+*/
+
+"STEPS_NN" = "шаг";
+"STEPS_NM" = "шага";
+"STEPS_GM" = "шагов";
+
