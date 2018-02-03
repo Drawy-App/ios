@@ -1,5 +1,0 @@
-boat
-lighthouse
-pug
-swan
-woman

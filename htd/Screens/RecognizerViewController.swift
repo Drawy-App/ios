@@ -73,6 +73,9 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
     func success() {
         self.captureSession!.stopRunning()
         DispatchQueue.main.sync {
+            autoreleasepool {
+                self.level!.set(1)
+            }
             performSegue(withIdentifier: "successSegue", sender: nil)
         }
     }
@@ -108,9 +111,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
             let output = AVCaptureVideoDataOutput()
             output.setSampleBufferDelegate(self, queue: self.queue)
             output.alwaysDiscardsLateVideoFrames = true
-            print("available", output.availableVideoPixelFormatTypes)
             output.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String:output.availableVideoPixelFormatTypes[2]]
-            print(output.videoSettings)
             
             let queue = DispatchQueue(label: "main")
             output.setSampleBufferDelegate(self, queue: queue)

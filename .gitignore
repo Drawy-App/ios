@@ -1,4 +1,5 @@
 *.mlmodel
+*.ipynb_checkpoints
 
 # Xcode
 #

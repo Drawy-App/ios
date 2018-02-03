@@ -35,10 +35,10 @@
 		B468F42A200BADE300C085C5 /* PresentingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F429200BADE300C085C5 /* PresentingAnimator.swift */; };
 		B468F42C200BAE0300C085C5 /* DismissingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F42B200BAE0300C085C5 /* DismissingAnimator.swift */; };
 		B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F42D200BC55500C085C5 /* RecognizerViewController.swift */; };
-		B468F432200BC66E00C085C5 /* retrained_labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = B468F430200BC66D00C085C5 /* retrained_labels.txt */; };
-		B468F433200BC66E00C085C5 /* retrained_graph.pb in Resources */ = {isa = PBXBuildFile; fileRef = B468F431200BC66E00C085C5 /* retrained_graph.pb */; };
-		B4A2D92D201CB7F70089D181 /* realmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B4A2D92C201CB7F70089D181 /* realmodel.mlmodel */; };
 		B4D931B42023A33F0071E283 /* SuccessScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D931B32023A33F0071E283 /* SuccessScreenViewController.swift */; };
+		B4D931B92024E0BC0071E283 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D931B82024E0BC0071E283 /* Score.swift */; };
+		B4D931BE202595F50071E283 /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4D931BD202595F50071E283 /* Images.bundle */; };
+		B4D931C02025B6690071E283 /* realmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B4D931BF2025B6690071E283 /* realmodel.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,10 +72,10 @@
 		B468F429200BADE300C085C5 /* PresentingAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingAnimator.swift; sourceTree = "<group>"; };
 		B468F42B200BAE0300C085C5 /* DismissingAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingAnimator.swift; sourceTree = "<group>"; };
 		B468F42D200BC55500C085C5 /* RecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerViewController.swift; sourceTree = "<group>"; };
-		B468F430200BC66D00C085C5 /* retrained_labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = retrained_labels.txt; sourceTree = "<group>"; };
-		B468F431200BC66E00C085C5 /* retrained_graph.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = retrained_graph.pb; sourceTree = "<group>"; };
-		B4A2D92C201CB7F70089D181 /* realmodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = realmodel.mlmodel; path = ../../../../../Desktop/converter/realmodel.mlmodel; sourceTree = "<group>"; };
 		B4D931B32023A33F0071E283 /* SuccessScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScreenViewController.swift; sourceTree = "<group>"; };
+		B4D931B82024E0BC0071E283 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		B4D931BD202595F50071E283 /* Images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Images.bundle; sourceTree = "<group>"; };
+		B4D931BF2025B6690071E283 /* realmodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = realmodel.mlmodel; sourceTree = "<group>"; };
 		B977F043DCE51CBA137A8626 /* Pods-htd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.debug.xcconfig"; sourceTree = "<group>"; };
 		C472F0F787E5D6981E0F5C2F /* Pods_htd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_htd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,7 +122,7 @@
 		B455A6B9200A6600000247BC /* htd */ = {
 			isa = PBXGroup;
 			children = (
-				B468F42F200BC65B00C085C5 /* Trained data */,
+				B4D931B72024E09E0071E283 /* Models */,
 				B468F426200BAD9C00C085C5 /* Custom Transitions */,
 				B455A6F5200AB70F000247BC /* Data */,
 				B455A6EE200AAE76000247BC /* Components */,
@@ -180,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				B455A6F1200AAF68000247BC /* LevelsTableViewCell.swift */,
-				B455A6F3200AB5F2000247BC /* Level.swift */,
 				B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */,
 			);
 			path = Components;
@@ -189,7 +188,8 @@
 		B455A6F5200AB70F000247BC /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B4A2D92C201CB7F70089D181 /* realmodel.mlmodel */,
+				B4D931BF2025B6690071E283 /* realmodel.mlmodel */,
+				B4D931BD202595F50071E283 /* Images.bundle */,
 				B455A6F6200AB71A000247BC /* Levels.swift */,
 			);
 			path = Data;
@@ -205,13 +205,13 @@
 			path = "Custom Transitions";
 			sourceTree = "<group>";
 		};
-		B468F42F200BC65B00C085C5 /* Trained data */ = {
+		B4D931B72024E09E0071E283 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B468F431200BC66E00C085C5 /* retrained_graph.pb */,
-				B468F430200BC66D00C085C5 /* retrained_labels.txt */,
+				B455A6F3200AB5F2000247BC /* Level.swift */,
+				B4D931B82024E0BC0071E283 /* Score.swift */,
 			);
-			path = "Trained data";
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FAF056E88BC28D4A50F3700C /* Frameworks */ = {
@@ -286,7 +286,6 @@
 			files = (
 				B455A6EA200AA502000247BC /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				B455A6C8200A6601000247BC /* LaunchScreen.storyboard in Resources */,
-				B468F432200BC66E00C085C5 /* retrained_labels.txt in Resources */,
 				B455A6E7200AA502000247BC /* SF-Pro-Text-LightItalic.otf in Resources */,
 				B455A6E8200AA502000247BC /* SF-Pro-Text-Semibold.otf in Resources */,
 				B455A6ED200AA502000247BC /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
@@ -296,7 +295,7 @@
 				B455A6E9200AA502000247BC /* SF-Pro-Text-Medium.otf in Resources */,
 				B455A6E3200AA502000247BC /* SF-Pro-Text-Bold.otf in Resources */,
 				B455A6C5200A6601000247BC /* Assets.xcassets in Resources */,
-				B468F433200BC66E00C085C5 /* retrained_graph.pb in Resources */,
+				B4D931BE202595F50071E283 /* Images.bundle in Resources */,
 				B455A6EB200AA502000247BC /* SF-Pro-Text-Regular.otf in Resources */,
 				B455A6E5200AA502000247BC /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				B455A6E2200AA502000247BC /* SF-Pro-Text-BoldItalic.otf in Resources */,
@@ -363,10 +362,11 @@
 				B468F425200BA0C100C085C5 /* GalleryCollectionViewCell.swift in Sources */,
 				B455A6D1200AA240000247BC /* MainScreenViewController.swift in Sources */,
 				B468F42C200BAE0300C085C5 /* DismissingAnimator.swift in Sources */,
+				B4D931B92024E0BC0071E283 /* Score.swift in Sources */,
+				B4D931C02025B6690071E283 /* realmodel.mlmodel in Sources */,
 				B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */,
 				B455A6C3200A6601000247BC /* htd.xcdatamodeld in Sources */,
 				B455A6F2200AAF68000247BC /* LevelsTableViewCell.swift in Sources */,
-				B4A2D92D201CB7F70089D181 /* realmodel.mlmodel in Sources */,
 				B4D931B42023A33F0071E283 /* SuccessScreenViewController.swift in Sources */,
 				B468F42A200BADE300C085C5 /* PresentingAnimator.swift in Sources */,
 				B455A6F9200B9457000247BC /* DetailsViewController.swift in Sources */,

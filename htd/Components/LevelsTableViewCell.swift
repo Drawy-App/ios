@@ -13,8 +13,20 @@ class LevelsTableViewCell: UITableViewCell {
     @IBOutlet weak var durationTitle: UILabel!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var previewView: UIImageView!
+    @IBOutlet weak var hasDrawnView: UIView!
     @IBOutlet weak var cellView: UIView!
-    var level: Level?
+    private var _level: Level?
+    var level: Level? {
+        set {
+            _level = newValue
+            if newValue != nil {
+                updateLevel()
+            }
+        }
+        get {
+            return _level
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,10 +44,10 @@ class LevelsTableViewCell: UITableViewCell {
         cellView.layer.shadowColor = UIColor.black.cgColor
         cellView.layer.shadowRadius = 0
         
+        hasDrawnView.layer.cornerRadius = 4
     }
     
     @objc func handleLongPress(gestureReconizer: UILongPressGestureRecognizer) {
-        NSLog("Long press handke")
         if gestureReconizer.state == .began {
             UIView.animate(withDuration: 5.0, animations: {
                     self.cellView.layer.shadowRadius = 5
@@ -46,11 +58,12 @@ class LevelsTableViewCell: UITableViewCell {
         }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func updateLevel() {
+        hasDrawnView.isHidden = level!.rating == 0
         durationTitle.text = String.init(format: "%d минуты", level!.duration)
         title.text = level!.title
-        previewView.image = level!.preview
+        previewView.image = UIImage.init(named: level!.preview)
+        print("Preview", level!.preview)
     }
 
 }

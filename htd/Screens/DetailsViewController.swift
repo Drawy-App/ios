@@ -13,14 +13,18 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
     SwiftPhotoGalleryDelegate, SwiftPhotoGalleryDataSource,
     UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
+    @IBOutlet weak var hasDrownLabel: UIView!
+    @IBOutlet weak var hasDrownView: UIView!
     @IBOutlet var makePhotoGesture: UITapGestureRecognizer!
     @IBOutlet weak var photoButton: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var previewViewContainer: UIView!
     @IBOutlet weak var previewView: UIImageView!
     @IBOutlet var backTapRecognizer: UITapGestureRecognizer!
+    
     
     var index: Int = 0
     var level: Level?
@@ -43,11 +47,19 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.contentInset = .init(top: 0, left: 15, bottom: 0, right: 15)
+        collectionView.contentInset = .init(top: 0, left: 15, bottom: 8, right: 15)
         
         titleLabel.text = level!.title
-        previewView.image = level!.preview
+        previewView.image = UIImage.init(named: level!.preview)
         timeLabel.text = String.init(format: "%d минут", level!.duration)
+        
+        hasDrownLabel.layer.cornerRadius = 4
+        hasDrownView.isHidden = self.level!.rating == 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (UIScreen.main.bounds.width - 15 * 4) / 3
+        return CGSize(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -92,6 +104,7 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "galleryCell", for: indexPath) as! GalleryCollectionViewCell
         cell.imageView.image = UIImage.init(named: level!.tutorials[indexPath.item])
+        cell.counterLabel.text = String(indexPath.item + 1)
         
         return cell as UICollectionViewCell
     }

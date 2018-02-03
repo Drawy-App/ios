@@ -13,7 +13,7 @@ class MainScreenViewController:
         UITableViewDataSource
 {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return Levels.data.count
+        return Levels.sharedInstance.data.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,17 +36,16 @@ class MainScreenViewController:
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell") as! LevelsTableViewCell
-        let data = Levels.data[indexPath.section]
+        let data = Levels.sharedInstance.data[indexPath.section]
         cell.level = data
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier! {
-        case "showDetails":
+        if segue.identifier! == "showDetails" {
             let destVC = segue.destination as! DetailsViewController
-            destVC.level = Levels.data[self.LevelsList.indexPathForSelectedRow!.section]
-        default: ()
+            destVC.level = Levels.sharedInstance.data[self.LevelsList.indexPathForSelectedRow!.section]
+            print("test")
         }
         
     }
@@ -58,6 +57,10 @@ class MainScreenViewController:
         LevelsList.delegate = self
         LevelsList.dataSource = self
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.LevelsList.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

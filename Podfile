@@ -4,5 +4,6 @@ use_frameworks!
 
 target 'htd' do
 	pod 'SwiftPhotoGallery'
+	pod 'Yams'
 	pod 'RealmSwift'
 end
