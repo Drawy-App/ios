@@ -23,6 +23,7 @@ class CarouselViewController: UIViewController,
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         pageViewController = UIPageViewController.init(
             transitionStyle: .scroll, navigationOrientation: .horizontal,
             options: nil
@@ -141,6 +142,12 @@ class CarouselViewController: UIViewController,
         )
         
         setButtonTitle()
+        
+        Analytics.sharedInstance.navigate("carousel_page", params: [
+            "name": self.level!.name,
+            "page": String(pageNumber),
+            "total_pages": String(self.images.count)
+        ])
     }
     
     func setButtonTitle() {
@@ -189,6 +196,10 @@ class CarouselViewController: UIViewController,
             let vc = segue.destination as! RecognizerViewController
             vc.level = self.level
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        Analytics.sharedInstance.navigate("carousel", params: ["name": self.level!.name])
     }
     
     func exit() {

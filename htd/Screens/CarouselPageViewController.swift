@@ -17,7 +17,7 @@ class CarouselPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.imageView.image = self.image
     }
 

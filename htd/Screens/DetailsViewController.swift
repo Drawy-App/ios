@@ -101,6 +101,10 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
             dest.pageNumber = self.collectionView.indexPathsForSelectedItems!.first!.item
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        Analytics.sharedInstance.navigate("details", params: ["name": self.level!.name])
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

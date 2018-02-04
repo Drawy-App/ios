@@ -10,8 +10,9 @@ import UIKit
 
 class MainScreenViewController:
         UIViewController, UITableViewDelegate,
-        UITableViewDataSource
+        UITableViewDataSource, UINavigationControllerDelegate
 {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return Levels.sharedInstance.data.count
     }
@@ -57,15 +58,34 @@ class MainScreenViewController:
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.appTitleLable.text = NSLocalizedString("APP_TITLE", comment: "App title")
         self.appSubTitleLable.text = NSLocalizedString("APP_SUBTITLE", comment: "App title")
         LevelsList.delegate = self
         LevelsList.dataSource = self
+        
         // Do any additional setup after loading the view.
+//        self.navigationController!.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.LevelsList.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        Analytics.sharedInstance.navigate("main", params: [
+            "levels": [
+                "done": Levels.sharedInstance.data.filter {level in level.rating > 0}
+                    .map { $0.name },
+                "undone": Levels.sharedInstance.data.filter {level in level.rating == 0}
+                    .map { $0.name }
+            ],
+            "levels_count": [
+                "done": Levels.sharedInstance.data.filter {level in level.rating > 0}.count,
+                "undone": Levels.sharedInstance.data.filter {level in level.rating == 0}.count
+            ]
+            ]
+        )
     }
     
     override func didReceiveMemoryWarning() {

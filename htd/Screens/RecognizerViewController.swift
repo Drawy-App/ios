@@ -14,6 +14,12 @@ import CoreGraphics
 
 class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
+    enum State {
+        case Nothing
+        case Something
+        case Success
+    }
+    
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var backButtonLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
@@ -26,9 +32,15 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
     var queue: DispatchQueue?
     var lastFailureTime = NSDate().timeIntervalSince1970
     var hasFinished = false
+    var envParams: [String:Any] = [:]
+    var state = State.Nothing
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        envParams = [
+            "name": self.level!.name,
+        ]
+        
         self.queue = DispatchQueue.global(qos: .userInteractive)
         initModel()
         try? VNImageRequestHandler(
@@ -72,18 +84,26 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
                 if timeElapsed > 3  {
                     self.success()
                 } else {
-                    DispatchQueue.main.async {
-                        self.captionLabel.text = NSLocalizedString(
-                            "FOUND_SOMETHING", comment: "Ask for pointing camera"
-                        )
+                    if self.state != .Something {
+                        self.state = .Something
+                        DispatchQueue.main.async {
+                            self.captionLabel.text = NSLocalizedString(
+                                "FOUND_SOMETHING", comment: "Ask for pointing camera"
+                            )
+                            Analytics.sharedInstance.event("found_something", params: self.envParams)
+                        }
                     }
-                    
                 }
             }
         } else {
             lastFailureTime = now
-            DispatchQueue.main.async {
-                self.captionLabel.text = NSLocalizedString("POINT_CAMERA", comment: "Ask for pointing camera")
+            if self.state != .Nothing {
+                self.state = .Nothing
+                DispatchQueue.main.async {
+                    self.captionLabel.text = NSLocalizedString("POINT_CAMERA", comment: "Ask for pointing camera")
+                    Analytics.sharedInstance.event("lost_something", params: self.envParams)
+                }
+                
             }
         }
     }
@@ -94,7 +114,15 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
             autoreleasepool {
                 self.level!.set(1)
             }
+            Analytics.sharedInstance.event("success_recognized", params: self.envParams)
             performSegue(withIdentifier: "successSegue", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "successSegue" {
+            let dest = segue.destination as! SuccessScreenViewController
+            dest.level = self.level
         }
     }
     
@@ -148,10 +176,15 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
             
             
             
-            captureSession?.startRunning()
+            captureSession!.startRunning()
+            Analytics.sharedInstance.event("camera_init_success", params: envParams)
         } catch {
             print(error)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        Analytics.sharedInstance.navigate("recognizer", params: envParams)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
