@@ -35,6 +35,7 @@
 		B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F42D200BC55500C085C5 /* RecognizerViewController.swift */; };
 		B47F3B41202612BF007E0B26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B47F3B43202612BF007E0B26 /* Localizable.strings */; };
 		B47F3B4B20264245007E0B26 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47F3B4A20264245007E0B26 /* CarouselViewController.swift */; };
+		B4AD7EEE20279CB70093EF65 /* MoreCaptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */; };
 		B4BCFE22202609F4008161EA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4BCFE21202609F3008161EA /* Info.plist */; };
 		B4BCFE2520260A45008161EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4BCFE2720260A45008161EA /* InfoPlist.strings */; };
 		B4BCFE2D20260B72008161EA /* GramCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BCFE2C20260B72008161EA /* GramCase.swift */; };
@@ -79,6 +80,7 @@
 		B47F3B42202612BF007E0B26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B47F3B44202612C1007E0B26 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B47F3B4A20264245007E0B26 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCaptionTableViewCell.swift; sourceTree = "<group>"; };
 		B4BCFE21202609F3008161EA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4BCFE2620260A45008161EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4BCFE2820260A46008161EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				B455A6F1200AAF68000247BC /* LevelsTableViewCell.swift */,
 				B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */,
 				B4CCEE5920274F0B0081014A /* Analytics.swift */,
+				B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B455A6F7200AB71A000247BC /* Levels.swift in Sources */,
+				B4AD7EEE20279CB70093EF65 /* MoreCaptionTableViewCell.swift in Sources */,
 				B468F425200BA0C100C085C5 /* GalleryCollectionViewCell.swift in Sources */,
 				B4CCEE5A20274F0C0081014A /* Analytics.swift in Sources */,
 				B455A6D1200AA240000247BC /* MainScreenViewController.swift in Sources */,
@@ -601,6 +605,7 @@
 				);
 				INFOPLIST_FILE = htd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "$(inherited) \"-D\" \"IOS_SIMULATOR\"";
 				PRODUCT_BUNDLE_IDENTIFIER = landyrev.htd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -624,6 +629,7 @@
 				);
 				INFOPLIST_FILE = htd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "$(inherited) \"-D\" \"IOS_SIMULATOR\"";
 				PRODUCT_BUNDLE_IDENTIFIER = landyrev.htd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

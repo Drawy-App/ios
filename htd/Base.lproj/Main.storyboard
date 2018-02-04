@@ -209,6 +209,32 @@
                                             <segue destination="tkN-Bd-S28" kind="show" identifier="showDetails" id="bxK-MN-Yzh"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="moreImagesCell" rowHeight="140" id="FTT-8l-Rld" customClass="MoreCaptionTableViewCell" customModule="htd" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="168" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FTT-8l-Rld" id="O9V-FW-LR6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новые картинки появятся уже совсем скоро!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXN-bo-nDN">
+                                                    <rect key="frame" x="40" y="46.666666666666657" width="334" height="48"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="zXN-bo-nDN" firstAttribute="leading" secondItem="O9V-FW-LR6" secondAttribute="leading" constant="40" id="RCe-IN-dZt"/>
+                                                <constraint firstItem="zXN-bo-nDN" firstAttribute="centerY" secondItem="O9V-FW-LR6" secondAttribute="centerY" id="bP9-E9-QIp"/>
+                                                <constraint firstAttribute="trailing" secondItem="zXN-bo-nDN" secondAttribute="trailing" constant="40" id="ciZ-pt-tpv"/>
+                                                <constraint firstItem="zXN-bo-nDN" firstAttribute="centerX" secondItem="O9V-FW-LR6" secondAttribute="centerX" id="wus-bZ-LIz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="zXN-bo-nDN" id="Pk8-tg-dMf"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -836,11 +862,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ура! Рисунок нарисован" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5E-SO-g5E">
-                                <rect key="frame" x="60" y="328.66666666666669" width="294" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="QX5-uJ-6Ej"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ура! Рисунок нарисован" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5E-SO-g5E">
+                                <rect key="frame" x="60" y="356" width="294" height="25.666666666666686"/>
                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -885,6 +908,6 @@
         <image name="cross" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PS5-Gn-qrl"/>
+        <segue reference="mpg-Nd-fru"/>
     </inferredMetricsTieBreakers>
 </document>

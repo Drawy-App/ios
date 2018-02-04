@@ -53,10 +53,22 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
         self.headerLabel.text = NSLocalizedString("RECOGNIZE_HEADER", comment: "Recognize screen header")
         self.captionLabel.text = NSLocalizedString("POINT_CAMERA", comment: "Ask for pointing camera")
         
-        queue!.async {
-            self.initCamera()
-        }
+        #if IOS_SIMULATOR
+            initEmulator()
+        #else
+            queue!.async {
+                self.initCamera()
+            }
+        #endif
+        
     }
+        
+        func initEmulator() {
+            NSLog("emulator mode")
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
+                self.success()
+            })
+        }
     
     @objc func exit() {
         self.navigationController?.popViewController(animated: true)
@@ -109,14 +121,21 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
     }
     
     func success() {
-        self.captureSession!.stopRunning()
-        DispatchQueue.main.sync {
-            autoreleasepool {
-                self.level!.set(1)
-            }
+        #if IOS_SIMULATOR
+            self.level!.set(1)
             Analytics.sharedInstance.event("success_recognized", params: self.envParams)
             performSegue(withIdentifier: "successSegue", sender: nil)
-        }
+            return
+        #else
+            self.captureSession!.stopRunning()
+            DispatchQueue.main.sync {
+                autoreleasepool {
+                    self.level!.set(1)
+                }
+                Analytics.sharedInstance.event("success_recognized", params: self.envParams)
+                performSegue(withIdentifier: "successSegue", sender: nil)
+            }
+        #endif
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -150,6 +169,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
     }
     
     func initCamera() {
+        
         let captureDevice = AVCaptureDevice.default(for: .video)!
         
         do {

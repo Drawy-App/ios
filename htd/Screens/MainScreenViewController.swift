@@ -14,7 +14,7 @@ class MainScreenViewController:
 {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return Levels.sharedInstance.data.count
+        return Levels.sharedInstance.data.count + 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,6 +36,12 @@ class MainScreenViewController:
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == Levels.sharedInstance.data.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "moreImagesCell") as! MoreCaptionTableViewCell
+            cell.captionLabel.text = NSLocalizedString("COMING_SOON", comment: "More coming soon")
+            return cell
+            
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell") as! LevelsTableViewCell
         let data = Levels.sharedInstance.data[indexPath.section]
         cell.level = data
