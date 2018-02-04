@@ -4,20 +4,17 @@ PODS:
   - Realm/Headers (3.0.2)
   - RealmSwift (3.0.2):
     - Realm (= 3.0.2)
-  - SwiftPhotoGallery (3.3.0)
   - Yams (0.5.0)
 
 DEPENDENCIES:
   - RealmSwift
-  - SwiftPhotoGallery
   - Yams
 
 SPEC CHECKSUMS:
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
-  SwiftPhotoGallery: a4397a398500401e4737472bba72f11484e7f0d4
   Yams: 58b13424ca380835c4c797bc775ce6cbb3bc0167
 
-PODFILE CHECKSUM: c7727f90ee06023f039e561be6f4927c4f1c5318
+PODFILE CHECKSUM: 6ad3c70dd4d343702837000c9b94fae292c6bc17
 
 COCOAPODS: 1.2.1.beta.1
