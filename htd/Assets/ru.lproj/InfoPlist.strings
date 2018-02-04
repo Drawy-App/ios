@@ -9,3 +9,5 @@
 "CFBundleDisplayName" = "Как рисовать";
 "CFBundleName" = "Как рисовать";
 NSCameraUsageDescription = "Чтобы мы могли распознать ваш рисунок";
+
+UILaunchStoryboardName = "LaunchScreen_ru";

@@ -608,8 +608,8 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 из 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-50-6Zx">
-                                        <rect key="frame" x="175" y="18" width="63.666666666666657" height="24"/>
-                                        <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="20"/>
+                                        <rect key="frame" x="174.33333333333334" y="18" width="65.333333333333343" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -885,6 +885,6 @@
         <image name="cross" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mpg-Nd-fru"/>
+        <segue reference="PS5-Gn-qrl"/>
     </inferredMetricsTieBreakers>
 </document>

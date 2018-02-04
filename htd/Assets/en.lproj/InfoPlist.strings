@@ -9,3 +9,5 @@
 "CFBundleDisplayName" = "How to draw";
 "CFBundleName" = "How to draw";
 NSCameraUsageDescription = "This will let us to recognize the drawing you made";
+
+UILaunchStoryboardName = "LaunchScreen_en";
