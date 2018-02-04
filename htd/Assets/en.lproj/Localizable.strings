@@ -5,8 +5,26 @@
   Created by Alexey Landyrev on 03.02.2018.
   Copyright © 2018 Alexey Landyrev. All rights reserved.
 */
+"APP_TITLE" = "DRAWING";
+"APP_SUBTITLE" = "MADE EASY";
 
 "STEPS_NN" = "step";
 "STEPS_NM" = "steps";
 "STEPS_GM" = "steps";
+
 "GALLERY_STEPS" = "%d of %d";
+"NEXT_BUTTON" = "Next";
+"CHECK_BUTTON" = "Make photo";
+"HAS_DROWN_LABEL" = "Completed";
+"BACK_BUTTON" = "Back";
+"RECOGNIZE_HEADER" = "Photo";
+"POINT_CAMERA" = "Please point camera to your drawing";
+"FOUND_SOMETHING" = "We found something...";
+"STEPS_HEADER" = "Steps";
+"SUCCESS_LABEL" = "Hurrah! You've completed this drawing";
+
+"lutz_boat0" = "Boat";
+"lutz_lighthouse0" = "Lighthouse";
+"lutz_pug0" = "Little pug";
+"lutz_swan0" = "Swan";
+"lutz_woman0" = "Woman's face";

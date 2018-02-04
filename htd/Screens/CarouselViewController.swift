@@ -11,9 +11,11 @@ import UIKit
 class CarouselViewController: UIViewController,
     UIPageViewControllerDataSource, UIPageViewControllerDelegate
 {
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pagesLabel: UILabel!
     @IBOutlet weak var crossButton: UIButton!
     @IBOutlet weak var pagesView: UIView!
+    var level: Level?
     var dragGesture: UIPanGestureRecognizer?
     var pageViewController: UIPageViewController?
     var images: [UIImage] = []
@@ -38,6 +40,9 @@ class CarouselViewController: UIViewController,
         ], direction: .forward, animated: false, completion: nil)
         
         crossButton.addTarget(self, action: #selector(self.exitAnimated), for: .touchUpInside)
+        
+        self.nextButton.addTarget(self, action: #selector(self.nextTap), for: .touchUpInside)
+        setButtonTitle()
         self.initDrag()
         self.setPageNumber()
     }
@@ -103,11 +108,11 @@ class CarouselViewController: UIViewController,
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let vc = viewController as! CarouselPageViewController
-        if vc.pageNumber + 1 >= self.images.count {
+        if vc.pageNumber >= self.images.count - 1 {
             return nil
         }
-        self.pageNumber += 1
-        return self.getViewForPage(self.pageNumber)
+        let number = vc.pageNumber + 1
+        return self.getViewForPage(number)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -115,8 +120,12 @@ class CarouselViewController: UIViewController,
         if vc.pageNumber <= 0 {
             return nil
         }
-        self.pageNumber -= 1
-        return self.getViewForPage(self.pageNumber)
+        let number = vc.pageNumber - 1
+        return self.getViewForPage(number)
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return (pageViewController.viewControllers!.first! as! CarouselPageViewController).pageNumber
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
@@ -124,14 +133,62 @@ class CarouselViewController: UIViewController,
     }
     
     func setPageNumber() {
+        let vc = self.pageViewController!.viewControllers!.first! as! CarouselPageViewController
+        pageNumber = vc.pageNumber
         self.pagesLabel.text = String.init(
             format: NSLocalizedString("GALLERY_STEPS", comment: "Page numbers in gallery"),
-            self.pageNumber + 1, self.images.count
+            pageNumber + 1, self.images.count
         )
+        
+        setButtonTitle()
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    func setButtonTitle() {
+        if pageNumber + 1 == self.images.count {
+            self.nextButton.setTitle(
+                NSLocalizedString("CHECK_BUTTON", comment: "Check button"),
+                for: .normal
+            )
+        } else {
+            self.nextButton.setTitle(
+                NSLocalizedString("NEXT_BUTTON", comment: "Next button"),
+                for: .normal
+            )
+        }
+    }
+    
+    @objc func nextTap() {
+        if pageNumber + 1 == self.images.count {
+            let pv = self.presentingViewController as! UINavigationController
+            pv.viewControllers.last!.performSegue(withIdentifier: "makePhoto", sender: self)
+            self.dismiss(animated: false, completion: nil)
+        } else {
+            let nextVC = getViewForPage(pageNumber + 1)
+            self.pageViewController?.setViewControllers(
+                [nextVC], direction: .forward,
+                animated: true, completion: {completed in
+                    if completed {
+                        self.pageNumber += 1
+                        self.setPageNumber()
+                    }
+                }
+            )
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIApplication.shared.isIdleTimerDisabled = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        UIApplication.shared.isIdleTimerDisabled = false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "makePhotoFromCarousel" {
+            let vc = segue.destination as! RecognizerViewController
+            vc.level = self.level
+        }
     }
     
     func exit() {

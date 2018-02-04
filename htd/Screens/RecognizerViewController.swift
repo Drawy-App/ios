@@ -15,7 +15,10 @@ import CoreGraphics
 class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var backButtonLabel: UILabel!
+    @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var previewView: UIImageView!
+    @IBOutlet var backTapGesture: UITapGestureRecognizer!
     var level: Level?
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
@@ -28,10 +31,23 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
         super.viewDidLoad()
         self.queue = DispatchQueue.global(qos: .userInteractive)
         initModel()
-        initCamera()
         try? VNImageRequestHandler(
                 ciImage: CIImage.init(image: UIImage.init(named: "test")!)!
             ).perform([request!])
+        
+        backTapGesture.addTarget(self, action: #selector(self.exit))
+        
+        self.backButtonLabel.text = NSLocalizedString("BACK_BUTTON", comment: "Back button")
+        self.headerLabel.text = NSLocalizedString("RECOGNIZE_HEADER", comment: "Recognize screen header")
+        self.captionLabel.text = NSLocalizedString("POINT_CAMERA", comment: "Ask for pointing camera")
+        
+        queue!.async {
+            self.initCamera()
+        }
+    }
+    
+    @objc func exit() {
+        self.navigationController?.popViewController(animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,7 +73,9 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
                     self.success()
                 } else {
                     DispatchQueue.main.async {
-                        self.captionLabel.text = "Кажется, мы что-то нашли..."
+                        self.captionLabel.text = NSLocalizedString(
+                            "FOUND_SOMETHING", comment: "Ask for pointing camera"
+                        )
                     }
                     
                 }
@@ -65,7 +83,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
         } else {
             lastFailureTime = now
             DispatchQueue.main.async {
-                self.captionLabel.text = "Наведите камеру на ваш рисунок"
+                self.captionLabel.text = NSLocalizedString("POINT_CAMERA", comment: "Ask for pointing camera")
             }
         }
     }

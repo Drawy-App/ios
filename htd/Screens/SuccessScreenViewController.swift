@@ -14,6 +14,7 @@ class SuccessScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.textLabel.text = NSLocalizedString("SUCCESS_LABEL", comment: "Success label")
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
             DispatchQueue.main.async {
                 self.navigationController?.popToRootViewController(animated: true)

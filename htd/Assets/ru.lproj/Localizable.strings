@@ -6,7 +6,26 @@
   Copyright © 2018 Alexey Landyrev. All rights reserved.
 */
 
+"APP_TITLE" = "ПРОСТО";
+"APP_SUBTITLE" = "НАЧНИ РИСОВАТЬ";
+
 "STEPS_NN" = "шаг";
 "STEPS_NM" = "шага";
 "STEPS_GM" = "шагов";
+
 "GALLERY_STEPS" = "%d из %d";
+"NEXT_BUTTON" = "Далее";
+"CHECK_BUTTON" = "Сделать фото";
+"HAS_DROWN_LABEL" = "Нарисовано";
+"BACK_BUTTON" = "Назад";
+"RECOGNIZE_HEADER" = "Фото";
+"POINT_CAMERA" = "Наведите камеру на ваши рисунок";
+"FOUND_SOMETHING" = "Кажется мы нашли что-то...";
+"STEPS_HEADER" = "Инструкции";
+"SUCCESS_LABEL" = "Ура! Рисунок нарисован";
+
+"lutz_boat0" = "Лодка";
+"lutz_lighthouse0" = "Маяк";
+"lutz_pug0" = "Маленький мопс";
+"lutz_swan0" = "Лебедь";
+"lutz_woman0" = "Лицо девушки";

@@ -12,7 +12,11 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
     UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var hasDrownLabel: UIView!
+    @IBOutlet weak var hasDrownTextLabel: UILabel!
+    @IBOutlet weak var makePhotoLabel: UILabel!
     @IBOutlet weak var hasDrownView: UIView!
+    @IBOutlet weak var stepsLabel: UILabel!
+    @IBOutlet weak var backButtonLabel: UILabel!
     @IBOutlet var makePhotoGesture: UITapGestureRecognizer!
     @IBOutlet weak var photoButton: UIView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -40,12 +44,17 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         collectionView.dataSource = self
         collectionView.contentInset = .init(top: 0, left: 15, bottom: 8, right: 15)
         
-        titleLabel.text = level!.title
+        titleLabel.text = NSLocalizedString(level!.name, comment: "title") //level!.title
         previewView.image = UIImage.init(named: level!.preview)
-        timeLabel.text = String.init(format: "%d минут", level!.duration)
+        timeLabel.text = GramCase.getLocalizedString(number: level!.tutorials.count, key: "STEPS")
         
         hasDrownLabel.layer.cornerRadius = 4
         hasDrownView.isHidden = self.level!.rating == 0
+        
+        self.makePhotoLabel.text = NSLocalizedString("CHECK_BUTTON", comment: "Make photo")
+        self.hasDrownTextLabel.text = NSLocalizedString("HAS_DROWN_LABEL", comment: "Has drown label")
+        self.stepsLabel.text = NSLocalizedString("STEPS_HEADER", comment: "Steps header")
+        self.backButtonLabel.text = NSLocalizedString("BACK_BUTTON", comment: "Back button")
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -84,6 +93,8 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         }
         if segue.identifier == "showGallery" {
             let dest = segue.destination as! CarouselViewController
+            dest.level = self.level
+//            dest.navigationController = self.navigationController
             dest.images = self.level!.tutorials.map {
                 UIImage.init(named: $0)!
             }

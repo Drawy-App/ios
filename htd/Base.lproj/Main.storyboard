@@ -203,6 +203,7 @@
                                             <outlet property="cellView" destination="OX0-DA-ZGV" id="gJa-vz-1e8"/>
                                             <outlet property="durationTitle" destination="39R-q7-s8L" id="AgY-8k-VKv"/>
                                             <outlet property="hasDrawnView" destination="zm7-5k-0F9" id="RvT-lr-yhR"/>
+                                            <outlet property="hasDrownLabel" destination="tXR-dk-cOB" id="58L-rr-5bo"/>
                                             <outlet property="previewView" destination="hch-Cz-OiN" id="sMW-TE-HWP"/>
                                             <outlet property="title" destination="7M4-pM-x5P" id="vDj-HE-oCl"/>
                                             <segue destination="tkN-Bd-S28" kind="show" identifier="showDetails" id="bxK-MN-Yzh"/>
@@ -227,6 +228,8 @@
                     <navigationItem key="navigationItem" id="Bo3-Nm-Jql"/>
                     <connections>
                         <outlet property="LevelsList" destination="ghn-xV-chF" id="6v4-FF-AnA"/>
+                        <outlet property="appSubTitleLable" destination="DNA-aa-9Hi" id="4tz-eA-Wce"/>
+                        <outlet property="appTitleLable" destination="z6P-eL-Rim" id="Ach-rU-zZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -544,14 +547,18 @@
                         <viewLayoutGuide key="safeArea" id="e57-1P-B9R"/>
                     </view>
                     <connections>
+                        <outlet property="backButtonLabel" destination="5CS-6b-fXv" id="RZv-jg-GbC"/>
                         <outlet property="backTapRecognizer" destination="inV-v2-NVn" id="p1C-eN-WK6"/>
                         <outlet property="collectionView" destination="8RM-4g-zV7" id="8YI-Vl-ymp"/>
                         <outlet property="hasDrownLabel" destination="yfB-T9-PhY" id="mUW-Cc-khR"/>
+                        <outlet property="hasDrownTextLabel" destination="P5G-sL-h1m" id="pLl-Xg-wGI"/>
                         <outlet property="hasDrownView" destination="V34-DM-0wE" id="5V1-ho-smi"/>
                         <outlet property="makePhotoGesture" destination="9cp-ng-9rx" id="Dwx-dK-JeD"/>
+                        <outlet property="makePhotoLabel" destination="1SV-Ma-dfk" id="cfC-MK-fRV"/>
                         <outlet property="photoButton" destination="9O6-IW-LBG" id="dYd-5o-Xii"/>
                         <outlet property="previewView" destination="g19-fa-LOx" id="ZgS-CT-snU"/>
                         <outlet property="previewViewContainer" destination="cgu-FR-30m" id="dBZ-Uf-qC1"/>
+                        <outlet property="stepsLabel" destination="MIu-wF-sdw" id="x5L-cM-UxP"/>
                         <outlet property="timeLabel" destination="WMT-wU-5LY" id="Prb-mn-WqS"/>
                         <outlet property="titleLabel" destination="UHo-zF-JT3" id="CfD-rY-fa4"/>
                         <outlet property="titleView" destination="jTb-zM-BRf" id="A3F-5k-6e9"/>
@@ -575,56 +582,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHB-Mq-gsj">
-                                <rect key="frame" x="20" y="40" width="34" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="VAh-sA-YcB"/>
-                                    <constraint firstAttribute="width" secondItem="cHB-Mq-gsj" secondAttribute="height" multiplier="1:1" id="WAu-tO-hhP"/>
-                                </constraints>
-                                <state key="normal" image="cross"/>
-                            </button>
-                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yva-YJ-Mex">
-                                <rect key="frame" x="0.0" y="80" width="414" height="576"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <gestureRecognizers/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JL5-FD-2xF" userLabel="Footer">
-                                <rect key="frame" x="0.0" y="656" width="414" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDP-Ta-nPW" userLabel="Header">
+                                <rect key="frame" x="0.0" y="20" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 из 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-50-6Zx">
-                                        <rect key="frame" x="175.66666666666666" y="28.666666666666629" width="63.666666666666657" height="24"/>
+                                        <rect key="frame" x="175" y="18" width="63.666666666666657" height="24"/>
                                         <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHB-Mq-gsj">
+                                        <rect key="frame" x="8" y="13" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="VAh-sA-YcB"/>
+                                            <constraint firstAttribute="width" secondItem="cHB-Mq-gsj" secondAttribute="height" multiplier="1:1" id="WAu-tO-hhP"/>
+                                        </constraints>
+                                        <state key="normal" image="cross"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="iAe-Vr-bbN"/>
-                                    <constraint firstItem="7ew-50-6Zx" firstAttribute="centerY" secondItem="JL5-FD-2xF" secondAttribute="centerY" id="m5R-WG-toh"/>
-                                    <constraint firstItem="7ew-50-6Zx" firstAttribute="centerX" secondItem="JL5-FD-2xF" secondAttribute="centerX" id="v1n-jG-u0u"/>
+                                    <constraint firstItem="cHB-Mq-gsj" firstAttribute="centerY" secondItem="PDP-Ta-nPW" secondAttribute="centerY" id="Cq6-jo-SP3"/>
+                                    <constraint firstAttribute="height" constant="60" id="Gzj-cE-Ru3"/>
+                                    <constraint firstItem="7ew-50-6Zx" firstAttribute="centerX" secondItem="PDP-Ta-nPW" secondAttribute="centerX" id="Xie-ET-4Pt"/>
+                                    <constraint firstItem="cHB-Mq-gsj" firstAttribute="leading" secondItem="PDP-Ta-nPW" secondAttribute="leading" constant="8" id="eTF-9g-Yg3"/>
+                                    <constraint firstItem="7ew-50-6Zx" firstAttribute="centerY" secondItem="PDP-Ta-nPW" secondAttribute="centerY" id="mWW-hH-IU8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yva-YJ-Mex">
+                                <rect key="frame" x="0.0" y="80" width="414" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JL5-FD-2xF" userLabel="Footer">
+                                <rect key="frame" x="0.0" y="636" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCs-8E-tlM">
+                                        <rect key="frame" x="145" y="32.666666666666629" width="125" height="36"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="20"/>
+                                        <state key="normal" title="Следующая">
+                                            <color key="titleColor" white="0.0" alpha="0.81148330479999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nCs-8E-tlM" firstAttribute="centerX" secondItem="JL5-FD-2xF" secondAttribute="centerX" id="GuN-eP-eqa"/>
+                                    <constraint firstItem="nCs-8E-tlM" firstAttribute="centerY" secondItem="JL5-FD-2xF" secondAttribute="centerY" id="KkT-Lt-tIV"/>
+                                    <constraint firstAttribute="height" constant="100" id="iAe-Vr-bbN"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Yva-YJ-Mex" firstAttribute="top" secondItem="zOp-1W-eRB" secondAttribute="top" constant="60" id="426-U7-ohm"/>
                             <constraint firstItem="Yva-YJ-Mex" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" id="5Ln-oQ-B55"/>
                             <constraint firstItem="JL5-FD-2xF" firstAttribute="top" secondItem="Yva-YJ-Mex" secondAttribute="bottom" id="6aW-Ne-FaE"/>
                             <constraint firstItem="JL5-FD-2xF" firstAttribute="bottom" secondItem="zOp-1W-eRB" secondAttribute="bottom" id="KGE-j9-UOp"/>
-                            <constraint firstItem="cHB-Mq-gsj" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" constant="20" id="PWL-pS-35a"/>
+                            <constraint firstItem="PDP-Ta-nPW" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" id="NFh-pV-crQ"/>
                             <constraint firstItem="zOp-1W-eRB" firstAttribute="trailing" secondItem="JL5-FD-2xF" secondAttribute="trailing" id="TOv-0o-HCi"/>
-                            <constraint firstItem="cHB-Mq-gsj" firstAttribute="top" secondItem="zOp-1W-eRB" secondAttribute="top" constant="20" id="eSl-vs-6qE"/>
+                            <constraint firstItem="Yva-YJ-Mex" firstAttribute="top" secondItem="PDP-Ta-nPW" secondAttribute="bottom" id="WXS-z9-b9g"/>
+                            <constraint firstItem="PDP-Ta-nPW" firstAttribute="trailing" secondItem="zOp-1W-eRB" secondAttribute="trailing" id="YAL-N1-s4y"/>
                             <constraint firstItem="JL5-FD-2xF" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" id="eZg-Wf-oTT"/>
                             <constraint firstItem="zOp-1W-eRB" firstAttribute="trailing" secondItem="Yva-YJ-Mex" secondAttribute="trailing" id="pUm-kq-Lmd"/>
+                            <constraint firstItem="PDP-Ta-nPW" firstAttribute="top" secondItem="zOp-1W-eRB" secondAttribute="top" id="pW6-kx-o1c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zOp-1W-eRB"/>
                     </view>
                     <connections>
                         <outlet property="crossButton" destination="cHB-Mq-gsj" id="vNG-FY-y74"/>
+                        <outlet property="nextButton" destination="nCs-8E-tlM" id="1x5-ZQ-Lwj"/>
                         <outlet property="pagesLabel" destination="7ew-50-6Zx" id="XrW-R2-yBo"/>
                         <outlet property="pagesView" destination="Yva-YJ-Mex" id="l1l-37-BPa"/>
+                        <segue destination="XEG-Dj-KIs" kind="show" identifier="makePhotoFromCarousel" id="PS5-Gn-qrl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dch-22-6wN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -711,7 +741,7 @@
                                             <constraint firstItem="bgx-v7-cmW" firstAttribute="leading" secondItem="fcC-sy-ZuY" secondAttribute="leading" constant="8" id="enN-g5-Rer"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="TtM-bp-mHW" appends="YES" id="wWv-Rf-bsR"/>
+                                            <outletCollection property="gestureRecognizers" destination="oOG-ht-p8y" appends="YES" id="yke-fn-jJ5"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -747,6 +777,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.396078431372549" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="yo7-vk-kxa" firstAttribute="trailing" secondItem="x2h-lZ-4YV" secondAttribute="trailing" id="9uV-qy-gG6"/>
                             <constraint firstItem="Yer-NY-tpp" firstAttribute="leading" secondItem="x2h-lZ-4YV" secondAttribute="leading" id="MjZ-if-R4C"/>
@@ -762,13 +793,16 @@
                         <viewLayoutGuide key="safeArea" id="x2h-lZ-4YV"/>
                     </view>
                     <connections>
+                        <outlet property="backButtonLabel" destination="l7i-Vp-AkI" id="TJD-vx-oPr"/>
+                        <outlet property="backTapGesture" destination="oOG-ht-p8y" id="O0K-qe-2Qd"/>
                         <outlet property="captionLabel" destination="mWF-Wf-J7c" id="FSo-6x-dHX"/>
+                        <outlet property="headerLabel" destination="ndC-Ld-m9g" id="OSl-o2-k9j"/>
                         <outlet property="previewView" destination="yo7-vk-kxa" id="TRH-OD-v5j"/>
                         <segue destination="dme-YS-4xA" kind="show" identifier="successSegue" id="qKr-KG-mfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sO6-BC-xON" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="TtM-bp-mHW"/>
+                <tapGestureRecognizer id="oOG-ht-p8y"/>
             </objects>
             <point key="canvasLocation" x="2064.8000000000002" y="115.59220389805098"/>
         </scene>
@@ -822,23 +856,12 @@
             </objects>
             <point key="canvasLocation" x="-630" y="116"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="EWQ-42-34J">
-            <objects>
-                <viewController id="a0d-EE-SUm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L7t-gs-CEL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="QBG-sn-2eA"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3bN-Va-gov" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="back_icon" width="13" height="22"/>
         <image name="cross" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mpg-Nd-fru"/>
+    </inferredMetricsTieBreakers>
 </document>

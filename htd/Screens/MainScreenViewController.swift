@@ -52,9 +52,13 @@ class MainScreenViewController:
     }
 
     @IBOutlet weak var LevelsList: UITableView!
+    @IBOutlet weak var appTitleLable: UILabel!
+    @IBOutlet weak var appSubTitleLable: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.appTitleLable.text = NSLocalizedString("APP_TITLE", comment: "App title")
+        self.appSubTitleLable.text = NSLocalizedString("APP_SUBTITLE", comment: "App title")
         LevelsList.delegate = self
         LevelsList.dataSource = self
         // Do any additional setup after loading the view.
