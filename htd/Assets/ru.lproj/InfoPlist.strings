@@ -8,3 +8,4 @@
 
 "CFBundleDisplayName" = "Как рисовать";
 "CFBundleName" = "Как рисовать";
+NSPhotoLibraryUsageDescription = "Чтобы мы могли распознать ваш рисунок";

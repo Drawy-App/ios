@@ -184,6 +184,7 @@ class CarouselViewController: UIViewController,
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        Analytics.sharedInstance.navigate("carousel", params: ["name": self.level!.name])
         UIApplication.shared.isIdleTimerDisabled = true
     }
     
@@ -196,10 +197,6 @@ class CarouselViewController: UIViewController,
             let vc = segue.destination as! RecognizerViewController
             vc.level = self.level
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        Analytics.sharedInstance.navigate("carousel", params: ["name": self.level!.name])
     }
     
     func exit() {

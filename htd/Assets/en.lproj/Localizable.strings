@@ -14,7 +14,7 @@
 
 "GALLERY_STEPS" = "%d of %d";
 "NEXT_BUTTON" = "Next";
-"CHECK_BUTTON" = "Make photo";
+"CHECK_BUTTON" = "Check";
 "HAS_DROWN_LABEL" = "Completed";
 "BACK_BUTTON" = "Back";
 "RECOGNIZE_HEADER" = "Photo";

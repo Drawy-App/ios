@@ -491,20 +491,42 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9O6-IW-LBG">
                                         <rect key="frame" x="15" y="15" width="384" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cделать фото" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SV-Ma-dfk">
-                                                <rect key="frame" x="134.33333333333334" y="20" width="117.33333333333334" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rF-vr-TSi" userLabel="Container">
+                                                <rect key="frame" x="119.00000000000001" y="0.0" width="147.33333333333337" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cделать фото" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SV-Ma-dfk">
+                                                        <rect key="frame" x="29.999999999999993" y="20" width="117.33333333333331" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="UJw-rn-BSI">
+                                                        <rect key="frame" x="0.0" y="22" width="22" height="16"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="16" id="H6d-gm-mH8"/>
+                                                            <constraint firstAttribute="width" constant="22" id="YSf-0C-qpF"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="UJw-rn-BSI" firstAttribute="leading" secondItem="4rF-vr-TSi" secondAttribute="leading" id="56a-3J-rUs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="1SV-Ma-dfk" secondAttribute="trailing" id="GML-pO-V4G"/>
+                                                    <constraint firstItem="UJw-rn-BSI" firstAttribute="centerY" secondItem="4rF-vr-TSi" secondAttribute="centerY" id="HQ3-aM-UuF"/>
+                                                    <constraint firstItem="1SV-Ma-dfk" firstAttribute="centerY" secondItem="4rF-vr-TSi" secondAttribute="centerY" id="Hc6-2H-SL6"/>
+                                                    <constraint firstItem="1SV-Ma-dfk" firstAttribute="leading" secondItem="UJw-rn-BSI" secondAttribute="trailing" constant="8" id="aCt-o8-UQE"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.011764705882352941" green="0.71764705882352942" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstItem="1SV-Ma-dfk" firstAttribute="centerX" secondItem="9O6-IW-LBG" secondAttribute="centerX" id="2ql-Q7-64N"/>
+                                            <constraint firstItem="4rF-vr-TSi" firstAttribute="centerY" secondItem="9O6-IW-LBG" secondAttribute="centerY" id="46A-aD-RrM"/>
                                             <constraint firstAttribute="height" constant="60" id="9al-1E-nie"/>
+                                            <constraint firstAttribute="bottom" secondItem="4rF-vr-TSi" secondAttribute="bottom" id="Crx-EN-aYD"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="NfY-12-6sG"/>
-                                            <constraint firstItem="1SV-Ma-dfk" firstAttribute="centerY" secondItem="9O6-IW-LBG" secondAttribute="centerY" id="UHS-1n-HeO"/>
+                                            <constraint firstItem="4rF-vr-TSi" firstAttribute="top" secondItem="9O6-IW-LBG" secondAttribute="top" id="QyC-kp-lIK"/>
+                                            <constraint firstItem="4rF-vr-TSi" firstAttribute="centerX" secondItem="9O6-IW-LBG" secondAttribute="centerX" id="YXT-jx-uJn"/>
                                         </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="9cp-ng-9rx" appends="YES" id="mzv-BX-ffT"/>
@@ -859,6 +881,7 @@
     </scenes>
     <resources>
         <image name="back_icon" width="13" height="22"/>
+        <image name="camera" width="22" height="16"/>
         <image name="cross" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
