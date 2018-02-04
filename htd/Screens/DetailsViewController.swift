@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import SwiftPhotoGallery
 
 class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
-    SwiftPhotoGalleryDelegate, SwiftPhotoGalleryDataSource,
     UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var hasDrownLabel: UIView!
@@ -28,13 +26,6 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
     
     var index: Int = 0
     var level: Level?
-    
-    func galleryDidTapToClose(gallery: SwiftPhotoGallery) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,29 +57,6 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         return 15
     }
     
-    func numberOfImagesInGallery(gallery: SwiftPhotoGallery) -> Int {
-        return level!.tutorials.count
-    }
-    
-    func imageInGallery(gallery: SwiftPhotoGallery, forIndex: Int) -> UIImage? {
-        return UIImage.init(named: level!.tutorials[forIndex])
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        index = indexPath.item
-        
-        let gallery = SwiftPhotoGallery(delegate: self, dataSource: self)
-        gallery.backgroundColor = UIColor.white
-        gallery.pageIndicatorTintColor = UIColor.gray.withAlphaComponent(0.5)
-        gallery.currentPageIndicatorTintColor = UIColor(red: 0.0, green: 0.66, blue: 0.875, alpha: 1.0)
-        gallery.hidePageControl = false
-        gallery.modalPresentationStyle = .custom
-        
-        present(gallery, animated: true, completion: { () -> Void in
-            gallery.currentPage = self.index
-        })
-    }
-    
     @objc func exit() {
         self.navigationController?.popViewController(animated: true)
     }
@@ -114,9 +82,14 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
             let dest = segue.destination as! RecognizerViewController
             dest.level = self.level
         }
+        if segue.identifier == "showGallery" {
+            let dest = segue.destination as! CarouselViewController
+            dest.images = self.level!.tutorials.map {
+                UIImage.init(named: $0)!
+            }
+            dest.pageNumber = self.collectionView.indexPathsForSelectedItems!.first!.item
+        }
     }
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -33,9 +33,11 @@
 		B468F425200BA0C100C085C5 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */; };
 		B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F42D200BC55500C085C5 /* RecognizerViewController.swift */; };
 		B47F3B41202612BF007E0B26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B47F3B43202612BF007E0B26 /* Localizable.strings */; };
+		B47F3B4B20264245007E0B26 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47F3B4A20264245007E0B26 /* CarouselViewController.swift */; };
 		B4BCFE22202609F4008161EA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4BCFE21202609F3008161EA /* Info.plist */; };
 		B4BCFE2520260A45008161EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4BCFE2720260A45008161EA /* InfoPlist.strings */; };
 		B4BCFE2D20260B72008161EA /* GramCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BCFE2C20260B72008161EA /* GramCase.swift */; };
+		B4CCEE582026586E0081014A /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCEE572026586E0081014A /* CarouselPageViewController.swift */; };
 		B4D931B42023A33F0071E283 /* SuccessScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D931B32023A33F0071E283 /* SuccessScreenViewController.swift */; };
 		B4D931B92024E0BC0071E283 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D931B82024E0BC0071E283 /* Score.swift */; };
 		B4D931BE202595F50071E283 /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4D931BD202595F50071E283 /* Images.bundle */; };
@@ -71,10 +73,12 @@
 		B468F42D200BC55500C085C5 /* RecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerViewController.swift; sourceTree = "<group>"; };
 		B47F3B42202612BF007E0B26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B47F3B44202612C1007E0B26 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B47F3B4A20264245007E0B26 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		B4BCFE21202609F3008161EA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4BCFE2620260A45008161EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4BCFE2820260A46008161EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4BCFE2C20260B72008161EA /* GramCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramCase.swift; sourceTree = "<group>"; };
+		B4CCEE572026586E0081014A /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
 		B4D931B32023A33F0071E283 /* SuccessScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScreenViewController.swift; sourceTree = "<group>"; };
 		B4D931B82024E0BC0071E283 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		B4D931BD202595F50071E283 /* Images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Images.bundle; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				B455A6F8200B9457000247BC /* DetailsViewController.swift */,
 				B468F42D200BC55500C085C5 /* RecognizerViewController.swift */,
 				B4D931B32023A33F0071E283 /* SuccessScreenViewController.swift */,
+				B47F3B4A20264245007E0B26 /* CarouselViewController.swift */,
+				B4CCEE572026586E0081014A /* CarouselPageViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -371,10 +377,12 @@
 				B468F425200BA0C100C085C5 /* GalleryCollectionViewCell.swift in Sources */,
 				B455A6D1200AA240000247BC /* MainScreenViewController.swift in Sources */,
 				B4D931B92024E0BC0071E283 /* Score.swift in Sources */,
+				B4CCEE582026586E0081014A /* CarouselPageViewController.swift in Sources */,
 				B4D931C02025B6690071E283 /* realmodel.mlmodel in Sources */,
 				B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */,
 				B455A6C3200A6601000247BC /* htd.xcdatamodeld in Sources */,
 				B455A6F2200AAF68000247BC /* LevelsTableViewCell.swift in Sources */,
+				B47F3B4B20264245007E0B26 /* CarouselViewController.swift in Sources */,
 				B4D931B42023A33F0071E283 /* SuccessScreenViewController.swift in Sources */,
 				B455A6F9200B9457000247BC /* DetailsViewController.swift in Sources */,
 				B4BCFE2D20260B72008161EA /* GramCase.swift in Sources */,

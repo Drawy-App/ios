@@ -9,4 +9,4 @@
 "STEPS_NN" = "step";
 "STEPS_NM" = "steps";
 "STEPS_GM" = "steps";
-
+"GALLERY_STEPS" = "%d of %d";

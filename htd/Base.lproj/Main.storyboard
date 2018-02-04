@@ -461,6 +461,7 @@
                                                     <outlet property="counterLabel" destination="7Xh-56-zmA" id="Dgh-pV-W1w"/>
                                                     <outlet property="imageView" destination="iM7-af-enh" id="VRG-Jl-yVS"/>
                                                     <outlet property="previewContainer" destination="XKo-Bx-EM0" id="9mD-KD-jdO"/>
+                                                    <segue destination="kqY-6P-Try" kind="presentation" identifier="showGallery" modalPresentationStyle="overCurrentContext" id="XFt-Gs-Lh0"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -565,6 +566,99 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1214.4927536231885" y="114.94565217391305"/>
+        </scene>
+        <!--Carousel View Controller-->
+        <scene sceneID="M3v-Sx-pSU">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="kqY-6P-Try" customClass="CarouselViewController" customModule="htd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sgc-JX-pBR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHB-Mq-gsj">
+                                <rect key="frame" x="20" y="40" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="VAh-sA-YcB"/>
+                                    <constraint firstAttribute="width" secondItem="cHB-Mq-gsj" secondAttribute="height" multiplier="1:1" id="WAu-tO-hhP"/>
+                                </constraints>
+                                <state key="normal" image="cross"/>
+                            </button>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yva-YJ-Mex">
+                                <rect key="frame" x="0.0" y="80" width="414" height="576"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JL5-FD-2xF" userLabel="Footer">
+                                <rect key="frame" x="0.0" y="656" width="414" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 из 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-50-6Zx">
+                                        <rect key="frame" x="175.66666666666666" y="28.666666666666629" width="63.666666666666657" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="iAe-Vr-bbN"/>
+                                    <constraint firstItem="7ew-50-6Zx" firstAttribute="centerY" secondItem="JL5-FD-2xF" secondAttribute="centerY" id="m5R-WG-toh"/>
+                                    <constraint firstItem="7ew-50-6Zx" firstAttribute="centerX" secondItem="JL5-FD-2xF" secondAttribute="centerX" id="v1n-jG-u0u"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Yva-YJ-Mex" firstAttribute="top" secondItem="zOp-1W-eRB" secondAttribute="top" constant="60" id="426-U7-ohm"/>
+                            <constraint firstItem="Yva-YJ-Mex" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" id="5Ln-oQ-B55"/>
+                            <constraint firstItem="JL5-FD-2xF" firstAttribute="top" secondItem="Yva-YJ-Mex" secondAttribute="bottom" id="6aW-Ne-FaE"/>
+                            <constraint firstItem="JL5-FD-2xF" firstAttribute="bottom" secondItem="zOp-1W-eRB" secondAttribute="bottom" id="KGE-j9-UOp"/>
+                            <constraint firstItem="cHB-Mq-gsj" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" constant="20" id="PWL-pS-35a"/>
+                            <constraint firstItem="zOp-1W-eRB" firstAttribute="trailing" secondItem="JL5-FD-2xF" secondAttribute="trailing" id="TOv-0o-HCi"/>
+                            <constraint firstItem="cHB-Mq-gsj" firstAttribute="top" secondItem="zOp-1W-eRB" secondAttribute="top" constant="20" id="eSl-vs-6qE"/>
+                            <constraint firstItem="JL5-FD-2xF" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" id="eZg-Wf-oTT"/>
+                            <constraint firstItem="zOp-1W-eRB" firstAttribute="trailing" secondItem="Yva-YJ-Mex" secondAttribute="trailing" id="pUm-kq-Lmd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zOp-1W-eRB"/>
+                    </view>
+                    <connections>
+                        <outlet property="crossButton" destination="cHB-Mq-gsj" id="vNG-FY-y74"/>
+                        <outlet property="pagesLabel" destination="7ew-50-6Zx" id="XrW-R2-yBo"/>
+                        <outlet property="pagesView" destination="Yva-YJ-Mex" id="l1l-37-BPa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dch-22-6wN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213.0434782608697" y="877.98913043478262"/>
+        </scene>
+        <!--Carousel Page View Controller-->
+        <scene sceneID="oPv-Tv-zqD">
+            <objects>
+                <viewController storyboardIdentifier="CarouselPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IRm-gD-U6S" customClass="CarouselPageViewController" customModule="htd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="inf-MX-RWA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2pv-5e-6Ty">
+                                <rect key="frame" x="40" y="100" width="334" height="556"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2pv-5e-6Ty" firstAttribute="leading" secondItem="SLi-3p-Tdz" secondAttribute="leading" constant="40" id="Cx0-Un-ctO"/>
+                            <constraint firstItem="SLi-3p-Tdz" firstAttribute="bottom" secondItem="2pv-5e-6Ty" secondAttribute="bottom" constant="80" id="ViW-pC-cPY"/>
+                            <constraint firstItem="2pv-5e-6Ty" firstAttribute="top" secondItem="SLi-3p-Tdz" secondAttribute="top" constant="80" id="kcZ-t2-E5X"/>
+                            <constraint firstItem="SLi-3p-Tdz" firstAttribute="trailing" secondItem="2pv-5e-6Ty" secondAttribute="trailing" constant="40" id="qQ1-j3-fi1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SLi-3p-Tdz"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="2pv-5e-6Ty" id="ksP-3J-li3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUs-vb-lQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2064" y="878"/>
         </scene>
         <!--Recognizer View Controller-->
         <scene sceneID="UOU-ZU-9PN">
@@ -745,5 +839,6 @@
     </scenes>
     <resources>
         <image name="back_icon" width="13" height="22"/>
+        <image name="cross" width="16" height="16"/>
     </resources>
 </document>
