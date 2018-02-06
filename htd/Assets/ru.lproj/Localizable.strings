@@ -24,6 +24,8 @@
 "STEPS_HEADER" = "Инструкции";
 "SUCCESS_LABEL" = "Ура, у вас получилось!\n\nСкорее начните следующий рисунок";
 "COMING_SOON" = "Новые картинки появятся совсем скоро";
+"ASK_REJECTED_PERMISSIONS" = "Пожалуйста, разрешите доступ к камере";
+"ASK_REJECTED_PERMISSIONS_BUTTON" = "Разрешить";
 
 "lutz_boat0" = "Лодка";
 "lutz_lighthouse0" = "Маяк";

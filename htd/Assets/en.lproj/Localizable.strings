@@ -23,6 +23,8 @@
 "STEPS_HEADER" = "Steps";
 "SUCCESS_LABEL" = "Hurrah! You've completed this drawing";
 "COMING_SOON" = "More tutorials coming very soon";
+"ASK_REJECTED_PERMISSIONS" = "Please allow this app to use your camera";
+"ASK_REJECTED_PERMISSIONS_BUTTON" = "Allow";
 
 "lutz_boat0" = "Boat";
 "lutz_lighthouse0" = "Lighthouse";

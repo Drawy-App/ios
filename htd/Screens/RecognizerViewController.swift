@@ -20,6 +20,9 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
         case Success
     }
     
+    @IBOutlet weak var grantPermissionLabel: UIView!
+    @IBOutlet weak var askPermissionButton: UIButton!
+    @IBOutlet weak var askPermissionText: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var backButtonLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
@@ -34,6 +37,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
     var hasFinished = false
     var envParams: [String:Any] = [:]
     var state = State.Nothing
+    var settingsUrl: URL?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,33 +46,38 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
         ]
         
         self.queue = DispatchQueue.global(qos: .userInteractive)
-        initModel()
-        try? VNImageRequestHandler(
-                ciImage: CIImage.init(image: UIImage.init(named: "test")!)!
-            ).perform([request!])
+        initModel(completed: {
+            #if IOS_SIMULATOR
+                self.initEmulator()
+            #else
+                self.queue!.async {
+                    self.checkPermissions(completed: self.initCamera)
+                }
+            #endif
+        })
         
         backTapGesture.addTarget(self, action: #selector(self.exit))
         
+        self.askPermissionButton.addTarget(self, action: #selector(self.openSettings), for: .touchUpInside)
+        
+        self.askPermissionText.text = NSLocalizedString("ASK_REJECTED_PERMISSIONS", comment: "Ask rejected permissions")
+        self.askPermissionButton.setTitle(NSLocalizedString("ASK_REJECTED_PERMISSIONS_BUTTON", comment: "Ask rejected permissions button"), for: .normal)
         self.backButtonLabel.text = NSLocalizedString("BACK_BUTTON", comment: "Back button")
         self.headerLabel.text = NSLocalizedString("RECOGNIZE_HEADER", comment: "Recognize screen header")
         self.captionLabel.text = NSLocalizedString("POINT_CAMERA", comment: "Ask for pointing camera")
-        
-        #if IOS_SIMULATOR
-            initEmulator()
-        #else
-            queue!.async {
-                self.initCamera()
-            }
-        #endif
-        
+    
     }
         
-        func initEmulator() {
-            NSLog("emulator mode")
-            Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
-                self.success()
-            })
-        }
+    func initEmulator() {
+        NSLog("emulator mode")
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
+            self.success()
+        })
+    }
+    
+    @objc func openSettings() {
+        UIApplication.shared.open(self.settingsUrl!, options: [:], completionHandler: nil)
+    }
     
     @objc func exit() {
         self.navigationController?.popViewController(animated: true)
@@ -78,7 +87,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
         super.didReceiveMemoryWarning()
     }
     
-    func initModel() {
+    func initModel(completed: (() -> ())?) {
         guard let model = try? VNCoreMLModel(for: realmodel().model) else {return}
         request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
             let results = finishedRequest.results as! [VNClassificationObservation]
@@ -86,6 +95,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
             self.rate(Int(result.confidence * 100))
         }
         request!.imageCropAndScaleOption = .scaleFill
+        if completed != nil { completed!() }
     }
     
     func rate(_ rate: Int) {
@@ -116,6 +126,35 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
                     Analytics.sharedInstance.event("lost_something", params: self.envParams)
                 }
                 
+            }
+        }
+    }
+    
+    func checkPermissions(completed: (() -> ())?) {
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            if completed != nil { completed!() }
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video, completionHandler: {_ in
+                self.checkPermissions(completed: completed)
+            })
+            return
+        default:
+            self.onRejectedGrants()
+            return
+        }
+        
+    }
+    
+    func onRejectedGrants() {
+        DispatchQueue.main.sync {
+            self.grantPermissionLabel.isHidden = false
+            self.settingsUrl = URL.init(string: UIApplicationOpenSettingsURLString)
+            guard self.settingsUrl != nil else {
+                return
+            }
+            if UIApplication.shared.canOpenURL(settingsUrl!) {
+                self.askPermissionButton.isHidden = false
             }
         }
     }

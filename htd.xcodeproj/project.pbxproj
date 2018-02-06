@@ -51,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		53F04AC74C63E30B0182C1EC /* Pods-htd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.release.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.release.xcconfig"; sourceTree = "<group>"; };
+		B44E4F8E202982660062CEC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B455A6B7200A6600000247BC /* htd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = htd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B455A6BA200A6600000247BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B455A6BF200A6601000247BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -459,6 +460,7 @@
 			children = (
 				B4BCFE2620260A45008161EA /* en */,
 				B4BCFE2820260A46008161EA /* ru */,
+				B44E4F8E202982660062CEC5 /* Base */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

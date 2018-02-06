@@ -6,8 +6,8 @@
   Copyright © 2018 Alexey Landyrev. All rights reserved.
 */
 
-"CFBundleDisplayName" = "How to draw";
-"CFBundleName" = "How to draw";
+"CFBundleDisplayName" = "Drawing";
+"CFBundleName" = "Drawing";
 NSCameraUsageDescription = "This will let us to recognize the drawing you made";
 
 UILaunchStoryboardName = "LaunchScreen_en";
