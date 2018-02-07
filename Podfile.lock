@@ -1,25 +1,17 @@
 PODS:
-  - Realm (3.0.2):
-    - Realm/Headers (= 3.0.2)
-  - Realm/Headers (3.0.2)
-  - RealmSwift (3.0.2):
-    - Realm (= 3.0.2)
   - Yams (0.5.0)
   - YandexMobileMetrica (2.9.6):
     - YandexMobileMetrica/Static (= 2.9.6)
   - YandexMobileMetrica/Static (2.9.6)
 
 DEPENDENCIES:
-  - RealmSwift
   - Yams
   - YandexMobileMetrica
 
 SPEC CHECKSUMS:
-  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
-  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
   Yams: 58b13424ca380835c4c797bc775ce6cbb3bc0167
   YandexMobileMetrica: 330c11f9e4b8b3b72454c0cd80f61b4231467ebe
 
-PODFILE CHECKSUM: cbfa25540b4965d7a33813be765fe2b46c5c7401
+PODFILE CHECKSUM: ec235bd0c2ccfb3a40fd011cb28f429c81a3a5d3
 
 COCOAPODS: 1.4.0

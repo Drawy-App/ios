@@ -5,5 +5,4 @@ use_frameworks!
 target 'htd' do
 	pod 'YandexMobileMetrica'
 	pod 'Yams'
-	pod 'RealmSwift'
 end
