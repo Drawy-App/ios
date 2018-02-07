@@ -12,13 +12,7 @@ import AVFoundation
 import Vision
 import CoreGraphics
 
-class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-    
-    enum State {
-        case Nothing
-        case Something
-        case Success
-    }
+class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, RecognizerDelegate {
     
     @IBOutlet weak var grantPermissionLabel: UIView!
     @IBOutlet weak var askPermissionButton: UIButton!
@@ -28,15 +22,14 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var previewView: UIImageView!
     @IBOutlet var backTapGesture: UITapGestureRecognizer!
+    
+    var recognizer: Recognizer?
     var level: Level?
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    var request: VNCoreMLRequest?
     var queue: DispatchQueue?
-    var lastFailureTime = NSDate().timeIntervalSince1970
     var hasFinished = false
     var envParams: [String:Any] = [:]
-    var state = State.Nothing
     var settingsUrl: URL?
 
     override func viewDidLoad() {
@@ -46,7 +39,8 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
         ]
         
         self.queue = DispatchQueue.global(qos: .userInteractive)
-        initModel(completed: {
+        
+        recognizer = Recognizer.init(level: self.level!, completed: {
             #if IOS_SIMULATOR
                 self.initEmulator()
             #else
@@ -55,6 +49,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
                 }
             #endif
         })
+        recognizer!.delegate = self
         
         backTapGesture.addTarget(self, action: #selector(self.exit))
         
@@ -71,7 +66,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
     func initEmulator() {
         NSLog("emulator mode")
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
-            self.success()
+            self.recognizeDidSuccess()
         })
     }
     
@@ -85,49 +80,6 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    func initModel(completed: (() -> ())?) {
-        guard let model = try? VNCoreMLModel(for: realmodel().model) else {return}
-        request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
-            let results = finishedRequest.results as! [VNClassificationObservation]
-            let result = results.filter {$0.identifier == self.level!.name}.first!
-            self.rate(Int(result.confidence * 100))
-        }
-        request!.imageCropAndScaleOption = .scaleFill
-        if completed != nil { completed!() }
-    }
-    
-    func rate(_ rate: Int) {
-        let now = NSDate().timeIntervalSince1970
-        if rate > 90 {
-            let timeElapsed = now - lastFailureTime
-            if timeElapsed > 0.33 {
-                if timeElapsed > 3  {
-                    self.success()
-                } else {
-                    if self.state != .Something {
-                        self.state = .Something
-                        DispatchQueue.main.async {
-                            self.captionLabel.text = NSLocalizedString(
-                                "FOUND_SOMETHING", comment: "Ask for pointing camera"
-                            )
-                            Analytics.sharedInstance.event("found_something", params: self.envParams)
-                        }
-                    }
-                }
-            }
-        } else {
-            lastFailureTime = now
-            if self.state != .Nothing {
-                self.state = .Nothing
-                DispatchQueue.main.async {
-                    self.captionLabel.text = NSLocalizedString("POINT_CAMERA", comment: "Ask for pointing camera")
-                    Analytics.sharedInstance.event("lost_something", params: self.envParams)
-                }
-                
-            }
-        }
     }
     
     func checkPermissions(completed: (() -> ())?) {
@@ -159,7 +111,23 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
         }
     }
     
-    func success() {
+    func recognizeDidFound() {
+        DispatchQueue.main.async {
+            self.captionLabel.text = NSLocalizedString(
+                "FOUND_SOMETHING", comment: "Ask for pointing camera"
+            )
+            Analytics.sharedInstance.event("found_something", params: self.envParams)
+        }
+    }
+    
+    func recognizeDidLost() {
+        DispatchQueue.main.async {
+            self.captionLabel.text = NSLocalizedString("POINT_CAMERA", comment: "Ask for pointing camera")
+            Analytics.sharedInstance.event("lost_something", params: self.envParams)
+        }
+    }
+    
+    func recognizeDidSuccess() {
         #if IOS_SIMULATOR
             self.level!.set(1)
             Analytics.sharedInstance.event("success_recognized", params: self.envParams)
@@ -185,27 +153,15 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
     }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-        CVPixelBufferLockBaseAddress(pixelBuffer, .readOnly);
-        var baseImg = CIImage.init(cvPixelBuffer: pixelBuffer)
-        baseImg = cropCiImage(baseImg)
-        DispatchQueue.main.async {
-            self.previewView.image = UIImage.init(ciImage: baseImg)
+        let baseImage = self.recognizer?.processImage(sampleBuffer)
+        DispatchQueue.main.sync {
+            if baseImage != nil {
+                self.previewView.image = UIImage.init(ciImage: baseImage!)
+            }
         }
-        try? VNImageRequestHandler(ciImage: baseImg, options: [:]).perform([request!])
-        CVPixelBufferUnlockBaseAddress(pixelBuffer, .readOnly);
     }
     
-    func cropCiImage(_ ciImage: CIImage) -> CIImage {
-        var newImage = ciImage
-        newImage = newImage.oriented(.right)
-        let imageSize = newImage.extent
-        let targetSize = imageSize.width > imageSize.height ? imageSize.height : imageSize.width
-        let targetRect = CGRect.init(x: 0, y: 0, width: targetSize, height: targetSize)
-        
-        return newImage.cropped(to: targetRect)
-        
-    }
+    
     
     func initCamera() {
         
