@@ -18,7 +18,11 @@ class Analytics {
     
     func initMetrics() {
         Fabric.with([Crashlytics.self])
-        YMMYandexMetrica.activate(withApiKey: "73f4540f-a438-4b3b-97f3-2b0f5f452043")
+        #if IOS_DEBUG
+            YMMYandexMetrica.activate(withApiKey: "dfc8e1e1-ffc6-46b1-822e-f9c39bb43510")
+        #else
+            YMMYandexMetrica.activate(withApiKey: "73f4540f-a438-4b3b-97f3-2b0f5f452043")
+        #endif
     }
     
     func navigate(_ pageName: String, params: [String:Any]?) {
@@ -27,6 +31,8 @@ class Analytics {
     
     func event(_ name: String, params: [String:Any]?) {
         YMMYandexMetrica.reportEvent(name, parameters: params, onFailure: nil)
-        NSLog("Message \"\(name)\" sended with params \(params ?? [:])")
+        #if IOS_DEBUG
+            NSLog("Message \"\(name)\" sended with params \(params ?? [:])")
+        #endif
     }
 }
