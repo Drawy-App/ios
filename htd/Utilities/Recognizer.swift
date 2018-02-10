@@ -45,11 +45,20 @@ class Recognizer {
     func cropCiImage(_ ciImage: CIImage) -> CIImage {
         var newImage = ciImage
         newImage = newImage.oriented(.right)
+        
         let imageSize = newImage.extent
         let targetSize = imageSize.width > imageSize.height ? imageSize.height : imageSize.width
-        let targetRect = CGRect.init(x: 0, y: 0, width: targetSize, height: targetSize)
+        let padding = abs(imageSize.width - imageSize.height) / 2
+        let targetRect = CGRect.init(x: 0, y: padding, width: targetSize, height: targetSize)
+        newImage = newImage.cropped(to: targetRect)
         
-        return newImage.cropped(to: targetRect)
+        let transformFilter = CIFilter.init(name: "CIAffineTransform")!
+        let affineTransform = CGAffineTransform.init(translationX: 0, y: 0 - padding)
+        transformFilter.setValue(newImage, forKey: "inputImage")
+        transformFilter.setValue(affineTransform, forKey: "inputTransform")
+        newImage = transformFilter.value(forKey: "outputImage") as! CIImage
+        
+        return newImage
         
     }
     

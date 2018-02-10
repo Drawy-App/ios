@@ -153,12 +153,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
     }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        let baseImage = self.recognizer?.processImage(sampleBuffer)
-        DispatchQueue.main.sync {
-            if baseImage != nil {
-                self.previewView.image = UIImage.init(ciImage: baseImage!)
-            }
-        }
+        let _ = self.recognizer?.processImage(sampleBuffer)
     }
     
     
@@ -180,6 +175,13 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
             captureSession = AVCaptureSession()
             captureSession?.addInput(input)
             captureSession?.addOutput(output)
+            
+            let preview = AVCaptureVideoPreviewLayer.init(session: captureSession!)
+            DispatchQueue.main.sync {
+                preview.frame = self.previewView.bounds
+                preview.videoGravity = .resizeAspectFill
+                self.previewView.layer.addSublayer(preview)
+            }
             
             do {
                 try captureDevice.lockForConfiguration()
