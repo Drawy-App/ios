@@ -1,5 +1,5 @@
-*.mlmodel
 *.ipynb_checkpoints
+tools/*/*.mlmodel
 
 # Xcode
 #
