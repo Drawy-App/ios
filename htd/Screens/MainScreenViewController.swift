@@ -13,6 +13,8 @@ class MainScreenViewController:
         UITableViewDataSource, UINavigationControllerDelegate
 {
     
+    var previews: [UIImage] = []
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return Levels.sharedInstance.data.count + 1
     }
@@ -45,6 +47,7 @@ class MainScreenViewController:
         let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell") as! LevelsTableViewCell
         let data = Levels.sharedInstance.data[indexPath.section]
         cell.level = data
+        cell.previewView.image = previews[indexPath.section]
         cell.indexPath = indexPath
         cell.tableView = tableView
         return cell
@@ -69,6 +72,10 @@ class MainScreenViewController:
         self.appSubTitleLable.text = NSLocalizedString("APP_SUBTITLE", comment: "App title")
         LevelsList.delegate = self
         LevelsList.dataSource = self
+        
+        previews = Levels.sharedInstance.data.map {level in
+            UIImage.init(named: level.preview)!
+        }
         
         // Do any additional setup after loading the view.
 //        self.navigationController!.delegate = self

@@ -52,7 +52,6 @@ class LevelsTableViewCell: UITableViewCell {
         hasDrawnView.isHidden = level!.rating == 0
         durationTitle.text = GramCase.getLocalizedString(number: level!.tutorials.count, key: "STEPS")
         title.text = NSLocalizedString(level!.name, comment: "Level name")
-        previewView.image = UIImage.init(named: level!.preview)
     }
 
 }
