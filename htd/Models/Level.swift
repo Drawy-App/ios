@@ -12,19 +12,25 @@ import RealmSwift
 class Level {
     let name: String
     var rating: Int
+    var difficulty: Int
     let preview: String
     let title: String
     let stage: Int
+    var totalStars: Int {
+        return self.rating * self.difficulty
+    }
+    
     static let bundleName: String = "Images.bundle"
 
     let tutorials: [String]
     let defaults: UserDefaults
     
-    init(name: String, tutorials: [String], stage: Int, realm: Realm) {
+    init(name: String, tutorials: [String], stage: Int, difficulty: Int, realm: Realm) {
         self.defaults = UserDefaults.standard
         
         self.name = name
         self.stage = stage
+        self.difficulty = difficulty
         self.preview = Level.getUrl("\(name)/\(name)_preview.png")
         self.title = NSLocalizedString(name, comment: "Tutorial name")
         self.tutorials = tutorials.map { Level.getUrl($0) }

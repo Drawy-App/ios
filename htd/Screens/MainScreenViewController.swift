@@ -24,13 +24,17 @@ class MainScreenViewController:
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        return 54
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView.init()
-        headerView.backgroundColor = UIColor.clear
-        return headerView
+        let header = tableView.dequeueReusableCell(withIdentifier: "stageHeader") as! MoreCaptionTableViewCell
+        header.captionLabel.text = NSLocalizedString("STAGE_NAME", comment: "Stage name").uppercased() +
+            " \(section + 1)"
+        let stage = Levels.sharedInstance.stages[section + 1]!
+        header.contentView.layer.opacity = stage.isUnlocked ? 1 : 0.5
+        
+        return header
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -40,11 +44,15 @@ class MainScreenViewController:
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell") as! LevelsTableViewCell
         
-        let data = Levels.sharedInstance.stages[indexPath.section + 1]!.levels[indexPath.row]
-        cell.level = data
+        let stage = Levels.sharedInstance.stages[indexPath.section + 1]!
+        let level = stage.levels[indexPath.row]
+        cell.level = level
         cell.previewView.image = previews[indexPath.section + 1]![indexPath.row]
         cell.indexPath = indexPath
         cell.tableView = tableView
+        
+        cell.cellView.layer.opacity = stage.isUnlocked ? 1 : 0.5
+        
         return cell
     }
     
@@ -69,11 +77,16 @@ class MainScreenViewController:
         self.appSubTitleLable.text = NSLocalizedString("APP_SUBTITLE", comment: "App title")
         LevelsList.delegate = self
         LevelsList.dataSource = self
+        LevelsList.backgroundView = nil
+        LevelsList.backgroundColor = .clear
+        LevelsList.contentInset = .init(top: 20, left: 0, bottom: 0, right: 0)
         
+        print("total stars", Levels.sharedInstance.totalStars)
         for stage in Levels.sharedInstance.stages {
             previews[stage.key] = stage.value.levels.map {level in
                 UIImage.init(named: level.preview)!
             }
+            print("stage", stage.value.number, stage.value.isUnlocked)
         }
         
         // Do any additional setup after loading the view.

@@ -12,6 +12,7 @@
 "STEPS_NM" = "steps";
 "STEPS_GM" = "steps";
 "STEPS_NS" = "steps";
+"STAGE_NAME" = "Level";
 
 "GALLERY_STEPS" = "%d of %d";
 "NEXT_BUTTON" = "Next";

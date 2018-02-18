@@ -15,6 +15,11 @@ class Levels {
     static let bundleName: String = "Images.bundle"
     static let sharedInstance = Levels()
     var stages: [Int: Stage] = [:]
+    var totalStars: Int {
+        return self.stages.map {stage in
+            stage.value.totalStars
+        }.reduce(0, +)
+    }
     
     private static func loadLevels(_ realm: Realm) -> [Level] {
         var levels: [Level] = []
@@ -26,6 +31,7 @@ class Levels {
                 name: level["name"] as! String,
                 tutorials: level["tutorials"] as! [String],
                 stage: level["level"] as! Int,
+                difficulty: level["difficulty"] as! Int,
                 realm: realm
             ))
         }
@@ -35,9 +41,9 @@ class Levels {
     init() {
         
         let realm = try! Realm()
-//        try! realm.write {
-//            realm.deleteAll()
-//        }
+        try! realm.write {
+            realm.deleteAll()
+        }
         
         self.data = Levels.loadLevels(realm)
         for stageNumber in Array(Set(self.data.map { $0.stage })) {
