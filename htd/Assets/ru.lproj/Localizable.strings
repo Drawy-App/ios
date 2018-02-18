@@ -12,6 +12,7 @@
 "STEPS_NN" = "шаг";
 "STEPS_NM" = "шага";
 "STEPS_GM" = "шагов";
+"STEPS_NS" = "шага";
 
 "GALLERY_STEPS" = "%d из %d";
 "NEXT_BUTTON" = "Далее";

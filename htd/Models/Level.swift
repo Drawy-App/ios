@@ -14,18 +14,17 @@ class Level {
     var rating: Int
     let preview: String
     let title: String
-    let duration: Int
+
     let tutorials: [String]
     let defaults: UserDefaults
     
-    init(name: String, preview: String, title: String, duration: Int,
+    init(name: String, preview: String, title: String,
          tutorials: [String], realm: Realm) {
         self.defaults = UserDefaults.standard
         
         self.name = name
         self.preview = preview
         self.title = title
-        self.duration = duration
         self.tutorials = tutorials
         
         var score = realm.object(ofType: Score.self, forPrimaryKey: name)

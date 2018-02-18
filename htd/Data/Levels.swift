@@ -24,8 +24,7 @@ class Levels {
             levels.append(Level.init(
                 name: level["name"] as! String,
                 preview: getUrl(level["preview"] as! String),
-                title: level["title"] as! String,
-                duration: level["duration"] as! Int,
+                title: level["name"] as! String,
                 tutorials: (level["tutorials"] as! [String])
                     .map { getUrl($0) },
                 realm: realm
