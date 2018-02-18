@@ -32,7 +32,8 @@ class Level {
         self.stage = stage
         self.difficulty = difficulty
         self.preview = Level.getUrl("\(name)/\(name)_preview.png")
-        self.title = NSLocalizedString(name, comment: "Tutorial name")
+//        self.title = NSLocalizedString(name, comment: "Tutorial name")
+        self.title = Bundle.main.localizedString(forKey: name, value: nil, table: "Levels")
         self.tutorials = tutorials.map { Level.getUrl($0) }
         
         var score = realm.object(ofType: Score.self, forPrimaryKey: name)
