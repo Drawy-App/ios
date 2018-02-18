@@ -14,15 +14,17 @@ class Level {
     var rating: Int
     let preview: String
     let title: String
+    let stage: Int
     static let bundleName: String = "Images.bundle"
 
     let tutorials: [String]
     let defaults: UserDefaults
     
-    init(name: String, tutorials: [String], realm: Realm) {
+    init(name: String, tutorials: [String], stage: Int, realm: Realm) {
         self.defaults = UserDefaults.standard
         
         self.name = name
+        self.stage = stage
         self.preview = Level.getUrl("\(name)/\(name)_preview.png")
         self.title = NSLocalizedString(name, comment: "Tutorial name")
         self.tutorials = tutorials.map { Level.getUrl($0) }

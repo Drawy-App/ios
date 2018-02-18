@@ -13,18 +13,18 @@ class MainScreenViewController:
         UITableViewDataSource, UINavigationControllerDelegate
 {
     
-    var previews: [UIImage] = []
+    var previews: [Int: [UIImage]] = [:]
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return Levels.sharedInstance.data.count + 1
+        return Levels.sharedInstance.stages.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return Levels.sharedInstance.stages[section + 1]!.levels.count
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 0 ? 10 : 0
+        return 10
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -38,16 +38,11 @@ class MainScreenViewController:
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == Levels.sharedInstance.data.count {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "moreImagesCell") as! MoreCaptionTableViewCell
-            cell.captionLabel.text = NSLocalizedString("COMING_SOON", comment: "More coming soon")
-            return cell
-            
-        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell") as! LevelsTableViewCell
-        let data = Levels.sharedInstance.data[indexPath.section]
+        
+        let data = Levels.sharedInstance.stages[indexPath.section + 1]!.levels[indexPath.row]
         cell.level = data
-        cell.previewView.image = previews[indexPath.section]
+        cell.previewView.image = previews[indexPath.section + 1]![indexPath.row]
         cell.indexPath = indexPath
         cell.tableView = tableView
         return cell
@@ -56,7 +51,9 @@ class MainScreenViewController:
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier! == "showDetails" {
             let destVC = segue.destination as! DetailsViewController
-            destVC.level = Levels.sharedInstance.data[self.LevelsList.indexPathForSelectedRow!.section]
+            let indexPath = self.LevelsList.indexPathForSelectedRow!
+            destVC.level = Levels.sharedInstance
+                .stages[indexPath.section + 1]!.levels[indexPath.row]
         }
         
     }
@@ -73,8 +70,10 @@ class MainScreenViewController:
         LevelsList.delegate = self
         LevelsList.dataSource = self
         
-        previews = Levels.sharedInstance.data.map {level in
-            UIImage.init(named: level.preview)!
+        for stage in Levels.sharedInstance.stages {
+            previews[stage.key] = stage.value.levels.map {level in
+                UIImage.init(named: level.preview)!
+            }
         }
         
         // Do any additional setup after loading the view.

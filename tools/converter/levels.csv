@@ -1,48 +1,48 @@
 name,title_ru,title_en,difficulty,level
-lutz_aquarium0,Аквариум,Aquarium,2,1
-lutz_boat0,Лодка,Boat,,1
-lutz_boat1,Пароход,Steamship,,1
-lutz_buffalo0,Бизон,Buffalo,,1
-lutz_but1,Бабочка,Butterfly,1,1
-lutz_but3,Мельпомена,Golden helicon,2,1
-lutz_buttercup0,Лютик,Buttercup,2,1
-lutz_cat0,Кошка,Cat,,1
-lutz_daisy0,Ромашка,Daisy,,1
-lutz_dog1,Пёс,Dog,,1
-lutz_duck0,Утка,Duck,,1
-lutz_el1,Слон,Elephant,,1
-lutz_face2,Мужчина в шляпе,Man in hat,,1
-lutz_fish0,Рыба,Fish,,1
-lutz_flower0,Цветок,Flower,1,1
-lutz_fox0,Лиса,Fox,2,1
-lutz_futhsia0,Фуксия,Fuchsia,,1
-lutz_globe0,Глобус,Globe,,1
-lutz_goose0,Гусь,Goose,3,1
-lutz_heron0,Цапля,Heron,,1
-lutz_horse0,Лошадь,Horse,,1
-lutz_jackpulit0,Аризема трёхлистная,Jack in the pulpit,,1
-lutz_lighthouse0,Маяк,Lighthouse,,1
-lutz_mapple0,Кленовый лист,Maple leaf,2,1
-lutz_morningglory0,Вьюнок,Morning glory,2,1
-lutz_mouse1,Мышь,Mouse,,1
-lutz_narcissus0,Нарцисс,Narcissus,3,1
-lutz_owl0,Сова,Owl,,1
-lutz_owl1,Сыч,Owl's head,,1
-lutz_peng0,Пингвин,Penguin,,1
-lutz_pig0,Свин,Pig,,1
-lutz_plane0,Биплан,Biplane,,1
-lutz_plane1,Аэроплан,Airplane,,1
-lutz_plane2,Низкоплан,Low wing,,1
-lutz_pug0,Маленький мопс,Little pug,,1
-lutz_rab0,Кролик,Rabbit,,1
-lutz_rab3,Дикий кролик,Standing rabbit,,1
-lutz_radish0,Редис,Radish,1,1
-lutz_snail0,Улитка,Snail,,1
-lutz_squirrel0,Белка,Squirrel,,1
-lutz_stork0,Аист,Stork,,1
-lutz_swallow0,Ласточка,Swallow,,1
-lutz_swallow2,Летящая ласточка,Swallow,,1
-lutz_swan0,Лебедь,Flying swallow,,1
-lutz_turtle0,Черепаха,Turtle,,1
-lutz_woman0,Лицо девушки,Woman's face,,1
+lutz_boat0,Лодка,Boat,1,1
+lutz_lighthouse0,Маяк,Lighthouse,2,1
+lutz_swan0,Лебедь,Flying swallow,3,1
+lutz_woman0,Лицо девушки,Woman's face,3,1
+lutz_pug0,Маленький мопс,Little pug,3,1
+lutz_but1,Бабочка,Butterfly,1,2
+lutz_fish0,Рыба,Fish,1,2
+lutz_mapple0,Кленовый лист,Maple leaf,2,2
+lutz_fox0,Лиса,Fox,2,2
+lutz_goose0,Гусь,Goose,3,2
+lutz_cat0,Кошка,Cat,3,2
+lutz_duck0,Утка,Duck,3,2
+lutz_rab0,Кролик,Rabbit,1,3
+lutz_swallow0,Ласточка,Swallow,1,3
+lutz_mouse1,Мышь,Mouse,1,3
+lutz_but3,Мельпомена,Golden helicon,2,3
+lutz_boat1,Пароход,Steamship,2,3
+lutz_owl1,Сыч,Owl's head,2,3
+lutz_squirrel0,Белка,Squirrel,3,3
+lutz_plane0,Биплан,Biplane,3,3
+lutz_horse0,Лошадь,Horse,3,3
+lutz_futhsia0,Фуксия,Fuchsia,3,3
+lutz_swallow2,Летящая ласточка,Swallow,1,4
+lutz_peng0,Пингвин,Penguin,1,4
+lutz_radish0,Редис,Radish,1,4
+lutz_flower0,Цветок,Flower,1,4
+lutz_rab3,Дикий кролик,Standing rabbit,2,4
+lutz_dog1,Пёс,Dog,2,4
+lutz_daisy0,Ромашка,Daisy,2,4
+lutz_owl0,Сова,Owl,2,4
+lutz_jackpulit0,Аризема трёхлистная,Jack in the pulpit,3,4
+lutz_plane1,Аэроплан,Airplane,3,4
+lutz_buffalo0,Бизон,Buffalo,3,4
+lutz_pig0,Свин,Pig,3,4
+lutz_snail0,Улитка,Snail,1,5
+lutz_turtle0,Черепаха,Turtle,1,5
+lutz_aquarium0,Аквариум,Aquarium,2,5
+lutz_morningglory0,Вьюнок,Morning glory,2,5
+lutz_buttercup0,Лютик,Buttercup,2,5
+lutz_el1,Слон,Elephant,2,5
+lutz_globe0,Глобус,Globe,2,5
+lutz_stork0,Аист,Stork,3,5
+lutz_face2,Мужчина в шляпе,Man in hat,3,5
+lutz_narcissus0,Нарцисс,Narcissus,3,5
+lutz_plane2,Низкоплан,Low wing,3,5
+lutz_heron0,Цапля,Heron,3,5
 random,,,,

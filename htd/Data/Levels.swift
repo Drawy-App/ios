@@ -14,6 +14,7 @@ class Levels {
     let data: [Level]
     static let bundleName: String = "Images.bundle"
     static let sharedInstance = Levels()
+    var stages: [Int: Stage] = [:]
     
     private static func loadLevels(_ realm: Realm) -> [Level] {
         var levels: [Level] = []
@@ -24,6 +25,7 @@ class Levels {
             levels.append(Level.init(
                 name: level["name"] as! String,
                 tutorials: level["tutorials"] as! [String],
+                stage: level["level"] as! Int,
                 realm: realm
             ))
         }
@@ -38,5 +40,12 @@ class Levels {
 //        }
         
         self.data = Levels.loadLevels(realm)
+        for stageNumber in Array(Set(self.data.map { $0.stage })) {
+            let stage = Stage.init(stageNumber, levels: self.data.filter({
+                $0.stage == stageNumber
+            }))
+            self.stages[stageNumber] = stage
+        }
+        print(self.stages)
     }
 }

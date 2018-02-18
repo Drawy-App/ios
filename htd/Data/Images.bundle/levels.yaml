@@ -1,15 +1,4 @@
-- difficulty: '2'
-  level: '1'
-  name: lutz_aquarium0
-  title_en: Aquarium
-  title_ru: Аквариум
-  tutorials:
-  - lutz_aquarium0/lutz_aquarium0_00.jpg
-  - lutz_aquarium0/lutz_aquarium0_01.jpg
-  - lutz_aquarium0/lutz_aquarium0_02.jpg
-  - lutz_aquarium0/lutz_aquarium0_03.jpg
-  - lutz_aquarium0/lutz_aquarium0_04.jpg
-- difficulty: ''
+- difficulty: '1'
   level: '1'
   name: lutz_boat0
   title_en: Boat
@@ -21,33 +10,57 @@
   - lutz_boat0/lutz_boat0_03.jpg
   - lutz_boat0/lutz_boat0_04.jpg
   - lutz_boat0/lutz_boat0_05.jpg
-- difficulty: ''
+- difficulty: '2'
   level: '1'
-  name: lutz_boat1
-  title_en: Steamship
-  title_ru: Пароход
+  name: lutz_lighthouse0
+  title_en: Lighthouse
+  title_ru: Маяк
   tutorials:
-  - lutz_boat1/lutz_boat1_00.jpg
-  - lutz_boat1/lutz_boat1_01.jpg
-  - lutz_boat1/lutz_boat1_02.jpg
-  - lutz_boat1/lutz_boat1_03.jpg
-  - lutz_boat1/lutz_boat1_04.jpg
-  - lutz_boat1/lutz_boat1_05.jpg
-- difficulty: ''
+  - lutz_lighthouse0/lutz_lighthouse0_00.jpg
+  - lutz_lighthouse0/lutz_lighthouse0_01.jpg
+  - lutz_lighthouse0/lutz_lighthouse0_02.jpg
+  - lutz_lighthouse0/lutz_lighthouse0_03.jpg
+  - lutz_lighthouse0/lutz_lighthouse0_04.jpg
+  - lutz_lighthouse0/lutz_lighthouse0_05.jpg
+- difficulty: '3'
   level: '1'
-  name: lutz_buffalo0
-  title_en: Buffalo
-  title_ru: Бизон
+  name: lutz_swan0
+  title_en: Flying swallow
+  title_ru: Лебедь
   tutorials:
-  - lutz_buffalo0/lutz_buffalo0_00.jpg
-  - lutz_buffalo0/lutz_buffalo0_01.jpg
-  - lutz_buffalo0/lutz_buffalo0_02.jpg
-  - lutz_buffalo0/lutz_buffalo0_03.jpg
-  - lutz_buffalo0/lutz_buffalo0_04.jpg
-  - lutz_buffalo0/lutz_buffalo0_05.jpg
-  - lutz_buffalo0/lutz_buffalo0_06.jpg
+  - lutz_swan0/lutz_swan0_00.jpg
+  - lutz_swan0/lutz_swan0_01.jpg
+  - lutz_swan0/lutz_swan0_02.jpg
+  - lutz_swan0/lutz_swan0_03.jpg
+  - lutz_swan0/lutz_swan0_04.jpg
+  - lutz_swan0/lutz_swan0_05.jpg
+- difficulty: '3'
+  level: '1'
+  name: lutz_woman0
+  title_en: Woman's face
+  title_ru: Лицо девушки
+  tutorials:
+  - lutz_woman0/lutz_woman0_00.jpg
+  - lutz_woman0/lutz_woman0_01.jpg
+  - lutz_woman0/lutz_woman0_02.jpg
+  - lutz_woman0/lutz_woman0_03.jpg
+  - lutz_woman0/lutz_woman0_04.jpg
+  - lutz_woman0/lutz_woman0_05.jpg
+- difficulty: '3'
+  level: '1'
+  name: lutz_pug0
+  title_en: Little pug
+  title_ru: Маленький мопс
+  tutorials:
+  - lutz_pug0/lutz_pug0_00.jpg
+  - lutz_pug0/lutz_pug0_01.jpg
+  - lutz_pug0/lutz_pug0_02.jpg
+  - lutz_pug0/lutz_pug0_03.jpg
+  - lutz_pug0/lutz_pug0_04.jpg
+  - lutz_pug0/lutz_pug0_05.jpg
+  - lutz_pug0/lutz_pug0_06.jpg
 - difficulty: '1'
-  level: '1'
+  level: '2'
   name: lutz_but1
   title_en: Butterfly
   title_ru: Бабочка
@@ -57,98 +70,8 @@
   - lutz_but1/lutz_but1_02.jpg
   - lutz_but1/lutz_but1_03.jpg
   - lutz_but1/lutz_but1_04.jpg
-- difficulty: '2'
-  level: '1'
-  name: lutz_but3
-  title_en: Golden helicon
-  title_ru: Мельпомена
-  tutorials:
-  - lutz_but3/lutz_but3_00.jpg
-  - lutz_but3/lutz_but3_01.jpg
-  - lutz_but3/lutz_but3_02.jpg
-  - lutz_but3/lutz_but3_03.jpg
-  - lutz_but3/lutz_but3_04.jpg
-- difficulty: '2'
-  level: '1'
-  name: lutz_buttercup0
-  title_en: Buttercup
-  title_ru: Лютик
-  tutorials:
-  - lutz_buttercup0/lutz_buttercup0_00.jpg
-  - lutz_buttercup0/lutz_buttercup0_01.jpg
-  - lutz_buttercup0/lutz_buttercup0_02.jpg
-  - lutz_buttercup0/lutz_buttercup0_03.jpg
-  - lutz_buttercup0/lutz_buttercup0_04.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_cat0
-  title_en: Cat
-  title_ru: Кошка
-  tutorials:
-  - lutz_cat0/lutz_cat0_00.jpg
-  - lutz_cat0/lutz_cat0_01.jpg
-  - lutz_cat0/lutz_cat0_02.jpg
-  - lutz_cat0/lutz_cat0_03.jpg
-  - lutz_cat0/lutz_cat0_04.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_daisy0
-  title_en: Daisy
-  title_ru: Ромашка
-  tutorials:
-  - lutz_daisy0/lutz_daisy0_00.jpg
-  - lutz_daisy0/lutz_daisy0_01.jpg
-  - lutz_daisy0/lutz_daisy0_02.jpg
-  - lutz_daisy0/lutz_daisy0_03.jpg
-  - lutz_daisy0/lutz_daisy0_04.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_dog1
-  title_en: Dog
-  title_ru: Пёс
-  tutorials:
-  - lutz_dog1/lutz_dog1_00.jpg
-  - lutz_dog1/lutz_dog1_01.jpg
-  - lutz_dog1/lutz_dog1_02.jpg
-  - lutz_dog1/lutz_dog1_03.jpg
-  - lutz_dog1/lutz_dog1_04.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_duck0
-  title_en: Duck
-  title_ru: Утка
-  tutorials:
-  - lutz_duck0/lutz_duck0_00.jpg
-  - lutz_duck0/lutz_duck0_01.jpg
-  - lutz_duck0/lutz_duck0_02.jpg
-  - lutz_duck0/lutz_duck0_03.jpg
-  - lutz_duck0/lutz_duck0_04.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_el1
-  title_en: Elephant
-  title_ru: Слон
-  tutorials:
-  - lutz_el1/lutz_el1_00.jpg
-  - lutz_el1/lutz_el1_01.jpg
-  - lutz_el1/lutz_el1_02.jpg
-  - lutz_el1/lutz_el1_03.jpg
-  - lutz_el1/lutz_el1_04.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_face2
-  title_en: Man in hat
-  title_ru: Мужчина в шляпе
-  tutorials:
-  - lutz_face2/lutz_face2_00.jpg
-  - lutz_face2/lutz_face2_01.jpg
-  - lutz_face2/lutz_face2_02.jpg
-  - lutz_face2/lutz_face2_03.jpg
-  - lutz_face2/lutz_face2_04.jpg
-  - lutz_face2/lutz_face2_05.jpg
-  - lutz_face2/lutz_face2_06.jpg
-- difficulty: ''
-  level: '1'
+- difficulty: '1'
+  level: '2'
   name: lutz_fish0
   title_en: Fish
   title_ru: Рыба
@@ -157,21 +80,18 @@
   - lutz_fish0/lutz_fish0_01.jpg
   - lutz_fish0/lutz_fish0_02.jpg
   - lutz_fish0/lutz_fish0_03.jpg
-- difficulty: '1'
-  level: '1'
-  name: lutz_flower0
-  title_en: Flower
-  title_ru: Цветок
-  tutorials:
-  - lutz_flower0/lutz_flower0_00.jpg
-  - lutz_flower0/lutz_flower0_01.jpg
-  - lutz_flower0/lutz_flower0_02.jpg
-  - lutz_flower0/lutz_flower0_03.jpg
-  - lutz_flower0/lutz_flower0_04.jpg
-  - lutz_flower0/lutz_flower0_05.jpg
-  - lutz_flower0/lutz_flower0_06.jpg
 - difficulty: '2'
-  level: '1'
+  level: '2'
+  name: lutz_mapple0
+  title_en: Maple leaf
+  title_ru: Кленовый лист
+  tutorials:
+  - lutz_mapple0/lutz_mapple0_00.jpg
+  - lutz_mapple0/lutz_mapple0_01.jpg
+  - lutz_mapple0/lutz_mapple0_02.jpg
+  - lutz_mapple0/lutz_mapple0_03.jpg
+- difficulty: '2'
+  level: '2'
   name: lutz_fox0
   title_en: Fox
   title_ru: Лиса
@@ -182,31 +102,8 @@
   - lutz_fox0/lutz_fox0_03.jpg
   - lutz_fox0/lutz_fox0_04.jpg
   - lutz_fox0/lutz_fox0_05.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_futhsia0
-  title_en: Fuchsia
-  title_ru: Фуксия
-  tutorials:
-  - lutz_futhsia0/lutz_futhsia0_00.jpg
-  - lutz_futhsia0/lutz_futhsia0_01.jpg
-  - lutz_futhsia0/lutz_futhsia0_02.jpg
-  - lutz_futhsia0/lutz_futhsia0_03.jpg
-  - lutz_futhsia0/lutz_futhsia0_04.jpg
-  - lutz_futhsia0/lutz_futhsia0_05.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_globe0
-  title_en: Globe
-  title_ru: Глобус
-  tutorials:
-  - lutz_globe0/lutz_globe0_00.jpg
-  - lutz_globe0/lutz_globe0_01.jpg
-  - lutz_globe0/lutz_globe0_02.jpg
-  - lutz_globe0/lutz_globe0_03.jpg
-  - lutz_globe0/lutz_globe0_04.jpg
 - difficulty: '3'
-  level: '1'
+  level: '2'
   name: lutz_goose0
   title_en: Goose
   title_ru: Гусь
@@ -217,20 +114,115 @@
   - lutz_goose0/lutz_goose0_03.jpg
   - lutz_goose0/lutz_goose0_04.jpg
   - lutz_goose0/lutz_goose0_05.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_heron0
-  title_en: Heron
-  title_ru: Цапля
+- difficulty: '3'
+  level: '2'
+  name: lutz_cat0
+  title_en: Cat
+  title_ru: Кошка
   tutorials:
-  - lutz_heron0/lutz_heron0_00.jpg
-  - lutz_heron0/lutz_heron0_01.jpg
-  - lutz_heron0/lutz_heron0_02.jpg
-  - lutz_heron0/lutz_heron0_03.jpg
-  - lutz_heron0/lutz_heron0_04.jpg
-  - lutz_heron0/lutz_heron0_05.jpg
-- difficulty: ''
-  level: '1'
+  - lutz_cat0/lutz_cat0_00.jpg
+  - lutz_cat0/lutz_cat0_01.jpg
+  - lutz_cat0/lutz_cat0_02.jpg
+  - lutz_cat0/lutz_cat0_03.jpg
+  - lutz_cat0/lutz_cat0_04.jpg
+- difficulty: '3'
+  level: '2'
+  name: lutz_duck0
+  title_en: Duck
+  title_ru: Утка
+  tutorials:
+  - lutz_duck0/lutz_duck0_00.jpg
+  - lutz_duck0/lutz_duck0_01.jpg
+  - lutz_duck0/lutz_duck0_02.jpg
+  - lutz_duck0/lutz_duck0_03.jpg
+  - lutz_duck0/lutz_duck0_04.jpg
+- difficulty: '1'
+  level: '3'
+  name: lutz_rab0
+  title_en: Rabbit
+  title_ru: Кролик
+  tutorials:
+  - lutz_rab0/lutz_rab0_00.jpg
+  - lutz_rab0/lutz_rab0_01.jpg
+  - lutz_rab0/lutz_rab0_02.jpg
+  - lutz_rab0/lutz_rab0_03.jpg
+  - lutz_rab0/lutz_rab0_04.jpg
+- difficulty: '1'
+  level: '3'
+  name: lutz_swallow0
+  title_en: Swallow
+  title_ru: Ласточка
+  tutorials:
+  - lutz_swallow0/lutz_swallow0_00.jpg
+  - lutz_swallow0/lutz_swallow0_01.jpg
+  - lutz_swallow0/lutz_swallow0_02.jpg
+  - lutz_swallow0/lutz_swallow0_03.jpg
+  - lutz_swallow0/lutz_swallow0_04.jpg
+- difficulty: '1'
+  level: '3'
+  name: lutz_mouse1
+  title_en: Mouse
+  title_ru: Мышь
+  tutorials:
+  - lutz_mouse1/lutz_mouse1_00.jpg
+  - lutz_mouse1/lutz_mouse1_01.jpg
+  - lutz_mouse1/lutz_mouse1_02.jpg
+  - lutz_mouse1/lutz_mouse1_03.jpg
+- difficulty: '2'
+  level: '3'
+  name: lutz_but3
+  title_en: Golden helicon
+  title_ru: Мельпомена
+  tutorials:
+  - lutz_but3/lutz_but3_00.jpg
+  - lutz_but3/lutz_but3_01.jpg
+  - lutz_but3/lutz_but3_02.jpg
+  - lutz_but3/lutz_but3_03.jpg
+  - lutz_but3/lutz_but3_04.jpg
+- difficulty: '2'
+  level: '3'
+  name: lutz_boat1
+  title_en: Steamship
+  title_ru: Пароход
+  tutorials:
+  - lutz_boat1/lutz_boat1_00.jpg
+  - lutz_boat1/lutz_boat1_01.jpg
+  - lutz_boat1/lutz_boat1_02.jpg
+  - lutz_boat1/lutz_boat1_03.jpg
+  - lutz_boat1/lutz_boat1_04.jpg
+  - lutz_boat1/lutz_boat1_05.jpg
+- difficulty: '2'
+  level: '3'
+  name: lutz_owl1
+  title_en: Owl's head
+  title_ru: Сыч
+  tutorials:
+  - lutz_owl1/lutz_owl1_01.jpg
+  - lutz_owl1/lutz_owl1_02.jpg
+  - lutz_owl1/lutz_owl1_03.jpg
+  - lutz_owl1/lutz_owl1_04.jpg
+  - lutz_owl1/lutz_owl1_05.jpg
+- difficulty: '3'
+  level: '3'
+  name: lutz_squirrel0
+  title_en: Squirrel
+  title_ru: Белка
+  tutorials:
+  - lutz_squirrel0/lutz_squirrel0_00.jpg
+  - lutz_squirrel0/lutz_squirrel0_01.jpg
+  - lutz_squirrel0/lutz_squirrel0_02.jpg
+- difficulty: '3'
+  level: '3'
+  name: lutz_plane0
+  title_en: Biplane
+  title_ru: Биплан
+  tutorials:
+  - lutz_plane0/lutz_plane0_00.jpg
+  - lutz_plane0/lutz_plane0_01.jpg
+  - lutz_plane0/lutz_plane0_02.jpg
+  - lutz_plane0/lutz_plane0_03.jpg
+- difficulty: '3'
+  level: '3'
   name: lutz_horse0
   title_en: Horse
   title_ru: Лошадь
@@ -244,94 +236,31 @@
   - lutz_horse0/lutz_horse0_06.jpg
   - lutz_horse0/lutz_horse0_07.jpg
   - lutz_horse0/lutz_horse0_08.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_jackpulit0
-  title_en: Jack in the pulpit
-  title_ru: Аризема трёхлистная
-  tutorials:
-  - lutz_jackpulit0/lutz_jackpulit0_00.jpg
-  - lutz_jackpulit0/lutz_jackpulit0_01.jpg
-  - lutz_jackpulit0/lutz_jackpulit0_02.jpg
-  - lutz_jackpulit0/lutz_jackpulit0_03.jpg
-  - lutz_jackpulit0/lutz_jackpulit0_04.jpg
-  - lutz_jackpulit0/lutz_jackpulit0_05.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_lighthouse0
-  title_en: Lighthouse
-  title_ru: Маяк
-  tutorials:
-  - lutz_lighthouse0/lutz_lighthouse0_00.jpg
-  - lutz_lighthouse0/lutz_lighthouse0_01.jpg
-  - lutz_lighthouse0/lutz_lighthouse0_02.jpg
-  - lutz_lighthouse0/lutz_lighthouse0_03.jpg
-  - lutz_lighthouse0/lutz_lighthouse0_04.jpg
-  - lutz_lighthouse0/lutz_lighthouse0_05.jpg
-- difficulty: '2'
-  level: '1'
-  name: lutz_mapple0
-  title_en: Maple leaf
-  title_ru: Кленовый лист
-  tutorials:
-  - lutz_mapple0/lutz_mapple0_00.jpg
-  - lutz_mapple0/lutz_mapple0_01.jpg
-  - lutz_mapple0/lutz_mapple0_02.jpg
-  - lutz_mapple0/lutz_mapple0_03.jpg
-- difficulty: '2'
-  level: '1'
-  name: lutz_morningglory0
-  title_en: Morning glory
-  title_ru: Вьюнок
-  tutorials:
-  - lutz_morningglory0/lutz_morningglory0_00.jpg
-  - lutz_morningglory0/lutz_morningglory0_01.jpg
-  - lutz_morningglory0/lutz_morningglory0_02.jpg
-  - lutz_morningglory0/lutz_morningglory0_03.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_mouse1
-  title_en: Mouse
-  title_ru: Мышь
-  tutorials:
-  - lutz_mouse1/lutz_mouse1_00.jpg
-  - lutz_mouse1/lutz_mouse1_01.jpg
-  - lutz_mouse1/lutz_mouse1_02.jpg
-  - lutz_mouse1/lutz_mouse1_03.jpg
 - difficulty: '3'
-  level: '1'
-  name: lutz_narcissus0
-  title_en: Narcissus
-  title_ru: Нарцисс
+  level: '3'
+  name: lutz_futhsia0
+  title_en: Fuchsia
+  title_ru: Фуксия
   tutorials:
-  - lutz_narcissus0/lutz_narcissus0_00.jpg
-  - lutz_narcissus0/lutz_narcissus0_01.jpg
-  - lutz_narcissus0/lutz_narcissus0_02.jpg
-  - lutz_narcissus0/lutz_narcissus0_03.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_owl0
-  title_en: Owl
-  title_ru: Сова
+  - lutz_futhsia0/lutz_futhsia0_00.jpg
+  - lutz_futhsia0/lutz_futhsia0_01.jpg
+  - lutz_futhsia0/lutz_futhsia0_02.jpg
+  - lutz_futhsia0/lutz_futhsia0_03.jpg
+  - lutz_futhsia0/lutz_futhsia0_04.jpg
+  - lutz_futhsia0/lutz_futhsia0_05.jpg
+- difficulty: '1'
+  level: '4'
+  name: lutz_swallow2
+  title_en: Swallow
+  title_ru: Летящая ласточка
   tutorials:
-  - lutz_owl0/lutz_owl0_00.jpg
-  - lutz_owl0/lutz_owl0_01.jpg
-  - lutz_owl0/lutz_owl0_02.jpg
-  - lutz_owl0/lutz_owl0_03.jpg
-  - lutz_owl0/lutz_owl0_04.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_owl1
-  title_en: Owl's head
-  title_ru: Сыч
-  tutorials:
-  - lutz_owl1/lutz_owl1_01.jpg
-  - lutz_owl1/lutz_owl1_02.jpg
-  - lutz_owl1/lutz_owl1_03.jpg
-  - lutz_owl1/lutz_owl1_04.jpg
-  - lutz_owl1/lutz_owl1_05.jpg
-- difficulty: ''
-  level: '1'
+  - lutz_swallow2/lutz_swallow2_00.jpg
+  - lutz_swallow2/lutz_swallow2_01.jpg
+  - lutz_swallow2/lutz_swallow2_02.jpg
+  - lutz_swallow2/lutz_swallow2_03.jpg
+  - lutz_swallow2/lutz_swallow2_04.jpg
+- difficulty: '1'
+  level: '4'
   name: lutz_peng0
   title_en: Penguin
   title_ru: Пингвин
@@ -340,73 +269,31 @@
   - lutz_peng0/lutz_peng0_01.jpg
   - lutz_peng0/lutz_peng0_02.jpg
   - lutz_peng0/lutz_peng0_03.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_pig0
-  title_en: Pig
-  title_ru: Свин
+- difficulty: '1'
+  level: '4'
+  name: lutz_radish0
+  title_en: Radish
+  title_ru: Редис
   tutorials:
-  - lutz_pig0/lutz_pig0_00.jpg
-  - lutz_pig0/lutz_pig0_01.jpg
-  - lutz_pig0/lutz_pig0_02.jpg
-  - lutz_pig0/lutz_pig0_03.jpg
-  - lutz_pig0/lutz_pig0_04.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_plane0
-  title_en: Biplane
-  title_ru: Биплан
+  - lutz_radish0/lutz_radish0_00.jpg
+  - lutz_radish0/lutz_radish0_01.jpg
+  - lutz_radish0/lutz_radish0_02.jpg
+  - lutz_radish0/lutz_radish0_03.jpg
+- difficulty: '1'
+  level: '4'
+  name: lutz_flower0
+  title_en: Flower
+  title_ru: Цветок
   tutorials:
-  - lutz_plane0/lutz_plane0_00.jpg
-  - lutz_plane0/lutz_plane0_01.jpg
-  - lutz_plane0/lutz_plane0_02.jpg
-  - lutz_plane0/lutz_plane0_03.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_plane1
-  title_en: Airplane
-  title_ru: Аэроплан
-  tutorials:
-  - lutz_plane1/lutz_plane1_00.jpg
-  - lutz_plane1/lutz_plane1_01.jpg
-  - lutz_plane1/lutz_plane1_02.jpg
-  - lutz_plane1/lutz_plane1_03.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_plane2
-  title_en: Low wing
-  title_ru: Низкоплан
-  tutorials:
-  - lutz_plane2/lutz_plane2_00.jpg
-  - lutz_plane2/lutz_plane2_01.jpg
-  - lutz_plane2/lutz_plane2_02.jpg
-  - lutz_plane2/lutz_plane2_03.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_pug0
-  title_en: Little pug
-  title_ru: Маленький мопс
-  tutorials:
-  - lutz_pug0/lutz_pug0_00.jpg
-  - lutz_pug0/lutz_pug0_01.jpg
-  - lutz_pug0/lutz_pug0_02.jpg
-  - lutz_pug0/lutz_pug0_03.jpg
-  - lutz_pug0/lutz_pug0_04.jpg
-  - lutz_pug0/lutz_pug0_05.jpg
-  - lutz_pug0/lutz_pug0_06.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_rab0
-  title_en: Rabbit
-  title_ru: Кролик
-  tutorials:
-  - lutz_rab0/lutz_rab0_00.jpg
-  - lutz_rab0/lutz_rab0_01.jpg
-  - lutz_rab0/lutz_rab0_02.jpg
-  - lutz_rab0/lutz_rab0_03.jpg
-  - lutz_rab0/lutz_rab0_04.jpg
-- difficulty: ''
-  level: '1'
+  - lutz_flower0/lutz_flower0_00.jpg
+  - lutz_flower0/lutz_flower0_01.jpg
+  - lutz_flower0/lutz_flower0_02.jpg
+  - lutz_flower0/lutz_flower0_03.jpg
+  - lutz_flower0/lutz_flower0_04.jpg
+  - lutz_flower0/lutz_flower0_05.jpg
+  - lutz_flower0/lutz_flower0_06.jpg
+- difficulty: '2'
+  level: '4'
   name: lutz_rab3
   title_en: Standing rabbit
   title_ru: Дикий кролик
@@ -417,18 +304,87 @@
   - lutz_rab3/lutz_rab3_03.jpg
   - lutz_rab3/lutz_rab3_04.jpg
   - lutz_rab3/lutz_rab3_05.jpg
-- difficulty: '1'
-  level: '1'
-  name: lutz_radish0
-  title_en: Radish
-  title_ru: Редис
+- difficulty: '2'
+  level: '4'
+  name: lutz_dog1
+  title_en: Dog
+  title_ru: Пёс
   tutorials:
-  - lutz_radish0/lutz_radish0_00.jpg
-  - lutz_radish0/lutz_radish0_01.jpg
-  - lutz_radish0/lutz_radish0_02.jpg
-  - lutz_radish0/lutz_radish0_03.jpg
-- difficulty: ''
-  level: '1'
+  - lutz_dog1/lutz_dog1_00.jpg
+  - lutz_dog1/lutz_dog1_01.jpg
+  - lutz_dog1/lutz_dog1_02.jpg
+  - lutz_dog1/lutz_dog1_03.jpg
+  - lutz_dog1/lutz_dog1_04.jpg
+- difficulty: '2'
+  level: '4'
+  name: lutz_daisy0
+  title_en: Daisy
+  title_ru: Ромашка
+  tutorials:
+  - lutz_daisy0/lutz_daisy0_00.jpg
+  - lutz_daisy0/lutz_daisy0_01.jpg
+  - lutz_daisy0/lutz_daisy0_02.jpg
+  - lutz_daisy0/lutz_daisy0_03.jpg
+  - lutz_daisy0/lutz_daisy0_04.jpg
+- difficulty: '2'
+  level: '4'
+  name: lutz_owl0
+  title_en: Owl
+  title_ru: Сова
+  tutorials:
+  - lutz_owl0/lutz_owl0_00.jpg
+  - lutz_owl0/lutz_owl0_01.jpg
+  - lutz_owl0/lutz_owl0_02.jpg
+  - lutz_owl0/lutz_owl0_03.jpg
+  - lutz_owl0/lutz_owl0_04.jpg
+- difficulty: '3'
+  level: '4'
+  name: lutz_jackpulit0
+  title_en: Jack in the pulpit
+  title_ru: Аризема трёхлистная
+  tutorials:
+  - lutz_jackpulit0/lutz_jackpulit0_00.jpg
+  - lutz_jackpulit0/lutz_jackpulit0_01.jpg
+  - lutz_jackpulit0/lutz_jackpulit0_02.jpg
+  - lutz_jackpulit0/lutz_jackpulit0_03.jpg
+  - lutz_jackpulit0/lutz_jackpulit0_04.jpg
+  - lutz_jackpulit0/lutz_jackpulit0_05.jpg
+- difficulty: '3'
+  level: '4'
+  name: lutz_plane1
+  title_en: Airplane
+  title_ru: Аэроплан
+  tutorials:
+  - lutz_plane1/lutz_plane1_00.jpg
+  - lutz_plane1/lutz_plane1_01.jpg
+  - lutz_plane1/lutz_plane1_02.jpg
+  - lutz_plane1/lutz_plane1_03.jpg
+- difficulty: '3'
+  level: '4'
+  name: lutz_buffalo0
+  title_en: Buffalo
+  title_ru: Бизон
+  tutorials:
+  - lutz_buffalo0/lutz_buffalo0_00.jpg
+  - lutz_buffalo0/lutz_buffalo0_01.jpg
+  - lutz_buffalo0/lutz_buffalo0_02.jpg
+  - lutz_buffalo0/lutz_buffalo0_03.jpg
+  - lutz_buffalo0/lutz_buffalo0_04.jpg
+  - lutz_buffalo0/lutz_buffalo0_05.jpg
+  - lutz_buffalo0/lutz_buffalo0_06.jpg
+- difficulty: '3'
+  level: '4'
+  name: lutz_pig0
+  title_en: Pig
+  title_ru: Свин
+  tutorials:
+  - lutz_pig0/lutz_pig0_00.jpg
+  - lutz_pig0/lutz_pig0_01.jpg
+  - lutz_pig0/lutz_pig0_02.jpg
+  - lutz_pig0/lutz_pig0_03.jpg
+  - lutz_pig0/lutz_pig0_04.jpg
+- difficulty: '1'
+  level: '5'
   name: lutz_snail0
   title_en: Snail
   title_ru: Улитка
@@ -437,17 +393,72 @@
   - lutz_snail0/lutz_snail0_01.jpg
   - lutz_snail0/lutz_snail0_02.jpg
   - lutz_snail0/lutz_snail0_03.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_squirrel0
-  title_en: Squirrel
-  title_ru: Белка
+- difficulty: '1'
+  level: '5'
+  name: lutz_turtle0
+  title_en: Turtle
+  title_ru: Черепаха
   tutorials:
-  - lutz_squirrel0/lutz_squirrel0_00.jpg
-  - lutz_squirrel0/lutz_squirrel0_01.jpg
-  - lutz_squirrel0/lutz_squirrel0_02.jpg
-- difficulty: ''
-  level: '1'
+  - lutz_turtle0/lutz_turtle0_00.jpg
+  - lutz_turtle0/lutz_turtle0_01.jpg
+  - lutz_turtle0/lutz_turtle0_02.jpg
+  - lutz_turtle0/lutz_turtle0_03.jpg
+- difficulty: '2'
+  level: '5'
+  name: lutz_aquarium0
+  title_en: Aquarium
+  title_ru: Аквариум
+  tutorials:
+  - lutz_aquarium0/lutz_aquarium0_00.jpg
+  - lutz_aquarium0/lutz_aquarium0_01.jpg
+  - lutz_aquarium0/lutz_aquarium0_02.jpg
+  - lutz_aquarium0/lutz_aquarium0_03.jpg
+  - lutz_aquarium0/lutz_aquarium0_04.jpg
+- difficulty: '2'
+  level: '5'
+  name: lutz_morningglory0
+  title_en: Morning glory
+  title_ru: Вьюнок
+  tutorials:
+  - lutz_morningglory0/lutz_morningglory0_00.jpg
+  - lutz_morningglory0/lutz_morningglory0_01.jpg
+  - lutz_morningglory0/lutz_morningglory0_02.jpg
+  - lutz_morningglory0/lutz_morningglory0_03.jpg
+- difficulty: '2'
+  level: '5'
+  name: lutz_buttercup0
+  title_en: Buttercup
+  title_ru: Лютик
+  tutorials:
+  - lutz_buttercup0/lutz_buttercup0_00.jpg
+  - lutz_buttercup0/lutz_buttercup0_01.jpg
+  - lutz_buttercup0/lutz_buttercup0_02.jpg
+  - lutz_buttercup0/lutz_buttercup0_03.jpg
+  - lutz_buttercup0/lutz_buttercup0_04.jpg
+- difficulty: '2'
+  level: '5'
+  name: lutz_el1
+  title_en: Elephant
+  title_ru: Слон
+  tutorials:
+  - lutz_el1/lutz_el1_00.jpg
+  - lutz_el1/lutz_el1_01.jpg
+  - lutz_el1/lutz_el1_02.jpg
+  - lutz_el1/lutz_el1_03.jpg
+  - lutz_el1/lutz_el1_04.jpg
+- difficulty: '2'
+  level: '5'
+  name: lutz_globe0
+  title_en: Globe
+  title_ru: Глобус
+  tutorials:
+  - lutz_globe0/lutz_globe0_00.jpg
+  - lutz_globe0/lutz_globe0_01.jpg
+  - lutz_globe0/lutz_globe0_02.jpg
+  - lutz_globe0/lutz_globe0_03.jpg
+  - lutz_globe0/lutz_globe0_04.jpg
+- difficulty: '3'
+  level: '5'
   name: lutz_stork0
   title_en: Stork
   title_ru: Аист
@@ -458,59 +469,48 @@
   - lutz_stork0/lutz_stork0_03.jpg
   - lutz_stork0/lutz_stork0_04.jpg
   - lutz_stork0/lutz_stork0_05.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_swallow0
-  title_en: Swallow
-  title_ru: Ласточка
+- difficulty: '3'
+  level: '5'
+  name: lutz_face2
+  title_en: Man in hat
+  title_ru: Мужчина в шляпе
   tutorials:
-  - lutz_swallow0/lutz_swallow0_00.jpg
-  - lutz_swallow0/lutz_swallow0_01.jpg
-  - lutz_swallow0/lutz_swallow0_02.jpg
-  - lutz_swallow0/lutz_swallow0_03.jpg
-  - lutz_swallow0/lutz_swallow0_04.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_swallow2
-  title_en: Swallow
-  title_ru: Летящая ласточка
+  - lutz_face2/lutz_face2_00.jpg
+  - lutz_face2/lutz_face2_01.jpg
+  - lutz_face2/lutz_face2_02.jpg
+  - lutz_face2/lutz_face2_03.jpg
+  - lutz_face2/lutz_face2_04.jpg
+  - lutz_face2/lutz_face2_05.jpg
+  - lutz_face2/lutz_face2_06.jpg
+- difficulty: '3'
+  level: '5'
+  name: lutz_narcissus0
+  title_en: Narcissus
+  title_ru: Нарцисс
   tutorials:
-  - lutz_swallow2/lutz_swallow2_00.jpg
-  - lutz_swallow2/lutz_swallow2_01.jpg
-  - lutz_swallow2/lutz_swallow2_02.jpg
-  - lutz_swallow2/lutz_swallow2_03.jpg
-  - lutz_swallow2/lutz_swallow2_04.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_swan0
-  title_en: Flying swallow
-  title_ru: Лебедь
+  - lutz_narcissus0/lutz_narcissus0_00.jpg
+  - lutz_narcissus0/lutz_narcissus0_01.jpg
+  - lutz_narcissus0/lutz_narcissus0_02.jpg
+  - lutz_narcissus0/lutz_narcissus0_03.jpg
+- difficulty: '3'
+  level: '5'
+  name: lutz_plane2
+  title_en: Low wing
+  title_ru: Низкоплан
   tutorials:
-  - lutz_swan0/lutz_swan0_00.jpg
-  - lutz_swan0/lutz_swan0_01.jpg
-  - lutz_swan0/lutz_swan0_02.jpg
-  - lutz_swan0/lutz_swan0_03.jpg
-  - lutz_swan0/lutz_swan0_04.jpg
-  - lutz_swan0/lutz_swan0_05.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_turtle0
-  title_en: Turtle
-  title_ru: Черепаха
+  - lutz_plane2/lutz_plane2_00.jpg
+  - lutz_plane2/lutz_plane2_01.jpg
+  - lutz_plane2/lutz_plane2_02.jpg
+  - lutz_plane2/lutz_plane2_03.jpg
+- difficulty: '3'
+  level: '5'
+  name: lutz_heron0
+  title_en: Heron
+  title_ru: Цапля
   tutorials:
-  - lutz_turtle0/lutz_turtle0_00.jpg
-  - lutz_turtle0/lutz_turtle0_01.jpg
-  - lutz_turtle0/lutz_turtle0_02.jpg
-  - lutz_turtle0/lutz_turtle0_03.jpg
-- difficulty: ''
-  level: '1'
-  name: lutz_woman0
-  title_en: Woman's face
-  title_ru: Лицо девушки
-  tutorials:
-  - lutz_woman0/lutz_woman0_00.jpg
-  - lutz_woman0/lutz_woman0_01.jpg
-  - lutz_woman0/lutz_woman0_02.jpg
-  - lutz_woman0/lutz_woman0_03.jpg
-  - lutz_woman0/lutz_woman0_04.jpg
-  - lutz_woman0/lutz_woman0_05.jpg
+  - lutz_heron0/lutz_heron0_00.jpg
+  - lutz_heron0/lutz_heron0_01.jpg
+  - lutz_heron0/lutz_heron0_02.jpg
+  - lutz_heron0/lutz_heron0_03.jpg
+  - lutz_heron0/lutz_heron0_04.jpg
+  - lutz_heron0/lutz_heron0_05.jpg
