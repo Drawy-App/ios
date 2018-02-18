@@ -23,21 +23,11 @@ class Levels {
         for level in yamlLevels {
             levels.append(Level.init(
                 name: level["name"] as! String,
-                preview: getUrl(level["preview"] as! String),
-                title: level["name"] as! String,
-                tutorials: (level["tutorials"] as! [String])
-                    .map { getUrl($0) },
+                tutorials: level["tutorials"] as! [String],
                 realm: realm
             ))
         }
         return levels
-    }
-    
-    private static func getUrl(_ name: String) -> String {
-        let shortName = String(name.split(separator: ".")[0])
-        let ext = String(name.split(separator: ".")[1])
-        let url = Bundle.main.path(forResource: shortName, ofType: ext, inDirectory: self.bundleName)
-        return url!
     }
     
     init() {

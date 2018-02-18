@@ -51,7 +51,7 @@ class LevelsTableViewCell: UITableViewCell {
     func updateLevel() {
         hasDrawnView.isHidden = level!.rating == 0
         durationTitle.text = GramCase.getLocalizedString(number: level!.tutorials.count, key: "STEPS")
-        title.text = NSLocalizedString(level!.name, comment: "Level name")
+        title.text = level!.title
     }
 
 }

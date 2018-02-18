@@ -1,40 +1,5 @@
-/* 
-  Localizable.strings
-  htd
-
-  Created by Alexey Landyrev on 03.02.2018.
-  Copyright © 2018 Alexey Landyrev. All rights reserved.
-*/
-
-"APP_TITLE" = "КАК РИСОВАТЬ";
-"APP_SUBTITLE" = "ПО ШАГАМ";
-
-"STEPS_NN" = "шаг";
-"STEPS_NM" = "шага";
-"STEPS_GM" = "шагов";
-"STEPS_NS" = "шага";
-
-"GALLERY_STEPS" = "%d из %d";
-"NEXT_BUTTON" = "Далее";
-"CHECK_BUTTON" = "Проверить";
-"HAS_DROWN_LABEL" = "Нарисовано";
-"BACK_BUTTON" = "Назад";
-"RECOGNIZE_HEADER" = "Фото";
-"POINT_CAMERA" = "Наведите камеру на ваш рисунок";
-"FOUND_SOMETHING" = "Кажется мы нашли что-то...";
-"STEPS_HEADER" = "Инструкции";
-"SUCCESS_LABEL" = "Ура, у вас получилось!\n\nСкорее начните следующий рисунок";
-"COMING_SOON" = "Новые картинки появятся совсем скоро";
-"ASK_REJECTED_PERMISSIONS" = "Пожалуйста, разрешите доступ к камере";
-"ASK_REJECTED_PERMISSIONS_BUTTON" = "Разрешить";
-
-"lutz_boat0" = "Лодка";
-"lutz_lighthouse0" = "Маяк";
-"lutz_pug0" = "Маленький мопс";
-"lutz_swan0" = "Лебедь";
-"lutz_woman0" = "Лицо девушки";
-
 "lutz_aquarium0" = "Аквариум";
+"lutz_boat0" = "Лодка";
 "lutz_boat1" = "Пароход";
 "lutz_buffalo0" = "Бизон";
 "lutz_but1" = "Бабочка";
@@ -55,6 +20,7 @@
 "lutz_heron0" = "Цапля";
 "lutz_horse0" = "Лошадь";
 "lutz_jackpulit0" = "Аризема трёхлистная";
+"lutz_lighthouse0" = "Маяк";
 "lutz_mapple0" = "Кленовый лист";
 "lutz_morningglory0" = "Вьюнок";
 "lutz_mouse1" = "Мышь";
@@ -66,12 +32,15 @@
 "lutz_plane0" = "Биплан";
 "lutz_plane1" = "Аэроплан";
 "lutz_plane2" = "Низкоплан";
+"lutz_pug0" = "Маленький мопс";
 "lutz_rab0" = "Кролик";
 "lutz_rab3" = "Дикий кролик";
 "lutz_radish0" = "Редис";
 "lutz_snail0" = "Улитка";
 "lutz_squirrel0" = "Белка";
-"lutz_stork0" = "Цапля";
+"lutz_stork0" = "Аист";
 "lutz_swallow0" = "Ласточка";
 "lutz_swallow2" = "Летящая ласточка";
+"lutz_swan0" = "Лебедь";
 "lutz_turtle0" = "Черепаха";
+"lutz_woman0" = "Лицо девушки";

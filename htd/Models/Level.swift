@@ -14,18 +14,18 @@ class Level {
     var rating: Int
     let preview: String
     let title: String
+    static let bundleName: String = "Images.bundle"
 
     let tutorials: [String]
     let defaults: UserDefaults
     
-    init(name: String, preview: String, title: String,
-         tutorials: [String], realm: Realm) {
+    init(name: String, tutorials: [String], realm: Realm) {
         self.defaults = UserDefaults.standard
         
         self.name = name
-        self.preview = preview
-        self.title = title
-        self.tutorials = tutorials
+        self.preview = Level.getUrl("\(name)/\(name)_preview.png")
+        self.title = NSLocalizedString(name, comment: "Tutorial name")
+        self.tutorials = tutorials.map { Level.getUrl($0) }
         
         var score = realm.object(ofType: Score.self, forPrimaryKey: name)
         if score == nil {
@@ -38,6 +38,13 @@ class Level {
         }
         self.rating = score!.rating
         
+    }
+    
+    private static func getUrl(_ name: String) -> String {
+        let shortName = String(name.split(separator: ".")[0])
+        let ext = String(name.split(separator: ".")[1])
+        let url = Bundle.main.path(forResource: shortName, ofType: ext, inDirectory: self.bundleName)
+        return url!
     }
     
     func set(_ rating: Int) {
