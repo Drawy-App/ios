@@ -35,7 +35,9 @@ class Recognizer {
         guard let model = try? VNCoreMLModel(for: realmodel().model) else {return}
         request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
             let results = finishedRequest.results as! [VNClassificationObservation]
-            let result = results.filter {$0.identifier == self.level.name}.first!
+            let result = results.filter {
+                $0.identifier.replacingOccurrences(of: " ", with: "_") == self.level.name
+            }.first!
             self.rate(Int(result.confidence * 100))
         }
         request!.imageCropAndScaleOption = .scaleFill
