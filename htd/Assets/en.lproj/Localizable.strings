@@ -27,3 +27,5 @@
 "COMING_SOON" = "More tutorials coming very soon";
 "ASK_REJECTED_PERMISSIONS" = "Please allow this app to use your camera";
 "ASK_REJECTED_PERMISSIONS_BUTTON" = "Allow";
+"DIFFICULTY" = "Difficulty";
+"NEED_MORE_STARS" = "Collect %d more ⭐ to unlock new level";

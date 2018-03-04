@@ -10,11 +10,10 @@ import UIKit
 
 class LevelsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var durationTitle: UILabel!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var previewView: UIImageView!
-    @IBOutlet weak var hasDrawnView: UIView!
-    @IBOutlet weak var hasDrownLabel: UILabel!
+    @IBOutlet weak var starsOuterView: UIView!
+    
     @IBOutlet weak var cellView: UIView!
     var indexPath: IndexPath?
     var tableView: UITableView?
@@ -34,7 +33,6 @@ class LevelsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        hasDrownLabel.text = NSLocalizedString("HAS_DROWN_LABEL", comment: "Has drown label")
         
         backgroundColor = .clear
         contentView.backgroundColor = .clear
@@ -44,14 +42,23 @@ class LevelsTableViewCell: UITableViewCell {
         cellView.layer.shadowOpacity = 0.5
         cellView.layer.shadowColor = UIColor.black.cgColor
         cellView.layer.shadowRadius = 0
-        
-        hasDrawnView.layer.cornerRadius = 4
     }
 
     func updateLevel() {
-        hasDrawnView.isHidden = level!.rating == 0
-        durationTitle.text = GramCase.getLocalizedString(number: level!.tutorials.count, key: "STEPS")
         title.text = level!.title
+        for view in starsOuterView.subviews {
+            view.removeFromSuperview()
+        }
+        for i in 0...(level!.difficulty - 1) {
+            addStar(i, full: level!.rating > 0 )
+        }
+    }
+    
+    func addStar(_ number: Int, full: Bool) {
+        let imageView = UIImageView.init()
+        imageView.frame = .init(x: number * (16 + 4), y: 7, width: 16, height: 16)
+        self.starsOuterView.addSubview(imageView)
+        imageView.image = UIImage.init(named: full ? "star" : "star_empty")
     }
 
 }

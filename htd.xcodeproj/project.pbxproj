@@ -189,7 +189,6 @@
 				B455A6BE200A6601000247BC /* Main.storyboard */,
 				B4CFCA38202785AD00A91B1C /* LaunchScreen_en.storyboard */,
 				B4CFCA352027858C00A91B1C /* LaunchScreen_ru.storyboard */,
-				B455A6C4200A6601000247BC /* Assets.xcassets */,
 				B4BCFE21202609F3008161EA /* Info.plist */,
 				B455A6C1200A6601000247BC /* htd.xcdatamodeld */,
 			);
@@ -212,6 +211,7 @@
 		B455A6D4200AA4E5000247BC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B455A6C4200A6601000247BC /* Assets.xcassets */,
 				B455A6D5200AA4EA000247BC /* Fonts */,
 				B4BCFE2720260A45008161EA /* InfoPlist.strings */,
 				B47F3B43202612BF007E0B26 /* Localizable.strings */,

@@ -41,9 +41,9 @@ class Levels {
     init() {
         
         let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-        }
+//        try! realm.write {
+//            realm.deleteAll()
+//        }
         
         self.data = Levels.loadLevels(realm)
         for stageNumber in Array(Set(self.data.map { $0.stage })) {

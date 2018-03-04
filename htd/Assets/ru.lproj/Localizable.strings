@@ -28,3 +28,5 @@
 "COMING_SOON" = "Новые картинки появятся совсем скоро";
 "ASK_REJECTED_PERMISSIONS" = "Пожалуйста, разрешите доступ к камере";
 "ASK_REJECTED_PERMISSIONS_BUTTON" = "Разрешить";
+"DIFFICULTY" = "Сложность";
+"NEED_MORE_STARS" = "Чтобы открыть следующий уровень, соберите ещё %d ⭐";

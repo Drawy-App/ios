@@ -11,8 +11,6 @@ import UIKit
 class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
     UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
-    @IBOutlet weak var hasDrownLabel: UIView!
-    @IBOutlet weak var hasDrownTextLabel: UILabel!
     @IBOutlet weak var makePhotoLabel: UILabel!
     @IBOutlet weak var hasDrownView: UIView!
     @IBOutlet weak var stepsLabel: UILabel!
@@ -48,13 +46,21 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         previewView.image = UIImage.init(named: level!.preview)
         timeLabel.text = GramCase.getLocalizedString(number: level!.tutorials.count, key: "STEPS")
         
-        hasDrownLabel.layer.cornerRadius = 4
-        hasDrownView.isHidden = self.level!.rating == 0
         
         self.makePhotoLabel.text = NSLocalizedString("CHECK_BUTTON", comment: "Make photo")
-        self.hasDrownTextLabel.text = NSLocalizedString("HAS_DROWN_LABEL", comment: "Has drown label")
         self.stepsLabel.text = NSLocalizedString("STEPS_HEADER", comment: "Steps header")
         self.backButtonLabel.text = NSLocalizedString("BACK_BUTTON", comment: "Back button")
+        
+        for i in 0...(level!.difficulty - 1) {
+            addStar(i, full: level!.rating > 0 )
+        }
+    }
+    
+    func addStar(_ number: Int, full: Bool) {
+        let imageView = UIImageView.init()
+        imageView.frame = .init(x: number * (16 + 4), y: 3, width: 16, height: 16)
+        self.hasDrownView.addSubview(imageView)
+        imageView.image = UIImage.init(named: full ? "star" : "star_empty")
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

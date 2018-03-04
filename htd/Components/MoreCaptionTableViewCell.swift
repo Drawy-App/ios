@@ -11,6 +11,9 @@ import UIKit
 class MoreCaptionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var threeStars: UIImageView!
+    var neededStars: Int? = nil
+    var maxStars: Int? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -14,11 +14,11 @@ class Stage {
     let number: Int
     let levels: [Level]
     var isUnlocked: Bool {
-        return Levels.sharedInstance.totalStars >= self.needed[self.number]!
+        return Levels.sharedInstance.totalStars >= Stage.needed[self.number]!
             || self.levels.filter({ $0.rating > 0}).count > 0
     }
     
-    let needed: [Int: Int] = [
+    static let needed: [Int: Int] = [
         1: 0,
         2: 6,
         3: 14,
