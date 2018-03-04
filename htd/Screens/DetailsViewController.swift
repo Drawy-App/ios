@@ -31,6 +31,7 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Colorize.sharedInstance.addColor(toView: self.view)
         
         self.navigationController!.interactivePopGestureRecognizer!.delegate = self
         backTapRecognizer.addTarget(self, action: #selector(self.exit))

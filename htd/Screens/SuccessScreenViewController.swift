@@ -15,6 +15,7 @@ class SuccessScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Colorize.sharedInstance.addColor(toView: self.view)
         
         self.textLabel.text = NSLocalizedString("SUCCESS_LABEL", comment: "Success label")
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in

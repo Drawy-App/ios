@@ -29,4 +29,4 @@
 "ASK_REJECTED_PERMISSIONS" = "Пожалуйста, разрешите доступ к камере";
 "ASK_REJECTED_PERMISSIONS_BUTTON" = "Разрешить";
 "DIFFICULTY" = "Сложность";
-"NEED_MORE_STARS" = "Чтобы открыть следующий уровень, соберите ещё %d ⭐";
+"NEED_MORE_STARS" = "Соберите ещё %d ⭐, чтобы открыть следующий уровень";

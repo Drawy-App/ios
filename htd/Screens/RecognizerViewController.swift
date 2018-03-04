@@ -34,6 +34,8 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Colorize.sharedInstance.addColor(toView: self.view)
+        
         envParams = [
             "name": self.level!.name,
         ]

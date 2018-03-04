@@ -40,6 +40,16 @@ class MainScreenViewController:
             }
             print("stage", stage.value.number, stage.value.isUnlocked)
         }
+        
+        Colorize.sharedInstance.addColor(toView: self.view)
+    }
+    
+    func addColor(toView view: UIView) {
+        let color = UIColor.init(patternImage: UIImage.init(named: "pattern1")!)
+        let newView = UIView.init(frame: self.view.frame)
+        newView.backgroundColor = color
+        newView.layer.opacity = 0.15
+        view.layer.insertSublayer(newView.layer, at: 0)
     }
     
     func getStageIndex(_ section: Int) -> Int? {
@@ -166,11 +176,11 @@ class MainScreenViewController:
     }
     
     @objc func scrollUp() {
-        self.LevelsList.scrollToRow(at: .init(row: 0, section: 1), at: .top, animated: false)
+        self.LevelsList.scrollToRow(at: .init(row: 0, section: 0), at: .top, animated: false)
     }
     
     @objc func animatedScrollUp() {
-        self.LevelsList.scrollToRow(at: .init(row: 0, section: 1), at: .top, animated: true)
+        self.LevelsList.scrollToRow(at: .init(row: 0, section: 0), at: .top, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
