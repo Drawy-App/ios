@@ -40,9 +40,6 @@ class MainScreenViewController:
             }
             print("stage", stage.value.number, stage.value.isUnlocked)
         }
-        
-        // Do any additional setup after loading the view.
-//        self.navigationController!.delegate = self
     }
     
     func getStageIndex(_ section: Int) -> Int? {
@@ -191,8 +188,13 @@ class MainScreenViewController:
             "levels_count": [
                 "done": Levels.sharedInstance.data.filter {level in level.rating > 0}.count,
                 "undone": Levels.sharedInstance.data.filter {level in level.rating == 0}.count
-            ]
-            ]
+            ],
+            "stages_count": [
+                "unlocked": Levels.sharedInstance.stages.filter {stage in stage.value.isUnlocked}.count,
+                "locked": Levels.sharedInstance.stages.filter {stage in !stage.value.isUnlocked}.count
+            ],
+            "stars_collected": Levels.sharedInstance.totalStars
+        ]
         )
     }
     
