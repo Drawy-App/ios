@@ -55,6 +55,9 @@ class MainScreenViewController:
                 break
             }
         }
+        if firstUnlocked == nil {
+            return section + 1
+        }
         if section < firstUnlocked! - 1 {
             return section + 1
         }
@@ -65,6 +68,11 @@ class MainScreenViewController:
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        if Levels.sharedInstance.stages.filter({stage in
+            return !stage.value.isUnlocked
+        }).count == 0 {
+            return Levels.sharedInstance.stages.count
+        }
         return Levels.sharedInstance.stages.count + 1
     }
     
@@ -86,7 +94,9 @@ class MainScreenViewController:
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let stageIndex = getStageIndex(section) else {
             let header = tableView.dequeueReusableCell(withIdentifier: "moreImagesCell") as! MoreCaptionTableViewCell
-            let nextStageIndex = getStageIndex(section + 1)!
+            guard let nextStageIndex = getStageIndex(section + 1) else {
+                return nil
+            }
             let neededStars = Stage.needed[nextStageIndex]! - Levels.sharedInstance.totalStars
             let maxStars = Stage.needed[nextStageIndex]! - Stage.needed[nextStageIndex - 1]!
             let share = Int(100 * Float(maxStars - neededStars) / Float(maxStars))
@@ -101,7 +111,6 @@ class MainScreenViewController:
                 NSLocalizedString("NEED_MORE_STARS", comment: "Need more stars"),
                 neededStars
             )
-//            String.localizedStringWithFormat("NEED_MORE_STARS", neededStars)
             
             return header as UIView
         }
