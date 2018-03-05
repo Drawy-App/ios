@@ -206,15 +206,15 @@
                                             <outlet property="title" destination="7M4-pM-x5P" id="vDj-HE-oCl"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="moreImagesCell" rowHeight="160" id="FTT-8l-Rld" customClass="MoreCaptionTableViewCell" customModule="htd" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="335.33333333333337" width="414" height="160"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="moreImagesCell" rowHeight="220" id="FTT-8l-Rld" customClass="MoreCaptionTableViewCell" customModule="htd" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="335.33333333333337" width="414" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FTT-8l-Rld" id="O9V-FW-LR6">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fgm-Y2-LuM">
-                                                    <rect key="frame" x="30" y="0.0" width="354" height="160"/>
+                                                    <rect key="frame" x="30" y="0.0" width="354" height="220"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="90" verticalHuggingPriority="90" image="three_stars" translatesAutoresizingMaskIntoConstraints="NO" id="Dxx-1o-KpQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="354" height="80"/>
@@ -222,12 +222,25 @@
                                                                 <constraint firstAttribute="height" constant="80" id="o3t-4d-odP"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новые картинки появятся уже совсем скоро!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXN-bo-nDN">
-                                                            <rect key="frame" x="0.0" y="80" width="354" height="80"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новые картинки появятся уже совсем скоро!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXN-bo-nDN">
+                                                            <rect key="frame" x="0.0" y="80" width="354" height="48"/>
                                                             <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjz-Bx-i3o">
+                                                            <rect key="frame" x="0.0" y="128" width="354" height="92"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="354" id="lSY-kL-MeN"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                            <state key="normal" title="Открыть все уровни">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <segue destination="uAl-Qk-Y69" kind="presentation" identifier="showPayScreen" modalTransitionStyle="crossDissolve" id="3zp-ss-GLo"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -242,6 +255,7 @@
                                         <connections>
                                             <outlet property="captionLabel" destination="zXN-bo-nDN" id="Pk8-tg-dMf"/>
                                             <outlet property="threeStars" destination="Dxx-1o-KpQ" id="IlM-jz-2XJ"/>
+                                            <outlet property="unlockAllButton" destination="bjz-Bx-i3o" id="RqM-Yy-sB5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -293,7 +307,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Назад" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CS-6b-fXv">
-                                        <rect key="frame" x="27.999999999999996" y="5.3333333333333357" width="52.666666666666657" height="20.333333333333332"/>
+                                        <rect key="frame" x="27.999999999999996" y="5" width="52.666666666666657" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -508,10 +522,10 @@
                                         <rect key="frame" x="15" y="15" width="384" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rF-vr-TSi" userLabel="Container">
-                                                <rect key="frame" x="119.00000000000001" y="0.0" width="147.33333333333337" height="60"/>
+                                                <rect key="frame" x="118.66666666666664" y="0.0" width="147.33333333333337" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cделать фото" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SV-Ma-dfk">
-                                                        <rect key="frame" x="29.999999999999993" y="20" width="117.33333333333331" height="20.333333333333329"/>
+                                                        <rect key="frame" x="29.999999999999993" y="20.666666666666629" width="117.33333333333331" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -534,7 +548,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.011764705882352941" green="0.71764705882352942" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.13725490196078433" green="0.62745098039215685" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="4rF-vr-TSi" firstAttribute="centerY" secondItem="9O6-IW-LBG" secondAttribute="centerY" id="46A-aD-RrM"/>
@@ -610,6 +624,138 @@
             </objects>
             <point key="canvasLocation" x="1214.4927536231885" y="114.94565217391305"/>
         </scene>
+        <!--Payment Screen View Controller-->
+        <scene sceneID="z6S-kl-sC0">
+            <objects>
+                <viewController id="uAl-Qk-Y69" customClass="PaymentScreenViewController" customModule="htd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X5H-eR-9I5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvq-ki-2As">
+                                <rect key="frame" x="0.0" y="661" width="0.0" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оплатить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCP-le-bor">
+                                        <rect key="frame" x="0.0" y="20" width="84.333333333333329" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
+                                        <color key="textColor" red="0.99958008527755737" green="0.98516052961349487" blue="0.93172472715377808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="IcG-DZ-Qeu">
+                                        <rect key="frame" x="0.0" y="20" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13725490196078433" green="0.62745098039215685" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="VCP-le-bor" firstAttribute="centerX" secondItem="gvq-ki-2As" secondAttribute="centerX" id="0PB-IQ-yxz"/>
+                                    <constraint firstAttribute="height" constant="60" id="6Kc-jR-Yu0"/>
+                                    <constraint firstItem="VCP-le-bor" firstAttribute="leading" secondItem="IcG-DZ-Qeu" secondAttribute="trailing" constant="8.5" id="Sbn-Qa-HEe"/>
+                                    <constraint firstItem="IcG-DZ-Qeu" firstAttribute="centerY" secondItem="gvq-ki-2As" secondAttribute="centerY" id="Sw3-Pz-gUN"/>
+                                    <constraint firstItem="VCP-le-bor" firstAttribute="centerY" secondItem="gvq-ki-2As" secondAttribute="centerY" id="Uzi-Ls-fGF"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gBw-yI-SxX" appends="YES" id="F8s-Oh-VFz"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TK6-Il-I7U">
+                                <rect key="frame" x="0.0" y="20" width="0.0" height="45"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPU-W2-cYu">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="45"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_icon" translatesAutoresizingMaskIntoConstraints="NO" id="XKf-na-t5z">
+                                                <rect key="frame" x="0.0" y="12.333333333333336" width="12.666666666666666" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="X6f-Cl-blP"/>
+                                                    <constraint firstAttribute="width" constant="12.5" id="bYt-5C-1T5"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Назад" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdo-CF-TZe">
+                                                <rect key="frame" x="0.0" y="12.333333333333334" width="51.333333333333336" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                                <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="Hdo-CF-TZe" firstAttribute="leading" secondItem="XKf-na-t5z" secondAttribute="trailing" constant="7.5" id="7Xu-Re-aMO"/>
+                                            <constraint firstItem="Hdo-CF-TZe" firstAttribute="centerY" secondItem="oPU-W2-cYu" secondAttribute="centerY" id="ALZ-qW-t69"/>
+                                            <constraint firstItem="XKf-na-t5z" firstAttribute="leading" secondItem="oPU-W2-cYu" secondAttribute="leading" constant="8" id="DqB-fd-GL9"/>
+                                            <constraint firstItem="XKf-na-t5z" firstAttribute="centerY" secondItem="oPU-W2-cYu" secondAttribute="centerY" id="Mf7-EQ-2nA"/>
+                                            <constraint firstAttribute="width" constant="120" id="hBf-GA-bTZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Fxe-9n-1bl" appends="YES" id="tc6-G1-hRt"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="F05-0x-5mV"/>
+                                    <constraint firstItem="oPU-W2-cYu" firstAttribute="top" secondItem="TK6-Il-I7U" secondAttribute="top" id="JCs-OQ-0Ct"/>
+                                    <constraint firstItem="oPU-W2-cYu" firstAttribute="leading" secondItem="TK6-Il-I7U" secondAttribute="leading" id="KId-6B-rJI"/>
+                                    <constraint firstAttribute="bottom" secondItem="oPU-W2-cYu" secondAttribute="bottom" id="MPd-cY-VPL"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dwF-5y-J0g">
+                                <rect key="frame" x="0.0" y="216" width="0.0" height="155"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👑" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJP-vx-QjW">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="62.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Про режим" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9A-bW-NK4">
+                                        <rect key="frame" x="0.0" y="82.333333333333314" width="0.0" height="26.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="22"/>
+                                        <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Более 40 уровней" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkG-gM-AaH">
+                                        <rect key="frame" x="0.0" y="128.66666666666669" width="0.0" height="26.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="22"/>
+                                        <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.094117647058823528" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="y09-x9-PoZ" firstAttribute="bottom" secondItem="gvq-ki-2As" secondAttribute="bottom" constant="15" id="3NG-7k-4Li"/>
+                            <constraint firstItem="TK6-Il-I7U" firstAttribute="leading" secondItem="y09-x9-PoZ" secondAttribute="leading" id="EjF-lk-P8h"/>
+                            <constraint firstAttribute="trailing" secondItem="dwF-5y-J0g" secondAttribute="trailing" constant="30" id="IBw-6r-d7v"/>
+                            <constraint firstItem="gvq-ki-2As" firstAttribute="leading" secondItem="y09-x9-PoZ" secondAttribute="leading" constant="15" id="YMS-yM-bkV"/>
+                            <constraint firstItem="dwF-5y-J0g" firstAttribute="leading" secondItem="X5H-eR-9I5" secondAttribute="leading" constant="30" id="aMg-b3-H4T"/>
+                            <constraint firstItem="y09-x9-PoZ" firstAttribute="trailing" secondItem="TK6-Il-I7U" secondAttribute="trailing" id="eEX-ac-PUZ"/>
+                            <constraint firstItem="dwF-5y-J0g" firstAttribute="centerY" secondItem="X5H-eR-9I5" secondAttribute="centerY" constant="-75" id="u3v-SQ-Q2p"/>
+                            <constraint firstItem="y09-x9-PoZ" firstAttribute="trailing" secondItem="gvq-ki-2As" secondAttribute="trailing" constant="15" id="uhl-0Q-z4P"/>
+                            <constraint firstItem="TK6-Il-I7U" firstAttribute="top" secondItem="y09-x9-PoZ" secondAttribute="top" id="xCX-xy-pP4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y09-x9-PoZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="adwLabel" destination="kkG-gM-AaH" id="xFX-eM-FfI"/>
+                        <outlet property="backButtonLabel" destination="Hdo-CF-TZe" id="mxD-fA-Cr3"/>
+                        <outlet property="backButtonTap" destination="Fxe-9n-1bl" id="ZkF-A1-hGF"/>
+                        <outlet property="backButtonView" destination="oPU-W2-cYu" id="nzY-sv-j1l"/>
+                        <outlet property="buyButtonLabel" destination="VCP-le-bor" id="HGS-TA-5Rl"/>
+                        <outlet property="buyButtonTap" destination="gBw-yI-SxX" id="4Hs-aV-Yt4"/>
+                        <outlet property="payButtonView" destination="gvq-ki-2As" id="Gys-PR-9ey"/>
+                        <outlet property="proModeTitle" destination="x9A-bW-NK4" id="dRN-sj-oDU"/>
+                        <outlet property="throbberView" destination="IcG-DZ-Qeu" id="RUQ-br-VtU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tzp-bF-GpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Fxe-9n-1bl"/>
+                <tapGestureRecognizer id="gBw-yI-SxX"/>
+            </objects>
+            <point key="canvasLocation" x="360.86956521739131" y="878.804347826087"/>
+        </scene>
         <!--Carousel View Controller-->
         <scene sceneID="M3v-Sx-pSU">
             <objects>
@@ -622,7 +768,7 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 из 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-50-6Zx">
-                                        <rect key="frame" x="174.33333333333334" y="18" width="65.333333333333343" height="24"/>
+                                        <rect key="frame" x="174" y="18" width="66" height="24"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -654,7 +800,7 @@
                                 <rect key="frame" x="0.0" y="636" width="414" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCs-8E-tlM">
-                                        <rect key="frame" x="145.33333333333334" y="32.666666666666629" width="125.00000000000003" height="36"/>
+                                        <rect key="frame" x="145" y="32.666666666666629" width="125" height="36"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="20"/>
                                         <state key="normal" title="Следующая">
                                             <color key="titleColor" white="0.0" alpha="0.81148330479999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -812,7 +958,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9S-9C-tue">
-                                        <rect key="frame" x="20" y="159.33333333333331" width="374" height="97"/>
+                                        <rect key="frame" x="20" y="159" width="374" height="97"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пожалуйста, разрешите доступ к камере" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg6-QI-aef">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>

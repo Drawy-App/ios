@@ -20,6 +20,8 @@
 "CHECK_BUTTON" = "Проверить";
 "HAS_DROWN_LABEL" = "Нарисовано";
 "BACK_BUTTON" = "Назад";
+"PAY_BUTTON" = "Открыть за %@";
+"PAY_BUTTON_NO_PRICE" = "Открыть";
 "RECOGNIZE_HEADER" = "Фото";
 "POINT_CAMERA" = "Наведите камеру на ваш рисунок";
 "FOUND_SOMETHING" = "Кажется мы нашли что-то...";
@@ -29,4 +31,7 @@
 "ASK_REJECTED_PERMISSIONS" = "Пожалуйста, разрешите доступ к камере";
 "ASK_REJECTED_PERMISSIONS_BUTTON" = "Разрешить";
 "DIFFICULTY" = "Сложность";
-"NEED_MORE_STARS" = "Соберите ещё %d ⭐, чтобы открыть следующий уровень";
+"NEED_MORE_STARS" = "Соберите ещё %d ⭐, откройте следующий уровень!";
+"UNLOCK_ALL_LEVELS" = "Открыть всё";
+"PRO_MODE_TITLE" = "ПРО РЕЖИМ";
+"BUY_DESCRIPTION" = "Хочешь получить все картинки и сразу?\n\nОткройте все картинки прямо сейчас!";

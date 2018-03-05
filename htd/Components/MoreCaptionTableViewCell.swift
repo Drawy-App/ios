@@ -11,6 +11,7 @@ import UIKit
 class MoreCaptionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var unlockAllButton: UIButton!
     @IBOutlet weak var threeStars: UIImageView!
     var neededStars: Int? = nil
     var maxStars: Int? = nil
@@ -20,6 +21,7 @@ class MoreCaptionTableViewCell: UITableViewCell {
         // Initialization code
         self.backgroundColor = .clear
         self.contentView.backgroundColor = .clear
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

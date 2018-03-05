@@ -93,7 +93,7 @@ class MainScreenViewController:
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if getStageIndex(section) == nil {
-            return 160
+            return 220
         }
         return 54
     }
@@ -114,6 +114,10 @@ class MainScreenViewController:
             } else {
                 header.threeStars.image = UIImage.init(named: "three_stars_zero")!
             }
+            header.unlockAllButton.setTitle(
+                NSLocalizedString("UNLOCK_ALL_LEVELS", comment: "Unlock all levels button"),
+                for: .normal
+            )
             header.captionLabel.text = String.localizedStringWithFormat(
                 NSLocalizedString("NEED_MORE_STARS", comment: "Need more stars"),
                 neededStars
@@ -160,7 +164,9 @@ class MainScreenViewController:
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let indexPath = self.LevelsList.indexPathForSelectedRow!
+        guard let indexPath = self.LevelsList.indexPathForSelectedRow else {
+            return
+        }
         
         
         if segue.identifier! == "showDetails" {

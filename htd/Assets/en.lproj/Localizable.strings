@@ -19,6 +19,8 @@
 "CHECK_BUTTON" = "Check";
 "HAS_DROWN_LABEL" = "Completed";
 "BACK_BUTTON" = "Back";
+"PAY_BUTTON" = "Unlock for %@";
+"PAY_BUTTON_NO_PRICE" = "Unlock";
 "RECOGNIZE_HEADER" = "Photo";
 "POINT_CAMERA" = "Please point camera to your drawing";
 "FOUND_SOMETHING" = "We found something...";
@@ -29,3 +31,7 @@
 "ASK_REJECTED_PERMISSIONS_BUTTON" = "Allow";
 "DIFFICULTY" = "Difficulty";
 "NEED_MORE_STARS" = "Collect %d more ⭐ to unlock new level";
+"UNLOCK_ALL_LEVELS" = "Unlock all";
+"PRO_MODE_TITLE" = "PRO MODE";
+
+"BUY_DESCRIPTION" = "Unlock all tutorials just in 10 seconds!";
