@@ -8,8 +8,6 @@
 
 import UIKit
 import Foundation
-import Fabric
-import Crashlytics
 import YandexMobileMetrica
 
 class Analytics {
@@ -17,7 +15,6 @@ class Analytics {
     static let sharedInstance = Analytics()
     
     func initMetrics() {
-        Fabric.with([Crashlytics.self])
         #if IOS_DEBUG
             YMMYandexMetrica.activate(withApiKey: "dfc8e1e1-ffc6-46b1-822e-f9c39bb43510")
         #else

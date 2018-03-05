@@ -1,17 +1,20 @@
 PODS:
+  - SwiftyStoreKit (0.13.0)
   - Yams (0.5.0)
   - YandexMobileMetrica (2.9.6):
     - YandexMobileMetrica/Static (= 2.9.6)
   - YandexMobileMetrica/Static (2.9.6)
 
 DEPENDENCIES:
+  - SwiftyStoreKit
   - Yams
   - YandexMobileMetrica
 
 SPEC CHECKSUMS:
+  SwiftyStoreKit: df6a58aba530128e1c5d5ae4fe7d191e5ac50d5d
   Yams: 58b13424ca380835c4c797bc775ce6cbb3bc0167
   YandexMobileMetrica: 330c11f9e4b8b3b72454c0cd80f61b4231467ebe
 
-PODFILE CHECKSUM: ec235bd0c2ccfb3a40fd011cb28f429c81a3a5d3
+PODFILE CHECKSUM: 8b9c713b7c53b3a13e16c4fe91c44f920ba637bc
 
 COCOAPODS: 1.4.0
