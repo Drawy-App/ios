@@ -6,4 +6,5 @@ target 'htd' do
 	pod 'YandexMobileMetrica'
 	pod 'Yams'
 	pod 'SwiftyStoreKit'
+	pod 'Google/Analytics'
 end

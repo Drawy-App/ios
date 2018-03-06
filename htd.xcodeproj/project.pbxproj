@@ -60,6 +60,7 @@
 		B4DBE0FE204DC6FC00531AF5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DBE0FD204DC6FC00531AF5 /* StoreKit.framework */; };
 		B4EB79F9204E040F0042571D /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EB79F7204E040E0042571D /* Crashlytics.framework */; };
 		B4EB79FA204E040F0042571D /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EB79F8204E040E0042571D /* Fabric.framework */; };
+		B4EB79FC204E09750042571D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EB79FB204E09740042571D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -132,6 +133,7 @@
 		B4DBE0FD204DC6FC00531AF5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B4EB79F7204E040E0042571D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		B4EB79F8204E040E0042571D /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		B4EB79FB204E09740042571D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B977F043DCE51CBA137A8626 /* Pods-htd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.debug.xcconfig"; sourceTree = "<group>"; };
 		C472F0F787E5D6981E0F5C2F /* Pods_htd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_htd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -185,6 +187,7 @@
 		B455A6B9200A6600000247BC /* htd */ = {
 			isa = PBXGroup;
 			children = (
+				B4EB79FB204E09740042571D /* GoogleService-Info.plist */,
 				B4C35F78202BA570000D3CB4 /* Frameworks */,
 				B4BCFE2920260AC9008161EA /* Utilities */,
 				B4D931B72024E09E0071E283 /* Models */,
@@ -399,6 +402,7 @@
 				B4D931BE202595F50071E283 /* Images.bundle in Resources */,
 				B455A6EB200AA502000247BC /* SF-Pro-Text-Regular.otf in Resources */,
 				B455A6E5200AA502000247BC /* SF-Pro-Text-HeavyItalic.otf in Resources */,
+				B4EB79FC204E09750042571D /* GoogleService-Info.plist in Resources */,
 				B455A6E2200AA502000247BC /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				B455A6C0200A6601000247BC /* Main.storyboard in Resources */,
 			);
@@ -414,11 +418,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-htd/Pods-htd-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Yams/Yams.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yams.framework",
 			);
