@@ -30,6 +30,7 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
         ]
         
         self.backButtonLabel.text = NSLocalizedString("BACK_BUTTON", comment: "Back button")
+        self.restoreButton.setTitle(NSLocalizedString("RESTORE_BUTTON", comment: "Restore button"), for: .normal)
         self.backButtonTap.addTarget(self, action: #selector(self.exit))
         self.buyButtonLabel.text = NSLocalizedString("PAY_BUTTON_NO_PRICE", comment: "Pay button no price")
         self.adwLabel.text = NSLocalizedString("BUY_DESCRIPTION", comment: "Buy description")
