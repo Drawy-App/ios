@@ -30,6 +30,7 @@
 		B455A6F4200AB5F2000247BC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6F3200AB5F2000247BC /* Level.swift */; };
 		B455A6F7200AB71A000247BC /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6F6200AB71A000247BC /* Levels.swift */; };
 		B455A6F9200B9457000247BC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6F8200B9457000247BC /* DetailsViewController.swift */; };
+		B458A921204F416D00B3E7B4 /* GA.m in Sources */ = {isa = PBXBuildFile; fileRef = B458A920204F416D00B3E7B4 /* GA.m */; };
 		B45CF7822039EA4000901235 /* Levels.strings in Resources */ = {isa = PBXBuildFile; fileRef = B45CF7842039EA4000901235 /* Levels.strings */; };
 		B45CF7872039F87B00901235 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CF7862039F87B00901235 /* Stage.swift */; };
 		B468F425200BA0C100C085C5 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */; };
@@ -104,6 +105,10 @@
 		B455A6F3200AB5F2000247BC /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		B455A6F6200AB71A000247BC /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
 		B455A6F8200B9457000247BC /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		B458A91E204F416D00B3E7B4 /* htd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "htd-Bridging-Header.h"; sourceTree = "<group>"; };
+		B458A91F204F416D00B3E7B4 /* GA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GA.h; sourceTree = "<group>"; };
+		B458A920204F416D00B3E7B4 /* GA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GA.m; sourceTree = "<group>"; };
+		B458A922204F485F00B3E7B4 /* htd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = htd.entitlements; sourceTree = "<group>"; };
 		B45CF7832039EA4000901235 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Levels.strings; sourceTree = "<group>"; };
 		B45CF7852039EA4200901235 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Levels.strings; sourceTree = "<group>"; };
 		B45CF7862039F87B00901235 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
@@ -187,6 +192,7 @@
 		B455A6B9200A6600000247BC /* htd */ = {
 			isa = PBXGroup;
 			children = (
+				B458A922204F485F00B3E7B4 /* htd.entitlements */,
 				B4EB79FB204E09740042571D /* GoogleService-Info.plist */,
 				B4C35F78202BA570000D3CB4 /* Frameworks */,
 				B4BCFE2920260AC9008161EA /* Utilities */,
@@ -254,7 +260,6 @@
 			children = (
 				B455A6F1200AAF68000247BC /* LevelsTableViewCell.swift */,
 				B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */,
-				B4CCEE5920274F0B0081014A /* Analytics.swift */,
 				B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */,
 			);
 			path = Components;
@@ -274,10 +279,14 @@
 		B4BCFE2920260AC9008161EA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B4CCEE5920274F0B0081014A /* Analytics.swift */,
 				B4BCFE2C20260B72008161EA /* GramCase.swift */,
 				B4C35F76202B9AB7000D3CB4 /* Recognizer.swift */,
 				B42D4264204C5CB00002175A /* Colorize.swift */,
 				B498394D204DC8840080CA37 /* Purchase.swift */,
+				B458A91E204F416D00B3E7B4 /* htd-Bridging-Header.h */,
+				B458A91F204F416D00B3E7B4 /* GA.h */,
+				B458A920204F416D00B3E7B4 /* GA.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -350,9 +359,13 @@
 				TargetAttributes = {
 					B455A6B6200A6600000247BC = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
 								enabled = 1;
 							};
 						};
@@ -506,6 +519,7 @@
 				B4CCEE5A20274F0C0081014A /* Analytics.swift in Sources */,
 				B455A6D1200AA240000247BC /* MainScreenViewController.swift in Sources */,
 				B4D931B92024E0BC0071E283 /* Score.swift in Sources */,
+				B458A921204F416D00B3E7B4 /* GA.m in Sources */,
 				B4CCEE582026586E0081014A /* CarouselPageViewController.swift in Sources */,
 				B4D931C02025B6690071E283 /* realmodel.mlmodel in Sources */,
 				B42D4265204C5CB00002175A /* Colorize.swift in Sources */,
@@ -697,6 +711,8 @@
 			baseConfigurationReference = B977F043DCE51CBA137A8626 /* Pods-htd.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = htd/htd.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -714,6 +730,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "htd/Utilities/htd-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -724,6 +742,8 @@
 			baseConfigurationReference = 53F04AC74C63E30B0182C1EC /* Pods-htd.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = htd/htd.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UB9STX7MH;
@@ -739,6 +759,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "htd/Utilities/htd-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

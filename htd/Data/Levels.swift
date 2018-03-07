@@ -21,6 +21,14 @@ class Levels {
         }.reduce(0, +)
     }
     
+    var unlockedLevels: Int {
+        return self.stages.filter({_, value in value.isUnlocked}).count
+    }
+    
+    var lockedLevels: Int {
+        return self.stages.filter({_, value in !value.isUnlocked}).count
+    }
+    
     private static func loadLevels(_ realm: Realm) -> [Level] {
         var levels: [Level] = []
         let yamlUrl = Bundle.main.url(forResource: "levels", withExtension: "yaml", subdirectory: bundleName)!

@@ -20,9 +20,13 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
     @IBOutlet var buyButtonTap: UITapGestureRecognizer!
     @IBOutlet var backButtonTap: UITapGestureRecognizer!
     @IBOutlet weak var throbberView: UIActivityIndicatorView!
+    var analyticsParams: [String:Any] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        analyticsParams = [
+            "levelsUnlockedCount": Levels.sharedInstance.unlockedLevels
+        ]
         
         self.backButtonLabel.text = NSLocalizedString("BACK_BUTTON", comment: "Back button")
         self.buyButtonLabel.text = NSLocalizedString("PAY_BUTTON_NO_PRICE", comment: "Pay button no price")
@@ -30,10 +34,11 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
         
         self.payButtonView.layer.cornerRadius = 5
         self.payButtonView.isUserInteractionEnabled = true
-        self.proModeTitle.text = NSLocalizedString("PRO_MODE_TITLE", comment: "Pro mode title")
+        self.proModeTitle.text = NSLocalizedString("PRO_MODE_TITLE", comment: "Pro mode title").uppercased()
+        
+        self.buyButtonTap.addTarget(self, action: #selector(tryToPay))
         
         prepare()
-        // Do any additional setup after loading the view.
         Colorize.sharedInstance.addColor(toView: self.view)
     }
     
@@ -46,6 +51,54 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
             } else {
                 print("error", error!.localizedDescription)
                 self.exit()
+            }
+        })
+    }
+    
+    func switchButton(_ isEnabled: Bool) {
+        self.payButtonView.alpha = isEnabled ? 1 : 0.5
+        if isEnabled {
+            self.buyButtonTap.addTarget(self, action: #selector(tryToPay))
+        } else {
+            self.buyButtonTap.removeTarget(self, action: #selector(tryToPay))
+        }
+        self.throbberView.isHidden = isEnabled
+    }
+    
+    @objc func tryToPay() {
+        Analytics.sharedInstance.event("pay_init", params: self.analyticsParams)
+        switchButton(false)
+        Purchase.sharedInstance.purchase(Purchase.unlockAllId, callback: {is_success, error in
+            self.switchButton(true)
+            if error == nil {
+                Analytics.sharedInstance.event("pay_success", params: self.analyticsParams)
+                let alert = UIAlertController.init(
+                    title: "\(NSLocalizedString("PRO_MODE_TITLE", comment: "Pro mode")) 👑",
+                    message: NSLocalizedString("PAID_SUCCESS_POPUP", comment: "Pay success popup"),
+                    preferredStyle: .alert
+                )
+                alert.addAction(UIAlertAction.init(
+                    title: NSLocalizedString("CONTINUE_BUTTON", comment: "Continue button"),
+                    style: .default, handler: {_ in
+                        alert.dismiss(animated: true, completion: nil)
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                ))
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                var error_params = self.analyticsParams
+                error_params["error"] = error.debugDescription
+                Analytics.sharedInstance.event("pay_failure", params: error_params)
+                
+                let alert = UIAlertController.init(
+                    title: NSLocalizedString("PRO_MODE_TITLE", comment: "Pro mode"),
+                    message: error!.localizedDescription,
+                    preferredStyle: .alert
+                )
+                alert.addAction(UIAlertAction.init(title: "OK", style: .default, handler: {_ in
+                    alert.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
         })
     }
@@ -75,14 +128,8 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
         return .lightContent
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        Analytics.sharedInstance.navigate("pay_wall", params: self.analyticsParams)
     }
-    */
 
 }

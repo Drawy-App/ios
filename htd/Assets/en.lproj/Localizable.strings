@@ -32,6 +32,8 @@
 "DIFFICULTY" = "Difficulty";
 "NEED_MORE_STARS" = "Collect %d more ⭐ to unlock new level";
 "UNLOCK_ALL_LEVELS" = "Unlock all";
-"PRO_MODE_TITLE" = "PRO MODE";
+"PRO_MODE_TITLE" = "Pro mode";
 
 "BUY_DESCRIPTION" = "Unlock all tutorials just in 10 seconds!";
+"PAID_SUCCESS_POPUP" = "Hooray! Now you are pro!";
+"CONTINUE_BUTTON" = "Continue";

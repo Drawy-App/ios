@@ -28,9 +28,10 @@ class Purchase {
     
     init() {
         self.realm = try! Realm()
-        if self.realm.object(ofType: UserPayments.self, forPrimaryKey: 0) == nil {
+        self.payments = self.realm.object(ofType: UserPayments.self, forPrimaryKey: 0)
+        if payments == nil {
             try! realm.write {
-                realm.create(UserPayments.self)
+                self.payments = realm.create(UserPayments.self)
             }
         }
     }
@@ -40,6 +41,10 @@ class Purchase {
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
+                Analytics.sharedInstance.paidAction(
+                    purchase.product,
+                    transactionId: purchase.transaction.transactionIdentifier!
+                )
                 self.savePurchase(purchase.productId)
                 callback(true, nil)
             case .error(let error):

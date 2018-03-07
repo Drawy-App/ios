@@ -14,6 +14,11 @@ class Stage {
     let number: Int
     let levels: [Level]
     var isUnlocked: Bool {
+        return Purchase.sharedInstance.payments!.products.contains(Purchase.unlockAllId)
+            || self.isUnlockedByUser
+    }
+    
+    var isUnlockedByUser: Bool {
         return Levels.sharedInstance.totalStars >= Stage.needed[self.number]!
             || self.levels.filter({ $0.rating > 0}).count > 0
     }

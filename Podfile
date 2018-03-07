@@ -7,4 +7,5 @@ target 'htd' do
 	pod 'Yams'
 	pod 'SwiftyStoreKit'
 	pod 'Google/Analytics'
+	pod 'GoogleIDFASupport'
 end
