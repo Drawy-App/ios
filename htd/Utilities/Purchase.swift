@@ -64,6 +64,29 @@ class Purchase {
         }
     }
     
+    func restore(_ productId: String, callback: @escaping (_ success: Bool, _ error: Error?) -> Void) {
+        SwiftyStoreKit.restorePurchases(atomically: true) { results in
+            if results.restoreFailedPurchases.count > 0 {
+                print("Restore Failed: \(results.restoreFailedPurchases)")
+                callback(false, nil)
+            }
+            else if results.restoredPurchases.count > 0 {
+                for purchase in results.restoredPurchases {
+                    if purchase.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+                    }
+                    if purchase.productId == productId {
+                        self.savePurchase(productId)
+                        callback(true, nil)
+                    }
+                }
+            }
+            else {
+                callback(false, nil)
+            }
+        }
+    }
+    
     func retrieveInfo(_ productId: String, callback: @escaping (_ product: SKProduct?, _ error: Error?) -> Void) {
         SwiftyStoreKit.retrieveProductsInfo([productId]) { result in
             if let product = result.retrievedProducts.first {
