@@ -16,6 +16,7 @@ class Analytics {
     
     func initMetrics() {
         GA.initGA()
+        FB.initFB()
         #if IOS_DEBUG
             YMMYandexMetrica.activate(withApiKey: "dfc8e1e1-ffc6-46b1-822e-f9c39bb43510")
         #else
