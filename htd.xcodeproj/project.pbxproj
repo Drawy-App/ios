@@ -33,6 +33,9 @@
 		B458A921204F416D00B3E7B4 /* GA.m in Sources */ = {isa = PBXBuildFile; fileRef = B458A920204F416D00B3E7B4 /* GA.m */; };
 		B45CF7822039EA4000901235 /* Levels.strings in Resources */ = {isa = PBXBuildFile; fileRef = B45CF7842039EA4000901235 /* Levels.strings */; };
 		B45CF7872039F87B00901235 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CF7862039F87B00901235 /* Stage.swift */; };
+		B466B5DC205AD97A0005F81C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B466B5DB205AD97A0005F81C /* Bolts.framework */; };
+		B466B5DE205AD9880005F81C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B466B5DD205AD9880005F81C /* FBSDKCoreKit.framework */; };
+		B466B5E1205ADA2F0005F81C /* FB.m in Sources */ = {isa = PBXBuildFile; fileRef = B466B5E0205ADA2F0005F81C /* FB.m */; };
 		B468F425200BA0C100C085C5 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */; };
 		B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F42D200BC55500C085C5 /* RecognizerViewController.swift */; };
 		B47F3B41202612BF007E0B26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B47F3B43202612BF007E0B26 /* Localizable.strings */; };
@@ -112,6 +115,10 @@
 		B45CF7832039EA4000901235 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Levels.strings; sourceTree = "<group>"; };
 		B45CF7852039EA4200901235 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Levels.strings; sourceTree = "<group>"; };
 		B45CF7862039F87B00901235 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		B466B5DB205AD97A0005F81C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		B466B5DD205AD9880005F81C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		B466B5DF205ADA2F0005F81C /* FB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FB.h; sourceTree = "<group>"; };
+		B466B5E0205ADA2F0005F81C /* FB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FB.m; sourceTree = "<group>"; };
 		B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B468F42D200BC55500C085C5 /* RecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerViewController.swift; sourceTree = "<group>"; };
 		B47F3B42202612BF007E0B26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -153,7 +160,9 @@
 				B4DBE0FE204DC6FC00531AF5 /* StoreKit.framework in Frameworks */,
 				B4EB79FA204E040F0042571D /* Fabric.framework in Frameworks */,
 				56ACFFAD0797B425BB22D836 /* Pods_htd.framework in Frameworks */,
+				B466B5DE205AD9880005F81C /* FBSDKCoreKit.framework in Frameworks */,
 				B4C35F7B202BA597000D3CB4 /* RealmSwift.framework in Frameworks */,
+				B466B5DC205AD97A0005F81C /* Bolts.framework in Frameworks */,
 				B4C35F7C202BA597000D3CB4 /* Realm.framework in Frameworks */,
 				B4EB79F9204E040F0042571D /* Crashlytics.framework in Frameworks */,
 			);
@@ -287,6 +296,8 @@
 				B458A91E204F416D00B3E7B4 /* htd-Bridging-Header.h */,
 				B458A91F204F416D00B3E7B4 /* GA.h */,
 				B458A920204F416D00B3E7B4 /* GA.m */,
+				B466B5DF205ADA2F0005F81C /* FB.h */,
+				B466B5E0205ADA2F0005F81C /* FB.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -294,6 +305,8 @@
 		B4C35F78202BA570000D3CB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B466B5DD205AD9880005F81C /* FBSDKCoreKit.framework */,
+				B466B5DB205AD97A0005F81C /* Bolts.framework */,
 				B4EB79F7204E040E0042571D /* Crashlytics.framework */,
 				B4EB79F8204E040E0042571D /* Fabric.framework */,
 				B4C35F7A202BA597000D3CB4 /* Realm.framework */,
@@ -520,6 +533,7 @@
 				B455A6D1200AA240000247BC /* MainScreenViewController.swift in Sources */,
 				B4D931B92024E0BC0071E283 /* Score.swift in Sources */,
 				B458A921204F416D00B3E7B4 /* GA.m in Sources */,
+				B466B5E1205ADA2F0005F81C /* FB.m in Sources */,
 				B4CCEE582026586E0081014A /* CarouselPageViewController.swift in Sources */,
 				B4D931C02025B6690071E283 /* realmodel.mlmodel in Sources */,
 				B42D4265204C5CB00002175A /* Colorize.swift in Sources */,
