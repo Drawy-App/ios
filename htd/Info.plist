@@ -23,7 +23,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb{your-app-id}</string>
+				<string>drawingiseasy</string>
 			</array>
 		</dict>
 	</array>
