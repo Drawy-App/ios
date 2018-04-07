@@ -34,7 +34,7 @@
                     createItemWithTransactionId:transactionId
                     name:product.productIdentifier
                     sku:product.productIdentifier category:@"general" price:product.price
-                    quantity: [NSNumber numberWithInt:0]
+                    quantity: [NSNumber numberWithInt:1]
                     currencyCode:product.priceLocale.currencyCode] build]];
 }
 
