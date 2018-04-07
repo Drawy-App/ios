@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import StoreKit
 
 class SuccessScreenViewController: UIViewController {
 
+    @IBOutlet weak var continueLabel: UILabel!
+    @IBOutlet var continueTapGesture: UITapGestureRecognizer!
+    @IBOutlet weak var continueButton: UIView!
     @IBOutlet weak var textLabel: UILabel!
     var level: Level?
     
@@ -18,11 +22,21 @@ class SuccessScreenViewController: UIViewController {
         Colorize.sharedInstance.addColor(toView: self.view)
         
         self.textLabel.text = NSLocalizedString("SUCCESS_LABEL", comment: "Success label")
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
-            DispatchQueue.main.async {
-                self.navigationController?.popToRootViewController(animated: true)
-            }
-        })
+        self.continueLabel.text = NSLocalizedString("CONTINUE_BUTTON", comment: "Continue")
+        self.continueButton.layer.cornerRadius = 5
+        self.continueTapGesture.addTarget(self, action: #selector(exit))
+    }
+    
+    @objc func rateUs() {
+        if (UserInfo.mayRate()) {
+            SKStoreReviewController.requestReview()
+            UserInfo.setRateTimeout()
+        }
+    }
+    
+    @objc func exit() {
+        self.rateUs()
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {

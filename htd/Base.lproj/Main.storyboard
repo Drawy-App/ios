@@ -1047,7 +1047,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pKe-QI-YUK">
-                                <rect key="frame" x="20" y="332" width="374" height="73"/>
+                                <rect key="frame" x="20" y="331.66666666666669" width="374" height="73"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="900" verticalHuggingPriority="900" text="👏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wy-aI-6Gt">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="46.666666666666664"/>
@@ -1056,29 +1056,69 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="899" text="Ура! Рисунок нарисован" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5E-SO-g5E">
-                                        <rect key="frame" x="0.0" y="46.666666666666686" width="374" height="26.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="46.666666666666629" width="374" height="26.333333333333329"/>
                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYN-62-82A">
+                                <rect key="frame" x="0.0" y="646" width="414" height="90"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-Ix-uCc">
+                                        <rect key="frame" x="15" y="15" width="384" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продолжить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lln-pe-SeN">
+                                                <rect key="frame" x="139.66666666666666" y="20.333333333333371" width="105" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                                <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.13725490196078433" green="0.62745098039215685" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="lln-pe-SeN" firstAttribute="centerY" secondItem="4qe-Ix-uCc" secondAttribute="centerY" id="ZyP-Wi-4ny"/>
+                                            <constraint firstItem="lln-pe-SeN" firstAttribute="centerX" secondItem="4qe-Ix-uCc" secondAttribute="centerX" id="bWQ-cx-kZL"/>
+                                            <constraint firstAttribute="height" constant="60" id="zs3-Ul-qsb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Gmv-36-tfA" appends="YES" id="0qj-7q-PDi"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4qe-Ix-uCc" secondAttribute="bottom" constant="15" id="3gl-mY-dN6"/>
+                                    <constraint firstAttribute="trailing" secondItem="4qe-Ix-uCc" secondAttribute="trailing" constant="15" id="7fC-i7-ZJ5"/>
+                                    <constraint firstItem="4qe-Ix-uCc" firstAttribute="leading" secondItem="WYN-62-82A" secondAttribute="leading" constant="15" id="RT5-tY-IGg"/>
+                                    <constraint firstAttribute="height" constant="90" id="lID-wc-7aL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.094117647058823528" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="WYN-62-82A" firstAttribute="bottom" secondItem="4el-d7-VW8" secondAttribute="bottom" id="3K6-Kf-g3S"/>
                             <constraint firstItem="pKe-QI-YUK" firstAttribute="leading" secondItem="kRK-nv-vef" secondAttribute="leading" constant="20" id="9N4-m1-XYx"/>
+                            <constraint firstItem="WYN-62-82A" firstAttribute="trailing" secondItem="4el-d7-VW8" secondAttribute="trailing" id="N2p-SJ-Bge"/>
                             <constraint firstAttribute="trailing" secondItem="pKe-QI-YUK" secondAttribute="trailing" constant="20" id="X66-Lq-S5V"/>
+                            <constraint firstItem="WYN-62-82A" firstAttribute="leading" secondItem="4el-d7-VW8" secondAttribute="leading" id="c9g-ec-4Ri"/>
                             <constraint firstItem="pKe-QI-YUK" firstAttribute="centerY" secondItem="kRK-nv-vef" secondAttribute="centerY" id="rrR-H3-H1U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4el-d7-VW8"/>
                     </view>
                     <connections>
+                        <outlet property="continueButton" destination="4qe-Ix-uCc" id="MzE-IY-gZs"/>
+                        <outlet property="continueLabel" destination="lln-pe-SeN" id="KU2-fz-zXW"/>
+                        <outlet property="continueTapGesture" destination="Gmv-36-tfA" id="zl9-TJ-Zbh"/>
                         <outlet property="textLabel" destination="E5E-SO-g5E" id="Rph-mm-zqJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MV8-Jd-lvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Gmv-36-tfA"/>
             </objects>
-            <point key="canvasLocation" x="2819" y="116"/>
+            <point key="canvasLocation" x="2818.840579710145" y="115.7608695652174"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vLT-d3-lou">

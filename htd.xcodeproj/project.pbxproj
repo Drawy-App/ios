@@ -12,6 +12,7 @@
 		B4031A522078ED0000C83EC0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A502078ED0000C83EC0 /* RealmSwift.framework */; };
 		B4031A532078EDB300C83EC0 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A4F2078ECFF00C83EC0 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4031A542078EDB300C83EC0 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A502078ED0000C83EC0 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B4031A562078F84100C83EC0 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4031A552078F84100C83EC0 /* UserInfo.swift */; };
 		B42D4265204C5CB00002175A /* Colorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D4264204C5CB00002175A /* Colorize.swift */; };
 		B455A6BB200A6600000247BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6BA200A6600000247BC /* AppDelegate.swift */; };
 		B455A6C0200A6601000247BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B455A6BE200A6601000247BC /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 		53F04AC74C63E30B0182C1EC /* Pods-htd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.release.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.release.xcconfig"; sourceTree = "<group>"; };
 		B4031A4F2078ECFF00C83EC0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		B4031A502078ED0000C83EC0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		B4031A552078F84100C83EC0 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		B42D4264204C5CB00002175A /* Colorize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorize.swift; sourceTree = "<group>"; };
 		B44E4F8E202982660062CEC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B455A6B7200A6600000247BC /* htd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = htd.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +319,7 @@
 				B455A6F3200AB5F2000247BC /* Level.swift */,
 				B4D931B82024E0BC0071E283 /* Score.swift */,
 				B45CF7862039F87B00901235 /* Stage.swift */,
+				B4031A552078F84100C83EC0 /* UserInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				B455A6F7200AB71A000247BC /* Levels.swift in Sources */,
 				B4AD7EEE20279CB70093EF65 /* MoreCaptionTableViewCell.swift in Sources */,
 				B468F425200BA0C100C085C5 /* GalleryCollectionViewCell.swift in Sources */,
+				B4031A562078F84100C83EC0 /* UserInfo.swift in Sources */,
 				B4CCEE5A20274F0C0081014A /* Analytics.swift in Sources */,
 				B455A6D1200AA240000247BC /* MainScreenViewController.swift in Sources */,
 				B4D931B92024E0BC0071E283 /* Score.swift in Sources */,
