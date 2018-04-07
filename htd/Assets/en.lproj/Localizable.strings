@@ -25,7 +25,7 @@
 "POINT_CAMERA" = "Please point camera to your drawing";
 "FOUND_SOMETHING" = "We found something...";
 "STEPS_HEADER" = "Steps";
-"SUCCESS_LABEL" = "Hurray! You've completed this drawing";
+"SUCCESS_SUB_LABEL" = "Hurray! You've completed this drawing\n\nStart new picture, to earn more stars";
 "COMING_SOON" = "More tutorials coming very soon";
 "ASK_REJECTED_PERMISSIONS" = "Please allow this app to use your camera";
 "ASK_REJECTED_PERMISSIONS_BUTTON" = "Allow";

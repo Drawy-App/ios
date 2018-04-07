@@ -14,6 +14,7 @@ class SuccessScreenViewController: UIViewController {
     @IBOutlet weak var continueLabel: UILabel!
     @IBOutlet var continueTapGesture: UITapGestureRecognizer!
     @IBOutlet weak var continueButton: UIView!
+    @IBOutlet weak var subTextLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
     var level: Level?
     
@@ -21,7 +22,8 @@ class SuccessScreenViewController: UIViewController {
         super.viewDidLoad()
         Colorize.sharedInstance.addColor(toView: self.view)
         
-        self.textLabel.text = NSLocalizedString("SUCCESS_LABEL", comment: "Success label")
+        self.textLabel.text = String.init(repeating: "⭐ ", count: level!.difficulty)
+        self.subTextLabel.text = NSLocalizedString("SUCCESS_SUB_LABEL", comment: "Success label")
         self.continueLabel.text = NSLocalizedString("CONTINUE_BUTTON", comment: "Continue")
         self.continueButton.layer.cornerRadius = 5
         self.continueTapGesture.addTarget(self, action: #selector(exit))

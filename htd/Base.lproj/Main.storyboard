@@ -1047,18 +1047,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pKe-QI-YUK">
-                                <rect key="frame" x="20" y="331.66666666666669" width="374" height="73"/>
+                                <rect key="frame" x="20" y="305.66666666666669" width="374" height="126.33333333333331"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="900" verticalHuggingPriority="900" text="👏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wy-aI-6Gt">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="46.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="899" text="⭐ ⭐ ⭐" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5E-SO-g5E">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="YT5-mc-MEi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="39"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="900" verticalHuggingPriority="900" text="👏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wy-aI-6Gt">
+                                        <rect key="frame" x="0.0" y="100" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="V7G-NL-ZAE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="899" text="Ура! Рисунок нарисован" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5E-SO-g5E">
-                                        <rect key="frame" x="0.0" y="46.666666666666629" width="374" height="26.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbE-4V-39U">
+                                        <rect key="frame" x="0.0" y="100" width="374" height="26.333333333333329"/>
                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1112,6 +1124,7 @@
                         <outlet property="continueButton" destination="4qe-Ix-uCc" id="MzE-IY-gZs"/>
                         <outlet property="continueLabel" destination="lln-pe-SeN" id="KU2-fz-zXW"/>
                         <outlet property="continueTapGesture" destination="Gmv-36-tfA" id="zl9-TJ-Zbh"/>
+                        <outlet property="subTextLabel" destination="PbE-4V-39U" id="eTm-Zu-VYO"/>
                         <outlet property="textLabel" destination="E5E-SO-g5E" id="Rph-mm-zqJ"/>
                     </connections>
                 </viewController>
