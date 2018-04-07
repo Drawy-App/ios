@@ -10,6 +10,8 @@
 		56ACFFAD0797B425BB22D836 /* Pods_htd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C472F0F787E5D6981E0F5C2F /* Pods_htd.framework */; };
 		B4031A512078ED0000C83EC0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A4F2078ECFF00C83EC0 /* Realm.framework */; };
 		B4031A522078ED0000C83EC0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A502078ED0000C83EC0 /* RealmSwift.framework */; };
+		B4031A532078EDB300C83EC0 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A4F2078ECFF00C83EC0 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B4031A542078EDB300C83EC0 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A502078ED0000C83EC0 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B42D4265204C5CB00002175A /* Colorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D4264204C5CB00002175A /* Colorize.swift */; };
 		B455A6BB200A6600000247BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6BA200A6600000247BC /* AppDelegate.swift */; };
 		B455A6C0200A6601000247BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B455A6BE200A6601000247BC /* Main.storyboard */; };
@@ -70,6 +72,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B4031A532078EDB300C83EC0 /* Realm.framework in Embed Frameworks */,
+				B4031A542078EDB300C83EC0 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
