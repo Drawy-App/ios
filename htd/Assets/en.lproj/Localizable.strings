@@ -37,5 +37,5 @@
 "BUY_DESCRIPTION" = "Unlock all tutorials just in 10 seconds!";
 "PAID_SUCCESS_POPUP" = "Hooray! Now you are pro!";
 "CONTINUE_BUTTON" = "Continue";
-"RESTORE_BUTTON" = "Восстановить покупки";
+"RESTORE_BUTTON" = "Restore purchases";
 "ON_RESTORE_FAILED" = "Unable to restore purchase";

@@ -67,7 +67,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
         
     func initEmulator() {
         NSLog("emulator mode")
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: {_ in
             self.recognizeDidSuccess()
         })
     }

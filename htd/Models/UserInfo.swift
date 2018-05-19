@@ -20,9 +20,9 @@ class UserInfo {
     static let secondsOff = 30 * 24 * 3600
     
     static func mayRate() -> Bool {
-        #if IOS_SIMULATOR
-            return true
-        #endif
+//        #if IOS_SIMULATOR
+//            return true
+//        #endif
         let lastRate = defaults.integer(forKey: Keys.lastRated)
         if lastRate == 0 {
             return true

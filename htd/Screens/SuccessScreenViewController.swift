@@ -31,6 +31,7 @@ class SuccessScreenViewController: UIViewController {
     
     @objc func rateUs() {
         if (UserInfo.mayRate()) {
+            Analytics.sharedInstance.event("rate_call", params: nil)
             SKStoreReviewController.requestReview()
             UserInfo.setRateTimeout()
         }
