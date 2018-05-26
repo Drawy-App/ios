@@ -43,7 +43,11 @@ class TutorialPhoneViewController: UIViewController {
         let preferences = UserDefaults.standard
         preferences.set(Date().timeIntervalSince1970, forKey: "first_run")
         preferences.synchronize()
-        performSegue(withIdentifier: "exitTutorial", sender: nil)
+        
+        let targetVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+        self.navigationController?.setViewControllers([targetVC], animated: true)
+
+//        performSegue(withIdentifier: "exitTutorial", sender: nil)
     }
 
     func startSwiping() {

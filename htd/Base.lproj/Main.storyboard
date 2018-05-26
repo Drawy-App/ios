@@ -1247,10 +1247,10 @@
             </objects>
             <point key="canvasLocation" x="2818.840579710145" y="115.7608695652174"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="vLT-d3-lou">
             <objects>
-                <navigationController navigationBarHidden="YES" id="A4Y-QN-eSY" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="A4Y-QN-eSY" customClass="NavigationViewController" customModule="htd" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a8J-Rj-7V1">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

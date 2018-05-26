@@ -13,6 +13,7 @@
 		B4031A532078EDB300C83EC0 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A4F2078ECFF00C83EC0 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4031A542078EDB300C83EC0 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A502078ED0000C83EC0 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4031A562078F84100C83EC0 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4031A552078F84100C83EC0 /* UserInfo.swift */; };
+		B411665F20BA074A004DEB81 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B411665E20BA074A004DEB81 /* NavigationViewController.swift */; };
 		B42D4265204C5CB00002175A /* Colorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D4264204C5CB00002175A /* Colorize.swift */; };
 		B455A6BB200A6600000247BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6BA200A6600000247BC /* AppDelegate.swift */; };
 		B455A6C0200A6601000247BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B455A6BE200A6601000247BC /* Main.storyboard */; };
@@ -87,6 +88,7 @@
 		B4031A4F2078ECFF00C83EC0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		B4031A502078ED0000C83EC0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		B4031A552078F84100C83EC0 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		B411665E20BA074A004DEB81 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		B42D4264204C5CB00002175A /* Colorize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorize.swift; sourceTree = "<group>"; };
 		B44E4F8E202982660062CEC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B455A6B7200A6600000247BC /* htd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = htd.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +218,7 @@
 				B4CFCA352027858C00A91B1C /* LaunchScreen_ru.storyboard */,
 				B4BCFE21202609F3008161EA /* Info.plist */,
 				B455A6C1200A6601000247BC /* htd.xcdatamodeld */,
+				B411665E20BA074A004DEB81 /* NavigationViewController.swift */,
 			);
 			path = htd;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				B4CCEE582026586E0081014A /* CarouselPageViewController.swift in Sources */,
 				B4D931C02025B6690071E283 /* realmodel.mlmodel in Sources */,
 				B42D4265204C5CB00002175A /* Colorize.swift in Sources */,
+				B411665F20BA074A004DEB81 /* NavigationViewController.swift in Sources */,
 				B45CF7872039F87B00901235 /* Stage.swift in Sources */,
 				B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */,
 				B455A6C3200A6601000247BC /* htd.xcdatamodeld in Sources */,

@@ -33,15 +33,6 @@ class MainScreenViewController:
         LevelsList.backgroundColor = .clear
         LevelsList.contentInset = .init(top: 20, left: 0, bottom: 0, right: 0)
         
-        NSLog("Start 1")
-        for stage in Levels.sharedInstance.stages {
-//            previews[stage.key] = stage.value.levels.map {level in
-//                level.preview
-//            }
-//            print("stage", stage.value.number, stage.value.isUnlocked)
-        }
-        NSLog("Start 2")
-        
         Colorize.sharedInstance.addColor(toView: self.view)
     }
     
@@ -161,7 +152,7 @@ class MainScreenViewController:
         let stageIndex = getStageIndex(indexPath.section)!
         let stage = Levels.sharedInstance.stages[stageIndex]!
         if stage.isUnlocked {
-            performSegue(withIdentifier: "showDetails", sender: nil)
+            performSegue(withIdentifier: "showDetails", sender: self)
         }
     }
     

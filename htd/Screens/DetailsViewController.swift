@@ -33,7 +33,7 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         super.viewDidLoad()
         Colorize.sharedInstance.addColor(toView: self.view)
         
-        self.navigationController!.interactivePopGestureRecognizer!.delegate = self
+        self.navigationController!.interactivePopGestureRecognizer?.delegate = self
         backTapRecognizer.addTarget(self, action: #selector(self.exit))
         previewViewContainer.layer.cornerRadius = 5
         
