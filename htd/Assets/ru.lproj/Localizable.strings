@@ -6,7 +6,7 @@
   Copyright © 2018 Alexey Landyrev. All rights reserved.
 */
 
-"APP_TITLE" = "КАК РИСОВАТЬ";
+"APP_TITLE" = "РИСОВАТЕЛЬ";
 "APP_SUBTITLE" = "ПО ШАГАМ";
 
 "STEPS_NN" = "шаг";

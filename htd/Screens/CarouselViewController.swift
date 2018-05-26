@@ -12,6 +12,8 @@ class CarouselViewController: UIViewController,
     UIPageViewControllerDataSource, UIPageViewControllerDelegate
 {
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var captureButton: UIControl!
+    @IBOutlet weak var captureButtonLabel: UILabel!
     @IBOutlet weak var pagesLabel: UILabel!
     @IBOutlet weak var crossButton: UIButton!
     @IBOutlet weak var pagesView: UIView!
@@ -23,6 +25,12 @@ class CarouselViewController: UIViewController,
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.captureButtonLabel.text = NSLocalizedString("CHECK_BUTTON", comment: "Check button")
+        self.nextButton.setTitle(NSLocalizedString("NEXT_BUTTON", comment: "Next button"), for: .normal)
+        self.captureButton.layer.cornerRadius = 5
+        self.captureButton.isHidden = true
+        
         
         pageViewController = UIPageViewController.init(
             transitionStyle: .scroll, navigationOrientation: .horizontal,
@@ -43,6 +51,8 @@ class CarouselViewController: UIViewController,
         crossButton.addTarget(self, action: #selector(self.exitAnimated), for: .touchUpInside)
         
         self.nextButton.addTarget(self, action: #selector(self.nextTap), for: .touchUpInside)
+        self.captureButton.addTarget(self, action: #selector(self.nextTap), for: .touchUpInside)
+        
         setButtonTitle()
         self.initDrag()
         self.setPageNumber()
@@ -151,17 +161,8 @@ class CarouselViewController: UIViewController,
     }
     
     func setButtonTitle() {
-        if pageNumber + 1 == self.images.count {
-            self.nextButton.setTitle(
-                NSLocalizedString("CHECK_BUTTON", comment: "Check button"),
-                for: .normal
-            )
-        } else {
-            self.nextButton.setTitle(
-                NSLocalizedString("NEXT_BUTTON", comment: "Next button"),
-                for: .normal
-            )
-        }
+        self.nextButton.isHidden = pageNumber + 1 == self.images.count
+        self.captureButton.isHidden = !(pageNumber + 1 == self.images.count)
     }
     
     @objc func nextTap() {

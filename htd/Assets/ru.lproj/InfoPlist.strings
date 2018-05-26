@@ -6,8 +6,8 @@
   Copyright © 2018 Alexey Landyrev. All rights reserved.
 */
 
-"CFBundleDisplayName" = "Как рисовать";
-"CFBundleName" = "Как рисовать";
+"CFBundleDisplayName" = "Рисователь";
+"CFBundleName" = "Рисователь";
 NSCameraUsageDescription = "Чтобы мы могли распознать ваш рисунок";
 
 UILaunchStoryboardName = "LaunchScreen_ru";
