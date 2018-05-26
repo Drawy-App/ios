@@ -46,6 +46,7 @@
 		B47F3B41202612BF007E0B26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B47F3B43202612BF007E0B26 /* Localizable.strings */; };
 		B47F3B4B20264245007E0B26 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47F3B4A20264245007E0B26 /* CarouselViewController.swift */; };
 		B491506D204DE12300268384 /* PaymentScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B491506C204DE12300268384 /* PaymentScreenViewController.swift */; };
+		B497E04920B9B2090081346E /* TutorialPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497E04820B9B2090081346E /* TutorialPhoneViewController.swift */; };
 		B498394E204DC8840080CA37 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B498394D204DC8840080CA37 /* Purchase.swift */; };
 		B4AD7EEE20279CB70093EF65 /* MoreCaptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */; };
 		B4BCFE22202609F4008161EA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4BCFE21202609F3008161EA /* Info.plist */; };
@@ -127,6 +128,7 @@
 		B47F3B44202612C1007E0B26 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B47F3B4A20264245007E0B26 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		B491506C204DE12300268384 /* PaymentScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScreenViewController.swift; sourceTree = "<group>"; };
+		B497E04820B9B2090081346E /* TutorialPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPhoneViewController.swift; sourceTree = "<group>"; };
 		B498394D204DC8840080CA37 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCaptionTableViewCell.swift; sourceTree = "<group>"; };
 		B4BCFE21202609F3008161EA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		B455A6CF200AA21F000247BC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B497E04720B9B1EA0081346E /* Tutorial */,
 				B455A6D0200AA240000247BC /* MainScreenViewController.swift */,
 				B455A6F8200B9457000247BC /* DetailsViewController.swift */,
 				B468F42D200BC55500C085C5 /* RecognizerViewController.swift */,
@@ -281,6 +284,14 @@
 				B45CF7842039EA4000901235 /* Levels.strings */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		B497E04720B9B1EA0081346E /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				B497E04820B9B2090081346E /* TutorialPhoneViewController.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		B4BCFE2920260AC9008161EA /* Utilities */ = {
@@ -345,7 +356,6 @@
 				B455A6B4200A6600000247BC /* Frameworks */,
 				B455A6B5200A6600000247BC /* Resources */,
 				155C425DA13602AFB25A15DE /* [CP] Embed Pods Frameworks */,
-				CD00F7CA83905041C6AADEC0 /* [CP] Copy Pods Resources */,
 				B4C35F83202BA6B1000D3CB4 /* Embed Frameworks */,
 				B4C35F84202BA6D5000D3CB4 /* Run Realm */,
 				B4EB79F6204E03E80042571D /* ShellScript */,
@@ -503,21 +513,6 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 70d5eb5247a716c96d278bedd9df4467e781e148 24b38e999fd52a9cae7b1b4e1d58f928605f9bf0f0bdb1d7ee7aa2953bc58482";
 		};
-		CD00F7CA83905041C6AADEC0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-htd/Pods-htd-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -548,6 +543,7 @@
 				B4C35F77202B9AB7000D3CB4 /* Recognizer.swift in Sources */,
 				B455A6F4200AB5F2000247BC /* Level.swift in Sources */,
 				B455A6BB200A6600000247BC /* AppDelegate.swift in Sources */,
+				B497E04920B9B2090081346E /* TutorialPhoneViewController.swift in Sources */,
 				B498394E204DC8840080CA37 /* Purchase.swift in Sources */,
 				B491506D204DE12300268384 /* PaymentScreenViewController.swift in Sources */,
 			);
