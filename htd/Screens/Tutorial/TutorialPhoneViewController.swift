@@ -13,6 +13,9 @@ class TutorialPhoneViewController: UIViewController {
     @IBOutlet weak var phoneImage: UIImageView!
     @IBOutlet weak var phoneYConstraint: NSLayoutConstraint!
     @IBOutlet weak var paperImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var continueButton: UIControl!
+    @IBOutlet weak var continueLabel: UILabel!
     private var page = 0
     private var images: [UIImage]?
     
@@ -30,12 +33,23 @@ class TutorialPhoneViewController: UIViewController {
         Colorize.sharedInstance.addColor(toView: self.view)
         // Do any additional setup after loading the view.
         
+        self.continueButton.addTarget(self, action: #selector(cont), for: .touchUpInside)
+        
         startSwiping()
+    }
+    
+    @objc
+    func cont() {
+        let preferences = UserDefaults.standard
+        preferences.set(Date().timeIntervalSince1970, forKey: "first_run")
+        preferences.synchronize()
+        performSegue(withIdentifier: "exitTutorial", sender: nil)
     }
 
     func startSwiping() {
         page = 0
         paperImage.image = images![page]
+        self.titleLabel.text = NSLocalizedString("TUTORIAL_DRAW_IMAGES", comment: "TUTORIAL_DRAW_IMAGES")
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {(timer) -> Void in
             self.page += 1
             if self.page == self.images!.count {
@@ -53,6 +67,7 @@ class TutorialPhoneViewController: UIViewController {
     }
     
     func startAnimate() {
+        self.titleLabel.text = NSLocalizedString("TUTORIAL_USE_NETWORK", comment: "TUTORIAL_DRAW_IMAGES")
         UIView.animate(withDuration: 0.3, animations: {
             self.phoneImage.alpha = 1.0
         })

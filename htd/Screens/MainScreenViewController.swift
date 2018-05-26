@@ -33,13 +33,14 @@ class MainScreenViewController:
         LevelsList.backgroundColor = .clear
         LevelsList.contentInset = .init(top: 20, left: 0, bottom: 0, right: 0)
         
-        print("total stars", Levels.sharedInstance.totalStars)
+        NSLog("Start 1")
         for stage in Levels.sharedInstance.stages {
-            previews[stage.key] = stage.value.levels.map {level in
-                UIImage.init(named: level.preview)!
-            }
-            print("stage", stage.value.number, stage.value.isUnlocked)
+//            previews[stage.key] = stage.value.levels.map {level in
+//                level.preview
+//            }
+//            print("stage", stage.value.number, stage.value.isUnlocked)
         }
+        NSLog("Start 2")
         
         Colorize.sharedInstance.addColor(toView: self.view)
     }
@@ -146,7 +147,8 @@ class MainScreenViewController:
         let stage = Levels.sharedInstance.stages[stageIndex]!
         let level = stage.levels[indexPath.row]
         cell.level = level
-        cell.previewView.image = previews[stageIndex]![indexPath.row]
+//        cell.previewView.image = previews[stageIndex]![indexPath.row]
+        cell.previewView.image = Levels.sharedInstance.stages[stageIndex]!.levels[indexPath.row].preview
         cell.indexPath = indexPath
         cell.tableView = tableView
         

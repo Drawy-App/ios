@@ -44,7 +44,7 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         collectionView.contentInset = .init(top: 0, left: 15, bottom: 8, right: 15)
         
         titleLabel.text = level!.title
-        previewView.image = UIImage.init(named: level!.preview)
+        previewView.image = level!.preview
         timeLabel.text = GramCase.getLocalizedString(number: level!.tutorials.count, key: "STEPS")
         
         

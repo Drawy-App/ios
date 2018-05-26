@@ -25,8 +25,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Analytics.sharedInstance.event("app_started", params: nil)
         
         Purchase.sharedInstance.completeTransaction()
+        print(Levels.sharedInstance.stages.count)
+        
+        let preferences = UserDefaults.standard
+        let lastRun = preferences.integer(forKey: "first_run")
+        if (lastRun <= 0) {
+            setTutorial()
+        }
+        #if IOS_DEBUG
+        setTutorial()
+        #endif
         
         return true
+    }
+    
+    func setTutorial() {
+        window!.rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tutorial")
+            as! TutorialPhoneViewController
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {

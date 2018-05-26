@@ -13,7 +13,7 @@ class Level {
     let name: String
     var rating: Int
     var difficulty: Int
-    let preview: String
+    let preview: UIImage
     let title: String
     let stage: Int
     var totalStars: Int {
@@ -31,7 +31,7 @@ class Level {
         self.name = name
         self.stage = stage
         self.difficulty = difficulty
-        self.preview = Level.getUrl("\(name)/\(name)_preview.png")
+        self.preview = UIImage.init(named: Level.getUrl("\(name)/\(name)_preview.png"))!
 //        self.title = NSLocalizedString(name, comment: "Tutorial name")
         self.title = Bundle.main.localizedString(forKey: name, value: nil, table: "Levels")
         self.tutorials = tutorials.map { Level.getUrl($0) }
