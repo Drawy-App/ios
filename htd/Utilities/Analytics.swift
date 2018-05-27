@@ -9,27 +9,31 @@
 import UIKit
 import Foundation
 import YandexMobileMetrica
+import StoreKit
+import Firebase
 
 class Analytics {
     
     static let sharedInstance = Analytics()
     
     func initMetrics() {
-        GA.initGA()
         FB.initFB()
         #if IOS_DEBUG
             YMMYandexMetrica.activate(withApiKey: "dfc8e1e1-ffc6-46b1-822e-f9c39bb43510")
         #else
             YMMYandexMetrica.activate(withApiKey: "73f4540f-a438-4b3b-97f3-2b0f5f452043")
         #endif
+    
     }
     
     func navigate(_ pageName: String, params: [String:Any]?) {
         YMMYandexMetrica.reportEvent("page_opened", parameters: params, onFailure: nil)
-        GA.pageOpened(pageName)
+        FIRAnalytics.setScreenName(pageName, screenClass: nil)
+        FIRAnalytics.logEvent(withName: "page_opened", parameters: params)
     }
     
     func event(_ name: String, params: [String:Any]?) {
+        FIRAnalytics.logEvent(withName: name, parameters: params)
         YMMYandexMetrica.reportEvent(name, parameters: params, onFailure: nil)
         #if IOS_DEBUG
             NSLog("Message \"\(name)\" sended with params \(params ?? [:])")
@@ -37,6 +41,9 @@ class Analytics {
     }
     
     func paidAction(_ product: SKProduct, transactionId: String) {
-        GA.paidAction(product, transactionId)
+        FIRAnalytics.logEvent(withName: kFIREventEcommercePurchase, parameters: [
+            kFIRParameterPrice: product.price,
+            kFIRParameterCurrency: product.priceLocale
+        ])
     }
 }

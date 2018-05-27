@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TutorialPhoneViewController: UIViewController {
 
@@ -16,6 +17,8 @@ class TutorialPhoneViewController: UIViewController {
     @IBOutlet weak var continueButton: UIControl!
     @IBOutlet weak var continueLabel: UILabel!
     @IBOutlet weak var phoneYConstraint: NSLayoutConstraint!
+    
+    var startTime: Date?
     
     
     override func viewDidLoad() {
@@ -29,6 +32,9 @@ class TutorialPhoneViewController: UIViewController {
         self.continueLabel.text = NSLocalizedString("CONTINUE_BUTTON", comment: "")
         self.titleLabel.text = NSLocalizedString("TUTORIAL_USE_NETWORK", comment: "TUTORIAL_DRAW_IMAGES")
         
+        startTime = Date()
+        Analytics.sharedInstance.event("tutorial_page_2_opened", params: nil)
+        
         Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false, block: {_ in
             self.startAnimate()
         })
@@ -40,6 +46,14 @@ class TutorialPhoneViewController: UIViewController {
         let preferences = UserDefaults.standard
         preferences.set(Date().timeIntervalSince1970, forKey: "first_run")
         preferences.synchronize()
+        
+        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
+        Analytics.sharedInstance.event("tutorial_page_2_passed", params: [
+            "time_elapsed": Int(timeElapsed)
+            ])
+        Analytics.sharedInstance.event(kFIREventTutorialComplete, params: [
+            "time_elapsed": Int(timeElapsed)
+            ])
         
         let targetVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
         self.navigationController?.setViewControllers([targetVC], animated: true)

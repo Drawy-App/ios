@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import Firebase
 
 class TutorialFirstViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var continueButton: UIControl!
     @IBOutlet weak var continueLabel: UILabel!
+    var startTime: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startTime = Date()
         
         continueButton.layer.cornerRadius = 5
         continueLabel.text = NSLocalizedString("CONTINUE_BUTTON", comment: "")
@@ -24,10 +28,17 @@ class TutorialFirstViewController: UIViewController {
         self.textLabel.text = NSLocalizedString("TUTORIAL_ALL_YOU_NEED", comment: "All you need is")
         
         Colorize.sharedInstance.addColor(toView: self.view)
+        
+        Analytics.sharedInstance.event(kFIREventTutorialBegin, params: nil)
+        Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
     }
     
     @objc
     func cont() {
+        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
+        Analytics.sharedInstance.event("tutorial_page_0_passed", params: [
+            "time_elapsed": Int(timeElapsed)
+            ])
         performSegue(withIdentifier: "firstToNextTutorial", sender: nil)
     }
     

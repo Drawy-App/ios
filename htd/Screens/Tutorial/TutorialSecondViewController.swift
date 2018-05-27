@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TutorialSecondViewController: UIViewController {
 
@@ -17,6 +18,7 @@ class TutorialSecondViewController: UIViewController {
     
     var images: [UIImage]?
     var page = 0
+    var startTime: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,7 @@ class TutorialSecondViewController: UIViewController {
         self.continueLabel.text = NSLocalizedString("CONTINUE_BUTTON", comment: "")
         self.textLabel.text = NSLocalizedString("TUTORIAL_DRAW_IMAGES", comment: "TUTORIAL_DRAW_IMAGES")
         continueButton.layer.cornerRadius = 5
+        startTime = Date()
         
         Colorize.sharedInstance.addColor(toView: self.view)
         
@@ -35,6 +38,7 @@ class TutorialSecondViewController: UIViewController {
             UIImage.init(named: "composition3")!
         ]
         startSwiping()
+        Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
     }
     
     func startSwiping() {
@@ -55,6 +59,10 @@ class TutorialSecondViewController: UIViewController {
     @objc
     func cont() {
         performSegue(withIdentifier: "secondToNextTutorial", sender: nil)
+        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
+        Analytics.sharedInstance.event("tutorial_page_1_passed", params: [
+            "time_elapsed": Int(timeElapsed)
+            ])
     }
 
     override func didReceiveMemoryWarning() {

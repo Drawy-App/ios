@@ -22,5 +22,41 @@
 	<false></false>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:463177218194:ios:67fd0357205eeffe</string>
+    <key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+    <string>ca-app-pub-3940256099942544/2934735716</string>
+    <key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+    <string>ca-app-pub-3940256099942544/4411468910</string>
+    <key>CLIENT_ID</key>
+    <string>1009739335418-h1pnb9ee7uth9nfl9etmh4m61i1ldqb4.apps.googleusercontent.com</string>
+    <key>REVERSED_CLIENT_ID</key>
+    <string>com.googleusercontent.apps.1009739335418-h1pnb9ee7uth9nfl9etmh4m61i1ldqb4</string>
+    <key>ANDROID_CLIENT_ID</key>
+    <string>1009739335418-ugttuvs9t6mco9k9uu2ipbpqhqfri8pi.apps.googleusercontent.com</string>
+    <key>API_KEY</key>
+    <string>AIzaSyCW0h2BGSWRtHD-BfGCLy93P99UBwgz50M</string>
+    <key>GCM_SENDER_ID</key>
+    <string>1009739335418</string>
+    <key>PLIST_VERSION</key>
+    <string>1</string>
+    <key>BUNDLE_ID</key>
+    <string>landyrev.htd</string>
+    <key>PROJECT_ID</key>
+    <string>drawing-made-easy-7433b</string>
+    <key>STORAGE_BUCKET</key>
+    <string>drawing-made-easy-7433b.appspot.com</string>
+    <key>IS_ADS_ENABLED</key>
+    <true></true>
+    <key>IS_ANALYTICS_ENABLED</key>
+    <false></false>
+    <key>IS_APPINVITE_ENABLED</key>
+    <true></true>
+    <key>IS_GCM_ENABLED</key>
+    <true></true>
+    <key>IS_SIGNIN_ENABLED</key>
+    <true></true>
+    <key>GOOGLE_APP_ID</key>
+    <string>1:1009739335418:ios:67fd0357205eeffe</string>
+    <key>DATABASE_URL</key>
+    <string>https://drawing-made-easy-7433b.firebaseio.com</string>
 </dict>
 </plist>

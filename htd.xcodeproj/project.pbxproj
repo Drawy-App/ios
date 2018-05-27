@@ -38,7 +38,6 @@
 		B455A6F4200AB5F2000247BC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6F3200AB5F2000247BC /* Level.swift */; };
 		B455A6F7200AB71A000247BC /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6F6200AB71A000247BC /* Levels.swift */; };
 		B455A6F9200B9457000247BC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6F8200B9457000247BC /* DetailsViewController.swift */; };
-		B458A921204F416D00B3E7B4 /* GA.m in Sources */ = {isa = PBXBuildFile; fileRef = B458A920204F416D00B3E7B4 /* GA.m */; };
 		B45CF7822039EA4000901235 /* Levels.strings in Resources */ = {isa = PBXBuildFile; fileRef = B45CF7842039EA4000901235 /* Levels.strings */; };
 		B45CF7872039F87B00901235 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CF7862039F87B00901235 /* Stage.swift */; };
 		B466B5DC205AD97A0005F81C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B466B5DB205AD97A0005F81C /* Bolts.framework */; };
@@ -118,8 +117,6 @@
 		B455A6F6200AB71A000247BC /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
 		B455A6F8200B9457000247BC /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		B458A91E204F416D00B3E7B4 /* htd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "htd-Bridging-Header.h"; sourceTree = "<group>"; };
-		B458A91F204F416D00B3E7B4 /* GA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GA.h; sourceTree = "<group>"; };
-		B458A920204F416D00B3E7B4 /* GA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GA.m; sourceTree = "<group>"; };
 		B458A922204F485F00B3E7B4 /* htd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = htd.entitlements; sourceTree = "<group>"; };
 		B45CF7832039EA4000901235 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Levels.strings; sourceTree = "<group>"; };
 		B45CF7852039EA4200901235 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Levels.strings; sourceTree = "<group>"; };
@@ -312,8 +309,6 @@
 				B42D4264204C5CB00002175A /* Colorize.swift */,
 				B498394D204DC8840080CA37 /* Purchase.swift */,
 				B458A91E204F416D00B3E7B4 /* htd-Bridging-Header.h */,
-				B458A91F204F416D00B3E7B4 /* GA.h */,
-				B458A920204F416D00B3E7B4 /* GA.m */,
 				B466B5DF205ADA2F0005F81C /* FB.h */,
 				B466B5E0205ADA2F0005F81C /* FB.m */,
 			);
@@ -537,7 +532,6 @@
 				B4CCEE5A20274F0C0081014A /* Analytics.swift in Sources */,
 				B455A6D1200AA240000247BC /* MainScreenViewController.swift in Sources */,
 				B4D931B92024E0BC0071E283 /* Score.swift in Sources */,
-				B458A921204F416D00B3E7B4 /* GA.m in Sources */,
 				B466B5E1205ADA2F0005F81C /* FB.m in Sources */,
 				B4CCEE582026586E0081014A /* CarouselPageViewController.swift in Sources */,
 				B4D931C02025B6690071E283 /* realmodel.mlmodel in Sources */,
