@@ -26,7 +26,6 @@ class NavigationViewController: UINavigationController {
     
     func setTutorial() {
         let rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tutorial")
-            as! TutorialPhoneViewController
         setViewControllers([rootVC], animated: false)
     }
 

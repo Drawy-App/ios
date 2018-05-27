@@ -40,5 +40,6 @@
 "RESTORE_BUTTON" = "Restore purchases";
 "ON_RESTORE_FAILED" = "Unable to restore purchase";
 
+"TUTORIAL_ALL_YOU_NEED" = "All you need is paper and pencil";
 "TUTORIAL_DRAW_IMAGES" = "Draw using simple step-by-step instructions";
 "TUTORIAL_USE_NETWORK" = "Neural network will recognize your picture with phone camera";
