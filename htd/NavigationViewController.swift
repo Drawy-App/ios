@@ -16,12 +16,12 @@ class NavigationViewController: UINavigationController {
         // Do any additional setup after loading the view.
         let preferences = UserDefaults.standard
         let lastRun = preferences.integer(forKey: "first_run")
-        if (lastRun <= 0) {
+        if (lastRun <= 0 && Levels.sharedInstance.totalStars == 0) {
             setTutorial()
         }
-        #if IOS_DEBUG
-        setTutorial()
-        #endif
+//        #if IOS_DEBUG
+//        setTutorial()
+//        #endif
     }
     
     func setTutorial() {
