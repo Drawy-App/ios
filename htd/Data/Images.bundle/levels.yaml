@@ -1,4 +1,11 @@
 - difficulty: '1'
+  level: '0'
+  name: generic_square
+  title_en: Try it
+  title_ru: Попробуй
+  tutorials:
+  - generic_square/generic_square_00.jpg
+- difficulty: '1'
   level: '1'
   name: lutz_boat0
   title_en: Boat

@@ -24,7 +24,8 @@ class Stage {
     }
     
     static let needed: [Int: Int] = [
-        1: 0,
+        0: 0,
+        1: 1,
         2: 3,
         3: 7,
         4: 12,

@@ -43,3 +43,5 @@
 "TUTORIAL_ALL_YOU_NEED" = "All you need is paper and pencil";
 "TUTORIAL_DRAW_IMAGES" = "Draw using simple step-by-step tutorials";
 "TUTORIAL_USE_NETWORK" = "Neural network recognizes your drawings to unlock new ones";
+
+"NEED_TO_FINISH_TEST" = "Нарисуйте квадрат, чтобы открыть остальные картинки";

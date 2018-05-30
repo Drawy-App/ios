@@ -55,13 +55,13 @@ class MainScreenViewController:
             }
         }
         if firstUnlocked == nil {
-            return section + 1
-        }
-        if section < firstUnlocked! - 1 {
-            return section + 1
-        }
-        if section > firstUnlocked! - 1 {
             return section
+        }
+        if section < firstUnlocked! {
+            return section
+        }
+        if section > firstUnlocked! {
+            return section - 1
         }
         return nil
     }
@@ -85,7 +85,7 @@ class MainScreenViewController:
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if getStageIndex(section) == nil {
-            return 220
+            return section == 1 ? 80 : 220
         }
         return 54
     }
@@ -114,6 +114,12 @@ class MainScreenViewController:
                 NSLocalizedString("NEED_MORE_STARS", comment: "Need more stars"),
                 neededStars
             )
+            
+            if section == 1 {
+                header.unlockAllButton.isHidden = true
+                header.threeStars.isHidden = true
+                header.captionLabel.text = NSLocalizedString("NEED_TO_FINISH_TEST", comment: "")
+            }
             
             return header as UIView
         }
@@ -151,7 +157,9 @@ class MainScreenViewController:
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let stageIndex = getStageIndex(indexPath.section)!
         let stage = Levels.sharedInstance.stages[stageIndex]!
-        if stage.isUnlocked {
+        if stage.number == 0 {
+            performSegue(withIdentifier: "firstPicture", sender: self)
+        } else if stage.isUnlocked {
             performSegue(withIdentifier: "showDetails", sender: self)
         }
     }

@@ -38,6 +38,10 @@ class Recognizer {
             let result = results.filter {
                 $0.identifier.replacingOccurrences(of: " ", with: "_") == self.level.name
             }.first!
+            print("final: ", result.identifier)
+            print("final: ", result.confidence)
+            print(results.first!.identifier)
+            print(results.first!.confidence)
             self.rate(Int(result.confidence * 100))
         }
         request!.imageCropAndScaleOption = .scaleFill
@@ -76,7 +80,7 @@ class Recognizer {
     
     func rate(_ rate: Int) {
         let now = NSDate().timeIntervalSince1970
-        if rate > 90 {
+        if rate > 75 {
             let timeElapsed = now - lastFailureTime
             if timeElapsed > 0.33 {
                 if timeElapsed > 3  {
