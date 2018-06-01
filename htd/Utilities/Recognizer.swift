@@ -80,7 +80,7 @@ class Recognizer {
     
     func rate(_ rate: Int) {
         let now = NSDate().timeIntervalSince1970
-        if rate > 75 {
+        if rate > 55 {
             let timeElapsed = now - lastFailureTime
             if timeElapsed > 0.33 {
                 if timeElapsed > 3  {
