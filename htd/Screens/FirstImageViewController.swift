@@ -24,6 +24,7 @@ class FirstImageViewController: UIViewController {
         
         self.backButtonLabel.text = NSLocalizedString("BACK_BUTTON", comment: "")
         recognizeLabel.text = NSLocalizedString("CHECK_BUTTON", comment: "")
+        textLabel.text = NSLocalizedString("FIRST_IMAGE_LABEL", comment: "")
         
         self.backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
         
