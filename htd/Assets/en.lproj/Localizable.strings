@@ -43,5 +43,5 @@
 "TUTORIAL_ALL_YOU_NEED" = "All you need is paper and pencil";
 "TUTORIAL_DRAW_IMAGES" = "Draw using simple step-by-step tutorials";
 "TUTORIAL_USE_NETWORK" = "Neural network recognizes your drawings to unlock new ones";
-"NEED_TO_FINISH_TEST" = "Нарисуйте квадрат, чтобы открыть остальные картинки";
+"NEED_TO_FINISH_TEST" = "Try to draw a square, to unlock new levels";
 "FIRST_IMAGE_LABEL" = "Draw a square.\n\nWill the neural network recognize\U00A0it? 🤔";
