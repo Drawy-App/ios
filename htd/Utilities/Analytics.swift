@@ -11,13 +11,14 @@ import Foundation
 import YandexMobileMetrica
 import StoreKit
 import Firebase
+import FacebookCore
 
 class Analytics {
     
     static let sharedInstance = Analytics()
     
     func initMetrics() {
-        FB.initFB()
+        AppEventsLogger.activate()
         #if IOS_DEBUG
             YMMYandexMetrica.activate(withApiKey: "dfc8e1e1-ffc6-46b1-822e-f9c39bb43510")
         #else
@@ -30,6 +31,9 @@ class Analytics {
         YMMYandexMetrica.reportEvent("page_opened", parameters: params, onFailure: nil)
         FIRAnalytics.setScreenName(pageName, screenClass: nil)
         FIRAnalytics.logEvent(withName: "page_opened", parameters: params)
+//        AppEventsLogger.log("page_opened", parameters: pa, valueToSum: <#T##Double?#>, accessToken: <#T##AccessToken?#>)
+//        AppEventsLogger.log(pageName, parameters: AppEvent.ParametersDictionary.init(uniqueKeysWithValues: params), valueToSum: nil, accessToken: nil)
+        
     }
     
     func event(_ name: String, params: [String:Any]?) {

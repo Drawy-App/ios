@@ -1,4 +1,15 @@
 PODS:
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FacebookCore (0.3.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.27)
+  - FBSDKCoreKit (4.33.0):
+    - Bolts (~> 1.7)
   - Firebase/Core (3.17.0):
     - FirebaseAnalytics (= 3.9.0)
     - FirebaseCore (= 3.6.0)
@@ -20,6 +31,7 @@ PODS:
   - YandexMobileMetrica/Static (2.9.6)
 
 DEPENDENCIES:
+  - FacebookCore
   - Firebase/Core
   - SwiftyStoreKit
   - Yams
@@ -27,6 +39,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Bolts
+    - FacebookCore
+    - FBSDKCoreKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -37,6 +52,9 @@ SPEC REPOS:
     - YandexMobileMetrica
 
 SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
+  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
   Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
@@ -46,6 +64,6 @@ SPEC CHECKSUMS:
   Yams: 58b13424ca380835c4c797bc775ce6cbb3bc0167
   YandexMobileMetrica: 330c11f9e4b8b3b72454c0cd80f61b4231467ebe
 
-PODFILE CHECKSUM: 8b645f58108803f39e6b2b71f1e186a034d5c9f8
+PODFILE CHECKSUM: f2ba1250220b485958d143e7dc71491b52678abc
 
 COCOAPODS: 1.5.2
