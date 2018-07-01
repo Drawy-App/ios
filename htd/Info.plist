@@ -17,18 +17,19 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.4.1</string>
+	<string>1.4.2</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>drawingiseasy</string>
+				<string>fb583744185320259</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>141</string>
+	<string>142</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -46,7 +47,7 @@
 	<key>FacebookAppID</key>
 	<string>583744185320259</string>
 	<key>FacebookDisplayName</key>
-	<string>Drawing Made Easy</string>
+	<string>Drawy</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
