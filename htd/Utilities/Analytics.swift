@@ -20,9 +20,13 @@ class Analytics {
     func initMetrics() {
         AppEventsLogger.activate()
         #if IOS_DEBUG
-            YMMYandexMetrica.activate(withApiKey: "dfc8e1e1-ffc6-46b1-822e-f9c39bb43510")
+            YMMYandexMetrica.activate(with: YMMYandexMetricaConfiguration.init(
+                apiKey: "dfc8e1e1-ffc6-46b1-822e-f9c39bb43510")!
+            )
         #else
-            YMMYandexMetrica.activate(withApiKey: "73f4540f-a438-4b3b-97f3-2b0f5f452043")
+            YMMYandexMetrica.activate(with: YMMYandexMetricaConfiguration.init(
+                apiKey: "73f4540f-a438-4b3b-97f3-2b0f5f452043")!
+            )
         #endif
     
     }
