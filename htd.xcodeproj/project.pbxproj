@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		56ACFFAD0797B425BB22D836 /* Pods_htd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C472F0F787E5D6981E0F5C2F /* Pods_htd.framework */; };
-		B4031A512078ED0000C83EC0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A4F2078ECFF00C83EC0 /* Realm.framework */; };
-		B4031A522078ED0000C83EC0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A502078ED0000C83EC0 /* RealmSwift.framework */; };
-		B4031A532078EDB300C83EC0 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A4F2078ECFF00C83EC0 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B4031A542078EDB300C83EC0 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4031A502078ED0000C83EC0 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4031A562078F84100C83EC0 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4031A552078F84100C83EC0 /* UserInfo.swift */; };
 		B411263020BAF40400CC86A9 /* realmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B411262F20BAF40400CC86A9 /* realmodel.mlmodel */; };
 		B411263220BB008C00CC86A9 /* FirstImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B411263120BB008C00CC86A9 /* FirstImageViewController.swift */; };
@@ -52,7 +48,6 @@
 		B497E04920B9B2090081346E /* TutorialPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497E04820B9B2090081346E /* TutorialPhoneViewController.swift */; };
 		B498394E204DC8840080CA37 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B498394D204DC8840080CA37 /* Purchase.swift */; };
 		B4AD7EEE20279CB70093EF65 /* MoreCaptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */; };
-		B4BCFE22202609F4008161EA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4BCFE21202609F3008161EA /* Info.plist */; };
 		B4BCFE2520260A45008161EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4BCFE2720260A45008161EA /* InfoPlist.strings */; };
 		B4BCFE2D20260B72008161EA /* GramCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BCFE2C20260B72008161EA /* GramCase.swift */; };
 		B4C35F77202B9AB7000D3CB4 /* Recognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C35F76202B9AB7000D3CB4 /* Recognizer.swift */; };
@@ -76,8 +71,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B4031A532078EDB300C83EC0 /* Realm.framework in Embed Frameworks */,
-				B4031A542078EDB300C83EC0 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,8 +79,6 @@
 
 /* Begin PBXFileReference section */
 		53F04AC74C63E30B0182C1EC /* Pods-htd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.release.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.release.xcconfig"; sourceTree = "<group>"; };
-		B4031A4F2078ECFF00C83EC0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		B4031A502078ED0000C83EC0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		B4031A552078F84100C83EC0 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		B411262F20BAF40400CC86A9 /* realmodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = realmodel.mlmodel; sourceTree = "<group>"; };
 		B411263120BB008C00CC86A9 /* FirstImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstImageViewController.swift; sourceTree = "<group>"; };
@@ -162,9 +153,7 @@
 				B4EB79FA204E040F0042571D /* Fabric.framework in Frameworks */,
 				56ACFFAD0797B425BB22D836 /* Pods_htd.framework in Frameworks */,
 				B466B5DE205AD9880005F81C /* FBSDKCoreKit.framework in Frameworks */,
-				B4031A512078ED0000C83EC0 /* Realm.framework in Frameworks */,
 				B466B5DC205AD97A0005F81C /* Bolts.framework in Frameworks */,
-				B4031A522078ED0000C83EC0 /* RealmSwift.framework in Frameworks */,
 				B4EB79F9204E040F0042571D /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,8 +311,6 @@
 		B4C35F78202BA570000D3CB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B4031A4F2078ECFF00C83EC0 /* Realm.framework */,
-				B4031A502078ED0000C83EC0 /* RealmSwift.framework */,
 				B466B5DD205AD9880005F81C /* FBSDKCoreKit.framework */,
 				B466B5DB205AD97A0005F81C /* Bolts.framework */,
 				B4EB79F7204E040E0042571D /* Crashlytics.framework */,
@@ -365,7 +352,6 @@
 				B455A6B5200A6600000247BC /* Resources */,
 				155C425DA13602AFB25A15DE /* [CP] Embed Pods Frameworks */,
 				B4C35F83202BA6B1000D3CB4 /* Embed Frameworks */,
-				B4C35F84202BA6D5000D3CB4 /* Run Realm */,
 				B4EB79F6204E03E80042571D /* ShellScript */,
 			);
 			buildRules = (
@@ -438,7 +424,6 @@
 				B455A6E6200AA502000247BC /* SF-Pro-Text-Light.otf in Resources */,
 				B455A6E9200AA502000247BC /* SF-Pro-Text-Medium.otf in Resources */,
 				B455A6E3200AA502000247BC /* SF-Pro-Text-Bold.otf in Resources */,
-				B4BCFE22202609F4008161EA /* Info.plist in Resources */,
 				B45CF7822039EA4000901235 /* Levels.strings in Resources */,
 				B455A6C5200A6601000247BC /* Assets.xcassets in Resources */,
 				B4CFCA3A202785AD00A91B1C /* LaunchScreen_en.storyboard in Resources */,
@@ -465,6 +450,8 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Yams/Yams.framework",
 			);
@@ -474,6 +461,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yams.framework",
 			);
@@ -500,20 +489,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B4C35F84202BA6D5000D3CB4 /* Run Realm */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Realm";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
-		};
 		B4EB79F6204E03E80042571D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -525,7 +500,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 70d5eb5247a716c96d278bedd9df4467e781e148 24b38e999fd52a9cae7b1b4e1d58f928605f9bf0f0bdb1d7ee7aa2953bc58482";
+			shellScript = "./Fabric.framework/run 70d5eb5247a716c96d278bedd9df4467e781e148 24b38e999fd52a9cae7b1b4e1d58f928605f9bf0f0bdb1d7ee7aa2953bc58482\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

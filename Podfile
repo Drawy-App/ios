@@ -7,5 +7,6 @@ target 'htd' do
 	pod 'Yams', '0.5.0'
 	pod 'SwiftyStoreKit', '0.13.0'
 	pod 'Firebase/Core', '3.17.0'
-	pod 'FacebookCore', '0.3.0'
+	pod 'FacebookCore', '0.3.1'
+ 	pod 'RealmSwift'
 end

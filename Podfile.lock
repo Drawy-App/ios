@@ -5,10 +5,10 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - FacebookCore (0.3.0):
+  - FacebookCore (0.3.1):
     - Bolts (~> 1.8)
-    - FBSDKCoreKit (~> 4.27)
-  - FBSDKCoreKit (4.33.0):
+    - FBSDKCoreKit (~> 4.33)
+  - FBSDKCoreKit (4.35.0):
     - Bolts (~> 1.7)
   - Firebase/Core (3.17.0):
     - FirebaseAnalytics (= 3.9.0)
@@ -24,6 +24,11 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.3)
   - "GoogleToolboxForMac/NSData+zlib (2.1.3)":
     - GoogleToolboxForMac/Defines (= 2.1.3)
+  - Realm (3.7.5):
+    - Realm/Headers (= 3.7.5)
+  - Realm/Headers (3.7.5)
+  - RealmSwift (3.7.5):
+    - Realm (= 3.7.5)
   - SwiftyStoreKit (0.13.0)
   - Yams (0.5.0)
   - YandexMobileMetrica (3.2.0):
@@ -31,8 +36,9 @@ PODS:
   - YandexMobileMetrica/Static (3.2.0)
 
 DEPENDENCIES:
-  - FacebookCore (= 0.3.0)
+  - FacebookCore (= 0.3.1)
   - Firebase/Core (= 3.17.0)
+  - RealmSwift
   - SwiftyStoreKit (= 0.13.0)
   - Yams (= 0.5.0)
   - YandexMobileMetrica (= 3.2.0)
@@ -47,23 +53,27 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseInstanceID
     - GoogleToolboxForMac
+    - Realm
+    - RealmSwift
     - SwiftyStoreKit
     - Yams
     - YandexMobileMetrica
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
-  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
+  FacebookCore: 33078ef1d7d76b73f7e8c990dca7d3ea6db8d22f
+  FBSDKCoreKit: 1a5b2e3ceb5ca827a53c54aa5f4a3480efff80d2
   Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
   FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  Realm: c286caf4dbf346ce24aad49ca76c7ce622d4a082
+  RealmSwift: 2a9281e37d6de55f66f76254d49d28aeb1b729e4
   SwiftyStoreKit: df6a58aba530128e1c5d5ae4fe7d191e5ac50d5d
   Yams: 58b13424ca380835c4c797bc775ce6cbb3bc0167
   YandexMobileMetrica: f18374ee6977a4cd1d0a86298a0df4ad7baf4135
 
-PODFILE CHECKSUM: e7c8ae30f2a0f27d9c07ca92abfb863860744aae
+PODFILE CHECKSUM: b6a79fe12edb06be3ff1967bdafd978bd6e91a5f
 
 COCOAPODS: 1.5.3
