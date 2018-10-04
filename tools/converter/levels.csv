@@ -2,7 +2,7 @@ name,title_ru,title_en,difficulty,level
 generic_square,Попробуй,Try it,1,0
 lutz_boat0,Лодка,Boat,1,1
 lutz_lighthouse0,Маяк,Lighthouse,2,1
-lutz_mapple0,Кленовый лист,Maple leaf,2,2
+lutz_el1,Слон,Elephant,2,2
 lutz_swan0,Лебедь,Flying swallow,3,2
 lutz_but1,Бабочка,Butterfly,1,3
 lutz_fox0,Лиса,Fox,2,3
@@ -36,7 +36,7 @@ lutz_morningglory0,Вьюнок,Morning glory,2,11
 lutz_plane1,Аэроплан,Airplane,3,11
 lutz_buffalo0,Бизон,Buffalo,3,11
 lutz_buttercup0,Лютик,Buttercup,2,12
-lutz_el1,Слон,Elephant,2,12
+lutz_mapple0,Кленовый лист,Maple leaf,2,12
 lutz_pig0,Свин,Pig,3,12
 lutz_stork0,Аист,Stork,3,12
 lutz_face2,Мужчина в шляпе,Man in hat,3,12

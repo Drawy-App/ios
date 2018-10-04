@@ -31,14 +31,15 @@
   - lutz_lighthouse0/lutz_lighthouse0_05.jpg
 - difficulty: '2'
   level: '2'
-  name: lutz_mapple0
-  title_en: Maple leaf
-  title_ru: Кленовый лист
+  name: lutz_el1
+  title_en: Elephant
+  title_ru: Слон
   tutorials:
-  - lutz_mapple0/lutz_mapple0_00.jpg
-  - lutz_mapple0/lutz_mapple0_01.jpg
-  - lutz_mapple0/lutz_mapple0_02.jpg
-  - lutz_mapple0/lutz_mapple0_03.jpg
+  - lutz_el1/lutz_el1_00.jpg
+  - lutz_el1/lutz_el1_01.jpg
+  - lutz_el1/lutz_el1_02.jpg
+  - lutz_el1/lutz_el1_03.jpg
+  - lutz_el1/lutz_el1_04.jpg
 - difficulty: '3'
   level: '2'
   name: lutz_swan0
@@ -413,15 +414,14 @@
   - lutz_buttercup0/lutz_buttercup0_04.jpg
 - difficulty: '2'
   level: '12'
-  name: lutz_el1
-  title_en: Elephant
-  title_ru: Слон
+  name: lutz_mapple0
+  title_en: Maple leaf
+  title_ru: Кленовый лист
   tutorials:
-  - lutz_el1/lutz_el1_00.jpg
-  - lutz_el1/lutz_el1_01.jpg
-  - lutz_el1/lutz_el1_02.jpg
-  - lutz_el1/lutz_el1_03.jpg
-  - lutz_el1/lutz_el1_04.jpg
+  - lutz_mapple0/lutz_mapple0_00.jpg
+  - lutz_mapple0/lutz_mapple0_01.jpg
+  - lutz_mapple0/lutz_mapple0_02.jpg
+  - lutz_mapple0/lutz_mapple0_03.jpg
 - difficulty: '3'
   level: '12'
   name: lutz_pig0
