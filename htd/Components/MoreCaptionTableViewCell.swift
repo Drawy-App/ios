@@ -53,7 +53,7 @@ class MoreCaptionTableViewCell: UITableViewCell {
             self.unlockAllButton.isHidden = true
             self.threeStars.isHidden = true
             self.captionLabel.text = NSLocalizedString("NEED_TO_FINISH_TEST", comment: "")
-        } else if self.section == 2 {
+        } else if self.section == 2 || UserInfo.isOldFreeVersion {
             self.captionLabel.text = String.localizedStringWithFormat(
                 NSLocalizedString("NEED_MORE_STARS", comment: "Need more stars"),
                 neededStars!
