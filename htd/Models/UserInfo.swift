@@ -52,7 +52,7 @@ class UserInfo {
     
     static var isOldFreeVersion: Bool {
         get {
-            let edgeDate = Date(timeIntervalSince1970: 1538524800)
+            let edgeDate = Date(timeIntervalSince1970: 1538816400)
             return (self.firstRunDate! < edgeDate)
         }
     }
