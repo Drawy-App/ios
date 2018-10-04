@@ -13,6 +13,7 @@ class MoreCaptionTableViewCell: UITableViewCell {
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var unlockAllButton: UIView!
     @IBOutlet weak var buttonLabel: UILabel!
+    @IBOutlet weak var buttonContainer: UIView!
     @IBOutlet weak var threeStars: UIImageView!
     var navigationController: UINavigationController? = nil
     var neededStars: Int? = nil
@@ -50,7 +51,7 @@ class MoreCaptionTableViewCell: UITableViewCell {
         )
         
         if self.section == 1 {
-            self.unlockAllButton.isHidden = true
+            self.buttonContainer.isHidden = true
             self.threeStars.isHidden = true
             self.captionLabel.text = NSLocalizedString("NEED_TO_FINISH_TEST", comment: "")
         } else if self.section == 2 || UserInfo.isOldFreeVersion {
