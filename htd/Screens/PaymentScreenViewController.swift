@@ -152,7 +152,8 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
     }
     
     @objc func exit() {
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

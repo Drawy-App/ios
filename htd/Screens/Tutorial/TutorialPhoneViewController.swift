@@ -43,9 +43,7 @@ class TutorialPhoneViewController: UIViewController {
     
     @objc
     func cont() {
-        let preferences = UserDefaults.standard
-        preferences.set(Date().timeIntervalSince1970, forKey: "first_run")
-        preferences.synchronize()
+        UserInfo.initFirstRun()
         
         let timeElapsed: Double = Date().timeIntervalSince(startTime!)
         Analytics.sharedInstance.event("tutorial_page_2_passed", params: [

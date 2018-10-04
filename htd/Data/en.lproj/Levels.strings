@@ -1,7 +1,7 @@
 "generic_square" = "Try it";
 "lutz_boat0" = "Boat";
 "lutz_lighthouse0" = "Lighthouse";
-"lutz_mapple0" = "Maple leaf";
+"lutz_el1" = "Elephant";
 "lutz_swan0" = "Flying swallow";
 "lutz_but1" = "Butterfly";
 "lutz_fox0" = "Fox";
@@ -35,7 +35,7 @@
 "lutz_plane1" = "Airplane";
 "lutz_buffalo0" = "Buffalo";
 "lutz_buttercup0" = "Buttercup";
-"lutz_el1" = "Elephant";
+"lutz_mapple0" = "Maple leaf";
 "lutz_pig0" = "Pig";
 "lutz_stork0" = "Stork";
 "lutz_face2" = "Man in hat";

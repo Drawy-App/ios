@@ -98,29 +98,12 @@ class MainScreenViewController:
             }
             let neededStars = Stage.needed[nextStageIndex]! - Levels.sharedInstance.totalStars
             let maxStars = Stage.needed[nextStageIndex]! - Stage.needed[nextStageIndex - 1]!
-            let share = Int(100 * Float(maxStars - neededStars) / Float(maxStars))
-            if share >= 66 {
-                header.threeStars.image = UIImage.init(named: "three_stars_two")!
-            } else if share >= 33 {
-                header.threeStars.image = UIImage.init(named: "three_stars_one")!
-            } else {
-                header.threeStars.image = UIImage.init(named: "three_stars_zero")!
-            }
-            header.unlockAllButton.setTitle(
-                NSLocalizedString("UNLOCK_ALL_LEVELS", comment: "Unlock all levels button"),
-                for: .normal
-            )
-            header.captionLabel.text = String.localizedStringWithFormat(
-                NSLocalizedString("NEED_MORE_STARS", comment: "Need more stars"),
-                neededStars
-            )
-            
-            if section == 1 {
-                header.unlockAllButton.isHidden = true
-                header.threeStars.isHidden = true
-                header.captionLabel.text = NSLocalizedString("NEED_TO_FINISH_TEST", comment: "")
-            }
-            
+            header.maxStars = maxStars
+            header.neededStars = neededStars
+            header.section = section
+            header.navigationController = self.navigationController
+            header.onTap = {self.performSegue(withIdentifier: "showPaywall", sender: nil)}
+            header.update()
             return header as UIView
         }
         

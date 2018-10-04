@@ -1,7 +1,7 @@
 "generic_square" = "Попробуй";
 "lutz_boat0" = "Лодка";
 "lutz_lighthouse0" = "Маяк";
-"lutz_mapple0" = "Кленовый лист";
+"lutz_el1" = "Слон";
 "lutz_swan0" = "Лебедь";
 "lutz_but1" = "Бабочка";
 "lutz_fox0" = "Лиса";
@@ -35,7 +35,7 @@
 "lutz_plane1" = "Аэроплан";
 "lutz_buffalo0" = "Бизон";
 "lutz_buttercup0" = "Лютик";
-"lutz_el1" = "Слон";
+"lutz_mapple0" = "Кленовый лист";
 "lutz_pig0" = "Свин";
 "lutz_stork0" = "Аист";
 "lutz_face2" = "Мужчина в шляпе";

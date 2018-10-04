@@ -19,7 +19,7 @@ class Stage {
     }
     
     var isUnlockedByUser: Bool {
-        return Levels.sharedInstance.totalStars >= Stage.needed[self.number]!
+        return (UserInfo.isOldFreeVersion || self.number <= 2) && Levels.sharedInstance.totalStars >= Stage.needed[self.number]!
             || self.levels.filter({ $0.rating > 0}).count > 0
     }
     
