@@ -58,6 +58,7 @@
 		B4D931BE202595F50071E283 /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4D931BD202595F50071E283 /* Images.bundle */; };
 		B4DBE0FE204DC6FC00531AF5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DBE0FD204DC6FC00531AF5 /* StoreKit.framework */; };
 		B4EB79FC204E09750042571D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EB79FB204E09740042571D /* GoogleService-Info.plist */; };
+		B4F9C9BA29F2B51100281BEF /* ProProduct.storekit in Resources */ = {isa = PBXBuildFile; fileRef = B4F9C9B929F2B51100281BEF /* ProProduct.storekit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -132,6 +133,7 @@
 		B4D931BD202595F50071E283 /* Images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Images.bundle; sourceTree = "<group>"; };
 		B4DBE0FD204DC6FC00531AF5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B4EB79FB204E09740042571D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4F9C9B929F2B51100281BEF /* ProProduct.storekit */ = {isa = PBXFileReference; lastKnownFileType = file; name = ProProduct.storekit; path = htd/ProProduct.storekit; sourceTree = SOURCE_ROOT; };
 		B977F043DCE51CBA137A8626 /* Pods-htd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.debug.xcconfig"; sourceTree = "<group>"; };
 		C472F0F787E5D6981E0F5C2F /* Pods_htd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_htd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -181,6 +183,7 @@
 			children = (
 				B458A922204F485F00B3E7B4 /* htd.entitlements */,
 				B4EB79FB204E09740042571D /* GoogleService-Info.plist */,
+				B4F9C9B929F2B51100281BEF /* ProProduct.storekit */,
 				B4BCFE2920260AC9008161EA /* Utilities */,
 				B4D931B72024E09E0071E283 /* Models */,
 				B455A6F5200AB70F000247BC /* Data */,
@@ -390,6 +393,7 @@
 			files = (
 				B455A6EA200AA502000247BC /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				B455A6E7200AA502000247BC /* SF-Pro-Text-LightItalic.otf in Resources */,
+				B4F9C9BA29F2B51100281BEF /* ProProduct.storekit in Resources */,
 				B455A6E8200AA502000247BC /* SF-Pro-Text-Semibold.otf in Resources */,
 				B455A6ED200AA502000247BC /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
 				B47F3B41202612BF007E0B26 /* Localizable.strings in Resources */,
@@ -424,12 +428,16 @@
 				"${PODS_ROOT}/Target Support Files/Pods-htd/Pods-htd-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Sentry/Sentry.framework",
+				"${BUILT_PRODUCTS_DIR}/SentryPrivate/SentryPrivate.framework",
 				"${BUILT_PRODUCTS_DIR}/Yams/Yams.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SentryPrivate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yams.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -658,7 +666,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

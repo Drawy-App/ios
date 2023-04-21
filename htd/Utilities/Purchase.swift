@@ -18,16 +18,19 @@ class UserPayments: Object {
     }
 }
 
-class Purchase {
+class Purchase: NSObject {
     static let sharedInstance = Purchase()
     var payments: UserPayments?
     let realm: Realm
+    private var updates: Task<Void, Never>? = nil
     
     static let unlockAllId = "landyrev.htd.unlock_all"
     
-    init() {
+    override init() {
         self.realm = try! Realm()
         self.payments = self.realm.object(ofType: UserPayments.self, forPrimaryKey: 0)
+        super.init()
+
         if payments == nil {
             try! realm.write {
                 self.payments = realm.create(UserPayments.self)
@@ -35,75 +38,49 @@ class Purchase {
         }
     }
     
-    func purchase(_ productId: String, callback: @escaping (_ result: Bool, _ error: Error?) -> Void ) {
-        callback(true, nil)
-//        SwiftyStoreKit.purchaseProduct(productId, quantity: 1, atomically: true) { result in
-//            switch result {
-//            case .success(let purchase):
-//                print("Purchase Success: \(purchase.productId)")
-//                Analytics.sharedInstance.paidAction(
-//                    purchase.product,
-//                    transactionId: purchase.transaction.transactionIdentifier!
-//                )
-//                self.savePurchase(purchase.productId)
-//                callback(true, nil)
-//            case .error(let error):
-//                switch error.code {
-//                case .unknown: self.logError("Unknown error. Please contact support", productId)
-//                case .clientInvalid: self.logError("Not allowed to make the payment", productId)
-//                case .paymentCancelled: self.logError("Payment cancelled", productId)
-//                case .paymentInvalid: self.logError("The purchase identifier was invalid", productId)
-//                case .paymentNotAllowed: self.logError("The device is not allowed to make the payment", productId)
-//                case .storeProductNotAvailable: self.logError("The product is not available in the current storefront", productId)
-//                case .cloudServicePermissionDenied: self.logError("Access to cloud service information is not allowed", productId)
-//                case .cloudServiceNetworkConnectionFailed: self.logError("Could not connect to the network", productId)
-//                case .cloudServiceRevoked: self.logError("User has revoked permission to use this cloud service", productId)
-//                }
-//                callback(false, error)
-//            }
-//        }
+    deinit {
+        updates?.cancel()
     }
     
-    func restore(_ productId: String, callback: @escaping (_ success: Bool, _ error: Error?) -> Void) {
-        callback(true, nil)
-//        SwiftyStoreKit.restorePurchases(atomically: true) { results in
-//            if results.restoreFailedPurchases.count > 0 {
-//                print("Restore Failed: \(results.restoreFailedPurchases)")
-//                callback(false, nil)
-//            }
-//            else if results.restoredPurchases.count > 0 {
-//                for purchase in results.restoredPurchases {
-//                    if purchase.needsFinishTransaction {
-//                        SwiftyStoreKit.finishTransaction(purchase.transaction)
-//                    }
-//                    if purchase.productId == productId {
-//                        self.savePurchase(productId)
-//                        callback(true, nil)
-//                    }
-//                }
-//            }
-//            else {
-//                callback(false, nil)
-//            }
-//        }
+    func observeUpdates() {
+        updates = self.observeTransactionUpdates()
     }
     
-    func retrieveInfo(_ productId: String, callback: @escaping (_ product: SKProduct?, _ error: Error?) -> Void) {
-        callback(nil, nil)
-//        SwiftyStoreKit.retrieveProductsInfo([productId]) { result in
-//            if let product = result.retrievedProducts.first {
-//                callback(product, nil)
-//                return
-//            }
-//            else {
-//                callback(nil, result.error)
-//                return
-//            }
-//        }
+    func onPurchased(_ product: Product, _ tx: Transaction) async throws -> Bool {
+        Analytics.sharedInstance.paidAction(product, transactionId: tx.id.formatted())
+        self.savePurchase(product.id)
+        return true;
     }
     
-    func logError(_ error: String, _ productId: String) {
-        NSLog(error)
+    func purchase(_ product: Product) async throws -> Bool {
+        let result = try await product.purchase()
+        switch result {
+        case let .success(.verified(tx)):
+            await tx.finish()
+            return try await onPurchased(product, tx);
+        case let .success(.unverified(_, error)):
+            Analytics.sharedInstance.captureError(error)
+            return false;
+        case .pending:
+            return false;
+        case .userCancelled:
+            return false;
+        @unknown default:
+            return false;
+        }
+    }
+    
+    func restore() async throws {
+        try await AppStore.sync()
+    }
+    
+    func retrieveInfo(_ productId: String) async throws -> Product? {
+        let products = try await Product.products(for: [productId])
+        return products.first
+    }
+    
+    func logError(_ error: Error, _ productId: String) {
+        Analytics.sharedInstance.captureError(error)
         Analytics.sharedInstance.event("payment_error", params: [
             productId: [
                 "message": error
@@ -111,26 +88,41 @@ class Purchase {
         ])
     }
     
-    func completeTransaction() {
-//        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
-//            for purchase in purchases {
-//                switch purchase.transaction.transactionState {
-//                case .purchased, .restored:
-//                    if purchase.needsFinishTransaction {
-//                        // Deliver content from server, then:
-//                        SwiftyStoreKit.finishTransaction(purchase.transaction)
-//                    }
-//                    self.savePurchase(purchase.productId)
-//                case .failed, .purchasing, .deferred:
-//                    break // do nothing
-//                }
-//            }
-//        }
+    private func savePurchase(_ productId: String) {
+        DispatchQueue.main.async {
+            try! self.realm.write {
+                self.payments!.products.append(Purchase.unlockAllId)
+            }
+        }
     }
     
-    private func savePurchase(_ productId: String) {
-        try! self.realm.write {
-            self.payments!.products.append(Purchase.unlockAllId)
+    private func observeTransactionUpdates() -> Task<Void, Never> {
+        Task(priority: .background) { [unowned self] in
+            for await _ in Transaction.updates {
+                await self.updatePurchasedProducts()
+            }
         }
+    }
+    
+    func updatePurchasedProducts() async {
+        for await result in Transaction.currentEntitlements {
+            guard case .verified(let transaction) = result else {
+                continue
+            }
+
+            if transaction.revocationDate == nil {
+                self.savePurchase(transaction.productID)
+            }
+        }
+    }
+}
+
+extension Purchase: SKPaymentTransactionObserver {
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+
+    }
+
+    func paymentQueue(_ queue: SKPaymentQueue, shouldAddStorePayment payment: SKPayment, for product: SKProduct) -> Bool {
+        return true
     }
 }

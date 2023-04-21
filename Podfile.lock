@@ -4,6 +4,12 @@ PODS:
   - Realm/Headers (10.38.0)
   - RealmSwift (10.38.0):
     - Realm (= 10.38.0)
+  - Sentry (8.5.0):
+    - Sentry/Core (= 8.5.0)
+    - SentryPrivate (= 8.5.0)
+  - Sentry/Core (8.5.0):
+    - SentryPrivate (= 8.5.0)
+  - SentryPrivate (8.5.0)
   - Yams (5.0.5)
   - YandexMobileMetrica (4.5.0):
     - YandexMobileMetrica/Static (= 4.5.0)
@@ -16,6 +22,7 @@ PODS:
 
 DEPENDENCIES:
   - RealmSwift (= 10.38.0)
+  - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `8.5.0`)
   - Yams (= 5.0.5)
   - YandexMobileMetrica (= 4.5.0)
 
@@ -23,15 +30,28 @@ SPEC REPOS:
   trunk:
     - Realm
     - RealmSwift
+    - SentryPrivate
     - Yams
     - YandexMobileMetrica
+
+EXTERNAL SOURCES:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 8.5.0
+
+CHECKOUT OPTIONS:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 8.5.0
 
 SPEC CHECKSUMS:
   Realm: 5902885dd1d5e71b0b020830caab937ecdf5bf07
   RealmSwift: 0fc037d6c32c7c4fc9362892380f380114ecdcf0
+  Sentry: 3be3f42e40e5a552935552e115744d5810a216d9
+  SentryPrivate: 8c9463280e282527f938d1a5d1d60f8e10ff279b
   Yams: 271b5757cee031e087ae6322128895c04826c4f3
   YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
 
-PODFILE CHECKSUM: e88ed6719b27fae3b2213a0c51daebf5239111ad
+PODFILE CHECKSUM: 424dd12c3c41cda5a1dfb040f86df8110bf59fd1
 
 COCOAPODS: 1.11.3

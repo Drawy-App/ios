@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-//import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Analytics.sharedInstance.initMetrics()
         Analytics.sharedInstance.event("app_open", params: nil)
         
-        Purchase.sharedInstance.completeTransaction()
+        Purchase.sharedInstance.observeUpdates()
         print(Levels.sharedInstance.stages.count)
         
         return true
