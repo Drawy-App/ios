@@ -8,9 +8,7 @@
 
 import UIKit
 import CoreData
-import Fabric
-import Crashlytics
-import Firebase
+//import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,13 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        Fabric.with([Crashlytics.self])
-        FIRApp.configure()
-        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {        
         // Override point for customization after application launch.
-        Analytics.sharedInstance.initMetrics()
-        Analytics.sharedInstance.event(kFIREventAppOpen, params: nil)
+        // TODO: analytics
+//        Analytics.sharedInstance.initMetrics()
+//        Analytics.sharedInstance.event(kFIREventAppOpen, params: nil)
         
         Purchase.sharedInstance.completeTransaction()
         print(Levels.sharedInstance.stages.count)
@@ -33,7 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        Analytics.sharedInstance.event("opened_by_url", params: ["url": url.absoluteString])
+        // TODO: analytics
+//        Analytics.sharedInstance.event("opened_by_url", params: ["url": url.absoluteString])
         print(url)
         return true
     }

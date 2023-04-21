@@ -10,15 +10,12 @@ import UIKit
 import Foundation
 import YandexMobileMetrica
 import StoreKit
-import Firebase
-import FacebookCore
 
 class Analytics {
     
     static let sharedInstance = Analytics()
     
     func initMetrics() {
-        AppEventsLogger.activate()
         #if IOS_DEBUG
             YMMYandexMetrica.activate(with: YMMYandexMetricaConfiguration.init(
                 apiKey: "dfc8e1e1-ffc6-46b1-822e-f9c39bb43510")!
@@ -33,15 +30,15 @@ class Analytics {
     
     func navigate(_ pageName: String, params: [String:Any]?) {
         YMMYandexMetrica.reportEvent("page_opened", parameters: params, onFailure: nil)
-        FIRAnalytics.setScreenName(pageName, screenClass: nil)
-        FIRAnalytics.logEvent(withName: "page_opened", parameters: params)
+//        FIRAnalytics.setScreenName(pageName, screenClass: nil)
+//        FIRAnalytics.logEvent(withName: "page_opened", parameters: params)
 //        AppEventsLogger.log("page_opened", parameters: pa, valueToSum: <#T##Double?#>, accessToken: <#T##AccessToken?#>)
 //        AppEventsLogger.log(pageName, parameters: AppEvent.ParametersDictionary.init(uniqueKeysWithValues: params), valueToSum: nil, accessToken: nil)
         
     }
     
     func event(_ name: String, params: [String:Any]?) {
-        FIRAnalytics.logEvent(withName: name, parameters: params)
+//        FIRAnalytics.logEvent(withName: name, parameters: params)
         YMMYandexMetrica.reportEvent(name, parameters: params, onFailure: nil)
         #if IOS_DEBUG
             NSLog("Message \"\(name)\" sended with params \(params ?? [:])")
@@ -49,9 +46,9 @@ class Analytics {
     }
     
     func paidAction(_ product: SKProduct, transactionId: String) {
-        FIRAnalytics.logEvent(withName: kFIREventEcommercePurchase, parameters: [
-            kFIRParameterPrice: product.price,
-            kFIRParameterCurrency: product.priceLocale
-        ])
+//        FIRAnalytics.logEvent(withName: kFIREventEcommercePurchase, parameters: [
+//            kFIRParameterPrice: product.price,
+//            kFIRParameterCurrency: product.priceLocale
+//        ])
     }
 }

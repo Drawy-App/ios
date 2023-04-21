@@ -38,8 +38,6 @@
 		B455A6F9200B9457000247BC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455A6F8200B9457000247BC /* DetailsViewController.swift */; };
 		B45CF7822039EA4000901235 /* Levels.strings in Resources */ = {isa = PBXBuildFile; fileRef = B45CF7842039EA4000901235 /* Levels.strings */; };
 		B45CF7872039F87B00901235 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CF7862039F87B00901235 /* Stage.swift */; };
-		B466B5DC205AD97A0005F81C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B466B5DB205AD97A0005F81C /* Bolts.framework */; };
-		B466B5DE205AD9880005F81C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B466B5DD205AD9880005F81C /* FBSDKCoreKit.framework */; };
 		B468F425200BA0C100C085C5 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */; };
 		B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F42D200BC55500C085C5 /* RecognizerViewController.swift */; };
 		B47F3B41202612BF007E0B26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B47F3B43202612BF007E0B26 /* Localizable.strings */; };
@@ -59,8 +57,6 @@
 		B4D931B92024E0BC0071E283 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D931B82024E0BC0071E283 /* Score.swift */; };
 		B4D931BE202595F50071E283 /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4D931BD202595F50071E283 /* Images.bundle */; };
 		B4DBE0FE204DC6FC00531AF5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DBE0FD204DC6FC00531AF5 /* StoreKit.framework */; };
-		B4EB79F9204E040F0042571D /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EB79F7204E040E0042571D /* Crashlytics.framework */; };
-		B4EB79FA204E040F0042571D /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EB79F8204E040E0042571D /* Fabric.framework */; };
 		B4EB79FC204E09750042571D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EB79FB204E09740042571D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -113,8 +109,6 @@
 		B45CF7832039EA4000901235 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Levels.strings; sourceTree = "<group>"; };
 		B45CF7852039EA4200901235 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Levels.strings; sourceTree = "<group>"; };
 		B45CF7862039F87B00901235 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
-		B466B5DB205AD97A0005F81C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		B466B5DD205AD9880005F81C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B468F42D200BC55500C085C5 /* RecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerViewController.swift; sourceTree = "<group>"; };
 		B47F3B42202612BF007E0B26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -137,8 +131,6 @@
 		B4D931B82024E0BC0071E283 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		B4D931BD202595F50071E283 /* Images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Images.bundle; sourceTree = "<group>"; };
 		B4DBE0FD204DC6FC00531AF5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		B4EB79F7204E040E0042571D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
-		B4EB79F8204E040E0042571D /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		B4EB79FB204E09740042571D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B977F043DCE51CBA137A8626 /* Pods-htd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.debug.xcconfig"; sourceTree = "<group>"; };
 		C472F0F787E5D6981E0F5C2F /* Pods_htd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_htd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,11 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4DBE0FE204DC6FC00531AF5 /* StoreKit.framework in Frameworks */,
-				B4EB79FA204E040F0042571D /* Fabric.framework in Frameworks */,
 				56ACFFAD0797B425BB22D836 /* Pods_htd.framework in Frameworks */,
-				B466B5DE205AD9880005F81C /* FBSDKCoreKit.framework in Frameworks */,
-				B466B5DC205AD97A0005F81C /* Bolts.framework in Frameworks */,
-				B4EB79F9204E040F0042571D /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +181,6 @@
 			children = (
 				B458A922204F485F00B3E7B4 /* htd.entitlements */,
 				B4EB79FB204E09740042571D /* GoogleService-Info.plist */,
-				B4C35F78202BA570000D3CB4 /* Frameworks */,
 				B4BCFE2920260AC9008161EA /* Utilities */,
 				B4D931B72024E09E0071E283 /* Models */,
 				B455A6F5200AB70F000247BC /* Data */,
@@ -308,17 +295,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		B4C35F78202BA570000D3CB4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B466B5DD205AD9880005F81C /* FBSDKCoreKit.framework */,
-				B466B5DB205AD97A0005F81C /* Bolts.framework */,
-				B4EB79F7204E040E0042571D /* Crashlytics.framework */,
-				B4EB79F8204E040E0042571D /* Fabric.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		B4D931B72024E09E0071E283 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,7 +328,6 @@
 				B455A6B5200A6600000247BC /* Resources */,
 				155C425DA13602AFB25A15DE /* [CP] Embed Pods Frameworks */,
 				B4C35F83202BA6B1000D3CB4 /* Embed Frameworks */,
-				B4EB79F6204E03E80042571D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -375,7 +350,7 @@
 				TargetAttributes = {
 					B455A6B6200A6600000247BC = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = "";
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
@@ -445,30 +420,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-htd/Pods-htd-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-htd/Pods-htd-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Yams/Yams.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yams.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-htd/Pods-htd-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-htd/Pods-htd-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		84C44987E068C06156A0B8D1 /* [CP] Check Pods Manifest.lock */ = {
@@ -488,19 +453,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		B4EB79F6204E03E80042571D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 70d5eb5247a716c96d278bedd9df4467e781e148 24b38e999fd52a9cae7b1b4e1d58f928605f9bf0f0bdb1d7ee7aa2953bc58482\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

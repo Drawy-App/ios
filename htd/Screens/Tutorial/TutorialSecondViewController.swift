@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class TutorialSecondViewController: UIViewController {
 
@@ -38,7 +37,8 @@ class TutorialSecondViewController: UIViewController {
             UIImage.init(named: "composition3")!
         ]
         startSwiping()
-        Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
+        // TODO: Analytics
+        // Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
     }
     
     func startSwiping() {
@@ -60,9 +60,10 @@ class TutorialSecondViewController: UIViewController {
     func cont() {
         performSegue(withIdentifier: "secondToNextTutorial", sender: nil)
         let timeElapsed: Double = Date().timeIntervalSince(startTime!)
-        Analytics.sharedInstance.event("tutorial_page_1_passed", params: [
-            "time_elapsed": Int(timeElapsed)
-            ])
+        // TODO: Analytics
+//        Analytics.sharedInstance.event("tutorial_page_1_passed", params: [
+//            "time_elapsed": Int(timeElapsed)
+//            ])
     }
 
     override func didReceiveMemoryWarning() {

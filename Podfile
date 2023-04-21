@@ -1,12 +1,9 @@
 workspace 'HTDWorkplace'
-platform :ios, '11.2'
+platform :ios, '12.0'
 use_frameworks!
 
 target 'htd' do
-	pod 'YandexMobileMetrica', '3.2.0'
-	pod 'Yams', '0.5.0'
-	pod 'SwiftyStoreKit', '0.13.0'
-	pod 'Firebase/Core', '3.17.0'
-	pod 'FacebookCore', '0.3.1'
- 	pod 'RealmSwift'
+	pod 'YandexMobileMetrica', '4.5.0'
+	pod 'Yams', '5.0.5'
+ 	pod 'RealmSwift', '10.38.0'
 end

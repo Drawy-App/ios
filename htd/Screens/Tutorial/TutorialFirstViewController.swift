@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class TutorialFirstViewController: UIViewController {
 
@@ -29,16 +28,18 @@ class TutorialFirstViewController: UIViewController {
         
         Colorize.sharedInstance.addColor(toView: self.view)
         
-        Analytics.sharedInstance.event(kFIREventTutorialBegin, params: nil)
-        Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
+        // TODO: analytics
+//        Analytics.sharedInstance.event(kFIREventTutorialBegin, params: nil)
+//        Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
     }
     
     @objc
     func cont() {
         let timeElapsed: Double = Date().timeIntervalSince(startTime!)
-        Analytics.sharedInstance.event("tutorial_page_0_passed", params: [
-            "time_elapsed": Int(timeElapsed)
-            ])
+        // TODO: analytics
+//        Analytics.sharedInstance.event("tutorial_page_0_passed", params: [
+//            "time_elapsed": Int(timeElapsed)
+//            ])
         performSegue(withIdentifier: "firstToNextTutorial", sender: nil)
     }
     

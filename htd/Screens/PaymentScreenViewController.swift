@@ -8,7 +8,6 @@
 
 import UIKit
 import StoreKit
-import Crashlytics
 
 class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var restoreButton: UIButton!
@@ -141,7 +140,8 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
         DispatchQueue.main.async {
             self.switchButton(true)
             self.buyButtonLabel.text = String.init(
-                format: NSLocalizedString("PAY_BUTTON", comment: "Buy button"), product.localizedPrice!
+                format: NSLocalizedString("PAY_BUTTON", comment: "Buy button"),
+                product.price
             )
         }
     }
