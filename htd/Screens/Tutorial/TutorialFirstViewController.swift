@@ -35,8 +35,8 @@ class TutorialFirstViewController: UIViewController {
     
     @objc
     func cont() {
-        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
         // TODO: analytics
+//        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
 //        Analytics.sharedInstance.event("tutorial_page_0_passed", params: [
 //            "time_elapsed": Int(timeElapsed)
 //            ])

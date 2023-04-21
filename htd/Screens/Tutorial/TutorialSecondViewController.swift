@@ -59,8 +59,8 @@ class TutorialSecondViewController: UIViewController {
     @objc
     func cont() {
         performSegue(withIdentifier: "secondToNextTutorial", sender: nil)
-        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
         // TODO: Analytics
+//        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
 //        Analytics.sharedInstance.event("tutorial_page_1_passed", params: [
 //            "time_elapsed": Int(timeElapsed)
 //            ])

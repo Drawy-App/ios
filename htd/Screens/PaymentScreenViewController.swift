@@ -51,7 +51,7 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
                 print("product", product!.productIdentifier)
                 self.enablePay(product!)
             } else {
-                print("error", error?.localizedDescription)
+                print("error", error?.localizedDescription ?? "")
                 self.exit()
             }
         })

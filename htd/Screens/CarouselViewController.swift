@@ -36,7 +36,7 @@ class CarouselViewController: UIViewController,
             transitionStyle: .scroll, navigationOrientation: .horizontal,
             options: nil
         )
-        self.addChildViewController(pageViewController!)
+        self.addChild(pageViewController!)
         pageViewController!.view.frame = .init(
             origin: .init(x: 0, y: 0),
             size: pagesView.frame.size
