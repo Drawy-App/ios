@@ -14,8 +14,7 @@ class Stage {
     let number: Int
     let levels: [Level]
     var isUnlocked: Bool {
-        return Purchase.sharedInstance.payments!.products.contains(Purchase.unlockAllId)
-            || self.isUnlockedByUser
+        return self.isUnlockedByUser
     }
     
     var isUnlockedByUser: Bool {
