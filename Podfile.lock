@@ -1,4 +1,5 @@
 PODS:
+  - AppLovinSDK (11.9.0)
   - Realm (10.38.0):
     - Realm/Headers (= 10.38.0)
   - Realm/Headers (10.38.0)
@@ -21,6 +22,7 @@ PODS:
     - YandexMobileMetrica/Static/Core
 
 DEPENDENCIES:
+  - AppLovinSDK
   - RealmSwift (= 10.38.0)
   - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `8.5.0`)
   - Yams (= 5.0.5)
@@ -28,6 +30,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AppLovinSDK
     - Realm
     - RealmSwift
     - SentryPrivate
@@ -45,6 +48,7 @@ CHECKOUT OPTIONS:
     :tag: 8.5.0
 
 SPEC CHECKSUMS:
+  AppLovinSDK: 2022f21e5b713b2c04bb7c2f10bde0f2dea89f11
   Realm: 5902885dd1d5e71b0b020830caab937ecdf5bf07
   RealmSwift: 0fc037d6c32c7c4fc9362892380f380114ecdcf0
   Sentry: 3be3f42e40e5a552935552e115744d5810a216d9
@@ -52,6 +56,6 @@ SPEC CHECKSUMS:
   Yams: 271b5757cee031e087ae6322128895c04826c4f3
   YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
 
-PODFILE CHECKSUM: 424dd12c3c41cda5a1dfb040f86df8110bf59fd1
+PODFILE CHECKSUM: 65c7813861f9912812443225058953282362f5f0
 
 COCOAPODS: 1.11.3
