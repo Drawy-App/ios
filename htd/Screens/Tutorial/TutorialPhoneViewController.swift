@@ -32,8 +32,7 @@ class TutorialPhoneViewController: UIViewController {
         self.titleLabel.text = NSLocalizedString("TUTORIAL_USE_NETWORK", comment: "TUTORIAL_DRAW_IMAGES")
         
         startTime = Date()
-        // TODO: analytics
-        // Analytics.sharedInstance.event("tutorial_page_2_opened", params: nil)
+         Analytics.sharedInstance.event("tutorial_page_2_opened", params: nil)
         
         Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false, block: {_ in
             self.startAnimate()
@@ -45,14 +44,13 @@ class TutorialPhoneViewController: UIViewController {
     func cont() {
         UserInfo.initFirstRun()
         
-        // TODO: analytics
-//        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
-//        Analytics.sharedInstance.event("tutorial_page_2_passed", params: [
-//            "time_elapsed": Int(timeElapsed)
-//            ])
-//        Analytics.sharedInstance.event(kFIREventTutorialComplete, params: [
-//            "time_elapsed": Int(timeElapsed)
-//            ])
+        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
+        Analytics.sharedInstance.event("tutorial_page_2_passed", params: [
+            "time_elapsed": Int(timeElapsed)
+            ])
+        Analytics.sharedInstance.event("tutorial_complete", params: [
+            "time_elapsed": Int(timeElapsed)
+            ])
         
         let targetVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
         self.navigationController?.setViewControllers([targetVC], animated: true)

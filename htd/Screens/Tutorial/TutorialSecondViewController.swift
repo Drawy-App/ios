@@ -37,8 +37,7 @@ class TutorialSecondViewController: UIViewController {
             UIImage.init(named: "composition3")!
         ]
         startSwiping()
-        // TODO: Analytics
-        // Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
+         Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
     }
     
     func startSwiping() {
@@ -59,11 +58,10 @@ class TutorialSecondViewController: UIViewController {
     @objc
     func cont() {
         performSegue(withIdentifier: "secondToNextTutorial", sender: nil)
-        // TODO: Analytics
-//        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
-//        Analytics.sharedInstance.event("tutorial_page_1_passed", params: [
-//            "time_elapsed": Int(timeElapsed)
-//            ])
+        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
+        Analytics.sharedInstance.event("tutorial_page_1_passed", params: [
+            "time_elapsed": Int(timeElapsed)
+            ])
     }
 
     override func didReceiveMemoryWarning() {

@@ -28,18 +28,16 @@ class TutorialFirstViewController: UIViewController {
         
         Colorize.sharedInstance.addColor(toView: self.view)
         
-        // TODO: analytics
-//        Analytics.sharedInstance.event(kFIREventTutorialBegin, params: nil)
-//        Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
+        Analytics.sharedInstance.event("tutorial_begin", params: nil)
+        Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
     }
     
     @objc
     func cont() {
-        // TODO: analytics
-//        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
-//        Analytics.sharedInstance.event("tutorial_page_0_passed", params: [
-//            "time_elapsed": Int(timeElapsed)
-//            ])
+        let timeElapsed: Double = Date().timeIntervalSince(startTime!)
+        Analytics.sharedInstance.event("tutorial_page_0_passed", params: [
+            "time_elapsed": Int(timeElapsed)
+            ])
         performSegue(withIdentifier: "firstToNextTutorial", sender: nil)
     }
     

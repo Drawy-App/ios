@@ -18,9 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        // TODO: analytics
-//        Analytics.sharedInstance.initMetrics()
-//        Analytics.sharedInstance.event(kFIREventAppOpen, params: nil)
+        Analytics.sharedInstance.initMetrics()
+        Analytics.sharedInstance.event("app_open", params: nil)
         
         Purchase.sharedInstance.completeTransaction()
         print(Levels.sharedInstance.stages.count)
@@ -29,8 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        // TODO: analytics
-//        Analytics.sharedInstance.event("opened_by_url", params: ["url": url.absoluteString])
+        Analytics.sharedInstance.event("opened_by_url", params: ["url": url.absoluteString])
         print(url)
         return true
     }

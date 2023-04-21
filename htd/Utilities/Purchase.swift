@@ -104,12 +104,11 @@ class Purchase {
     
     func logError(_ error: String, _ productId: String) {
         NSLog(error)
-        // TODO: analytics
-//        Analytics.sharedInstance.event("payment_error", params: [
-//            productId: [
-//                "message": error
-//            ]
-//        ])
+        Analytics.sharedInstance.event("payment_error", params: [
+            productId: [
+                "message": error
+            ]
+        ])
     }
     
     func completeTransaction() {
