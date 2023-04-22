@@ -61,6 +61,7 @@
 		B4F9C9BA29F2B51100281BEF /* ProProduct.storekit in Resources */ = {isa = PBXBuildFile; fileRef = B4F9C9B929F2B51100281BEF /* ProProduct.storekit */; };
 		B4F9C9BC29F2DD5D00281BEF /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BB29F2DD5D00281BEF /* Ad.swift */; };
 		B4F9C9BE29F3E3BA00281BEF /* AdViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BD29F3E3BA00281BEF /* AdViewCell.swift */; };
+		B4F9C9C029F4457200281BEF /* InterstitialAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BF29F4457200281BEF /* InterstitialAdLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -138,6 +139,7 @@
 		B4F9C9B929F2B51100281BEF /* ProProduct.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = ProProduct.storekit; path = htd/ProProduct.storekit; sourceTree = SOURCE_ROOT; };
 		B4F9C9BB29F2DD5D00281BEF /* Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
 		B4F9C9BD29F3E3BA00281BEF /* AdViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewCell.swift; sourceTree = "<group>"; };
+		B4F9C9BF29F4457200281BEF /* InterstitialAdLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdLoader.swift; sourceTree = "<group>"; };
 		B977F043DCE51CBA137A8626 /* Pods-htd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.debug.xcconfig"; sourceTree = "<group>"; };
 		C472F0F787E5D6981E0F5C2F /* Pods_htd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_htd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -300,6 +302,7 @@
 				B4BCFE2C20260B72008161EA /* GramCase.swift */,
 				B42D4264204C5CB00002175A /* Colorize.swift */,
 				B498394D204DC8840080CA37 /* Purchase.swift */,
+				B4F9C9BF29F4457200281BEF /* InterstitialAdLoader.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */,
 				B455A6C3200A6601000247BC /* htd.xcdatamodeld in Sources */,
 				B455A6F2200AAF68000247BC /* LevelsTableViewCell.swift in Sources */,
+				B4F9C9C029F4457200281BEF /* InterstitialAdLoader.swift in Sources */,
 				B47F3B4B20264245007E0B26 /* CarouselViewController.swift in Sources */,
 				B4F9C9BC29F2DD5D00281BEF /* Ad.swift in Sources */,
 				B4D931B42023A33F0071E283 /* SuccessScreenViewController.swift in Sources */,

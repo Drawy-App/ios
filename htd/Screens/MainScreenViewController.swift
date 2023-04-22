@@ -14,6 +14,7 @@ class MainScreenViewController:
 {
     
     var previews: [Int: [UIImage]] = [:]
+    let interstitialAdLoader = InterstitialAdLoader(adId: "e91a5b08633294b9")
 
     @IBOutlet var appTitleTap: UITapGestureRecognizer!
     @IBOutlet weak var LevelsList: UITableView!
@@ -166,7 +167,13 @@ class MainScreenViewController:
         if stage.number == 0 {
             performSegue(withIdentifier: "firstPicture", sender: self)
         } else if stage.isUnlocked {
-            performSegue(withIdentifier: "showDetails", sender: self)
+            if (showAd) {
+                interstitialAdLoader.maybeShowAdWith {
+                    self.performSegue(withIdentifier: "showDetails", sender: self)
+                }
+            } else {
+                performSegue(withIdentifier: "showDetails", sender: self)
+            }
         }
     }
     
