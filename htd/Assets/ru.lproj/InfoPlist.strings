@@ -9,5 +9,6 @@
 "CFBundleDisplayName" = "Рисователь";
 "CFBundleName" = "Рисователь";
 NSCameraUsageDescription = "Чтобы мы могли распознать ваш рисунок";
+NSUserTrackingUsageDescription = "Это поможет нам персонализировать рекламу внутри приложения";
 
 UILaunchStoryboardName = "LaunchScreen_ru";

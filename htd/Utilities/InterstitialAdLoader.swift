@@ -51,6 +51,7 @@ class InterstitialAdLoader: NSObject, MAAdDelegate {
     
     func didHide(_ ad: MAAd) {
         runCallback()
+        interstitialAd.load()
     }
     
     func didClick(_ ad: MAAd) {
@@ -59,6 +60,7 @@ class InterstitialAdLoader: NSObject, MAAdDelegate {
     
     func didFail(toDisplay ad: MAAd, withError error: MAError) {
         runCallback()
+        interstitialAd.load()
     }
     
     
