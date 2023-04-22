@@ -60,6 +60,7 @@
 		B4EB79FC204E09750042571D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EB79FB204E09740042571D /* GoogleService-Info.plist */; };
 		B4F9C9BA29F2B51100281BEF /* ProProduct.storekit in Resources */ = {isa = PBXBuildFile; fileRef = B4F9C9B929F2B51100281BEF /* ProProduct.storekit */; };
 		B4F9C9BC29F2DD5D00281BEF /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BB29F2DD5D00281BEF /* Ad.swift */; };
+		B4F9C9BE29F3E3BA00281BEF /* AdViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BD29F3E3BA00281BEF /* AdViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -136,6 +137,7 @@
 		B4EB79FB204E09740042571D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4F9C9B929F2B51100281BEF /* ProProduct.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = ProProduct.storekit; path = htd/ProProduct.storekit; sourceTree = SOURCE_ROOT; };
 		B4F9C9BB29F2DD5D00281BEF /* Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
+		B4F9C9BD29F3E3BA00281BEF /* AdViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewCell.swift; sourceTree = "<group>"; };
 		B977F043DCE51CBA137A8626 /* Pods-htd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-htd/Pods-htd.debug.xcconfig"; sourceTree = "<group>"; };
 		C472F0F787E5D6981E0F5C2F /* Pods_htd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_htd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -256,6 +258,7 @@
 				B455A6F1200AAF68000247BC /* LevelsTableViewCell.swift */,
 				B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */,
 				B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */,
+				B4F9C9BD29F3E3BA00281BEF /* AdViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				B455A6F4200AB5F2000247BC /* Level.swift in Sources */,
 				B455A6BB200A6600000247BC /* AppDelegate.swift in Sources */,
 				B497E04920B9B2090081346E /* TutorialPhoneViewController.swift in Sources */,
+				B4F9C9BE29F3E3BA00281BEF /* AdViewCell.swift in Sources */,
 				B411666120BA970E004DEB81 /* TutorialFirstViewController.swift in Sources */,
 				B498394E204DC8840080CA37 /* Purchase.swift in Sources */,
 				B411263020BAF40400CC86A9 /* realmodel.mlmodel in Sources */,

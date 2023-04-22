@@ -19,6 +19,15 @@ class MainScreenViewController:
     @IBOutlet weak var LevelsList: UITableView!
     @IBOutlet weak var appTitleLable: UILabel!
     @IBOutlet weak var appSubTitleLable: UILabel!
+    var isProMode: Bool {
+        return Purchase.sharedInstance.proMode
+    }
+
+    var showAd: Bool {
+        get {
+            return !isProMode
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,8 +88,12 @@ class MainScreenViewController:
         guard let stageIndex = getStageIndex(section) else {
             return 0
         }
-        
-        return Levels.sharedInstance.stages[stageIndex]!.levels.count
+        let levelsCount = Levels.sharedInstance.stages[stageIndex]!.levels.count
+
+        if (section > 0 && showAd) {
+            return levelsCount + 1
+        }
+        return levelsCount
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -117,17 +130,27 @@ class MainScreenViewController:
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let stageIndex = getStageIndex(indexPath.section)!
+        let stage = Levels.sharedInstance.stages[stageIndex]!
+        if (indexPath.row >= stage.levels.count) {
+            let height: CGFloat = (UIDevice.current.userInterfaceIdiom == .pad) ? 90 : 50
+            return height
+        }
         return 130
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell  {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell") as! LevelsTableViewCell
         let stageIndex = getStageIndex(indexPath.section)!
         
         let stage = Levels.sharedInstance.stages[stageIndex]!
+        if (indexPath.row >= stage.levels.count) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "adCell", for: indexPath) as! AdViewCell
+            return cell
+        }
         let level = stage.levels[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell") as! LevelsTableViewCell
         cell.level = level
-//        cell.previewView.image = previews[stageIndex]![indexPath.row]
         cell.previewView.image = Levels.sharedInstance.stages[stageIndex]!.levels[indexPath.row].preview
         cell.indexPath = indexPath
         cell.tableView = tableView

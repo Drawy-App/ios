@@ -35,7 +35,6 @@ class MoreCaptionTableViewCell: UITableViewCell {
     
     
     func update() {
-        
         let share = Int(100 * Float(maxStars! - neededStars!) / Float(maxStars!))
         if share >= 66 {
             self.threeStars.image = UIImage.init(named: "three_stars_two")!

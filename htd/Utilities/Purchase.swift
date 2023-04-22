@@ -42,6 +42,12 @@ class Purchase: NSObject {
         updates?.cancel()
     }
     
+    var proMode: Bool {
+        get {
+            return payments!.products.contains(Purchase.unlockAllId)
+        }
+    }
+    
     func observeUpdates() {
         updates = self.observeTransactionUpdates()
     }
