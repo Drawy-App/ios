@@ -9,6 +9,7 @@
 import Foundation
 import AppLovinSDK
 import AppTrackingTransparency
+import AdSupport
 
 class Ad {
     static let sharedInstance = Ad()
@@ -20,6 +21,8 @@ class Ad {
     }
     
     func debug() {
+        let uid = AdSupport.ASIdentifierManager.shared().advertisingIdentifier.uuidString
+        UIPasteboard.general.string = uid
         ALSdk.shared()!.showMediationDebugger()
     }
     
