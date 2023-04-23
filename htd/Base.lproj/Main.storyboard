@@ -307,6 +307,7 @@
                         <outlet property="appSubTitleLable" destination="DNA-aa-9Hi" id="4tz-eA-Wce"/>
                         <outlet property="appTitleLable" destination="z6P-eL-Rim" id="Ach-rU-zZx"/>
                         <outlet property="appTitleTap" destination="N5u-qY-hUg" id="3Sx-dV-Bec"/>
+                        <outlet property="headerView" destination="Ioz-e4-VhB" id="Jd5-34-mY7"/>
                         <segue destination="tkN-Bd-S28" kind="show" identifier="showDetails" id="I5w-sw-u6J"/>
                         <segue destination="RBD-FE-tNA" kind="show" identifier="firstPicture" id="Xii-zg-5jp"/>
                         <segue destination="uAl-Qk-Y69" kind="show" identifier="showPaywall" id="ST1-Xt-eeC"/>
@@ -336,7 +337,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Назад" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CS-6b-fXv">
-                                        <rect key="frame" x="28" y="5" width="49.5" height="20"/>
+                                        <rect key="frame" x="28" y="5" width="53" height="20.5"/>
                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -482,10 +483,10 @@
                                                                     <rect key="frame" x="15" y="15" width="90" height="90"/>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vev-Kq-4Ma">
-                                                                    <rect key="frame" x="5" y="5" width="23" height="22"/>
+                                                                    <rect key="frame" x="5" y="5" width="22" height="22.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xh-56-zmA">
-                                                                            <rect key="frame" x="8" y="4" width="7" height="14"/>
+                                                                            <rect key="frame" x="8" y="4" width="6" height="14.5"/>
                                                                             <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="12"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -912,13 +913,13 @@
                                 <rect key="frame" x="15" y="403" width="290" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оплатить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCP-le-bor">
-                                        <rect key="frame" x="107.5" y="20" width="75.5" height="20"/>
+                                        <rect key="frame" x="103" y="20" width="84.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" red="0.99958008527755737" green="0.98516052961349487" blue="0.93172472715377808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="IcG-DZ-Qeu">
-                                        <rect key="frame" x="79" y="20" width="20" height="20"/>
+                                        <rect key="frame" x="74.5" y="20" width="20" height="20"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.13725490196078433" green="0.62745098039215685" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1144,7 +1145,7 @@
                                         <rect key="frame" x="24" y="20" width="272" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Проверить" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYI-zX-I12">
-                                                <rect key="frame" x="85" y="18" width="102.5" height="24"/>
+                                                <rect key="frame" x="79" y="18" width="114.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1159,7 +1160,7 @@
                                         </constraints>
                                     </view>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCs-8E-tlM">
-                                        <rect key="frame" x="104" y="32" width="112" height="36"/>
+                                        <rect key="frame" x="97.5" y="32" width="125" height="36"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="20"/>
                                         <state key="normal" title="Следующая">
                                             <color key="titleColor" white="0.0" alpha="0.81148330479999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1248,7 +1249,7 @@
                                 <rect key="frame" x="0.0" y="12" width="320" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фото" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-Ld-m9g">
-                                        <rect key="frame" x="130.5" y="8.5" width="59.5" height="28"/>
+                                        <rect key="frame" x="128" y="8" width="64" height="29"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1264,7 +1265,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Назад" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7i-Vp-AkI">
-                                                <rect key="frame" x="27.5" y="12.5" width="49.5" height="20"/>
+                                                <rect key="frame" x="27.5" y="12.5" width="53" height="20"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1322,16 +1323,16 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9S-9C-tue">
-                                        <rect key="frame" x="20" y="112.5" width="280" height="95"/>
+                                        <rect key="frame" x="20" y="111.5" width="280" height="97"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пожалуйста, разрешите доступ к камере" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg6-QI-aef">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="47"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="48"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReA-OE-v1e">
-                                                <rect key="frame" x="83" y="57" width="114" height="38"/>
+                                                <rect key="frame" x="79" y="58" width="122" height="39"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="22"/>
                                                 <state key="normal" title="Разрешить"/>
                                             </button>
@@ -1516,7 +1517,7 @@
                                 <rect key="frame" x="15" y="493" width="290" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продолжить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHN-TH-u3Q">
-                                        <rect key="frame" x="94.5" y="20" width="101.5" height="20"/>
+                                        <rect key="frame" x="88.5" y="20" width="113" height="20"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1533,7 +1534,7 @@
                                 <rect key="frame" x="0.0" y="377" width="320" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Всё что вам понадобится – бумага и карандаш" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mx8-pT-cNN">
-                                        <rect key="frame" x="38" y="26.5" width="244" height="47"/>
+                                        <rect key="frame" x="38" y="14" width="244" height="72"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>

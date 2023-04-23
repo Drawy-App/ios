@@ -19,13 +19,20 @@ class Ad {
         }
     }
     
+    func debug() {
+        ALSdk.shared()!.showMediationDebugger()
+    }
+    
     private func initAppLovin() {
+
+        ALPrivacySettings.setHasUserConsent(true)
+        ALPrivacySettings.setIsAgeRestrictedUser(false)
+        ALPrivacySettings.setDoNotSell(false)
         let settings = ALSdkSettings()
         let sdk = ALSdk.shared(with: settings)!
         // Please make sure to set the mediation provider value to "max" to ensure proper functionality
         sdk.mediationProvider = "max"
         sdk.initializeSdk { (configuration: ALSdkConfiguration) in
-            
         }
     }
 }

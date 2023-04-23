@@ -1,5 +1,103 @@
 PODS:
+  - AppLovinMediationGoogleAdapter (10.4.0.0):
+    - AppLovinSDK
+    - Google-Mobile-Ads-SDK (= 10.4.0)
+  - AppLovinMediationIronSourceAdapter (7.2.7.0.1):
+    - AppLovinSDK
+    - IronSourceSDK (= 7.2.7.0)
+  - AppLovinMediationMyTargetAdapter (5.17.4.1):
+    - AppLovinSDK
+    - myTargetSDK (= 5.17.4)
+  - AppLovinMediationYandexAdapter (5.5.0.0):
+    - AppLovinSDK
+    - YandexMobileAds (= 5.5.0)
   - AppLovinSDK (11.9.0)
+  - DivKit (13.0.0):
+    - DivKit_Base (= 13.0.0)
+    - DivKit_BaseTiny (= 13.0.0)
+    - DivKit_BaseUI (= 13.0.0)
+    - DivKit_CommonCore (= 13.0.0)
+    - DivKit_LayoutKit (= 13.0.0)
+    - DivKit_LayoutKitInterface (= 13.0.0)
+    - DivKit_Networking (= 13.0.0)
+    - DivKit_Serialization (= 13.0.0)
+    - DivKit_TemplatesSupport (= 13.0.0)
+  - DivKit_Base (13.0.0):
+    - DivKit_BaseTiny (= 13.0.0)
+    - DivKit_BaseUI (= 13.0.0)
+  - DivKit_BaseTiny (13.0.0)
+  - DivKit_BaseUI (13.0.0):
+    - DivKit_BaseTiny (= 13.0.0)
+  - DivKit_CommonCore (13.0.0):
+    - DivKit_Base (= 13.0.0)
+    - DivKit_BaseTiny (= 13.0.0)
+  - DivKit_LayoutKit (13.0.0):
+    - DivKit_BaseTiny (= 13.0.0)
+    - DivKit_BaseUI (= 13.0.0)
+    - DivKit_CommonCore (= 13.0.0)
+    - DivKit_LayoutKitInterface (= 13.0.0)
+  - DivKit_LayoutKitInterface (13.0.0):
+    - DivKit_Base (= 13.0.0)
+    - DivKit_BaseTiny (= 13.0.0)
+    - DivKit_BaseUI (= 13.0.0)
+  - DivKit_Networking (13.0.0):
+    - DivKit_Base (= 13.0.0)
+  - DivKit_Serialization (13.0.0):
+    - DivKit_CommonCore (= 13.0.0)
+  - DivKit_TemplatesSupport (13.0.0):
+    - DivKit_CommonCore (= 13.0.0)
+    - DivKit_Serialization (= 13.0.0)
+  - Google-Mobile-Ads-SDK (10.4.0):
+    - GoogleAppMeasurement (< 11.0, >= 7.0)
+    - GoogleUserMessagingPlatform (>= 1.1)
+  - GoogleAppMeasurement (10.8.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.8.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (10.8.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.8.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.8.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleUserMessagingPlatform (2.0.1)
+  - GoogleUtilities/AppDelegateSwizzler (7.11.1):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.11.1):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.11.1):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.11.1):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.11.1):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.11.1)"
+  - GoogleUtilities/Reachability (7.11.1):
+    - GoogleUtilities/Logger
+  - IronSourceSDK (7.2.7.0)
+  - myTargetSDK (5.17.4):
+    - myTrackerSDK (~> 3.0.3)
+  - myTrackerSDK (3.0.8)
+  - nanopb (2.30909.0):
+    - nanopb/decode (= 2.30909.0)
+    - nanopb/encode (= 2.30909.0)
+  - nanopb/decode (2.30909.0)
+  - nanopb/encode (2.30909.0)
+  - PromisesObjC (2.2.0)
   - Realm (10.38.0):
     - Realm/Headers (= 10.38.0)
   - Realm/Headers (10.38.0)
@@ -12,6 +110,12 @@ PODS:
     - SentryPrivate (= 8.5.0)
   - SentryPrivate (8.5.0)
   - Yams (5.0.5)
+  - YandexMobileAds (5.5.0):
+    - DivKit (~> 13.0)
+    - YandexMobileAds/Static (= 5.5.0)
+  - YandexMobileAds/Static (5.5.0):
+    - DivKit (~> 13.0)
+    - YandexMobileMetrica (< 5.0.0, >= 4.0.0)
   - YandexMobileMetrica (4.5.0):
     - YandexMobileMetrica/Static (= 4.5.0)
   - YandexMobileMetrica/Static (4.5.0):
@@ -22,6 +126,10 @@ PODS:
     - YandexMobileMetrica/Static/Core
 
 DEPENDENCIES:
+  - AppLovinMediationGoogleAdapter
+  - AppLovinMediationIronSourceAdapter
+  - AppLovinMediationMyTargetAdapter
+  - AppLovinMediationYandexAdapter
   - AppLovinSDK
   - RealmSwift (= 10.38.0)
   - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `8.5.0`)
@@ -30,11 +138,35 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AppLovinMediationGoogleAdapter
+    - AppLovinMediationIronSourceAdapter
+    - AppLovinMediationMyTargetAdapter
+    - AppLovinMediationYandexAdapter
     - AppLovinSDK
+    - DivKit
+    - DivKit_Base
+    - DivKit_BaseTiny
+    - DivKit_BaseUI
+    - DivKit_CommonCore
+    - DivKit_LayoutKit
+    - DivKit_LayoutKitInterface
+    - DivKit_Networking
+    - DivKit_Serialization
+    - DivKit_TemplatesSupport
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUserMessagingPlatform
+    - GoogleUtilities
+    - IronSourceSDK
+    - myTargetSDK
+    - myTrackerSDK
+    - nanopb
+    - PromisesObjC
     - Realm
     - RealmSwift
     - SentryPrivate
     - Yams
+    - YandexMobileAds
     - YandexMobileMetrica
 
 EXTERNAL SOURCES:
@@ -48,14 +180,38 @@ CHECKOUT OPTIONS:
     :tag: 8.5.0
 
 SPEC CHECKSUMS:
+  AppLovinMediationGoogleAdapter: e48a21fbb780ce442d814961c252920a8255e11c
+  AppLovinMediationIronSourceAdapter: 29681cb5fc9ba22b6d6c6d09bab179383fbd18b0
+  AppLovinMediationMyTargetAdapter: b890c242e34b56fc76bd9ff977c88b2788164b94
+  AppLovinMediationYandexAdapter: 25a6284bbfd4ed7d873b6dd81d0c0341c4dc539a
   AppLovinSDK: 2022f21e5b713b2c04bb7c2f10bde0f2dea89f11
+  DivKit: cbc853a0e94022835e9307e604135aa25424e284
+  DivKit_Base: 538c8daf847099e700646beb2b447aee1a4818fe
+  DivKit_BaseTiny: 1fa9cd01974dc65430bf409fef57e9a9b4c0679f
+  DivKit_BaseUI: b0478ce03702bbda3aa76f4388c05249ef578878
+  DivKit_CommonCore: 4db51be9c1263c0f7b62e9fb864785f47ab57875
+  DivKit_LayoutKit: c7974256f128cb2bbd7d5d6711c95c63727c53b3
+  DivKit_LayoutKitInterface: 02b3436a7191ab1b517da54a5fe076f9f6977c31
+  DivKit_Networking: 400504b0212282bd047c6720f70abaf74f6e4dd8
+  DivKit_Serialization: 4a55e41a1f06ec211e696963403db53469a19337
+  DivKit_TemplatesSupport: 6cb0a79e7673caeb05686403bd2b9a34c3624571
+  Google-Mobile-Ads-SDK: 32fe7836431a06a29f7734ae092b600137c8108d
+  GoogleAppMeasurement: 0ba93018e916f7badf915c2337d43cc1fa96b3f9
+  GoogleUserMessagingPlatform: 5f8b30daf181805317b6b985bb51c1ff3beca054
+  GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
+  IronSourceSDK: 03ab6e62ac10589e5bea97cf0a379989f6965f36
+  myTargetSDK: acf56c7f19401c7929d3da7a9dcd43924364137e
+  myTrackerSDK: df675bf18db63d9a426bd00d6c3dec4ba4bea57e
+  nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   Realm: 5902885dd1d5e71b0b020830caab937ecdf5bf07
   RealmSwift: 0fc037d6c32c7c4fc9362892380f380114ecdcf0
   Sentry: 3be3f42e40e5a552935552e115744d5810a216d9
   SentryPrivate: 8c9463280e282527f938d1a5d1d60f8e10ff279b
   Yams: 271b5757cee031e087ae6322128895c04826c4f3
+  YandexMobileAds: 1affe9f27183a569960e108a4b4cb6cbcfc8eaea
   YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
 
-PODFILE CHECKSUM: 65c7813861f9912812443225058953282362f5f0
+PODFILE CHECKSUM: 19ce9f8f16d0482eb2d8a1cb9eb9b508bc11ad1e
 
 COCOAPODS: 1.12.1

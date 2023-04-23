@@ -17,6 +17,7 @@ class MainScreenViewController:
     let interstitialAdLoader = InterstitialAdLoader(adId: "e91a5b08633294b9")
 
     @IBOutlet var appTitleTap: UITapGestureRecognizer!
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var LevelsList: UITableView!
     @IBOutlet weak var appTitleLable: UILabel!
     @IBOutlet weak var appSubTitleLable: UILabel!
@@ -44,6 +45,14 @@ class MainScreenViewController:
         LevelsList.contentInset = .init(top: 20, left: 0, bottom: 0, right: 0)
         
         Colorize.sharedInstance.addColor(toView: self.view)
+        
+        let gr = UITapGestureRecognizer(target: self, action: #selector(onHeaderTap))
+        gr.numberOfTapsRequired = 5
+        headerView.addGestureRecognizer(gr)
+    }
+    
+    @objc func onHeaderTap() {
+        Ad.sharedInstance.debug()
     }
     
     func addColor(toView view: UIView) {
