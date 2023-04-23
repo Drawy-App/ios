@@ -12,7 +12,8 @@ import AppLovinSDK
 
 class AdViewCell: UITableViewCell, MAAdViewAdDelegate {
     var adView: MAAdView?
-    
+    var retryAttempt = 0.0
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadAd()
@@ -43,9 +44,18 @@ class AdViewCell: UITableViewCell, MAAdViewAdDelegate {
     
     func didCollapse(_ ad: MAAd) { }
     
-    func didLoad(_ ad: MAAd) { }
+    func didLoad(_ ad: MAAd) {
+        retryAttempt = 0
+    }
     
-    func didFailToLoadAd(forAdUnitIdentifier adUnitIdentifier: String, withError error: MAError) {}
+    func didFailToLoadAd(forAdUnitIdentifier adUnitIdentifier: String, withError error: MAError) {
+        retryAttempt += 1
+        let delaySec = pow(2.0, min(6.0, retryAttempt))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + delaySec) {
+            self.adView?.loadAd()
+        }
+    }
     
     func didDisplay(_ ad: MAAd) {}
     

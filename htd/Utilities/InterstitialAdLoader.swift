@@ -12,6 +12,8 @@ import AppLovinSDK
 class InterstitialAdLoader: NSObject, MAAdDelegate {
     private let adId: String
     var interstitialAd: MAInterstitialAd!
+    var retryAttempt = 0.0
+
     var onHideCallback: (() -> Void)?
     
     init(adId: String) {
@@ -39,11 +41,16 @@ class InterstitialAdLoader: NSObject, MAAdDelegate {
     }
 
     func didLoad(_ ad: MAAd) {
-
+        retryAttempt = 0
     }
     
     func didFailToLoadAd(forAdUnitIdentifier adUnitIdentifier: String, withError error: MAError) {
-
+        retryAttempt += 1
+        let delaySec = pow(2.0, min(6.0, retryAttempt))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + delaySec) {
+            self.interstitialAd.load()
+        }
     }
     
     func didDisplay(_ ad: MAAd) {
