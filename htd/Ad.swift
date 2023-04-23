@@ -29,7 +29,7 @@ class Ad {
     private func initAppLovin() {
 
         ALPrivacySettings.setHasUserConsent(true)
-        ALPrivacySettings.setIsAgeRestrictedUser(false)
+        ALPrivacySettings.setIsAgeRestrictedUser(true)
         ALPrivacySettings.setDoNotSell(false)
         let settings = ALSdkSettings()
         let sdk = ALSdk.shared(with: settings)!
