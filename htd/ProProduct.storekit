@@ -1,0 +1,40 @@
+{
+  "identifier" : "70A29CC7",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "1355835711",
+      "localizations" : [
+        {
+          "description" : "Unlock all available tutorials",
+          "displayName" : "Pro mode",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "Разблокировать все уровни в приложении",
+          "displayName" : "Про режим",
+          "locale" : "ru"
+        }
+      ],
+      "productID" : "landyrev.htd.unlock_all",
+      "referenceName" : "Unlock all levels",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "1344514998",
+    "_developerTeamID" : "6UB9STX7MH",
+    "_lastSynchronizedDate" : 703780970.42456102
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

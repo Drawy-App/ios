@@ -8,7 +8,6 @@
 
 import UIKit
 import StoreKit
-import Crashlytics
 
 class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var restoreButton: UIButton!
@@ -41,21 +40,25 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
         
         self.restoreButton.addTarget(self, action: #selector(self.restore), for: .touchUpInside)
         
-        prepare()
+        Task {
+            await prepare()
+        }
         Colorize.sharedInstance.addColor(toView: self.view)
     }
     
-    func prepare() {
+    func prepare() async {
         switchButton(false)
-        Purchase.sharedInstance.retrieveInfo(Purchase.unlockAllId, callback: {product, error in
+        do {
+            let product = try await Purchase.sharedInstance.retrieveInfo(Purchase.unlockAllId)
             if product != nil {
-                print("product", product!.productIdentifier)
                 self.enablePay(product!)
             } else {
-                print("error", error?.localizedDescription)
                 self.exit()
             }
-        })
+        } catch {
+            Analytics.sharedInstance.captureError(error)
+            self.exit()
+        }
     }
     
     func switchButton(_ isEnabled: Bool) {
@@ -75,29 +78,33 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
     @objc func tryToPay() {
         Analytics.sharedInstance.event("pay_init", params: self.analyticsParams)
         switchButton(false)
-        Purchase.sharedInstance.purchase(Purchase.unlockAllId, callback: {is_success, error in
-            self.switchButton(true)
-            if error == nil {
-                self.onSuccess()
-            } else {
-                self.onFail(error, description: error!.localizedDescription)
+        Task {
+            do {
+                let product = try await Purchase.sharedInstance.retrieveInfo(Purchase.unlockAllId)
+                let purchaseResult = try await Purchase.sharedInstance.purchase(product!)
+                if (purchaseResult) {
+                    self.onSuccess()
+                } else {
+                    self.onFail(nil, description: "Purchase failed")
+                }
+            } catch {
+                self.onFail(error, description: error.localizedDescription)
             }
-        })
+        }
     }
     
     @objc func restore() {
         self.switchButton(false)
-        Purchase.sharedInstance.restore(Purchase.unlockAllId, callback: {success, error in
-            self.switchButton(true)
-            if success {
-                self.onSuccess(isRestore: true)
-            } else {
+        Task {
+            do {
+                try await Purchase.sharedInstance.restore();
+            } catch {
                 self.onFail(
                     error, description: NSLocalizedString("ON_RESTORE_FAILED", comment: "On restore failed"),
                     isRestore: true
                 )
             }
-        })
+        }
     }
     
     func onSuccess(isRestore: Bool = false) {
@@ -113,7 +120,7 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
             title: NSLocalizedString("CONTINUE_BUTTON", comment: "Continue button"),
             style: .default, handler: {_ in
                 alert.dismiss(animated: true, completion: nil)
-                self.dismiss(animated: true, completion: nil)
+                self.exit()
         }
         ))
         self.present(alert, animated: true, completion: nil)
@@ -137,22 +144,22 @@ class PaymentScreenViewController: UIViewController, UIGestureRecognizerDelegate
         self.present(alert, animated: true, completion: nil)
     }
     
-    func enablePay(_ product: SKProduct) {
+    func enablePay(_ product: Product) {
         DispatchQueue.main.async {
             self.switchButton(true)
             self.buyButtonLabel.text = String.init(
-                format: NSLocalizedString("PAY_BUTTON", comment: "Buy button"), product.localizedPrice!
+                format: NSLocalizedString("PAY_BUTTON", comment: "Buy button"),
+                product.displayPrice
             )
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
     }
     
     @objc func exit() {
-//        self.dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
     

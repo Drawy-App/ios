@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class TutorialFirstViewController: UIViewController {
 
@@ -29,7 +28,7 @@ class TutorialFirstViewController: UIViewController {
         
         Colorize.sharedInstance.addColor(toView: self.view)
         
-        Analytics.sharedInstance.event(kFIREventTutorialBegin, params: nil)
+        Analytics.sharedInstance.event("tutorial_begin", params: nil)
         Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
     }
     

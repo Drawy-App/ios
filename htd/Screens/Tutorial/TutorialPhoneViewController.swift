@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class TutorialPhoneViewController: UIViewController {
 
@@ -33,7 +32,7 @@ class TutorialPhoneViewController: UIViewController {
         self.titleLabel.text = NSLocalizedString("TUTORIAL_USE_NETWORK", comment: "TUTORIAL_DRAW_IMAGES")
         
         startTime = Date()
-        Analytics.sharedInstance.event("tutorial_page_2_opened", params: nil)
+         Analytics.sharedInstance.event("tutorial_page_2_opened", params: nil)
         
         Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false, block: {_ in
             self.startAnimate()
@@ -49,7 +48,7 @@ class TutorialPhoneViewController: UIViewController {
         Analytics.sharedInstance.event("tutorial_page_2_passed", params: [
             "time_elapsed": Int(timeElapsed)
             ])
-        Analytics.sharedInstance.event(kFIREventTutorialComplete, params: [
+        Analytics.sharedInstance.event("tutorial_complete", params: [
             "time_elapsed": Int(timeElapsed)
             ])
         

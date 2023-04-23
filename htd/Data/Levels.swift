@@ -38,8 +38,8 @@ class Levels {
             levels.append(Level.init(
                 name: level["name"] as! String,
                 tutorials: level["tutorials"] as! [String],
-                stage: level["level"] as! Int,
-                difficulty: level["difficulty"] as! Int,
+                stage: Int(level["level"] as! String)!,
+                difficulty: Int(level["difficulty"] as! String)!,
                 realm: realm
             ))
         }

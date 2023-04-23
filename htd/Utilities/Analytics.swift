@@ -10,48 +10,59 @@ import UIKit
 import Foundation
 import YandexMobileMetrica
 import StoreKit
-import Firebase
-import FacebookCore
+import Sentry
 
 class Analytics {
-    
+    let devMode: Bool
     static let sharedInstance = Analytics()
     
-    func initMetrics() {
-        AppEventsLogger.activate()
+    init() {
         #if IOS_DEBUG
-            YMMYandexMetrica.activate(with: YMMYandexMetricaConfiguration.init(
-                apiKey: "dfc8e1e1-ffc6-46b1-822e-f9c39bb43510")!
-            )
+        devMode = true
         #else
-            YMMYandexMetrica.activate(with: YMMYandexMetricaConfiguration.init(
-                apiKey: "73f4540f-a438-4b3b-97f3-2b0f5f452043")!
-            )
+        devMode = false
         #endif
+    }
     
+    func initMetrics() {
+        if (!devMode) {
+            YMMYandexMetrica.activate(with: .init(apiKey: "73f4540f-a438-4b3b-97f3-2b0f5f452043")!)
+        }
+        SentrySDK.start { options in
+            options.dsn = "https://d3911bc726954b7884fe39d632d5c172@o4505052152004608.ingest.sentry.io/4505052152791040"
+            options.tracesSampleRate = 1.0
+            if (self.devMode) {
+                options.environment = "dev"
+            } else {
+                options.environment = "production"
+            }
+        }
     }
     
     func navigate(_ pageName: String, params: [String:Any]?) {
+        if (devMode) {
+            return
+        }
         YMMYandexMetrica.reportEvent("page_opened", parameters: params, onFailure: nil)
-        FIRAnalytics.setScreenName(pageName, screenClass: nil)
-        FIRAnalytics.logEvent(withName: "page_opened", parameters: params)
-//        AppEventsLogger.log("page_opened", parameters: pa, valueToSum: <#T##Double?#>, accessToken: <#T##AccessToken?#>)
-//        AppEventsLogger.log(pageName, parameters: AppEvent.ParametersDictionary.init(uniqueKeysWithValues: params), valueToSum: nil, accessToken: nil)
         
     }
     
     func event(_ name: String, params: [String:Any]?) {
-        FIRAnalytics.logEvent(withName: name, parameters: params)
-        YMMYandexMetrica.reportEvent(name, parameters: params, onFailure: nil)
-        #if IOS_DEBUG
+        if (devMode) {
             NSLog("Message \"\(name)\" sended with params \(params ?? [:])")
-        #endif
+        } else {
+            YMMYandexMetrica.reportEvent(name, parameters: params, onFailure: nil)
+        }
     }
     
-    func paidAction(_ product: SKProduct, transactionId: String) {
-        FIRAnalytics.logEvent(withName: kFIREventEcommercePurchase, parameters: [
-            kFIRParameterPrice: product.price,
-            kFIRParameterCurrency: product.priceLocale
-        ])
+    func paidAction(_ product: Product, transactionId: String) {
+//        FIRAnalytics.logEvent(withName: kFIREventEcommercePurchase, parameters: [
+//            kFIRParameterPrice: product.price,
+//            kFIRParameterCurrency: product.priceLocale
+//        ])
+    }
+    
+    func captureError(_ error: Error) {
+        SentrySDK.capture(error: error)
     }
 }

@@ -19,9 +19,9 @@ class NavigationViewController: UINavigationController {
         if (lastRun <= 0 && Levels.sharedInstance.totalStars == 0) {
             setTutorial()
         }
-        #if IOS_DEBUG
-        setTutorial()
-        #endif
+//        #if IOS_DEBUG
+//        setTutorial()
+//        #endif
     }
     
     func setTutorial() {

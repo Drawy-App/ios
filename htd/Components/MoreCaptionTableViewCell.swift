@@ -35,7 +35,6 @@ class MoreCaptionTableViewCell: UITableViewCell {
     
     
     func update() {
-        
         let share = Int(100 * Float(maxStars! - neededStars!) / Float(maxStars!))
         if share >= 66 {
             self.threeStars.image = UIImage.init(named: "three_stars_two")!
@@ -54,14 +53,11 @@ class MoreCaptionTableViewCell: UITableViewCell {
             self.buttonContainer.isHidden = true
             self.threeStars.isHidden = true
             self.captionLabel.text = NSLocalizedString("NEED_TO_FINISH_TEST", comment: "")
-        } else if self.section == 2 || UserInfo.isOldFreeVersion {
+        } else {
             self.captionLabel.text = String.localizedStringWithFormat(
                 NSLocalizedString("NEED_MORE_STARS", comment: "Need more stars"),
                 neededStars!
             )
-        } else {
-            self.threeStars.isHidden = true
-            self.captionLabel.text = NSLocalizedString("BUY_TEASER", comment: "Buy teaser for header")
         }
         
         let buttonRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(self.gotoPayWall))

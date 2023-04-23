@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class TutorialSecondViewController: UIViewController {
 
@@ -38,7 +37,7 @@ class TutorialSecondViewController: UIViewController {
             UIImage.init(named: "composition3")!
         ]
         startSwiping()
-        Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
+         Analytics.sharedInstance.event("tutorial_page_1_opened", params: nil)
     }
     
     func startSwiping() {

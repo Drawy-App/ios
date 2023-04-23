@@ -103,7 +103,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
     func onRejectedGrants() {
         DispatchQueue.main.sync {
             self.grantPermissionLabel.isHidden = false
-            self.settingsUrl = URL.init(string: UIApplicationOpenSettingsURLString)
+            self.settingsUrl = URL.init(string: UIApplication.openSettingsURLString)
             guard self.settingsUrl != nil else {
                 return
             }
@@ -187,7 +187,7 @@ class RecognizerViewController: UIViewController, AVCaptureVideoDataOutputSample
             
             do {
                 try captureDevice.lockForConfiguration()
-                captureDevice.activeVideoMinFrameDuration = CMTimeMake(1, 24)
+                captureDevice.activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: 24)
                 captureDevice.unlockForConfiguration()
             } catch {
                 print(error)

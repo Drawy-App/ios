@@ -14,11 +14,22 @@ class MainScreenViewController:
 {
     
     var previews: [Int: [UIImage]] = [:]
+    let interstitialAdLoader = InterstitialAdLoader(adId: "e91a5b08633294b9")
 
     @IBOutlet var appTitleTap: UITapGestureRecognizer!
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var LevelsList: UITableView!
     @IBOutlet weak var appTitleLable: UILabel!
     @IBOutlet weak var appSubTitleLable: UILabel!
+    var isProMode: Bool {
+        return Purchase.sharedInstance.proMode
+    }
+
+    var showAd: Bool {
+        get {
+            return !isProMode
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +45,14 @@ class MainScreenViewController:
         LevelsList.contentInset = .init(top: 20, left: 0, bottom: 0, right: 0)
         
         Colorize.sharedInstance.addColor(toView: self.view)
+        
+        let gr = UITapGestureRecognizer(target: self, action: #selector(onHeaderTap))
+        gr.numberOfTapsRequired = 5
+        headerView.addGestureRecognizer(gr)
+    }
+    
+    @objc func onHeaderTap() {
+        Ad.sharedInstance.debug()
     }
     
     func addColor(toView view: UIView) {
@@ -79,8 +98,12 @@ class MainScreenViewController:
         guard let stageIndex = getStageIndex(section) else {
             return 0
         }
-        
-        return Levels.sharedInstance.stages[stageIndex]!.levels.count
+        let levelsCount = Levels.sharedInstance.stages[stageIndex]!.levels.count
+
+        if (section > 0 && showAd) {
+            return levelsCount + 1
+        }
+        return levelsCount
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -117,17 +140,27 @@ class MainScreenViewController:
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let stageIndex = getStageIndex(indexPath.section)!
+        let stage = Levels.sharedInstance.stages[stageIndex]!
+        if (indexPath.row >= stage.levels.count) {
+            let height: CGFloat = (UIDevice.current.userInterfaceIdiom == .pad) ? 90 : 50
+            return height
+        }
         return 130
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell  {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell") as! LevelsTableViewCell
         let stageIndex = getStageIndex(indexPath.section)!
         
         let stage = Levels.sharedInstance.stages[stageIndex]!
+        if (indexPath.row >= stage.levels.count) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "adCell", for: indexPath) as! AdViewCell
+            return cell
+        }
         let level = stage.levels[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell") as! LevelsTableViewCell
         cell.level = level
-//        cell.previewView.image = previews[stageIndex]![indexPath.row]
         cell.previewView.image = Levels.sharedInstance.stages[stageIndex]!.levels[indexPath.row].preview
         cell.indexPath = indexPath
         cell.tableView = tableView
@@ -143,7 +176,13 @@ class MainScreenViewController:
         if stage.number == 0 {
             performSegue(withIdentifier: "firstPicture", sender: self)
         } else if stage.isUnlocked {
-            performSegue(withIdentifier: "showDetails", sender: self)
+            if (showAd) {
+                interstitialAdLoader.maybeShowAdWith {
+                    self.performSegue(withIdentifier: "showDetails", sender: self)
+                }
+            } else {
+                performSegue(withIdentifier: "showDetails", sender: self)
+            }
         }
     }
     
