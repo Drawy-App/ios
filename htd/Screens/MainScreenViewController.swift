@@ -176,30 +176,24 @@ class MainScreenViewController:
         if stage.number == 0 {
             performSegue(withIdentifier: "firstPicture", sender: self)
         } else if stage.isUnlocked {
+            let level = Levels.sharedInstance.stages[stageIndex]!.levels[indexPath.row]
             if (showAd) {
                 interstitialAdLoader.maybeShowAdWith {
-                    self.performSegue(withIdentifier: "showDetails", sender: self)
+                    self.performSegue(withIdentifier: "showDetails", sender: level)
                 }
             } else {
-                performSegue(withIdentifier: "showDetails", sender: self)
+                performSegue(withIdentifier: "showDetails", sender: level)
             }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = self.LevelsList.indexPathForSelectedRow else {
-            return
-        }
-        
-        
         if segue.identifier! == "showDetails" {
-            guard let stageIndex = getStageIndex(indexPath.section) else {
+            let destVC = segue.destination as! DetailsViewController
+            guard let level = sender as? Level else {
                 return
             }
-            
-            let destVC = segue.destination as! DetailsViewController
-            destVC.level = Levels.sharedInstance
-                .stages[stageIndex]!.levels[indexPath.row]
+            destVC.level = level
         }
         
     }
