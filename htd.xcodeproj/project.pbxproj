@@ -771,7 +771,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.8;
+				MARKETING_VERSION = 2.0.9;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "$(inherited) \"-D\" \"IOS_DEBUG\"";
 				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "$(inherited) \"-D\" \"IOS_SIMULATOR\"";
 				PRODUCT_BUNDLE_IDENTIFIER = landyrev.htd;
@@ -808,7 +808,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.8;
+				MARKETING_VERSION = 2.0.9;
 				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "$(inherited) \"-D\" \"IOS_SIMULATOR\"";
 				PRODUCT_BUNDLE_IDENTIFIER = landyrev.htd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
