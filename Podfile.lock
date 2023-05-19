@@ -12,6 +12,7 @@ PODS:
     - AppLovinSDK
     - YandexMobileAds (= 5.5.0)
   - AppLovinSDK (11.9.0)
+  - BranchSDK (2.1.2)
   - DivKit (13.0.0):
     - DivKit_Base (= 13.0.0)
     - DivKit_BaseTiny (= 13.0.0)
@@ -131,6 +132,7 @@ DEPENDENCIES:
   - AppLovinMediationMyTargetAdapter
   - AppLovinMediationYandexAdapter
   - AppLovinSDK
+  - BranchSDK
   - RealmSwift (= 10.38.0)
   - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `8.5.0`)
   - Yams (= 5.0.5)
@@ -143,6 +145,7 @@ SPEC REPOS:
     - AppLovinMediationMyTargetAdapter
     - AppLovinMediationYandexAdapter
     - AppLovinSDK
+    - BranchSDK
     - DivKit
     - DivKit_Base
     - DivKit_BaseTiny
@@ -185,6 +188,7 @@ SPEC CHECKSUMS:
   AppLovinMediationMyTargetAdapter: b890c242e34b56fc76bd9ff977c88b2788164b94
   AppLovinMediationYandexAdapter: 25a6284bbfd4ed7d873b6dd81d0c0341c4dc539a
   AppLovinSDK: 2022f21e5b713b2c04bb7c2f10bde0f2dea89f11
+  BranchSDK: 8b25eda1d9e82778d476edc1026e385cf58c56b6
   DivKit: cbc853a0e94022835e9307e604135aa25424e284
   DivKit_Base: 538c8daf847099e700646beb2b447aee1a4818fe
   DivKit_BaseTiny: 1fa9cd01974dc65430bf409fef57e9a9b4c0679f
@@ -212,6 +216,6 @@ SPEC CHECKSUMS:
   YandexMobileAds: 1affe9f27183a569960e108a4b4cb6cbcfc8eaea
   YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
 
-PODFILE CHECKSUM: 19ce9f8f16d0482eb2d8a1cb9eb9b508bc11ad1e
+PODFILE CHECKSUM: 2ee955769efeb76ed209288e4b7e11987f2473f9
 
 COCOAPODS: 1.12.1

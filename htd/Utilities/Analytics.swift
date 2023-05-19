@@ -11,6 +11,7 @@ import Foundation
 import YandexMobileMetrica
 import StoreKit
 import Sentry
+import BranchSDK
 
 class Analytics {
     let devMode: Bool
@@ -52,14 +53,28 @@ class Analytics {
             NSLog("Message \"\(name)\" sended with params \(params ?? [:])")
         } else {
             YMMYandexMetrica.reportEvent(name, parameters: params, onFailure: nil)
+            branchEevent(name, params: params)
         }
     }
     
+    func branchEevent(_ name: String, params: [String:Any]?) {
+        let branchEvent = BranchEvent.customEvent(withName: name)
+        if (params != nil) {
+            params!.keys.forEach { key in
+                if let value = params![key] {
+                    branchEvent.customData[key] = String.init(describing: value)
+                }
+            }
+        }
+        branchEvent.logEvent()
+    }
+    
     func paidAction(_ product: Product, transactionId: String) {
-//        FIRAnalytics.logEvent(withName: kFIREventEcommercePurchase, parameters: [
-//            kFIRParameterPrice: product.price,
-//            kFIRParameterCurrency: product.priceLocale
-//        ])
+
+        branchEevent(BranchStandardEvent.purchase.rawValue, params: [
+            "price": product.price,
+            "currency": product.priceFormatStyle.currencyCode
+        ])
     }
     
     func captureError(_ error: Error) {

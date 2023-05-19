@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>branch_key</key>
+	<dict>
+		<key>test</key>
+		<string>key_test_jbDYSsvIn2MBg3wQBLKp9logzDeiASo7</string>
+		<key>live</key>
+		<string>key_live_eiB7MrtOb8OCg8rItUzSMpojvFpbANkU</string>
+	</dict>
+	<key>branch_universal_link_domains</key>
+	<array>
+		<string>drawy-alternate.test-app.link</string>
+		<string>drawy.test-app.link</string>
+		<string>drawy.app.link</string>
+		<string>drawy-alternate.app.link</string>
+	</array>
 	<key>CFBundleGetInfoString</key>
 	<string></string>
 	<key>GADApplicationIdentifier</key>
@@ -31,6 +45,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>htd</string>
 				<string>drawingiseasy</string>
 				<string>fb583744185320259</string>
 			</array>

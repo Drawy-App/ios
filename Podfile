@@ -12,4 +12,5 @@ target 'htd' do
   pod 'AppLovinMediationIronSourceAdapter'
   pod 'AppLovinMediationMyTargetAdapter'
   pod 'AppLovinMediationYandexAdapter'
+  pod 'BranchSDK'
 end

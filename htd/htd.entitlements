@@ -5,7 +5,11 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>applinks:1365997.redirect.appmetrica.yandex.com</string>
-		<string>applinks:landyrev.ru</string>
+		<string>applinks:drawy.app.link</string>
+		<string>applinks:drawy-alternate.app.link</string>
+		<string>applinks:app.drawy.art</string>
+		<string>applinks:drawy.test-app.link</string>
+		<string>applinks:drawy-alternate.test-app.link</string>
 	</array>
 </dict>
 </plist>
