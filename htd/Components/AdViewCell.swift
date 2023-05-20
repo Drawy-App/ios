@@ -21,13 +21,18 @@ class AdViewCell: UITableViewCell, MAAdViewAdDelegate, MAAdRevenueDelegate {
     
     private func loadAd() {
         adView?.removeFromSuperview()
-        adView = MAAdView(adUnitIdentifier: "78322977698178e3")
+        adView = MAAdView(adUnitIdentifier: "16e1ef1bec51c5fc", adFormat: .mrec)
         adView!.delegate = self
         adView!.revenueDelegate = self
 
         let view = self.contentView
+        let frame = view.frame
+        let screenSize = UIScreen.main.bounds
+        let width = screenSize.width
+        let height = CGFloat(130)
     
-        adView!.frame = view.frame
+        adView!.frame = .init(x: frame.origin.x, y: frame.origin.y, width: width, height: height)
+        adView!.center.x = view.center.x
         adView!.backgroundColor = UIColor.clear
     
         view.addSubview(adView!)

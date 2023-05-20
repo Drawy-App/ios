@@ -142,10 +142,6 @@ class MainScreenViewController:
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let stageIndex = getStageIndex(indexPath.section)!
         let stage = Levels.sharedInstance.stages[stageIndex]!
-        if (indexPath.row >= stage.levels.count) {
-            let height: CGFloat = (UIDevice.current.userInterfaceIdiom == .pad) ? 90 : 50
-            return height
-        }
         return 130
     }
     
