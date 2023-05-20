@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import AppLovinSDK
 
-class AdViewCell: UITableViewCell, MAAdViewAdDelegate {
+class AdViewCell: UITableViewCell, MAAdViewAdDelegate, MAAdRevenueDelegate {
     var adView: MAAdView?
     var retryAttempt = 0.0
 
@@ -23,6 +23,7 @@ class AdViewCell: UITableViewCell, MAAdViewAdDelegate {
         adView?.removeFromSuperview()
         adView = MAAdView(adUnitIdentifier: "78322977698178e3")
         adView!.delegate = self
+        adView!.revenueDelegate = self
 
         let view = self.contentView
     
@@ -57,11 +58,17 @@ class AdViewCell: UITableViewCell, MAAdViewAdDelegate {
         }
     }
     
-    func didDisplay(_ ad: MAAd) {}
+    func didDisplay(_ ad: MAAd) {
+        Analytics.sharedInstance.adShown(ad)
+    }
     
     func didHide(_ ad: MAAd) {}
     
     func didClick(_ ad: MAAd) {}
     
     func didFail(toDisplay ad: MAAd, withError error: MAError) { }
+    
+    func didPayRevenue(for ad: MAAd) {
+        Analytics.sharedInstance.revenuePaid(ad)
+    }
 }

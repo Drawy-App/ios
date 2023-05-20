@@ -1,4 +1,7 @@
 PODS:
+  - Adjust (4.33.4):
+    - Adjust/Core (= 4.33.4)
+  - Adjust/Core (4.33.4)
   - AppLovinMediationGoogleAdapter (10.4.0.0):
     - AppLovinSDK
     - Google-Mobile-Ads-SDK (= 10.4.0)
@@ -127,6 +130,7 @@ PODS:
     - YandexMobileMetrica/Static/Core
 
 DEPENDENCIES:
+  - Adjust (~> 4.33.3)
   - AppLovinMediationGoogleAdapter
   - AppLovinMediationIronSourceAdapter
   - AppLovinMediationMyTargetAdapter
@@ -140,6 +144,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Adjust
     - AppLovinMediationGoogleAdapter
     - AppLovinMediationIronSourceAdapter
     - AppLovinMediationMyTargetAdapter
@@ -183,6 +188,7 @@ CHECKOUT OPTIONS:
     :tag: 8.5.0
 
 SPEC CHECKSUMS:
+  Adjust: 4690e07ea401ee56d4d3f4f5bdad86c94f51903f
   AppLovinMediationGoogleAdapter: e48a21fbb780ce442d814961c252920a8255e11c
   AppLovinMediationIronSourceAdapter: 29681cb5fc9ba22b6d6c6d09bab179383fbd18b0
   AppLovinMediationMyTargetAdapter: b890c242e34b56fc76bd9ff977c88b2788164b94
@@ -216,6 +222,6 @@ SPEC CHECKSUMS:
   YandexMobileAds: 1affe9f27183a569960e108a4b4cb6cbcfc8eaea
   YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
 
-PODFILE CHECKSUM: 2ee955769efeb76ed209288e4b7e11987f2473f9
+PODFILE CHECKSUM: 5c4fc9c9f7567e452a1dabadf50b0a16dea39658
 
 COCOAPODS: 1.12.1

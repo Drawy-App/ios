@@ -13,4 +13,5 @@ target 'htd' do
   pod 'AppLovinMediationMyTargetAdapter'
   pod 'AppLovinMediationYandexAdapter'
   pod 'BranchSDK'
+  pod 'Adjust', '~> 4.33.3'
 end

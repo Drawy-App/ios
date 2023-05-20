@@ -12,6 +12,8 @@ import YandexMobileMetrica
 import StoreKit
 import Sentry
 import BranchSDK
+import Adjust
+import AppLovinSDK
 
 class Analytics {
     let devMode: Bool
@@ -48,16 +50,17 @@ class Analytics {
         
     }
     
-    func event(_ name: String, params: [String:Any]?) {
+    func event(_ name: String, params: [String:Any]?, revenue: Double? = nil) {
         if (devMode) {
             NSLog("Message \"\(name)\" sended with params \(params ?? [:])")
         } else {
             YMMYandexMetrica.reportEvent(name, parameters: params, onFailure: nil)
-            branchEevent(name, params: params)
+            branchEevent(name, params: params, revenue: revenue)
+            adjustEvent(name, params: params, revenue: revenue)
         }
     }
     
-    func branchEevent(_ name: String, params: [String:Any]?) {
+    func branchEevent(_ name: String, params: [String:Any]?, revenue: Double? = nil) {
         let branchEvent = BranchEvent.customEvent(withName: name)
         if (params != nil) {
             params!.keys.forEach { key in
@@ -69,12 +72,51 @@ class Analytics {
         branchEvent.logEvent()
     }
     
+    func adjustEvent(_ name: String, params: [String: Any]?, revenue: Double? = nil) {
+        let event = ADJEvent(eventToken: name)
+        if (params != nil) {
+            params!.keys.forEach { key in
+                if let value = params![key] {
+                    event?.addPartnerParameter(key, value: String.init(describing: value))
+                }
+            }
+        }
+        if (revenue != nil) {
+            event?.setRevenue(revenue!, currency: "USD")
+        }
+        Adjust.trackEvent(event)
+    }
+    
     func paidAction(_ product: Product, transactionId: String) {
-
         branchEevent(BranchStandardEvent.purchase.rawValue, params: [
             "price": product.price,
             "currency": product.priceFormatStyle.currencyCode
         ])
+    }
+    
+    func adShown(_ ad: MAAd) {
+        event(
+            "ad_shown",
+            params: describe(ad: ad) as [String : Any]
+        )
+    }
+    
+    func revenuePaid(_ ad: MAAd) {
+        event(
+            "ad_revenue_paid",
+            params: describe(ad: ad) as [String : Any],
+            revenue: ad.revenue
+        )
+    }
+    
+    func describe(ad: MAAd) -> [String: String?] {
+        return [
+            "network": ad.networkName,
+            "dspName": ad.dspName,
+            "dspIdentifier": ad.dspIdentifier,
+            "placement": ad.placement,
+            "networkPlacement": ad.networkPlacement
+        ]
     }
     
     func captureError(_ error: Error) {

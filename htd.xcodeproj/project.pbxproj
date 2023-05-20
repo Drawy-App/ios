@@ -48,6 +48,10 @@
 		B4BCFE2520260A45008161EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4BCFE2720260A45008161EA /* InfoPlist.strings */; };
 		B4BCFE2D20260B72008161EA /* GramCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BCFE2C20260B72008161EA /* GramCase.swift */; };
 		B4C35F77202B9AB7000D3CB4 /* Recognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C35F76202B9AB7000D3CB4 /* Recognizer.swift */; };
+		B4CBF4572A19053F00FE5E25 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF4562A19053F00FE5E25 /* AdSupport.framework */; };
+		B4CBF4592A19054600FE5E25 /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF4582A19054600FE5E25 /* AdServices.framework */; };
+		B4CBF45B2A19054F00FE5E25 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF45A2A19054F00FE5E25 /* AppTrackingTransparency.framework */; };
+		B4CBF45D2A19055700FE5E25 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF45C2A19055700FE5E25 /* WebKit.framework */; };
 		B4CCEE582026586E0081014A /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCEE572026586E0081014A /* CarouselPageViewController.swift */; };
 		B4CCEE5A20274F0C0081014A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCEE5920274F0B0081014A /* Analytics.swift */; };
 		B4CFCA372027858D00A91B1C /* LaunchScreen_ru.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CFCA352027858C00A91B1C /* LaunchScreen_ru.storyboard */; };
@@ -130,6 +134,10 @@
 		B4BCFE2820260A46008161EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4BCFE2C20260B72008161EA /* GramCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramCase.swift; sourceTree = "<group>"; };
 		B4C35F76202B9AB7000D3CB4 /* Recognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognizer.swift; sourceTree = "<group>"; };
+		B4CBF4562A19053F00FE5E25 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		B4CBF4582A19054600FE5E25 /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
+		B4CBF45A2A19054F00FE5E25 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		B4CBF45C2A19055700FE5E25 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B4CCEE572026586E0081014A /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
 		B4CCEE5920274F0B0081014A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		B4CFCA362027858C00A91B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen_ru.storyboard; sourceTree = "<group>"; };
@@ -150,6 +158,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CBF45D2A19055700FE5E25 /* WebKit.framework in Frameworks */,
+				B4CBF45B2A19054F00FE5E25 /* AppTrackingTransparency.framework in Frameworks */,
+				B4CBF4592A19054600FE5E25 /* AdServices.framework in Frameworks */,
+				B4CBF4572A19053F00FE5E25 /* AdSupport.framework in Frameworks */,
 				B4DBE0FE204DC6FC00531AF5 /* StoreKit.framework in Frameworks */,
 				E21EC27126889FEDA79D3A48 /* Pods_htd.framework in Frameworks */,
 			);
@@ -331,6 +343,10 @@
 		FAF056E88BC28D4A50F3700C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4CBF45C2A19055700FE5E25 /* WebKit.framework */,
+				B4CBF45A2A19054F00FE5E25 /* AppTrackingTransparency.framework */,
+				B4CBF4582A19054600FE5E25 /* AdServices.framework */,
+				B4CBF4562A19053F00FE5E25 /* AdSupport.framework */,
 				B4DBE0FD204DC6FC00531AF5 /* StoreKit.framework */,
 				63958CBA8EAECE3A4FDBF311 /* Pods_htd.framework */,
 			);
@@ -488,6 +504,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-htd/Pods-htd-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Adjust/Adjust.framework",
 				"${BUILT_PRODUCTS_DIR}/BranchSDK/BranchSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/DivKit/DivKit.framework",
 				"${BUILT_PRODUCTS_DIR}/DivKit_Base/Base.framework",
@@ -510,6 +527,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Adjust.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BranchSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DivKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base.framework",
@@ -759,7 +777,7 @@
 				CODE_SIGN_ENTITLEMENTS = htd/htd.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 208;
+				CURRENT_PROJECT_VERSION = 209;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6UB9STX7MH;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -797,7 +815,7 @@
 				CODE_SIGN_ENTITLEMENTS = htd/htd.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 208;
+				CURRENT_PROJECT_VERSION = 209;
 				DEVELOPMENT_TEAM = 6UB9STX7MH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

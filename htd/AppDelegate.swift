@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import BranchSDK
+import Adjust
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,13 +21,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Analytics.sharedInstance.initMetrics()
         
+        let yourAppToken = "fCMgSWuGWcAA8jBpWyfXEH"
+        let environment = Analytics.sharedInstance.devMode ? ADJEnvironmentSandbox : ADJEnvironmentProduction
+        let adjustConfig = ADJConfig(
+            appToken: yourAppToken,
+            environment: environment
+        )
+
+        Adjust.appDidLaunch(adjustConfig)
+        
         Purchase.sharedInstance.observeUpdates()
         Branch.getInstance().initSession(launchOptions: launchOptions) { (params, error) in
             if (error != nil) {
                 Analytics.sharedInstance.captureError(error!)
             }
           }
-        
+        if (Analytics.sharedInstance.devMode) {
+            Branch.useTestBranchKey()
+        }
         Analytics.sharedInstance.event("app_open", params: nil)
         
         return true
