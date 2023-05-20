@@ -15,7 +15,6 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
     @IBOutlet weak var hasDrownView: UIView!
     @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var backButtonLabel: UILabel!
-    @IBOutlet var makePhotoGesture: UITapGestureRecognizer!
     @IBOutlet weak var photoButton: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleView: UIView!
@@ -24,7 +23,7 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
     @IBOutlet weak var previewViewContainer: UIView!
     @IBOutlet weak var previewView: UIImageView!
     @IBOutlet var backTapRecognizer: UITapGestureRecognizer!
-    
+    private let interstitial = InterstitialAdLoader.init(adId: "e91a5b08633294b9")
     
     var index: Int = 0
     var level: Level?
@@ -51,6 +50,9 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         self.makePhotoLabel.text = NSLocalizedString("CHECK_BUTTON", comment: "Make photo")
         self.stepsLabel.text = NSLocalizedString("STEPS_HEADER", comment: "Steps header")
         self.backButtonLabel.text = NSLocalizedString("BACK_BUTTON", comment: "Back button")
+        
+        let makePhotoGesture = UITapGestureRecognizer(target: self, action: #selector(self.makePhoto))
+        photoButton.addGestureRecognizer(makePhotoGesture)
         
         for i in 0...(level!.difficulty - 1) {
             addStar(i, full: level!.rating > 0 )
@@ -91,6 +93,16 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
         cell.counterLabel.text = String(indexPath.item + 1)
         
         return cell as UICollectionViewCell
+    }
+    
+    @objc private func makePhoto() {
+        if (Ad.sharedInstance.showAd) {
+            interstitial.maybeShowAdWith {
+                self.performSegue(withIdentifier: "makePhoto", sender: self)
+            }
+        } else {
+            self.performSegue(withIdentifier: "makePhoto", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

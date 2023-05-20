@@ -588,9 +588,6 @@
                                             <constraint firstItem="4rF-vr-TSi" firstAttribute="top" secondItem="9O6-IW-LBG" secondAttribute="top" id="QyC-kp-lIK"/>
                                             <constraint firstItem="4rF-vr-TSi" firstAttribute="centerX" secondItem="9O6-IW-LBG" secondAttribute="centerX" id="YXT-jx-uJn"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="9cp-ng-9rx" appends="YES" id="mzv-BX-ffT"/>
-                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -633,7 +630,6 @@
                         <outlet property="backTapRecognizer" destination="inV-v2-NVn" id="p1C-eN-WK6"/>
                         <outlet property="collectionView" destination="8RM-4g-zV7" id="8YI-Vl-ymp"/>
                         <outlet property="hasDrownView" destination="V34-DM-0wE" id="5V1-ho-smi"/>
-                        <outlet property="makePhotoGesture" destination="9cp-ng-9rx" id="Dwx-dK-JeD"/>
                         <outlet property="makePhotoLabel" destination="1SV-Ma-dfk" id="cfC-MK-fRV"/>
                         <outlet property="photoButton" destination="9O6-IW-LBG" id="dYd-5o-Xii"/>
                         <outlet property="previewView" destination="g19-fa-LOx" id="ZgS-CT-snU"/>
@@ -642,17 +638,13 @@
                         <outlet property="timeLabel" destination="WMT-wU-5LY" id="Prb-mn-WqS"/>
                         <outlet property="titleLabel" destination="UHo-zF-JT3" id="CfD-rY-fa4"/>
                         <outlet property="titleView" destination="jTb-zM-BRf" id="A3F-5k-6e9"/>
+                        <segue destination="XEG-Dj-KIs" kind="show" identifier="makePhoto" id="1Y7-nY-vpD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmg-t0-uod" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="inV-v2-NVn"/>
-                <tapGestureRecognizer id="9cp-ng-9rx">
-                    <connections>
-                        <segue destination="XEG-Dj-KIs" kind="show" identifier="makePhoto" id="mpg-Nd-fru"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1214.4927536231885" y="114.94565217391305"/>
+            <point key="canvasLocation" x="1281" y="114"/>
         </scene>
         <!--Tutorial Second View Controller-->
         <scene sceneID="hzy-3M-Yua">
@@ -1388,6 +1380,7 @@
                             <constraint firstItem="Yer-NY-tpp" firstAttribute="bottom" secondItem="x2h-lZ-4YV" secondAttribute="bottom" id="sxc-xc-hgK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5sd-Sd-di3"/>
                     <connections>
                         <outlet property="askPermissionButton" destination="ReA-OE-v1e" id="aTl-Vm-brp"/>
                         <outlet property="askPermissionText" destination="kg6-QI-aef" id="O5p-zi-VOH"/>
@@ -1487,6 +1480,7 @@
                             <constraint firstItem="pKe-QI-YUK" firstAttribute="centerY" secondItem="kRK-nv-vef" secondAttribute="centerY" id="rrR-H3-H1U"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Bfa-BR-zKZ"/>
                     <connections>
                         <outlet property="continueButton" destination="4qe-Ix-uCc" id="MzE-IY-gZs"/>
                         <outlet property="continueLabel" destination="lln-pe-SeN" id="KU2-fz-zXW"/>
@@ -1601,7 +1595,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PS5-Gn-qrl"/>
+        <segue reference="1Y7-nY-vpD"/>
         <segue reference="4yj-U9-Vxc"/>
     </inferredMetricsTieBreakers>
     <resources>
