@@ -15,6 +15,8 @@ target 'htd' do
   pod 'AppLovinMediationInMobiAdapter'
   pod 'AppLovinMediationFacebookAdapter'
   pod 'AppLovinMediationMintegralAdapter'
+  pod 'AppLovinMediationOguryPresageAdapter'
+  pod 'AppLovinMediationAdColonyAdapter'
   pod 'BranchSDK'
   pod 'AppsFlyerFramework'
   pod 'AppsFlyer-AdRevenue'

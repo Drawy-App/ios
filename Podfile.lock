@@ -1,4 +1,8 @@
 PODS:
+  - AdColony (4.9.0)
+  - AppLovinMediationAdColonyAdapter (4.9.0.0.4):
+    - AdColony (= 4.9.0)
+    - AppLovinSDK
   - AppLovinMediationFacebookAdapter (6.12.0.3):
     - AppLovinSDK
     - FBAudienceNetwork (= 6.12.0)
@@ -18,6 +22,9 @@ PODS:
   - AppLovinMediationMyTargetAdapter (5.17.4.1):
     - AppLovinSDK
     - myTargetSDK (= 5.17.4)
+  - AppLovinMediationOguryPresageAdapter (4.1.2.0):
+    - AppLovinSDK
+    - OgurySdk (= 4.1.2)
   - AppLovinMediationYandexAdapter (5.5.0.0):
     - AppLovinSDK
     - YandexMobileAds (= 5.5.0)
@@ -155,6 +162,24 @@ PODS:
     - nanopb/encode (= 2.30909.0)
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
+  - OguryAds (3.4.2):
+    - OguryAds/OMID (= 3.4.2)
+    - OguryCore (= 1.3.0)
+  - OguryAds/OMID (3.4.2):
+    - OguryCore (= 1.3.0)
+  - OguryChoiceManager (4.1.0):
+    - OguryCore (= 1.3.0)
+  - OguryCore (1.3.0)
+  - OgurySdk (4.1.2):
+    - OguryCore (= 1.3.0)
+    - OgurySdk/OguryAds (= 4.1.2)
+    - OgurySdk/OguryChoiceManager (= 4.1.2)
+  - OgurySdk/OguryAds (4.1.2):
+    - OguryAds (= 3.4.2)
+    - OguryCore (= 1.3.0)
+  - OgurySdk/OguryChoiceManager (4.1.2):
+    - OguryChoiceManager (= 4.1.0)
+    - OguryCore (= 1.3.0)
   - PromisesObjC (2.2.0)
   - Realm (10.38.0):
     - Realm/Headers (= 10.38.0)
@@ -184,12 +209,14 @@ PODS:
     - YandexMobileMetrica/Static/Core
 
 DEPENDENCIES:
+  - AppLovinMediationAdColonyAdapter
   - AppLovinMediationFacebookAdapter
   - AppLovinMediationGoogleAdapter
   - AppLovinMediationInMobiAdapter
   - AppLovinMediationIronSourceAdapter
   - AppLovinMediationMintegralAdapter
   - AppLovinMediationMyTargetAdapter
+  - AppLovinMediationOguryPresageAdapter
   - AppLovinMediationYandexAdapter
   - AppLovinSDK
   - AppsFlyer-AdRevenue
@@ -202,12 +229,15 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AdColony
+    - AppLovinMediationAdColonyAdapter
     - AppLovinMediationFacebookAdapter
     - AppLovinMediationGoogleAdapter
     - AppLovinMediationInMobiAdapter
     - AppLovinMediationIronSourceAdapter
     - AppLovinMediationMintegralAdapter
     - AppLovinMediationMyTargetAdapter
+    - AppLovinMediationOguryPresageAdapter
     - AppLovinMediationYandexAdapter
     - AppLovinSDK
     - AppsFlyer-AdRevenue
@@ -234,6 +264,10 @@ SPEC REPOS:
     - myTargetSDK
     - myTrackerSDK
     - nanopb
+    - OguryAds
+    - OguryChoiceManager
+    - OguryCore
+    - OgurySdk
     - PromisesObjC
     - Realm
     - RealmSwift
@@ -253,12 +287,15 @@ CHECKOUT OPTIONS:
     :tag: 8.5.0
 
 SPEC CHECKSUMS:
+  AdColony: 4f3738dc633d7aaa8ec60729df973076cc8e97ed
+  AppLovinMediationAdColonyAdapter: aa2bf39a85ad152a631a76898706eeeb61e84eaa
   AppLovinMediationFacebookAdapter: 296b4b4faeda8b70103ae5c4134b5604082defbd
   AppLovinMediationGoogleAdapter: e48a21fbb780ce442d814961c252920a8255e11c
   AppLovinMediationInMobiAdapter: a0305720f6a4462b4a3befab192d8aae7b52f929
   AppLovinMediationIronSourceAdapter: 29681cb5fc9ba22b6d6c6d09bab179383fbd18b0
   AppLovinMediationMintegralAdapter: 943fd17f49e5f9a83a75566d20e1d46b5f01c1f8
   AppLovinMediationMyTargetAdapter: b890c242e34b56fc76bd9ff977c88b2788164b94
+  AppLovinMediationOguryPresageAdapter: 81b5ef8278cb67ea2f5a02f62d71b504b974eb5f
   AppLovinMediationYandexAdapter: 25a6284bbfd4ed7d873b6dd81d0c0341c4dc539a
   AppLovinSDK: 2022f21e5b713b2c04bb7c2f10bde0f2dea89f11
   AppsFlyer-AdRevenue: a38170b0b59f74cd07c7a9b91ee026f147b5c968
@@ -285,6 +322,10 @@ SPEC CHECKSUMS:
   myTargetSDK: acf56c7f19401c7929d3da7a9dcd43924364137e
   myTrackerSDK: df675bf18db63d9a426bd00d6c3dec4ba4bea57e
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  OguryAds: ef02e9a59e0a46121f51a1cf51c181f6b47fbe1d
+  OguryChoiceManager: d343728017250c52d5a2adfabfff9f6f6489bb45
+  OguryCore: ebf53e0b40de0980d028c45704a961213070c18e
+  OgurySdk: 1c3c5ba088adcfc0992929b0f5ad518517824c00
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   Realm: 5902885dd1d5e71b0b020830caab937ecdf5bf07
   RealmSwift: 0fc037d6c32c7c4fc9362892380f380114ecdcf0
@@ -294,6 +335,6 @@ SPEC CHECKSUMS:
   YandexMobileAds: 1affe9f27183a569960e108a4b4cb6cbcfc8eaea
   YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
 
-PODFILE CHECKSUM: 226c12fee6db758f16308a83b9532b569c7af43a
+PODFILE CHECKSUM: 9f8daee50d74ae84fb8586bd1a2af59312f450ae
 
 COCOAPODS: 1.12.1
