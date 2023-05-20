@@ -39,6 +39,7 @@
 		B45CF7872039F87B00901235 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CF7862039F87B00901235 /* Stage.swift */; };
 		B468F425200BA0C100C085C5 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */; };
 		B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F42D200BC55500C085C5 /* RecognizerViewController.swift */; };
+		B46934A02A191FED00F00FBA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B469349F2A191FED00F00FBA /* iAd.framework */; };
 		B47F3B41202612BF007E0B26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B47F3B43202612BF007E0B26 /* Localizable.strings */; };
 		B47F3B4B20264245007E0B26 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47F3B4A20264245007E0B26 /* CarouselViewController.swift */; };
 		B491506D204DE12300268384 /* PaymentScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B491506C204DE12300268384 /* PaymentScreenViewController.swift */; };
@@ -122,6 +123,7 @@
 		B45CF7862039F87B00901235 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B468F42D200BC55500C085C5 /* RecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerViewController.swift; sourceTree = "<group>"; };
+		B469349F2A191FED00F00FBA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		B47F3B42202612BF007E0B26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B47F3B44202612C1007E0B26 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B47F3B4A20264245007E0B26 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46934A02A191FED00F00FBA /* iAd.framework in Frameworks */,
 				B4CBF45D2A19055700FE5E25 /* WebKit.framework in Frameworks */,
 				B4CBF45B2A19054F00FE5E25 /* AppTrackingTransparency.framework in Frameworks */,
 				B4CBF4592A19054600FE5E25 /* AdServices.framework in Frameworks */,
@@ -346,6 +349,7 @@
 		FAF056E88BC28D4A50F3700C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B469349F2A191FED00F00FBA /* iAd.framework */,
 				B4CBF45C2A19055700FE5E25 /* WebKit.framework */,
 				B4CBF45A2A19054F00FE5E25 /* AppTrackingTransparency.framework */,
 				B4CBF4582A19054600FE5E25 /* AdServices.framework */,
@@ -507,7 +511,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-htd/Pods-htd-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Adjust/Adjust.framework",
 				"${BUILT_PRODUCTS_DIR}/BranchSDK/BranchSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/DivKit/DivKit.framework",
 				"${BUILT_PRODUCTS_DIR}/DivKit_Base/Base.framework",
@@ -530,7 +533,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Adjust.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BranchSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DivKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base.framework",

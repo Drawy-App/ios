@@ -9,7 +9,8 @@
 import UIKit
 import CoreData
 import BranchSDK
-import Adjust
+import AppsFlyerLib
+import AppsFlyerAdRevenue
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,16 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Analytics.sharedInstance.initMetrics()
-        
-        let yourAppToken = "fCMgSWuGWcAA8jBpWyfXEH"
-        let environment = Analytics.sharedInstance.devMode ? ADJEnvironmentSandbox : ADJEnvironmentProduction
-        let adjustConfig = ADJConfig(
-            appToken: yourAppToken,
-            environment: environment
-        )
-
-        Adjust.appDidLaunch(adjustConfig)
-        
+        initAppsFlyer()
         Purchase.sharedInstance.observeUpdates()
         Branch.getInstance().initSession(launchOptions: launchOptions) { (params, error) in
             if (error != nil) {
@@ -40,8 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Branch.useTestBranchKey()
         }
         Analytics.sharedInstance.event("app_open", params: nil)
-        
         return true
+    }
+    
+    func initAppsFlyer() {
+        AppsFlyerAdRevenue.start()
+        AppsFlyerLib.shared().appsFlyerDevKey = "fCMgSWuGWcAA8jBpWyfXEH"
+        AppsFlyerLib.shared().appleAppID = "1344514998"
+        AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
+        AppsFlyerLib.shared().start()
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {

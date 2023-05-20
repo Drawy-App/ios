@@ -12,7 +12,8 @@ import YandexMobileMetrica
 import StoreKit
 import Sentry
 import BranchSDK
-import Adjust
+import AppsFlyerLib
+import AppsFlyerAdRevenue
 import AppLovinSDK
 
 class Analytics {
@@ -56,7 +57,7 @@ class Analytics {
         } else {
             YMMYandexMetrica.reportEvent(name, parameters: params, onFailure: nil)
             branchEevent(name, params: params, revenue: revenue)
-            adjustEvent(name, params: params, revenue: revenue)
+            appsflyterEvent(name, params: params, revenue: revenue)
         }
     }
     
@@ -72,25 +73,25 @@ class Analytics {
         branchEvent.logEvent()
     }
     
-    func adjustEvent(_ name: String, params: [String: Any]?, revenue: Double? = nil) {
-        let event = ADJEvent(eventToken: name)
-        if (params != nil) {
-            params!.keys.forEach { key in
-                if let value = params![key] {
-                    event?.addPartnerParameter(key, value: String.init(describing: value))
-                }
-            }
-        }
-        if (revenue != nil) {
-            event?.setRevenue(revenue!, currency: "USD")
-        }
-        Adjust.trackEvent(event)
+    func appsflyterEvent(_ name: String, params: [String: Any]?, revenue: Double? = nil) {
+        AppsFlyerLib.shared().logEvent(
+            name,
+            withValues: params
+        );
     }
     
     func paidAction(_ product: Product, transactionId: String) {
         branchEevent(BranchStandardEvent.purchase.rawValue, params: [
             "price": product.price,
             "currency": product.priceFormatStyle.currencyCode
+        ])
+        event("purchase", params: [
+            "currency": product.priceFormatStyle.currencyCode
+        ], revenue: NSDecimalNumber(decimal: product.price).doubleValue)
+        
+        AppsFlyerLib.shared().logEvent(AFEventPurchase, withValues: [
+            AFEventParamRevenue: product.price.doubleValue,
+            AFEventParamCurrency: product.priceFormatStyle.currencyCode,
         ])
     }
     
@@ -99,6 +100,7 @@ class Analytics {
             "ad_shown",
             params: describe(ad: ad) as [String : Any]
         )
+        AppsFlyerLib.shared().logEvent(AFEventAdView, withValues: [:]);
     }
     
     func revenuePaid(_ ad: MAAd) {
@@ -106,6 +108,18 @@ class Analytics {
             "ad_revenue_paid",
             params: describe(ad: ad) as [String : Any],
             revenue: ad.revenue
+        )
+        let adRevenueParams: [AnyHashable: Any] = [
+            kAppsFlyerAdRevenueAdUnit : ad.adUnitIdentifier,
+            kAppsFlyerAdRevenueAdType : ad.format,
+            kAppsFlyerAdRevenuePlacement : ad.placement as Any,
+        ]
+        AppsFlyerAdRevenue.shared().logAdRevenue(
+            monetizationNetwork: ad.networkName,
+            mediationNetwork: .applovinMax,
+            eventRevenue: .init(value: ad.revenue),
+            revenueCurrency: "USD",
+            additionalParameters: adRevenueParams
         )
     }
     
@@ -121,5 +135,11 @@ class Analytics {
     
     func captureError(_ error: Error) {
         SentrySDK.capture(error: error)
+    }
+}
+
+extension Decimal {
+    var doubleValue:Double {
+        return NSDecimalNumber(decimal:self).doubleValue
     }
 }
