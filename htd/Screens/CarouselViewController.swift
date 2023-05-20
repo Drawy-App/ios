@@ -24,7 +24,7 @@ class CarouselViewController: UIViewController,
     var images: [UIImage] = []
     var pageNumber: Int = 0
     var banner: BannerView?
-    let bannerHeight: CGFloat = 130
+    let bannerHeight: CGFloat = 250
     let interstitial = InterstitialAdLoader.init(adId: "e91a5b08633294b9")
     
     private func initAd() {

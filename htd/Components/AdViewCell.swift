@@ -29,11 +29,11 @@ class AdViewCell: UITableViewCell, MAAdViewAdDelegate, MAAdRevenueDelegate {
         let frame = view.frame
         let screenSize = UIScreen.main.bounds
         let width = screenSize.width
-        let height = CGFloat(130)
+        let height = CGFloat(250)
     
         adView!.frame = .init(x: frame.origin.x, y: frame.origin.y, width: width, height: height)
         adView!.center.x = view.center.x
-        adView!.backgroundColor = UIColor.clear
+        adView!.backgroundColor = UIColor.white.withAlphaComponent(0.2)
     
         view.addSubview(adView!)
     
