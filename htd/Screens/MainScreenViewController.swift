@@ -21,15 +21,6 @@ class MainScreenViewController:
     @IBOutlet weak var LevelsList: UITableView!
     @IBOutlet weak var appTitleLable: UILabel!
     @IBOutlet weak var appSubTitleLable: UILabel!
-    var isProMode: Bool {
-        return Purchase.sharedInstance.proMode
-    }
-
-    var showAd: Bool {
-        get {
-            return !isProMode
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,7 +91,7 @@ class MainScreenViewController:
         }
         let levelsCount = Levels.sharedInstance.stages[stageIndex]!.levels.count
 
-        if (section > 0 && showAd) {
+        if (section > 0 && Ad.sharedInstance.showAd) {
             return levelsCount + 1
         }
         return levelsCount
@@ -173,7 +164,7 @@ class MainScreenViewController:
             performSegue(withIdentifier: "firstPicture", sender: self)
         } else if stage.isUnlocked {
             let level = Levels.sharedInstance.stages[stageIndex]!.levels[indexPath.row]
-            if (showAd) {
+            if (Ad.sharedInstance.showAd) {
                 interstitialAdLoader.maybeShowAdWith {
                     self.performSegue(withIdentifier: "showDetails", sender: level)
                 }

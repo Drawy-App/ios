@@ -17,14 +17,29 @@ class CarouselViewController: UIViewController,
     @IBOutlet weak var pagesLabel: UILabel!
     @IBOutlet weak var crossButton: UIButton!
     @IBOutlet weak var pagesView: UIView!
+    @IBOutlet weak var bannerView: UIView!
     var level: Level?
     var dragGesture: UIPanGestureRecognizer?
     var pageViewController: UIPageViewController?
     var images: [UIImage] = []
     var pageNumber: Int = 0
+    var banner: BannerView?
+    let bannerHeight: CGFloat = 130
+    
+    private func initAd() {
+        let heightConstraint = bannerView.constraints.first(where: {c in
+            return c.identifier == "bannerHeight"
+        })
+        heightConstraint?.constant = bannerHeight
+        banner = .init(id: "16e1ef1bec51c5fc", with: bannerView, height: bannerHeight)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (Ad.sharedInstance.showAd) {
+            initAd()
+        }
         
         self.captureButtonLabel.text = NSLocalizedString("CHECK_BUTTON", comment: "Check button")
         self.nextButton.setTitle(NSLocalizedString("NEXT_BUTTON", comment: "Next button"), for: .normal)

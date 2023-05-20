@@ -52,6 +52,7 @@
 		B4CBF4592A19054600FE5E25 /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF4582A19054600FE5E25 /* AdServices.framework */; };
 		B4CBF45B2A19054F00FE5E25 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF45A2A19054F00FE5E25 /* AppTrackingTransparency.framework */; };
 		B4CBF45D2A19055700FE5E25 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF45C2A19055700FE5E25 /* WebKit.framework */; };
+		B4CBF45F2A19148F00FE5E25 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBF45E2A19148F00FE5E25 /* BannerView.swift */; };
 		B4CCEE582026586E0081014A /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCEE572026586E0081014A /* CarouselPageViewController.swift */; };
 		B4CCEE5A20274F0C0081014A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCEE5920274F0B0081014A /* Analytics.swift */; };
 		B4CFCA372027858D00A91B1C /* LaunchScreen_ru.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CFCA352027858C00A91B1C /* LaunchScreen_ru.storyboard */; };
@@ -138,6 +139,7 @@
 		B4CBF4582A19054600FE5E25 /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
 		B4CBF45A2A19054F00FE5E25 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		B4CBF45C2A19055700FE5E25 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B4CBF45E2A19148F00FE5E25 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		B4CCEE572026586E0081014A /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
 		B4CCEE5920274F0B0081014A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		B4CFCA362027858C00A91B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen_ru.storyboard; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */,
 				B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */,
 				B4F9C9BD29F3E3BA00281BEF /* AdViewCell.swift */,
+				B4CBF45E2A19148F00FE5E25 /* BannerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				B497E04920B9B2090081346E /* TutorialPhoneViewController.swift in Sources */,
 				B4F9C9BE29F3E3BA00281BEF /* AdViewCell.swift in Sources */,
 				B411666120BA970E004DEB81 /* TutorialFirstViewController.swift in Sources */,
+				B4CBF45F2A19148F00FE5E25 /* BannerView.swift in Sources */,
 				B498394E204DC8840080CA37 /* Purchase.swift in Sources */,
 				B411263020BAF40400CC86A9 /* realmodel.mlmodel in Sources */,
 				B491506D204DE12300268384 /* PaymentScreenViewController.swift in Sources */,

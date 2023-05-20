@@ -13,6 +13,16 @@ import AdSupport
 
 class Ad {
     static let sharedInstance = Ad()
+    
+    var isProMode: Bool {
+        return Purchase.sharedInstance.proMode
+    }
+
+    var showAd: Bool {
+        get {
+            return !isProMode
+        }
+    }
 
     func initialise() {
         ATTrackingManager.requestTrackingAuthorization { status in
