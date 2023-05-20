@@ -39,6 +39,7 @@
 		B45CF7872039F87B00901235 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CF7862039F87B00901235 /* Stage.swift */; };
 		B468F425200BA0C100C085C5 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */; };
 		B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468F42D200BC55500C085C5 /* RecognizerViewController.swift */; };
+		B46934A02A191FED00F00FBA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B469349F2A191FED00F00FBA /* iAd.framework */; };
 		B47F3B41202612BF007E0B26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B47F3B43202612BF007E0B26 /* Localizable.strings */; };
 		B47F3B4B20264245007E0B26 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47F3B4A20264245007E0B26 /* CarouselViewController.swift */; };
 		B491506D204DE12300268384 /* PaymentScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B491506C204DE12300268384 /* PaymentScreenViewController.swift */; };
@@ -48,6 +49,11 @@
 		B4BCFE2520260A45008161EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4BCFE2720260A45008161EA /* InfoPlist.strings */; };
 		B4BCFE2D20260B72008161EA /* GramCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BCFE2C20260B72008161EA /* GramCase.swift */; };
 		B4C35F77202B9AB7000D3CB4 /* Recognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C35F76202B9AB7000D3CB4 /* Recognizer.swift */; };
+		B4CBF4572A19053F00FE5E25 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF4562A19053F00FE5E25 /* AdSupport.framework */; };
+		B4CBF4592A19054600FE5E25 /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF4582A19054600FE5E25 /* AdServices.framework */; };
+		B4CBF45B2A19054F00FE5E25 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF45A2A19054F00FE5E25 /* AppTrackingTransparency.framework */; };
+		B4CBF45D2A19055700FE5E25 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF45C2A19055700FE5E25 /* WebKit.framework */; };
+		B4CBF45F2A19148F00FE5E25 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBF45E2A19148F00FE5E25 /* BannerView.swift */; };
 		B4CCEE582026586E0081014A /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCEE572026586E0081014A /* CarouselPageViewController.swift */; };
 		B4CCEE5A20274F0C0081014A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCEE5920274F0B0081014A /* Analytics.swift */; };
 		B4CFCA372027858D00A91B1C /* LaunchScreen_ru.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CFCA352027858C00A91B1C /* LaunchScreen_ru.storyboard */; };
@@ -117,6 +123,7 @@
 		B45CF7862039F87B00901235 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B468F42D200BC55500C085C5 /* RecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerViewController.swift; sourceTree = "<group>"; };
+		B469349F2A191FED00F00FBA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		B47F3B42202612BF007E0B26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B47F3B44202612C1007E0B26 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B47F3B4A20264245007E0B26 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +137,11 @@
 		B4BCFE2820260A46008161EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4BCFE2C20260B72008161EA /* GramCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramCase.swift; sourceTree = "<group>"; };
 		B4C35F76202B9AB7000D3CB4 /* Recognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognizer.swift; sourceTree = "<group>"; };
+		B4CBF4562A19053F00FE5E25 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		B4CBF4582A19054600FE5E25 /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
+		B4CBF45A2A19054F00FE5E25 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		B4CBF45C2A19055700FE5E25 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B4CBF45E2A19148F00FE5E25 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		B4CCEE572026586E0081014A /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
 		B4CCEE5920274F0B0081014A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		B4CFCA362027858C00A91B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen_ru.storyboard; sourceTree = "<group>"; };
@@ -150,6 +162,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46934A02A191FED00F00FBA /* iAd.framework in Frameworks */,
+				B4CBF45D2A19055700FE5E25 /* WebKit.framework in Frameworks */,
+				B4CBF45B2A19054F00FE5E25 /* AppTrackingTransparency.framework in Frameworks */,
+				B4CBF4592A19054600FE5E25 /* AdServices.framework in Frameworks */,
+				B4CBF4572A19053F00FE5E25 /* AdSupport.framework in Frameworks */,
 				B4DBE0FE204DC6FC00531AF5 /* StoreKit.framework in Frameworks */,
 				E21EC27126889FEDA79D3A48 /* Pods_htd.framework in Frameworks */,
 			);
@@ -263,6 +280,7 @@
 				B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */,
 				B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */,
 				B4F9C9BD29F3E3BA00281BEF /* AdViewCell.swift */,
+				B4CBF45E2A19148F00FE5E25 /* BannerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -331,6 +349,11 @@
 		FAF056E88BC28D4A50F3700C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B469349F2A191FED00F00FBA /* iAd.framework */,
+				B4CBF45C2A19055700FE5E25 /* WebKit.framework */,
+				B4CBF45A2A19054F00FE5E25 /* AppTrackingTransparency.framework */,
+				B4CBF4582A19054600FE5E25 /* AdServices.framework */,
+				B4CBF4562A19053F00FE5E25 /* AdSupport.framework */,
 				B4DBE0FD204DC6FC00531AF5 /* StoreKit.framework */,
 				63958CBA8EAECE3A4FDBF311 /* Pods_htd.framework */,
 			);
@@ -570,6 +593,7 @@
 				B497E04920B9B2090081346E /* TutorialPhoneViewController.swift in Sources */,
 				B4F9C9BE29F3E3BA00281BEF /* AdViewCell.swift in Sources */,
 				B411666120BA970E004DEB81 /* TutorialFirstViewController.swift in Sources */,
+				B4CBF45F2A19148F00FE5E25 /* BannerView.swift in Sources */,
 				B498394E204DC8840080CA37 /* Purchase.swift in Sources */,
 				B411263020BAF40400CC86A9 /* realmodel.mlmodel in Sources */,
 				B491506D204DE12300268384 /* PaymentScreenViewController.swift in Sources */,
@@ -759,7 +783,7 @@
 				CODE_SIGN_ENTITLEMENTS = htd/htd.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 208;
+				CURRENT_PROJECT_VERSION = 209;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6UB9STX7MH;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -771,7 +795,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.9;
+				MARKETING_VERSION = 2.1.0;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "$(inherited) \"-D\" \"IOS_DEBUG\"";
 				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "$(inherited) \"-D\" \"IOS_SIMULATOR\"";
 				PRODUCT_BUNDLE_IDENTIFIER = landyrev.htd;
@@ -797,7 +821,7 @@
 				CODE_SIGN_ENTITLEMENTS = htd/htd.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 208;
+				CURRENT_PROJECT_VERSION = 209;
 				DEVELOPMENT_TEAM = 6UB9STX7MH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -808,7 +832,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.9;
+				MARKETING_VERSION = 2.1.0;
 				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "$(inherited) \"-D\" \"IOS_SIMULATOR\"";
 				PRODUCT_BUNDLE_IDENTIFIER = landyrev.htd;
 				PRODUCT_NAME = "$(TARGET_NAME)";

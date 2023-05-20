@@ -666,7 +666,7 @@
                                 <rect key="frame" x="15" y="473" width="290" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продолжить" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgM-xz-HLD">
-                                        <rect key="frame" x="88.5" y="20" width="113" height="20"/>
+                                        <rect key="frame" x="94.5" y="20" width="101.5" height="20"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -683,7 +683,7 @@
                                 <rect key="frame" x="0.0" y="357" width="320" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рисуйте картинки, используя простые пошаговые инструкции" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCs-gv-eDJ">
-                                        <rect key="frame" x="38" y="14" width="244" height="72"/>
+                                        <rect key="frame" x="38" y="15" width="244" height="70"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -751,7 +751,7 @@
                                 <rect key="frame" x="15" y="473" width="290" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продолжить" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msI-PH-J99">
-                                        <rect key="frame" x="88.5" y="20" width="113" height="20"/>
+                                        <rect key="frame" x="94.5" y="20" width="101.5" height="20"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -769,7 +769,7 @@
                                 <rect key="frame" x="0.0" y="357" width="320" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neural network recognizes your drawings to unlock new ones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzx-ir-4uZ">
-                                        <rect key="frame" x="38" y="14" width="244" height="72"/>
+                                        <rect key="frame" x="38" y="15" width="244" height="70"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -913,13 +913,13 @@
                                 <rect key="frame" x="15" y="403" width="290" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оплатить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCP-le-bor">
-                                        <rect key="frame" x="103" y="20" width="84.5" height="20.5"/>
+                                        <rect key="frame" x="107.5" y="20" width="75.5" height="20"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" red="0.99958008527755737" green="0.98516052961349487" blue="0.93172472715377808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="IcG-DZ-Qeu">
-                                        <rect key="frame" x="74.5" y="20" width="20" height="20"/>
+                                        <rect key="frame" x="79" y="20" width="20" height="20"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.13725490196078433" green="0.62745098039215685" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1001,7 +1001,7 @@
                                         <rect key="frame" x="8" y="4" width="13" height="22"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Назад" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOL-BZ-uJT">
-                                        <rect key="frame" x="28.5" y="5" width="53" height="20"/>
+                                        <rect key="frame" x="28.5" y="5" width="49.5" height="20"/>
                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1021,7 +1021,7 @@
                                 <rect key="frame" x="15" y="473" width="290" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Проверить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBO-85-jDf">
-                                        <rect key="frame" x="96.5" y="20" width="97" height="20"/>
+                                        <rect key="frame" x="101.5" y="20" width="87" height="20"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1110,7 +1110,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 из 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-50-6Zx">
-                                        <rect key="frame" x="127" y="18" width="66" height="24"/>
+                                        <rect key="frame" x="127.5" y="18" width="65.5" height="24"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1137,6 +1137,12 @@
                                 <rect key="frame" x="0.0" y="60" width="320" height="388"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ky-JA-e2f">
+                                <rect key="frame" x="0.0" y="448" width="320" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" identifier="bannerHeight" id="IeM-mq-zFl"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JL5-FD-2xF" userLabel="Footer">
                                 <rect key="frame" x="0.0" y="448" width="320" height="100"/>
@@ -1182,19 +1188,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Yva-YJ-Mex" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" id="5Ln-oQ-B55"/>
-                            <constraint firstItem="JL5-FD-2xF" firstAttribute="top" secondItem="Yva-YJ-Mex" secondAttribute="bottom" id="6aW-Ne-FaE"/>
+                            <constraint firstItem="JL5-FD-2xF" firstAttribute="top" secondItem="4Ky-JA-e2f" secondAttribute="bottom" id="83I-QA-dl7"/>
+                            <constraint firstItem="Yva-YJ-Mex" firstAttribute="trailing" secondItem="zOp-1W-eRB" secondAttribute="trailing" id="FYh-bJ-JE7"/>
+                            <constraint firstItem="Yva-YJ-Mex" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" id="GPK-od-4G9"/>
                             <constraint firstItem="JL5-FD-2xF" firstAttribute="bottom" secondItem="zOp-1W-eRB" secondAttribute="bottom" id="KGE-j9-UOp"/>
                             <constraint firstItem="PDP-Ta-nPW" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" id="NFh-pV-crQ"/>
+                            <constraint firstItem="Yva-YJ-Mex" firstAttribute="top" secondItem="PDP-Ta-nPW" secondAttribute="bottom" id="OLA-g9-Nge"/>
+                            <constraint firstItem="4Ky-JA-e2f" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" id="Ool-4w-I9K"/>
                             <constraint firstItem="zOp-1W-eRB" firstAttribute="trailing" secondItem="JL5-FD-2xF" secondAttribute="trailing" id="TOv-0o-HCi"/>
-                            <constraint firstItem="Yva-YJ-Mex" firstAttribute="top" secondItem="PDP-Ta-nPW" secondAttribute="bottom" id="WXS-z9-b9g"/>
                             <constraint firstItem="PDP-Ta-nPW" firstAttribute="trailing" secondItem="zOp-1W-eRB" secondAttribute="trailing" id="YAL-N1-s4y"/>
                             <constraint firstItem="JL5-FD-2xF" firstAttribute="leading" secondItem="zOp-1W-eRB" secondAttribute="leading" id="eZg-Wf-oTT"/>
-                            <constraint firstItem="zOp-1W-eRB" firstAttribute="trailing" secondItem="Yva-YJ-Mex" secondAttribute="trailing" id="pUm-kq-Lmd"/>
+                            <constraint firstItem="4Ky-JA-e2f" firstAttribute="trailing" secondItem="zOp-1W-eRB" secondAttribute="trailing" id="iIZ-kG-vi3"/>
                             <constraint firstItem="PDP-Ta-nPW" firstAttribute="top" secondItem="zOp-1W-eRB" secondAttribute="top" id="pW6-kx-o1c"/>
+                            <constraint firstItem="4Ky-JA-e2f" firstAttribute="top" secondItem="Yva-YJ-Mex" secondAttribute="bottom" id="zQN-eF-qva"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="4Ky-JA-e2f" id="8H5-h1-R54"/>
                         <outlet property="captureButton" destination="6c7-N5-pM8" id="Ugs-gB-658"/>
                         <outlet property="captureButtonLabel" destination="zYI-zX-I12" id="K9r-Ve-hSM"/>
                         <outlet property="crossButton" destination="cHB-Mq-gsj" id="vNG-FY-y74"/>
@@ -1206,7 +1216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dch-22-6wN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1213.0434782608697" y="877.98913043478262"/>
+            <point key="canvasLocation" x="1211.25" y="877.81690140845069"/>
         </scene>
         <!--Carousel Page View Controller-->
         <scene sceneID="oPv-Tv-zqD">
@@ -1249,7 +1259,7 @@
                                 <rect key="frame" x="0.0" y="12" width="320" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фото" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-Ld-m9g">
-                                        <rect key="frame" x="128" y="8" width="64" height="29"/>
+                                        <rect key="frame" x="130.5" y="8.5" width="59.5" height="28"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1265,7 +1275,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Назад" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7i-Vp-AkI">
-                                                <rect key="frame" x="27.5" y="12.5" width="53" height="20"/>
+                                                <rect key="frame" x="27.5" y="12.5" width="49.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1323,16 +1333,16 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9S-9C-tue">
-                                        <rect key="frame" x="20" y="111.5" width="280" height="97"/>
+                                        <rect key="frame" x="20" y="112.5" width="280" height="95"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пожалуйста, разрешите доступ к камере" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg6-QI-aef">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="47"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReA-OE-v1e">
-                                                <rect key="frame" x="79" y="58" width="122" height="39"/>
+                                                <rect key="frame" x="83" y="57" width="114" height="38"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="22"/>
                                                 <state key="normal" title="Разрешить"/>
                                             </button>
@@ -1591,7 +1601,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mpg-Nd-fru"/>
+        <segue reference="PS5-Gn-qrl"/>
         <segue reference="4yj-U9-Vxc"/>
     </inferredMetricsTieBreakers>
     <resources>

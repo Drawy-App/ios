@@ -13,4 +13,6 @@ target 'htd' do
   pod 'AppLovinMediationMyTargetAdapter'
   pod 'AppLovinMediationYandexAdapter'
   pod 'BranchSDK'
+  pod 'AppsFlyerFramework'
+  pod 'AppsFlyer-AdRevenue'
 end

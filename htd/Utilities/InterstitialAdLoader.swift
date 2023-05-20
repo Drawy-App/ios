@@ -9,7 +9,7 @@
 import Foundation
 import AppLovinSDK
 
-class InterstitialAdLoader: NSObject, MAAdDelegate {
+class InterstitialAdLoader: NSObject, MAAdDelegate, MAAdRevenueDelegate {
     private let adId: String
     var interstitialAd: MAInterstitialAd!
     var retryAttempt = 0.0
@@ -21,6 +21,7 @@ class InterstitialAdLoader: NSObject, MAAdDelegate {
         super.init()
         interstitialAd = MAInterstitialAd(adUnitIdentifier: adId)
         interstitialAd.delegate = self
+        interstitialAd.revenueDelegate = self
 
         // Load the first ad
         interstitialAd.load()
@@ -54,6 +55,7 @@ class InterstitialAdLoader: NSObject, MAAdDelegate {
     }
     
     func didDisplay(_ ad: MAAd) {
+        Analytics.sharedInstance.adShown(ad)
     }
     
     func didHide(_ ad: MAAd) {
@@ -70,5 +72,7 @@ class InterstitialAdLoader: NSObject, MAAdDelegate {
         interstitialAd.load()
     }
     
-    
+    func didPayRevenue(for ad: MAAd) {
+        Analytics.sharedInstance.revenuePaid(ad)
+    }
 }

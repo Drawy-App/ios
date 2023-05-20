@@ -17,14 +17,30 @@ class CarouselViewController: UIViewController,
     @IBOutlet weak var pagesLabel: UILabel!
     @IBOutlet weak var crossButton: UIButton!
     @IBOutlet weak var pagesView: UIView!
+    @IBOutlet weak var bannerView: UIView!
     var level: Level?
     var dragGesture: UIPanGestureRecognizer?
     var pageViewController: UIPageViewController?
     var images: [UIImage] = []
     var pageNumber: Int = 0
+    var banner: BannerView?
+    let bannerHeight: CGFloat = 130
+    let interstitial = InterstitialAdLoader.init(adId: "e91a5b08633294b9")
+    
+    private func initAd() {
+        let heightConstraint = bannerView.constraints.first(where: {c in
+            return c.identifier == "bannerHeight"
+        })
+        heightConstraint?.constant = bannerHeight
+        banner = .init(id: "16e1ef1bec51c5fc", with: bannerView, height: bannerHeight)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (Ad.sharedInstance.showAd) {
+            initAd()
+        }
         
         self.captureButtonLabel.text = NSLocalizedString("CHECK_BUTTON", comment: "Check button")
         self.nextButton.setTitle(NSLocalizedString("NEXT_BUTTON", comment: "Next button"), for: .normal)
@@ -167,9 +183,13 @@ class CarouselViewController: UIViewController,
     
     @objc func nextTap() {
         if pageNumber + 1 == self.images.count {
-            let pv = self.presentingViewController as! UINavigationController
-            pv.viewControllers.last!.performSegue(withIdentifier: "makePhoto", sender: self)
-            self.dismiss(animated: false, completion: nil)
+            if (Ad.sharedInstance.showAd) {
+                interstitial.maybeShowAdWith {
+                    self.verify()
+                }
+            } else {
+                verify()
+            }
         } else {
             let nextVC = getViewForPage(pageNumber + 1)
             self.pageViewController?.setViewControllers(
@@ -182,6 +202,12 @@ class CarouselViewController: UIViewController,
                 }
             )
         }
+    }
+    
+    func verify() {
+        let pv = self.presentingViewController as! UINavigationController
+        pv.viewControllers.last!.performSegue(withIdentifier: "makePhoto", sender: self)
+        self.dismiss(animated: false, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
