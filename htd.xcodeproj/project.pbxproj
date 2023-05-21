@@ -206,6 +206,7 @@
 		B455A6B9200A6600000247BC /* htd */ = {
 			isa = PBXGroup;
 			children = (
+				B4BCFE21202609F3008161EA /* Info.plist */,
 				B458A922204F485F00B3E7B4 /* htd.entitlements */,
 				B4EB79FB204E09740042571D /* GoogleService-Info.plist */,
 				B4F9C9B929F2B51100281BEF /* ProProduct.storekit */,
@@ -219,7 +220,6 @@
 				B455A6BE200A6601000247BC /* Main.storyboard */,
 				B4CFCA38202785AD00A91B1C /* LaunchScreen_en.storyboard */,
 				B4CFCA352027858C00A91B1C /* LaunchScreen_ru.storyboard */,
-				B4BCFE21202609F3008161EA /* Info.plist */,
 				B455A6C1200A6601000247BC /* htd.xcdatamodeld */,
 				B411665E20BA074A004DEB81 /* NavigationViewController.swift */,
 				B4F9C9BB29F2DD5D00281BEF /* Ad.swift */,
