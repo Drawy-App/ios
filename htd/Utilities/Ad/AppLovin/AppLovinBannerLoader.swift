@@ -1,44 +1,53 @@
 //
-//  BannerView.swift
+//  AppLovinBannerLoader.swift
 //  htd
 //
-//  Created by Alexey Landyrev on 20.05.2023.
+//  Created by Alexey Landyrev on 08.06.2023.
 //  Copyright © 2023 Alexey Landyrev. All rights reserved.
 //
 
 import Foundation
 import AppLovinSDK
 
-class BannerView: NSObject, MAAdViewAdDelegate, MAAdRevenueDelegate {
-    var retryAttempt: Double = 0
-    let adView: MAAdView
-
-    init(id: String, with view: UIView, height: CGFloat? = nil) {
-        adView = MAAdView.init(adUnitIdentifier: id, adFormat: .mrec)
+class AppLovinBannerLoader: NSObject, BannerAdLoader, MAAdViewAdDelegate, MAAdRevenueDelegate {
+    private var retryAttempt: Double = 0
+    let id = "16e1ef1bec51c5fc"
+    let format = MAAdFormat.mrec
+    let height: CGFloat?
+    var adView: MAAdView?
+    let view: UIView
+    
+    required init(view: UIView, height: CGFloat?) {
+        self.height = height
+        self.view = view
         super.init()
+    }
+    
+    func getView(_ rootViewController: UIViewController) -> UIView {
+        adView = MAAdView.init(adUnitIdentifier: id, adFormat: format)
         
-        adView.delegate = self
-        adView.revenueDelegate = self
+        adView!.delegate = self
+        adView!.revenueDelegate = self
         let frame = view.frame
         let frameHeight = height ?? frame.height
         let frameWidth = view.frame.width
-        adView.frame = CGRect(
+        adView!.frame = CGRect(
             x: 0, y: 0,
             width: frameWidth,
             height: frameHeight
         )
     
         // Center the MREC
-        adView.center.x = view.center.x
+        adView!.center.x = view.center.x
     
         // Set background or background color for MREC ads to be fully functional
-        adView.backgroundColor = .clear
+        adView!.backgroundColor = .clear
     
-        view.addSubview(adView)
+        view.addSubview(adView!)
     
         // Load the first ad
-        adView.loadAd()
-
+        adView!.loadAd()
+        return adView!
     }
     
     func didExpand(_ ad: MAAd) {
@@ -75,7 +84,8 @@ class BannerView: NSObject, MAAdViewAdDelegate, MAAdRevenueDelegate {
         let delaySec = pow(2.0, min(6.0, retryAttempt))
         
         DispatchQueue.main.asyncAfter(deadline: .now() + delaySec) {
-            self.adView.loadAd()
+            self.adView?.loadAd()
         }
     }
+    
 }

@@ -145,6 +145,7 @@ class MainScreenViewController:
         let stage = Levels.sharedInstance.stages[stageIndex]!
         if (indexPath.row >= stage.levels.count) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "adCell", for: indexPath) as! AdViewCell
+            cell.loadAd(self)
             return cell
         }
         let level = stage.levels[indexPath.row]

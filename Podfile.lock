@@ -1,98 +1,162 @@
 PODS:
   - AdColony (4.9.0)
-  - AppLovinMediationAdColonyAdapter (4.9.0.0.4):
-    - AdColony (= 4.9.0)
-    - AppLovinSDK
-  - AppLovinMediationFacebookAdapter (6.12.0.3):
-    - AppLovinSDK
-    - FBAudienceNetwork (= 6.12.0)
-  - AppLovinMediationGoogleAdapter (10.4.0.0):
-    - AppLovinSDK
-    - Google-Mobile-Ads-SDK (= 10.4.0)
-  - AppLovinMediationInMobiAdapter (10.1.4.0):
-    - AppLovinSDK
-    - InMobiSDK/Core (= 10.1.4)
-  - AppLovinMediationIronSourceAdapter (7.2.7.0.1):
-    - AppLovinSDK
-    - IronSourceSDK (= 7.2.7.0)
-  - AppLovinMediationMintegralAdapter (7.3.6.0.0):
-    - AppLovinSDK
-    - MintegralAdSDK (= 7.3.6)
-    - MintegralAdSDK/BidSplashAd (= 7.3.6)
-  - AppLovinMediationMyTargetAdapter (5.17.4.1):
-    - AppLovinSDK
-    - myTargetSDK (= 5.17.4)
-  - AppLovinMediationOguryPresageAdapter (4.1.2.0):
-    - AppLovinSDK
-    - OgurySdk (= 4.1.2)
-  - AppLovinMediationYandexAdapter (5.5.0.0):
-    - AppLovinSDK
-    - YandexMobileAds (= 5.5.0)
-  - AppLovinSDK (11.9.0)
+  - Ads-Global/BUAdSDK_Compatible (5.2.0.7):
+    - Ads-Global/BURelyAdSDK
+    - Ads-Global/Dep_Compatible
+  - Ads-Global/BURelyAdSDK (5.2.0.7)
+  - Ads-Global/Dep_Compatible (5.2.0.7):
+    - BURelyFoundation_Global/Pangle (~> 0.1.0.16)
+  - AppLovinSDK (11.10.1)
   - AppsFlyer-AdRevenue (6.9.1):
     - AppsFlyerFramework (~> 6)
-  - AppsFlyerFramework (6.11.0):
-    - AppsFlyerFramework/Main (= 6.11.0)
-  - AppsFlyerFramework/Main (6.11.0)
+  - AppsFlyerFramework (6.11.1):
+    - AppsFlyerFramework/Main (= 6.11.1)
+  - AppsFlyerFramework/Main (6.11.1)
   - BranchSDK (2.1.2)
-  - DivKit (13.0.0):
-    - DivKit_Base (= 13.0.0)
-    - DivKit_BaseTiny (= 13.0.0)
-    - DivKit_BaseUI (= 13.0.0)
-    - DivKit_CommonCore (= 13.0.0)
-    - DivKit_LayoutKit (= 13.0.0)
-    - DivKit_LayoutKitInterface (= 13.0.0)
-    - DivKit_Networking (= 13.0.0)
-    - DivKit_Serialization (= 13.0.0)
-    - DivKit_TemplatesSupport (= 13.0.0)
-  - DivKit_Base (13.0.0):
-    - DivKit_BaseTiny (= 13.0.0)
-    - DivKit_BaseUI (= 13.0.0)
-  - DivKit_BaseTiny (13.0.0)
-  - DivKit_BaseUI (13.0.0):
-    - DivKit_BaseTiny (= 13.0.0)
-  - DivKit_CommonCore (13.0.0):
-    - DivKit_Base (= 13.0.0)
-    - DivKit_BaseTiny (= 13.0.0)
-  - DivKit_LayoutKit (13.0.0):
-    - DivKit_BaseTiny (= 13.0.0)
-    - DivKit_BaseUI (= 13.0.0)
-    - DivKit_CommonCore (= 13.0.0)
-    - DivKit_LayoutKitInterface (= 13.0.0)
-  - DivKit_LayoutKitInterface (13.0.0):
-    - DivKit_Base (= 13.0.0)
-    - DivKit_BaseTiny (= 13.0.0)
-    - DivKit_BaseUI (= 13.0.0)
-  - DivKit_Networking (13.0.0):
-    - DivKit_Base (= 13.0.0)
-  - DivKit_Serialization (13.0.0):
-    - DivKit_CommonCore (= 13.0.0)
-  - DivKit_TemplatesSupport (13.0.0):
-    - DivKit_CommonCore (= 13.0.0)
-    - DivKit_Serialization (= 13.0.0)
+  - BURelyFoundation_Global/AFNetworking (0.1.0.16)
+  - BURelyFoundation_Global/Foundation (0.1.0.16):
+    - BURelyFoundation_Global/NETWork
+  - BURelyFoundation_Global/Gecko (0.1.0.16):
+    - BURelyFoundation_Global/Foundation
+  - BURelyFoundation_Global/Header (0.1.0.16)
+  - BURelyFoundation_Global/NETWork (0.1.0.16):
+    - BURelyFoundation_Global/AFNetworking
+  - BURelyFoundation_Global/Pangle (0.1.0.16):
+    - BURelyFoundation_Global/AFNetworking
+    - BURelyFoundation_Global/Foundation
+    - BURelyFoundation_Global/Gecko
+    - BURelyFoundation_Global/Header
+    - BURelyFoundation_Global/NETWork
+    - BURelyFoundation_Global/SDWebImage
+    - BURelyFoundation_Global/YYModel
+    - BURelyFoundation_Global/ZFPlayer
+    - BURelyFoundation_Global/Zip
+  - BURelyFoundation_Global/SDWebImage (0.1.0.16):
+    - BURelyFoundation_Global/Foundation
+  - BURelyFoundation_Global/YYModel (0.1.0.16)
+  - BURelyFoundation_Global/ZFPlayer (0.1.0.16):
+    - BURelyFoundation_Global/Foundation
+    - BURelyFoundation_Global/Zip
+  - BURelyFoundation_Global/Zip (0.1.0.16):
+    - BURelyFoundation_Global/Foundation
+  - CleverAdsSolutions-Base (3.1.8)
+  - CleverAdsSolutions-SDK/AdColony (3.1.8):
+    - AdColony (= 4.9.0)
+    - CleverAdsSolutions-SDK/AppLovin (= 3.1.8)
+    - CleverAdsSolutions-SDK/IronSource (= 3.1.8)
+  - CleverAdsSolutions-SDK/AppLovin (3.1.8):
+    - AppLovinSDK (~> 11.10.1)
+    - CleverAdsSolutions-Base
+  - CleverAdsSolutions-SDK/AudienceNetwork (3.1.8):
+    - CleverAdsSolutions-SDK/AppLovin (= 3.1.8)
+    - CleverAdsSolutions-SDK/IronSource (= 3.1.8)
+    - FBAudienceNetwork (~> 6.12.0)
+  - CleverAdsSolutions-SDK/GoogleAds (3.1.8):
+    - CleverAdsSolutions-SDK/AppLovin (= 3.1.8)
+    - CleverAdsSolutions-SDK/IronSource (= 3.1.8)
+    - Google-Mobile-Ads-SDK (~> 10.5.0)
+  - CleverAdsSolutions-SDK/InMobi (3.1.8):
+    - CleverAdsSolutions-SDK/AppLovin (= 3.1.8)
+    - CleverAdsSolutions-SDK/IronSource (= 3.1.8)
+    - InMobiSDK/Core (= 10.1.4)
+  - CleverAdsSolutions-SDK/IronSource (3.1.8):
+    - CleverAdsSolutions-Base
+    - IronSourceSDK (= 7.3.0.0)
+  - CleverAdsSolutions-SDK/Mintegral (3.1.8):
+    - CleverAdsSolutions-SDK/AppLovin (= 3.1.8)
+    - MintegralAdSDK (~> 7.3.7)
+    - MintegralAdSDK/BidSplashAd (~> 7.3.7)
+  - CleverAdsSolutions-SDK/MyTarget (3.1.8):
+    - CleverAdsSolutions-SDK/AppLovin (= 3.1.8)
+    - CleverAdsSolutions-SDK/IronSource (= 3.1.8)
+    - myTargetSDK (= 5.17.5)
+  - CleverAdsSolutions-SDK/Optimal (3.1.8):
+    - CleverAdsSolutions-Base (= 3.1.8)
+    - CleverAdsSolutions-SDK/AdColony (= 3.1.8)
+    - CleverAdsSolutions-SDK/AppLovin (= 3.1.8)
+    - CleverAdsSolutions-SDK/AudienceNetwork (= 3.1.8)
+    - CleverAdsSolutions-SDK/GoogleAds (= 3.1.8)
+    - CleverAdsSolutions-SDK/InMobi (= 3.1.8)
+    - CleverAdsSolutions-SDK/IronSource (= 3.1.8)
+    - CleverAdsSolutions-SDK/Mintegral (= 3.1.8)
+    - CleverAdsSolutions-SDK/MyTarget (= 3.1.8)
+    - CleverAdsSolutions-SDK/Pangle (= 3.1.8)
+    - CleverAdsSolutions-SDK/Tapjoy (= 3.1.8)
+    - CleverAdsSolutions-SDK/UnityAds (= 3.1.8)
+    - CleverAdsSolutions-SDK/Vungle (= 3.1.8)
+    - CleverAdsSolutions-SDK/YandexAds (= 3.1.8)
+  - CleverAdsSolutions-SDK/Pangle (3.1.8):
+    - Ads-Global/BUAdSDK_Compatible (= 5.2.0.7)
+    - CleverAdsSolutions-SDK/AppLovin (= 3.1.8)
+    - CleverAdsSolutions-SDK/IronSource (= 3.1.8)
+  - CleverAdsSolutions-SDK/Tapjoy (3.1.8):
+    - CleverAdsSolutions-SDK/AppLovin (= 3.1.8)
+    - CleverAdsSolutions-SDK/IronSource (= 3.1.8)
+    - TapjoySDK (= 13.0.1)
+  - CleverAdsSolutions-SDK/UnityAds (3.1.8):
+    - CleverAdsSolutions-SDK/IronSource (= 3.1.8)
+    - UnityAds (~> 4.7.1)
+  - CleverAdsSolutions-SDK/Vungle (3.1.8):
+    - CleverAdsSolutions-SDK/AppLovin (= 3.1.8)
+    - CleverAdsSolutions-SDK/IronSource (= 3.1.8)
+    - VungleSDK-iOS (~> 6.12.3)
+  - CleverAdsSolutions-SDK/YandexAds (3.1.8):
+    - CleverAdsSolutions-Base
+    - YandexMobileAds (= 5.7.0)
+  - DivKit (24.2.0):
+    - DivKit_Base (= 24.2.0)
+    - DivKit_BaseTiny (= 24.2.0)
+    - DivKit_BaseUI (= 24.2.0)
+    - DivKit_CommonCore (= 24.2.0)
+    - DivKit_LayoutKit (= 24.2.0)
+    - DivKit_LayoutKitInterface (= 24.2.0)
+    - DivKit_Networking (= 24.2.0)
+    - DivKit_Serialization (= 24.2.0)
+  - DivKit_Base (24.2.0):
+    - DivKit_BaseTiny (= 24.2.0)
+    - DivKit_BaseUI (= 24.2.0)
+  - DivKit_BaseTiny (24.2.0)
+  - DivKit_BaseUI (24.2.0):
+    - DivKit_BaseTiny (= 24.2.0)
+  - DivKit_CommonCore (24.2.0):
+    - DivKit_Base (= 24.2.0)
+    - DivKit_BaseTiny (= 24.2.0)
+  - DivKit_LayoutKit (24.2.0):
+    - DivKit_BaseTiny (= 24.2.0)
+    - DivKit_BaseUI (= 24.2.0)
+    - DivKit_CommonCore (= 24.2.0)
+    - DivKit_LayoutKitInterface (= 24.2.0)
+  - DivKit_LayoutKitInterface (24.2.0):
+    - DivKit_Base (= 24.2.0)
+    - DivKit_BaseTiny (= 24.2.0)
+    - DivKit_BaseUI (= 24.2.0)
+  - DivKit_Networking (24.2.0):
+    - DivKit_Base (= 24.2.0)
+  - DivKit_Serialization (24.2.0):
+    - DivKit_CommonCore (= 24.2.0)
   - FBAudienceNetwork (6.12.0)
-  - Google-Mobile-Ads-SDK (10.4.0):
+  - Google-Mobile-Ads-SDK (10.5.0):
     - GoogleAppMeasurement (< 11.0, >= 7.0)
     - GoogleUserMessagingPlatform (>= 1.1)
-  - GoogleAppMeasurement (10.8.0):
-    - GoogleAppMeasurement/AdIdSupport (= 10.8.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
-    - GoogleUtilities/MethodSwizzler (~> 7.8)
-    - GoogleUtilities/Network (~> 7.8)
-    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - GoogleAppMeasurement (10.10.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - GoogleAppMeasurement/AdIdSupport (10.8.0):
-    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.8.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
-    - GoogleUtilities/MethodSwizzler (~> 7.8)
-    - GoogleUtilities/Network (~> 7.8)
-    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - GoogleAppMeasurement/AdIdSupport (10.10.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - GoogleAppMeasurement/WithoutAdIdSupport (10.8.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
-    - GoogleUtilities/MethodSwizzler (~> 7.8)
-    - GoogleUtilities/Network (~> 7.8)
-    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.10.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
   - GoogleUserMessagingPlatform (2.0.1)
   - GoogleUtilities/AppDelegateSwizzler (7.11.1):
@@ -113,48 +177,48 @@ PODS:
   - GoogleUtilities/Reachability (7.11.1):
     - GoogleUtilities/Logger
   - InMobiSDK/Core (10.1.4)
-  - IronSourceSDK (7.2.7.0)
-  - MintegralAdSDK (7.3.6):
-    - MintegralAdSDK/BannerAd (= 7.3.6)
-    - MintegralAdSDK/BidBannerAd (= 7.3.6)
-    - MintegralAdSDK/BidInterstitialVideoAd (= 7.3.6)
-    - MintegralAdSDK/BidNativeAd (= 7.3.6)
-    - MintegralAdSDK/BidNewInterstitialAd (= 7.3.6)
-    - MintegralAdSDK/BidRewardVideoAd (= 7.3.6)
-    - MintegralAdSDK/InterstitialVideoAd (= 7.3.6)
-    - MintegralAdSDK/NativeAd (= 7.3.6)
-    - MintegralAdSDK/NewInterstitialAd (= 7.3.6)
-    - MintegralAdSDK/RewardVideoAd (= 7.3.6)
-  - MintegralAdSDK/BannerAd (7.3.6):
+  - IronSourceSDK (7.3.0.0)
+  - MintegralAdSDK (7.3.8):
+    - MintegralAdSDK/BannerAd (= 7.3.8)
+    - MintegralAdSDK/BidBannerAd (= 7.3.8)
+    - MintegralAdSDK/BidInterstitialVideoAd (= 7.3.8)
+    - MintegralAdSDK/BidNativeAd (= 7.3.8)
+    - MintegralAdSDK/BidNewInterstitialAd (= 7.3.8)
+    - MintegralAdSDK/BidRewardVideoAd (= 7.3.8)
+    - MintegralAdSDK/InterstitialVideoAd (= 7.3.8)
+    - MintegralAdSDK/NativeAd (= 7.3.8)
+    - MintegralAdSDK/NewInterstitialAd (= 7.3.8)
+    - MintegralAdSDK/RewardVideoAd (= 7.3.8)
+  - MintegralAdSDK/BannerAd (7.3.8):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/BidBannerAd (7.3.6):
+  - MintegralAdSDK/BidBannerAd (7.3.8):
     - MintegralAdSDK/BannerAd
     - MintegralAdSDK/BidNativeAd
-  - MintegralAdSDK/BidInterstitialVideoAd (7.3.6):
+  - MintegralAdSDK/BidInterstitialVideoAd (7.3.8):
     - MintegralAdSDK/BidNativeAd
     - MintegralAdSDK/InterstitialVideoAd
-  - MintegralAdSDK/BidNativeAd (7.3.6):
+  - MintegralAdSDK/BidNativeAd (7.3.8):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/BidNewInterstitialAd (7.3.6):
+  - MintegralAdSDK/BidNewInterstitialAd (7.3.8):
     - MintegralAdSDK/BidNativeAd
     - MintegralAdSDK/NewInterstitialAd
-  - MintegralAdSDK/BidRewardVideoAd (7.3.6):
+  - MintegralAdSDK/BidRewardVideoAd (7.3.8):
     - MintegralAdSDK/BidNativeAd
     - MintegralAdSDK/RewardVideoAd
-  - MintegralAdSDK/BidSplashAd (7.3.6):
+  - MintegralAdSDK/BidSplashAd (7.3.8):
     - MintegralAdSDK/BidNativeAd
     - MintegralAdSDK/SplashAd
-  - MintegralAdSDK/InterstitialVideoAd (7.3.6):
+  - MintegralAdSDK/InterstitialVideoAd (7.3.8):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/NativeAd (7.3.6)
-  - MintegralAdSDK/NewInterstitialAd (7.3.6):
+  - MintegralAdSDK/NativeAd (7.3.8)
+  - MintegralAdSDK/NewInterstitialAd (7.3.8):
     - MintegralAdSDK/InterstitialVideoAd
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/RewardVideoAd (7.3.6):
+  - MintegralAdSDK/RewardVideoAd (7.3.8):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/SplashAd (7.3.6):
+  - MintegralAdSDK/SplashAd (7.3.8):
     - MintegralAdSDK/NativeAd
-  - myTargetSDK (5.17.4):
+  - myTargetSDK (5.17.5):
     - myTrackerSDK (~> 3.0.3)
   - myTrackerSDK (3.0.8)
   - nanopb (2.30909.0):
@@ -162,24 +226,6 @@ PODS:
     - nanopb/encode (= 2.30909.0)
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
-  - OguryAds (3.4.2):
-    - OguryAds/OMID (= 3.4.2)
-    - OguryCore (= 1.3.0)
-  - OguryAds/OMID (3.4.2):
-    - OguryCore (= 1.3.0)
-  - OguryChoiceManager (4.1.0):
-    - OguryCore (= 1.3.0)
-  - OguryCore (1.3.0)
-  - OgurySdk (4.1.2):
-    - OguryCore (= 1.3.0)
-    - OgurySdk/OguryAds (= 4.1.2)
-    - OgurySdk/OguryChoiceManager (= 4.1.2)
-  - OgurySdk/OguryAds (4.1.2):
-    - OguryAds (= 3.4.2)
-    - OguryCore (= 1.3.0)
-  - OgurySdk/OguryChoiceManager (4.1.2):
-    - OguryChoiceManager (= 4.1.0)
-    - OguryCore (= 1.3.0)
   - PromisesObjC (2.2.0)
   - Realm (10.38.0):
     - Realm/Headers (= 10.38.0)
@@ -192,12 +238,15 @@ PODS:
   - Sentry/Core (8.5.0):
     - SentryPrivate (= 8.5.0)
   - SentryPrivate (8.5.0)
+  - TapjoySDK (13.0.1)
+  - UnityAds (4.7.1)
+  - VungleSDK-iOS (6.12.3)
   - Yams (5.0.5)
-  - YandexMobileAds (5.5.0):
-    - DivKit (~> 13.0)
-    - YandexMobileAds/Static (= 5.5.0)
-  - YandexMobileAds/Static (5.5.0):
-    - DivKit (~> 13.0)
+  - YandexMobileAds (5.7.0):
+    - DivKit (~> 24.0)
+    - YandexMobileAds/Static (= 5.7.0)
+  - YandexMobileAds/Static (5.7.0):
+    - DivKit (~> 24.0)
     - YandexMobileMetrica (< 5.0.0, >= 4.0.0)
   - YandexMobileMetrica (4.5.0):
     - YandexMobileMetrica/Static (= 4.5.0)
@@ -209,40 +258,28 @@ PODS:
     - YandexMobileMetrica/Static/Core
 
 DEPENDENCIES:
-  - AppLovinMediationAdColonyAdapter
-  - AppLovinMediationFacebookAdapter
-  - AppLovinMediationGoogleAdapter
-  - AppLovinMediationInMobiAdapter
-  - AppLovinMediationIronSourceAdapter
-  - AppLovinMediationMintegralAdapter
-  - AppLovinMediationMyTargetAdapter
-  - AppLovinMediationOguryPresageAdapter
-  - AppLovinMediationYandexAdapter
   - AppLovinSDK
   - AppsFlyer-AdRevenue
   - AppsFlyerFramework
   - BranchSDK
+  - CleverAdsSolutions-SDK/Optimal (~> 3.1.8)
   - RealmSwift (= 10.38.0)
   - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `8.5.0`)
   - Yams (= 5.0.5)
   - YandexMobileMetrica (= 4.5.0)
 
 SPEC REPOS:
+  https://github.com/cleveradssolutions/CAS-Specs.git:
+    - CleverAdsSolutions-Base
+    - CleverAdsSolutions-SDK
   trunk:
     - AdColony
-    - AppLovinMediationAdColonyAdapter
-    - AppLovinMediationFacebookAdapter
-    - AppLovinMediationGoogleAdapter
-    - AppLovinMediationInMobiAdapter
-    - AppLovinMediationIronSourceAdapter
-    - AppLovinMediationMintegralAdapter
-    - AppLovinMediationMyTargetAdapter
-    - AppLovinMediationOguryPresageAdapter
-    - AppLovinMediationYandexAdapter
+    - Ads-Global
     - AppLovinSDK
     - AppsFlyer-AdRevenue
     - AppsFlyerFramework
     - BranchSDK
+    - BURelyFoundation_Global
     - DivKit
     - DivKit_Base
     - DivKit_BaseTiny
@@ -252,7 +289,6 @@ SPEC REPOS:
     - DivKit_LayoutKitInterface
     - DivKit_Networking
     - DivKit_Serialization
-    - DivKit_TemplatesSupport
     - FBAudienceNetwork
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
@@ -264,14 +300,13 @@ SPEC REPOS:
     - myTargetSDK
     - myTrackerSDK
     - nanopb
-    - OguryAds
-    - OguryChoiceManager
-    - OguryCore
-    - OgurySdk
     - PromisesObjC
     - Realm
     - RealmSwift
     - SentryPrivate
+    - TapjoySDK
+    - UnityAds
+    - VungleSDK-iOS
     - Yams
     - YandexMobileAds
     - YandexMobileMetrica
@@ -288,53 +323,46 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AdColony: 4f3738dc633d7aaa8ec60729df973076cc8e97ed
-  AppLovinMediationAdColonyAdapter: aa2bf39a85ad152a631a76898706eeeb61e84eaa
-  AppLovinMediationFacebookAdapter: 296b4b4faeda8b70103ae5c4134b5604082defbd
-  AppLovinMediationGoogleAdapter: e48a21fbb780ce442d814961c252920a8255e11c
-  AppLovinMediationInMobiAdapter: a0305720f6a4462b4a3befab192d8aae7b52f929
-  AppLovinMediationIronSourceAdapter: 29681cb5fc9ba22b6d6c6d09bab179383fbd18b0
-  AppLovinMediationMintegralAdapter: 943fd17f49e5f9a83a75566d20e1d46b5f01c1f8
-  AppLovinMediationMyTargetAdapter: b890c242e34b56fc76bd9ff977c88b2788164b94
-  AppLovinMediationOguryPresageAdapter: 81b5ef8278cb67ea2f5a02f62d71b504b974eb5f
-  AppLovinMediationYandexAdapter: 25a6284bbfd4ed7d873b6dd81d0c0341c4dc539a
-  AppLovinSDK: 2022f21e5b713b2c04bb7c2f10bde0f2dea89f11
+  Ads-Global: fe0bb701ee694253f8125cb870ddbec5028578fc
+  AppLovinSDK: a76e8ec3d34fb172c7a32c15efe6805e070c918a
   AppsFlyer-AdRevenue: a38170b0b59f74cd07c7a9b91ee026f147b5c968
-  AppsFlyerFramework: c7b32b66c75f6e4313295c19944ee0ee59380ecf
+  AppsFlyerFramework: fc1fd93999a3e53d028259265b92150d55decfe3
   BranchSDK: 8b25eda1d9e82778d476edc1026e385cf58c56b6
-  DivKit: cbc853a0e94022835e9307e604135aa25424e284
-  DivKit_Base: 538c8daf847099e700646beb2b447aee1a4818fe
-  DivKit_BaseTiny: 1fa9cd01974dc65430bf409fef57e9a9b4c0679f
-  DivKit_BaseUI: b0478ce03702bbda3aa76f4388c05249ef578878
-  DivKit_CommonCore: 4db51be9c1263c0f7b62e9fb864785f47ab57875
-  DivKit_LayoutKit: c7974256f128cb2bbd7d5d6711c95c63727c53b3
-  DivKit_LayoutKitInterface: 02b3436a7191ab1b517da54a5fe076f9f6977c31
-  DivKit_Networking: 400504b0212282bd047c6720f70abaf74f6e4dd8
-  DivKit_Serialization: 4a55e41a1f06ec211e696963403db53469a19337
-  DivKit_TemplatesSupport: 6cb0a79e7673caeb05686403bd2b9a34c3624571
+  BURelyFoundation_Global: 4c9c90e6880e9e426052ac00577734098e3e5e60
+  CleverAdsSolutions-Base: 026ba7c5a6a3879e209e6489dc3710a11a619436
+  CleverAdsSolutions-SDK: e1eec671317e890614a993d27e1b7cda63f47a74
+  DivKit: f2151bd0bfc67e0b4ad949e8cd1caa7379253bef
+  DivKit_Base: 263499ebc77c217314d4bee1b374781c3643c8a9
+  DivKit_BaseTiny: 42535fa725058957129f231b4b52d394ed4d7ea9
+  DivKit_BaseUI: cb86da6096de4a3bb670b4196ddeed0334acd671
+  DivKit_CommonCore: dd26a3f7dcc9010ec3a4ed3c5c3718e7a882536a
+  DivKit_LayoutKit: cdcfa56dd6a88495703350bb63f410dde426435c
+  DivKit_LayoutKitInterface: f0dae7b2e7a024d0340914490b1c06c0e6a926ae
+  DivKit_Networking: cd028559a160baa76c43fda52174f2f83c87b747
+  DivKit_Serialization: b4d8a4672de9134889c5f92f5f7e04e04112e660
   FBAudienceNetwork: e0fcc9091fced34910ed0b6da06f129db46ac9e6
-  Google-Mobile-Ads-SDK: 32fe7836431a06a29f7734ae092b600137c8108d
-  GoogleAppMeasurement: 0ba93018e916f7badf915c2337d43cc1fa96b3f9
+  Google-Mobile-Ads-SDK: d4846d2d9bfe840ad7444078b5f9f565032bd4c2
+  GoogleAppMeasurement: bbbfd4bcb2b40ae9b772c3b0823a58c1e3d618f9
   GoogleUserMessagingPlatform: 5f8b30daf181805317b6b985bb51c1ff3beca054
   GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
   InMobiSDK: 285be689e0e92f68d436f0486ddc476f086d60c8
-  IronSourceSDK: 03ab6e62ac10589e5bea97cf0a379989f6965f36
-  MintegralAdSDK: 9d87097c51771c27b17939196de52e2508ebf37e
-  myTargetSDK: acf56c7f19401c7929d3da7a9dcd43924364137e
+  IronSourceSDK: 70d098472ea63fa8d58e47ad79ad761ad256ce15
+  MintegralAdSDK: 3b8edca477aecef338e484235090a61578795c07
+  myTargetSDK: a4e52b626e687f7be32dce62ebc7339665dab296
   myTrackerSDK: df675bf18db63d9a426bd00d6c3dec4ba4bea57e
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
-  OguryAds: ef02e9a59e0a46121f51a1cf51c181f6b47fbe1d
-  OguryChoiceManager: d343728017250c52d5a2adfabfff9f6f6489bb45
-  OguryCore: ebf53e0b40de0980d028c45704a961213070c18e
-  OgurySdk: 1c3c5ba088adcfc0992929b0f5ad518517824c00
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   Realm: 5902885dd1d5e71b0b020830caab937ecdf5bf07
   RealmSwift: 0fc037d6c32c7c4fc9362892380f380114ecdcf0
   Sentry: 3be3f42e40e5a552935552e115744d5810a216d9
   SentryPrivate: 8c9463280e282527f938d1a5d1d60f8e10ff279b
+  TapjoySDK: 30df1515a5a0a16076c6610c517911657164b2c2
+  UnityAds: 7c095394cf4815bb607db6b98de86b06b068cb51
+  VungleSDK-iOS: 27725029a42dfb9e39c67956637233fde1ee1797
   Yams: 271b5757cee031e087ae6322128895c04826c4f3
-  YandexMobileAds: 1affe9f27183a569960e108a4b4cb6cbcfc8eaea
+  YandexMobileAds: b45236d3287869802f22dd342bfecbd218dc2b30
   YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
 
-PODFILE CHECKSUM: 9f8daee50d74ae84fb8586bd1a2af59312f450ae
+PODFILE CHECKSUM: c60c33112c9093485ccce196b01bb194e9475c3f
 
 COCOAPODS: 1.12.1

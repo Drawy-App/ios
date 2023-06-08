@@ -49,12 +49,14 @@
 		B4AD7EEE20279CB70093EF65 /* MoreCaptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */; };
 		B4BCFE2520260A45008161EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4BCFE2720260A45008161EA /* InfoPlist.strings */; };
 		B4BCFE2D20260B72008161EA /* GramCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BCFE2C20260B72008161EA /* GramCase.swift */; };
+		B4C1F3D92A321CEF0066FC21 /* BannerAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1F3D82A321CEF0066FC21 /* BannerAdLoader.swift */; };
+		B4C1F3DC2A321D740066FC21 /* AppLovinBannerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1F3DB2A321D740066FC21 /* AppLovinBannerLoader.swift */; };
+		B4C1F3DE2A32218F0066FC21 /* CASBannerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1F3DD2A32218F0066FC21 /* CASBannerLoader.swift */; };
 		B4C35F77202B9AB7000D3CB4 /* Recognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C35F76202B9AB7000D3CB4 /* Recognizer.swift */; };
 		B4CBF4572A19053F00FE5E25 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF4562A19053F00FE5E25 /* AdSupport.framework */; };
 		B4CBF4592A19054600FE5E25 /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF4582A19054600FE5E25 /* AdServices.framework */; };
 		B4CBF45B2A19054F00FE5E25 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF45A2A19054F00FE5E25 /* AppTrackingTransparency.framework */; };
 		B4CBF45D2A19055700FE5E25 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF45C2A19055700FE5E25 /* WebKit.framework */; };
-		B4CBF45F2A19148F00FE5E25 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBF45E2A19148F00FE5E25 /* BannerView.swift */; };
 		B4CCEE582026586E0081014A /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCEE572026586E0081014A /* CarouselPageViewController.swift */; };
 		B4CCEE5A20274F0C0081014A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCEE5920274F0B0081014A /* Analytics.swift */; };
 		B4CFCA372027858D00A91B1C /* LaunchScreen_ru.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CFCA352027858C00A91B1C /* LaunchScreen_ru.storyboard */; };
@@ -68,6 +70,7 @@
 		B4F9C9BC29F2DD5D00281BEF /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BB29F2DD5D00281BEF /* Ad.swift */; };
 		B4F9C9BE29F3E3BA00281BEF /* AdViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BD29F3E3BA00281BEF /* AdViewCell.swift */; };
 		B4F9C9C029F4457200281BEF /* InterstitialAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BF29F4457200281BEF /* InterstitialAdLoader.swift */; };
+		C59080C00AB9ECE4AE01EAD5 /* cas_settings108.json in Resources */ = {isa = PBXBuildFile; fileRef = D8FD371E006CEE102AC228F2 /* cas_settings108.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -136,12 +139,14 @@
 		B4BCFE2620260A45008161EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4BCFE2820260A46008161EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4BCFE2C20260B72008161EA /* GramCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramCase.swift; sourceTree = "<group>"; };
+		B4C1F3D82A321CEF0066FC21 /* BannerAdLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdLoader.swift; sourceTree = "<group>"; };
+		B4C1F3DB2A321D740066FC21 /* AppLovinBannerLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLovinBannerLoader.swift; sourceTree = "<group>"; };
+		B4C1F3DD2A32218F0066FC21 /* CASBannerLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASBannerLoader.swift; sourceTree = "<group>"; };
 		B4C35F76202B9AB7000D3CB4 /* Recognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognizer.swift; sourceTree = "<group>"; };
 		B4CBF4562A19053F00FE5E25 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B4CBF4582A19054600FE5E25 /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
 		B4CBF45A2A19054F00FE5E25 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		B4CBF45C2A19055700FE5E25 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		B4CBF45E2A19148F00FE5E25 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		B4CCEE572026586E0081014A /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
 		B4CCEE5920274F0B0081014A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		B4CFCA362027858C00A91B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen_ru.storyboard; sourceTree = "<group>"; };
@@ -155,6 +160,7 @@
 		B4F9C9BB29F2DD5D00281BEF /* Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
 		B4F9C9BD29F3E3BA00281BEF /* AdViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewCell.swift; sourceTree = "<group>"; };
 		B4F9C9BF29F4457200281BEF /* InterstitialAdLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdLoader.swift; sourceTree = "<group>"; };
+		D8FD371E006CEE102AC228F2 /* cas_settings108.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = cas_settings108.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +229,7 @@
 				B455A6C1200A6601000247BC /* htd.xcdatamodeld */,
 				B411665E20BA074A004DEB81 /* NavigationViewController.swift */,
 				B4F9C9BB29F2DD5D00281BEF /* Ad.swift */,
+				D8FD371E006CEE102AC228F2 /* cas_settings108.json */,
 			);
 			path = htd;
 			sourceTree = "<group>";
@@ -280,7 +287,6 @@
 				B468F424200BA0C100C085C5 /* GalleryCollectionViewCell.swift */,
 				B4AD7EED20279CB70093EF65 /* MoreCaptionTableViewCell.swift */,
 				B4F9C9BD29F3E3BA00281BEF /* AdViewCell.swift */,
-				B4CBF45E2A19148F00FE5E25 /* BannerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -325,14 +331,33 @@
 		B4BCFE2920260AC9008161EA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B4C1F3D72A321CDF0066FC21 /* Ad */,
 				B4B57D2620E90C5D0057DDB9 /* Camera */,
 				B4CCEE5920274F0B0081014A /* Analytics.swift */,
 				B4BCFE2C20260B72008161EA /* GramCase.swift */,
 				B42D4264204C5CB00002175A /* Colorize.swift */,
 				B498394D204DC8840080CA37 /* Purchase.swift */,
-				B4F9C9BF29F4457200281BEF /* InterstitialAdLoader.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B4C1F3D72A321CDF0066FC21 /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				B4C1F3DA2A321D680066FC21 /* AppLovin */,
+				B4F9C9BF29F4457200281BEF /* InterstitialAdLoader.swift */,
+				B4C1F3D82A321CEF0066FC21 /* BannerAdLoader.swift */,
+			);
+			path = Ad;
+			sourceTree = "<group>";
+		};
+		B4C1F3DA2A321D680066FC21 /* AppLovin */ = {
+			isa = PBXGroup;
+			children = (
+				B4C1F3DB2A321D740066FC21 /* AppLovinBannerLoader.swift */,
+				B4C1F3DD2A32218F0066FC21 /* CASBannerLoader.swift */,
+			);
+			path = AppLovin;
 			sourceTree = "<group>";
 		};
 		B4D931B72024E09E0071E283 /* Models */ = {
@@ -456,6 +481,7 @@
 				B4EB79FC204E09750042571D /* GoogleService-Info.plist in Resources */,
 				B455A6E2200AA502000247BC /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				B455A6C0200A6601000247BC /* Main.storyboard in Resources */,
+				C59080C00AB9ECE4AE01EAD5 /* cas_settings108.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,15 +497,14 @@
 				"${PODS_ROOT}/Target Support Files/Pods-htd/Pods-htd-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BranchSDK/BranchSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/DivKit/DivKit.framework",
-				"${BUILT_PRODUCTS_DIR}/DivKit_Base/Base.framework",
-				"${BUILT_PRODUCTS_DIR}/DivKit_BaseTiny/BaseTiny.framework",
-				"${BUILT_PRODUCTS_DIR}/DivKit_BaseUI/BaseUI.framework",
-				"${BUILT_PRODUCTS_DIR}/DivKit_CommonCore/CommonCore.framework",
+				"${BUILT_PRODUCTS_DIR}/DivKit_Base/BasePublic.framework",
+				"${BUILT_PRODUCTS_DIR}/DivKit_BaseTiny/BaseTinyPublic.framework",
+				"${BUILT_PRODUCTS_DIR}/DivKit_BaseUI/BaseUIPublic.framework",
+				"${BUILT_PRODUCTS_DIR}/DivKit_CommonCore/CommonCorePublic.framework",
 				"${BUILT_PRODUCTS_DIR}/DivKit_LayoutKit/LayoutKit.framework",
 				"${BUILT_PRODUCTS_DIR}/DivKit_LayoutKitInterface/LayoutKitInterface.framework",
-				"${BUILT_PRODUCTS_DIR}/DivKit_Networking/Networking.framework",
+				"${BUILT_PRODUCTS_DIR}/DivKit_Networking/NetworkingPublic.framework",
 				"${BUILT_PRODUCTS_DIR}/DivKit_Serialization/Serialization.framework",
-				"${BUILT_PRODUCTS_DIR}/DivKit_TemplatesSupport/TemplatesSupport.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -488,21 +513,19 @@
 				"${BUILT_PRODUCTS_DIR}/SentryPrivate/SentryPrivate.framework",
 				"${BUILT_PRODUCTS_DIR}/Yams/Yams.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OguryAds/OMID/OMSDK_Ogury.framework/OMSDK_Ogury",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BranchSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DivKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BaseTiny.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BaseUI.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BasePublic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BaseTinyPublic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BaseUIPublic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonCorePublic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LayoutKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LayoutKitInterface.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Networking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NetworkingPublic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Serialization.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TemplatesSupport.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -511,7 +534,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SentryPrivate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yams.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OMSDK_Ogury.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -525,12 +547,16 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-htd/Pods-htd-resources.sh",
-				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-11.9.0/AppLovinSDKResources.bundle",
-				"${PODS_ROOT}/YandexMobileAds/static/YandexMobileAds.xcframework/YandexMobileAdsBundle.bundle",
+				"${PODS_ROOT}/Ads-Global/SDK/PAGAdSDK.bundle",
+				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-11.10.1/AppLovinSDKResources.bundle",
+				"${PODS_ROOT}/CleverAdsSolutions-Base/libs/CASBaseResources.bundle",
+				"${PODS_ROOT}/YandexMobileAds/YandexMobileAds.xcframework/YandexMobileAdsBundle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PAGAdSDK.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AppLovinSDKResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CASBaseResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YandexMobileAdsBundle.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +608,7 @@
 				B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */,
 				B455A6C3200A6601000247BC /* htd.xcdatamodeld in Sources */,
 				B455A6F2200AAF68000247BC /* LevelsTableViewCell.swift in Sources */,
+				B4C1F3DC2A321D740066FC21 /* AppLovinBannerLoader.swift in Sources */,
 				B4F9C9C029F4457200281BEF /* InterstitialAdLoader.swift in Sources */,
 				B47F3B4B20264245007E0B26 /* CarouselViewController.swift in Sources */,
 				B4F9C9BC29F2DD5D00281BEF /* Ad.swift in Sources */,
@@ -595,9 +622,10 @@
 				B497E04920B9B2090081346E /* TutorialPhoneViewController.swift in Sources */,
 				B4F9C9BE29F3E3BA00281BEF /* AdViewCell.swift in Sources */,
 				B411666120BA970E004DEB81 /* TutorialFirstViewController.swift in Sources */,
-				B4CBF45F2A19148F00FE5E25 /* BannerView.swift in Sources */,
 				B498394E204DC8840080CA37 /* Purchase.swift in Sources */,
+				B4C1F3D92A321CEF0066FC21 /* BannerAdLoader.swift in Sources */,
 				B411263020BAF40400CC86A9 /* realmodel.mlmodel in Sources */,
+				B4C1F3DE2A32218F0066FC21 /* CASBannerLoader.swift in Sources */,
 				B491506D204DE12300268384 /* PaymentScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -792,6 +820,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = htd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -829,6 +858,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = htd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

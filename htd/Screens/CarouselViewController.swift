@@ -18,12 +18,13 @@ class CarouselViewController: UIViewController,
     @IBOutlet weak var crossButton: UIButton!
     @IBOutlet weak var pagesView: UIView!
     @IBOutlet weak var bannerView: UIView!
+    var bannerSubView: UIView?
     var level: Level?
     var dragGesture: UIPanGestureRecognizer?
     var pageViewController: UIPageViewController?
     var images: [UIImage] = []
     var pageNumber: Int = 0
-    var banner: BannerView?
+    var bannerLoader: BannerAdLoader?
     let bannerHeight: CGFloat = 250
     let interstitial = InterstitialAdLoader.init(adId: "e91a5b08633294b9")
     
@@ -32,7 +33,8 @@ class CarouselViewController: UIViewController,
             return c.identifier == "bannerHeight"
         })
         heightConstraint?.constant = bannerHeight
-        banner = .init(id: "16e1ef1bec51c5fc", with: bannerView, height: bannerHeight)
+        bannerLoader = Ad.sharedInstance.getBannerLoader(view: bannerView, height: bannerHeight)
+        bannerSubView = bannerLoader?.getView(self)
     }
 
     override func viewDidLoad() {

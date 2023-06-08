@@ -2,30 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAdvertisingAttributionReportEndpoint</key>
-	<string>https://appsflyer-skadnetwork.com/</string>
-	<key>branch_key</key>
-	<dict>
-		<key>test</key>
-		<string>key_test_jbDYSsvIn2MBg3wQBLKp9logzDeiASo7</string>
-		<key>live</key>
-		<string>key_live_eiB7MrtOb8OCg8rItUzSMpojvFpbANkU</string>
-	</dict>
-	<key>branch_universal_link_domains</key>
-	<array>
-		<string>drawy-alternate.test-app.link</string>
-		<string>drawy.test-app.link</string>
-		<string>drawy.app.link</string>
-		<string>drawy-alternate.app.link</string>
-	</array>
-	<key>CFBundleGetInfoString</key>
-	<string></string>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-6975537991860566~2428326324</string>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>AppLovinSdkKey</key>
 	<string>XWgwzoDCH3gbGgJDxE3vtOAxILBiFseocUIi_JUN5QfsLb_7pHy3PnaDM09BkKhwQyRWppqDJXomrp9zeq0ues</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -34,6 +10,8 @@
 	<string>Drawing</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -53,15 +31,18 @@
 			</array>
 		</dict>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>FacebookAppID</key>
 	<string>583744185320259</string>
 	<key>FacebookDisplayName</key>
 	<string>Drawy</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-9041187040625593~3371789598</string>
+	<key>GADDelayAppMeasurementInit</key>
+	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -71,40 +52,19 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MyTargetSDKAutoInitMode</key>
+	<false/>
+	<key>NSAdvertisingAttributionReportEndpoint</key>
+	<string>https://appsflyer-skadnetwork.com/</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>This will let us to recognize the drawing you made</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>This uses device info for more personalized ads and content</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>SF-Pro-Text-Medium.otf</string>
-		<string>SF-Pro-Text-Bold.otf</string>
-		<string>SF-Pro-Text-Heavy.otf</string>
-		<string>SF-Pro-Text-Light.otf</string>
-		<string>SF-Pro-Text-Regular.otf</string>
-		<string>SF-Pro-Text-Semibold.otf</string>
-	</array>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen_ru</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -747,6 +707,62 @@
 			<key>SKAdNetworkIdentifier</key>
 			<string>zq492l623r.skadnetwork</string>
 		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>bmxgpxpgc.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>dcc9l689qj.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>r26jy69rpl.skadnetwork</string>
+		</dict>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SF-Pro-Text-Medium.otf</string>
+		<string>SF-Pro-Text-Bold.otf</string>
+		<string>SF-Pro-Text-Heavy.otf</string>
+		<string>SF-Pro-Text-Light.otf</string>
+		<string>SF-Pro-Text-Regular.otf</string>
+		<string>SF-Pro-Text-Semibold.otf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen_ru</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>branch_key</key>
+	<dict>
+		<key>live</key>
+		<string>key_live_eiB7MrtOb8OCg8rItUzSMpojvFpbANkU</string>
+		<key>test</key>
+		<string>key_test_jbDYSsvIn2MBg3wQBLKp9logzDeiASo7</string>
+	</dict>
+	<key>branch_universal_link_domains</key>
+	<array>
+		<string>drawy-alternate.test-app.link</string>
+		<string>drawy.test-app.link</string>
+		<string>drawy.app.link</string>
+		<string>drawy-alternate.app.link</string>
 	</array>
 </dict>
 </plist>
