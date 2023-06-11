@@ -258,7 +258,6 @@ PODS:
     - YandexMobileMetrica/Static/Core
 
 DEPENDENCIES:
-  - AppLovinSDK
   - AppsFlyer-AdRevenue
   - AppsFlyerFramework
   - BranchSDK
@@ -363,6 +362,6 @@ SPEC CHECKSUMS:
   YandexMobileAds: b45236d3287869802f22dd342bfecbd218dc2b30
   YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
 
-PODFILE CHECKSUM: c60c33112c9093485ccce196b01bb194e9475c3f
+PODFILE CHECKSUM: 988e16ca9fa25e053b13301cefcea6e1ed8830d1
 
 COCOAPODS: 1.12.1

@@ -186,7 +186,7 @@ class CarouselViewController: UIViewController,
     @objc func nextTap() {
         if pageNumber + 1 == self.images.count {
             if (Ad.sharedInstance.showAd) {
-                interstitial.maybeShowAdWith {
+                interstitial.maybeShowAdWith(with: self) {
                     self.verify()
                 }
             } else {

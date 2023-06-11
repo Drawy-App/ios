@@ -14,7 +14,6 @@ import Sentry
 import BranchSDK
 import AppsFlyerLib
 import AppsFlyerAdRevenue
-import AppLovinSDK
 
 class Analytics {
     let devMode: Bool
@@ -95,43 +94,43 @@ class Analytics {
         ])
     }
     
-    func adShown(_ ad: MAAd) {
-        event(
-            "ad_shown",
-            params: describe(ad: ad) as [String : Any]
-        )
-        AppsFlyerLib.shared().logEvent(AFEventAdView, withValues: [:]);
-    }
-    
-    func revenuePaid(_ ad: MAAd) {
-        event(
-            "ad_revenue_paid",
-            params: describe(ad: ad) as [String : Any],
-            revenue: ad.revenue
-        )
-        let adRevenueParams: [AnyHashable: Any] = [
-            kAppsFlyerAdRevenueAdUnit : ad.adUnitIdentifier,
-            kAppsFlyerAdRevenueAdType : ad.format,
-            kAppsFlyerAdRevenuePlacement : ad.placement as Any,
-        ]
-        AppsFlyerAdRevenue.shared().logAdRevenue(
-            monetizationNetwork: ad.networkName,
-            mediationNetwork: .applovinMax,
-            eventRevenue: .init(value: ad.revenue),
-            revenueCurrency: "USD",
-            additionalParameters: adRevenueParams
-        )
-    }
-    
-    func describe(ad: MAAd) -> [String: String?] {
-        return [
-            "network": ad.networkName,
-            "dspName": ad.dspName,
-            "dspIdentifier": ad.dspIdentifier,
-            "placement": ad.placement,
-            "networkPlacement": ad.networkPlacement
-        ]
-    }
+//    func adShown(_ ad: MAAd) {
+//        event(
+//            "ad_shown",
+//            params: describe(ad: ad) as [String : Any]
+//        )
+//        AppsFlyerLib.shared().logEvent(AFEventAdView, withValues: [:]);
+//    }
+//    
+//    func revenuePaid(_ ad: MAAd) {
+//        event(
+//            "ad_revenue_paid",
+//            params: describe(ad: ad) as [String : Any],
+//            revenue: ad.revenue
+//        )
+//        let adRevenueParams: [AnyHashable: Any] = [
+//            kAppsFlyerAdRevenueAdUnit : ad.adUnitIdentifier,
+//            kAppsFlyerAdRevenueAdType : ad.format,
+//            kAppsFlyerAdRevenuePlacement : ad.placement as Any,
+//        ]
+//        AppsFlyerAdRevenue.shared().logAdRevenue(
+//            monetizationNetwork: ad.networkName,
+//            mediationNetwork: .applovinMax,
+//            eventRevenue: .init(value: ad.revenue),
+//            revenueCurrency: "USD",
+//            additionalParameters: adRevenueParams
+//        )
+//    }
+//    
+//    func describe(ad: MAAd) -> [String: String?] {
+//        return [
+//            "network": ad.networkName,
+//            "dspName": ad.dspName,
+//            "dspIdentifier": ad.dspIdentifier,
+//            "placement": ad.placement,
+//            "networkPlacement": ad.networkPlacement
+//        ]
+//    }
     
     func captureError(_ error: Error) {
         SentrySDK.capture(error: error)

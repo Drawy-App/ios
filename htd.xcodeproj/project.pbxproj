@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E1495AB92BCC5B9C7224789 /* Pods_htd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D25598B40F8461ADBBE5B5 /* Pods_htd.framework */; };
+		521901C6EAFC75424D30D26E /* cas_settings108.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B76501F6706B0DB4E51EDA2 /* cas_settings108.json */; };
 		B4031A562078F84100C83EC0 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4031A552078F84100C83EC0 /* UserInfo.swift */; };
 		B411263020BAF40400CC86A9 /* realmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B411262F20BAF40400CC86A9 /* realmodel.mlmodel */; };
 		B411263220BB008C00CC86A9 /* FirstImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B411263120BB008C00CC86A9 /* FirstImageViewController.swift */; };
@@ -43,6 +44,8 @@
 		B46934A02A191FED00F00FBA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B469349F2A191FED00F00FBA /* iAd.framework */; };
 		B47F3B41202612BF007E0B26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B47F3B43202612BF007E0B26 /* Localizable.strings */; };
 		B47F3B4B20264245007E0B26 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47F3B4A20264245007E0B26 /* CarouselViewController.swift */; };
+		B480FA0A2A36095F0024D386 /* AppLovinBannerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1F3DB2A321D740066FC21 /* AppLovinBannerLoader.swift */; };
+		B480FA0B2A360A3B0024D386 /* InterstitialAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BF29F4457200281BEF /* InterstitialAdLoader.swift */; };
 		B491506D204DE12300268384 /* PaymentScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B491506C204DE12300268384 /* PaymentScreenViewController.swift */; };
 		B497E04920B9B2090081346E /* TutorialPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497E04820B9B2090081346E /* TutorialPhoneViewController.swift */; };
 		B498394E204DC8840080CA37 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B498394D204DC8840080CA37 /* Purchase.swift */; };
@@ -50,7 +53,6 @@
 		B4BCFE2520260A45008161EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4BCFE2720260A45008161EA /* InfoPlist.strings */; };
 		B4BCFE2D20260B72008161EA /* GramCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BCFE2C20260B72008161EA /* GramCase.swift */; };
 		B4C1F3D92A321CEF0066FC21 /* BannerAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1F3D82A321CEF0066FC21 /* BannerAdLoader.swift */; };
-		B4C1F3DC2A321D740066FC21 /* AppLovinBannerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1F3DB2A321D740066FC21 /* AppLovinBannerLoader.swift */; };
 		B4C1F3DE2A32218F0066FC21 /* CASBannerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1F3DD2A32218F0066FC21 /* CASBannerLoader.swift */; };
 		B4C35F77202B9AB7000D3CB4 /* Recognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C35F76202B9AB7000D3CB4 /* Recognizer.swift */; };
 		B4CBF4572A19053F00FE5E25 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CBF4562A19053F00FE5E25 /* AdSupport.framework */; };
@@ -69,7 +71,6 @@
 		B4F9C9BA29F2B51100281BEF /* ProProduct.storekit in Resources */ = {isa = PBXBuildFile; fileRef = B4F9C9B929F2B51100281BEF /* ProProduct.storekit */; };
 		B4F9C9BC29F2DD5D00281BEF /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BB29F2DD5D00281BEF /* Ad.swift */; };
 		B4F9C9BE29F3E3BA00281BEF /* AdViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BD29F3E3BA00281BEF /* AdViewCell.swift */; };
-		B4F9C9C029F4457200281BEF /* InterstitialAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9C9BF29F4457200281BEF /* InterstitialAdLoader.swift */; };
 		C59080C00AB9ECE4AE01EAD5 /* cas_settings108.json in Resources */ = {isa = PBXBuildFile; fileRef = D8FD371E006CEE102AC228F2 /* cas_settings108.json */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B76501F6706B0DB4E51EDA2 /* cas_settings108.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = cas_settings108.json; sourceTree = "<group>"; };
 		7E68DE32F0E8C4603D8EBF29 /* Pods-htd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.debug.xcconfig"; path = "Target Support Files/Pods-htd/Pods-htd.debug.xcconfig"; sourceTree = "<group>"; };
 		B2D25598B40F8461ADBBE5B5 /* Pods_htd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_htd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33083AE43E87748EB927235 /* Pods-htd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-htd.release.xcconfig"; path = "Target Support Files/Pods-htd/Pods-htd.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				B411665E20BA074A004DEB81 /* NavigationViewController.swift */,
 				B4F9C9BB29F2DD5D00281BEF /* Ad.swift */,
 				D8FD371E006CEE102AC228F2 /* cas_settings108.json */,
+				1B76501F6706B0DB4E51EDA2 /* cas_settings108.json */,
 			);
 			path = htd;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				B455A6E2200AA502000247BC /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				B455A6C0200A6601000247BC /* Main.storyboard in Resources */,
 				C59080C00AB9ECE4AE01EAD5 /* cas_settings108.json in Resources */,
+				521901C6EAFC75424D30D26E /* cas_settings108.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,13 +612,12 @@
 				B468F42E200BC55500C085C5 /* RecognizerViewController.swift in Sources */,
 				B455A6C3200A6601000247BC /* htd.xcdatamodeld in Sources */,
 				B455A6F2200AAF68000247BC /* LevelsTableViewCell.swift in Sources */,
-				B4C1F3DC2A321D740066FC21 /* AppLovinBannerLoader.swift in Sources */,
-				B4F9C9C029F4457200281BEF /* InterstitialAdLoader.swift in Sources */,
 				B47F3B4B20264245007E0B26 /* CarouselViewController.swift in Sources */,
 				B4F9C9BC29F2DD5D00281BEF /* Ad.swift in Sources */,
 				B4D931B42023A33F0071E283 /* SuccessScreenViewController.swift in Sources */,
 				B455A6F9200B9457000247BC /* DetailsViewController.swift in Sources */,
 				B411263220BB008C00CC86A9 /* FirstImageViewController.swift in Sources */,
+				B480FA0A2A36095F0024D386 /* AppLovinBannerLoader.swift in Sources */,
 				B4BCFE2D20260B72008161EA /* GramCase.swift in Sources */,
 				B4C35F77202B9AB7000D3CB4 /* Recognizer.swift in Sources */,
 				B455A6F4200AB5F2000247BC /* Level.swift in Sources */,
@@ -627,6 +630,7 @@
 				B411263020BAF40400CC86A9 /* realmodel.mlmodel in Sources */,
 				B4C1F3DE2A32218F0066FC21 /* CASBannerLoader.swift in Sources */,
 				B491506D204DE12300268384 /* PaymentScreenViewController.swift in Sources */,
+				B480FA0B2A360A3B0024D386 /* InterstitialAdLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -66,11 +66,11 @@ class AppLovinBannerLoader: NSObject, BannerAdLoader, MAAdViewAdDelegate, MAAdRe
     }
     
     func didDisplay(_ ad: MAAd) {
-        Analytics.sharedInstance.adShown(ad)
+//        Analytics.sharedInstance.adShown(ad)
     }
     
     func didPayRevenue(for ad: MAAd) {
-        Analytics.sharedInstance.revenuePaid(ad)
+//        Analytics.sharedInstance.revenuePaid(ad)
     }
     
     func didHide(_ ad: MAAd) {

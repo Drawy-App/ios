@@ -7,11 +7,12 @@
 //
 
 import Foundation
-import AppLovinSDK
+import UIKit
+import CleverAdsSolutions
 
-class InterstitialAdLoader: NSObject, MAAdDelegate, MAAdRevenueDelegate {
+class InterstitialAdLoader: NSObject, CASCallback {
     private let adId: String
-    var interstitialAd: MAInterstitialAd!
+//    var interstitialAd: MAInterstitialAd!
     var retryAttempt = 0.0
 
     var onHideCallback: (() -> Void)?
@@ -19,21 +20,24 @@ class InterstitialAdLoader: NSObject, MAAdDelegate, MAAdRevenueDelegate {
     init(adId: String) {
         self.adId = adId
         super.init()
-        interstitialAd = MAInterstitialAd(adUnitIdentifier: adId)
-        interstitialAd.delegate = self
-        interstitialAd.revenueDelegate = self
-
-        // Load the first ad
-        interstitialAd.load()
+//        interstitialAd = MAInterstitialAd(adUnitIdentifier: adId)
+//        interstitialAd.delegate = self
+//        interstitialAd.revenueDelegate = self
+//
+//        // Load the first ad
+//        interstitialAd.load()
     }
     
-    func maybeShowAdWith(callback: @escaping (() -> Void)) {
+    func maybeShowAdWith(with viewController: UIViewController, callback: @escaping (() -> Void)) {
         self.onHideCallback = callback
-        if (interstitialAd.isReady) {
-            interstitialAd.show()
-        } else {
-            runCallback()
-        }
+//        if (interstitialAd.isReady) {
+//            interstitialAd.show()
+//        } else {
+//            runCallback()
+//        }
+//        runCallback()
+//        manager.presentInterstitial(fromRootViewController: self, callback: self)
+        Ad.sharedInstance.casMediationManager!.presentInterstitial(fromRootViewController: viewController, callback: self)
     }
     
     func runCallback() {
@@ -41,38 +45,46 @@ class InterstitialAdLoader: NSObject, MAAdDelegate, MAAdRevenueDelegate {
         self.onHideCallback = nil
     }
 
-    func didLoad(_ ad: MAAd) {
-        retryAttempt = 0
-    }
+//    func didLoad(_ ad: MAAd) {
+//        retryAttempt = 0
+//    }
+//
+//    func didFailToLoadAd(forAdUnitIdentifier adUnitIdentifier: String, withError error: MAError) {
+//        retryAttempt += 1
+//        let delaySec = pow(2.0, min(6.0, retryAttempt))
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + delaySec) {
+//            self.interstitialAd.load()
+//        }
+//    }
+//
+//    func didDisplay(_ ad: MAAd) {
+//        Analytics.sharedInstance.adShown(ad)
+//    }
+//
+//    func didHide(_ ad: MAAd) {
+//        runCallback()
+//        interstitialAd.load()
+//    }
+//
+//    func didClick(_ ad: MAAd) {
+//        runCallback()
+//    }
+//
+//    func didFail(toDisplay ad: MAAd, withError error: MAError) {
+//        runCallback()
+//        interstitialAd.load()
+//    }
+//
+//    func didPayRevenue(for ad: MAAd) {
+//        Analytics.sharedInstance.revenuePaid(ad)
+//    }
     
-    func didFailToLoadAd(forAdUnitIdentifier adUnitIdentifier: String, withError error: MAError) {
-        retryAttempt += 1
-        let delaySec = pow(2.0, min(6.0, retryAttempt))
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + delaySec) {
-            self.interstitialAd.load()
-        }
-    }
-    
-    func didDisplay(_ ad: MAAd) {
-        Analytics.sharedInstance.adShown(ad)
-    }
-    
-    func didHide(_ ad: MAAd) {
+    func didClosedAd() {
         runCallback()
-        interstitialAd.load()
     }
     
-    func didClick(_ ad: MAAd) {
+    func didClickedAd() {
         runCallback()
-    }
-    
-    func didFail(toDisplay ad: MAAd, withError error: MAError) {
-        runCallback()
-        interstitialAd.load()
-    }
-    
-    func didPayRevenue(for ad: MAAd) {
-        Analytics.sharedInstance.revenuePaid(ad)
     }
 }

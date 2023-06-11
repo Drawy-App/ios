@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CleverAdsSolutions
 
-class CASBannerLoader: NSObject, BannerAdLoader {
+class CASBannerLoader: NSObject, BannerAdLoader, CASBannerDelegate {
     let height: CGFloat?
     let view: UIView
     
@@ -22,26 +22,27 @@ class CASBannerLoader: NSObject, BannerAdLoader {
     
     func getView(_ rootViewController: UIViewController) -> UIView {
         let bannerView = CASBannerView(adSize: .mediumRectangle, manager: Ad.sharedInstance.casMediationManager!)
+        bannerView.adDelegate = self
         bannerView.rootViewController = rootViewController
-        bannerView.translatesAutoresizingMaskIntoConstraints = true
-        
-        let frame = view.frame
-        let frameHeight = height ?? frame.height
-        let frameWidth = view.frame.width
-        bannerView.isAutoloadEnabled = true
-        bannerView.frame = CGRect(
-            x: 0, y: 0,
-            width: frameWidth,
-            height: frameHeight
-        )
-    
-        // Center the MREC
+//        bannerView.translatesAutoresizingMaskIntoConstraints = true
+//
+//        let frame = view.frame
+//        let frameHeight = height ?? frame.height
+//        let frameWidth = view.frame.width
+//        bannerView.isAutoloadEnabled = true
+//        bannerView.frame = CGRect(
+//            x: 0, y: 0,
+//            width: frameWidth,
+//            height: frameHeight
+//        )
+//
+//         Center the MREC
         bannerView.center.x = view.center.x
         bannerView.backgroundColor = .red
         
         view.addSubview(bannerView)
-        bannerView.loadNextAd()
-//        positionBannerAtBottomOfSafeArea(bannerView)
+        print("Banner ad view initialised: \(bannerView.isAdReady)")
+
         return bannerView
     }
     
@@ -54,6 +55,22 @@ class CASBannerLoader: NSObject, BannerAdLoader {
           [bannerView.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
            bannerView.bottomAnchor.constraint(equalTo: guide.bottomAnchor)]
         )
+    }
+    
+    func bannerAdView(_ adView: CASBannerView, didFailWith error: CASError) {
+        print("Failed to load banner ad view: \(error)")
+    }
+    
+    func bannerAdViewDidLoad(_ view: CASBannerView) {
+        print("Banner ad view loaded")
+    }
+    
+    func bannerAdView(_ adView: CASBannerView, willPresent impression: CASImpression) {
+        print("Banner ad view will present")
+    }
+    
+    func bannerAdViewDidRecordClick(_ adView: CASBannerView) {
+        print("Banner ad view did record click")
     }
     
 }

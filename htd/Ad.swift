@@ -45,7 +45,7 @@ class Ad {
     
     func initCas() {
         CAS.settings.setTagged(audience: .notChildren)
-        
+        CAS.settings.setDebugMode(true)
         casMediationManager = CAS.buildManager()
             // List Ad formats used in app
             .withAdTypes(CASType.banner, CASType.interstitial, CASType.rewarded)

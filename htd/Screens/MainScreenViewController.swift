@@ -163,13 +163,18 @@ class MainScreenViewController:
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let stageIndex = getStageIndex(indexPath.section)!
-        let stage = Levels.sharedInstance.stages[stageIndex]!
+        guard let stage = Levels.sharedInstance.stages[stageIndex] else {
+            return
+        }
         if stage.number == 0 {
             performSegue(withIdentifier: "firstPicture", sender: self)
         } else if stage.isUnlocked {
-            let level = Levels.sharedInstance.stages[stageIndex]!.levels[indexPath.row]
+            guard indexPath.row < stage.levels.count else {
+                return
+            }
+            let level = stage.levels[indexPath.row]
             if (Ad.sharedInstance.showAd) {
-                interstitialAdLoader.maybeShowAdWith {
+                interstitialAdLoader.maybeShowAdWith(with: self) {
                     self.performSegue(withIdentifier: "showDetails", sender: level)
                 }
             } else {

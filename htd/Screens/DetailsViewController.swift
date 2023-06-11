@@ -97,7 +97,7 @@ class DetailsViewController: UIViewController, UIGestureRecognizerDelegate,
     
     @objc private func makePhoto() {
         if (Ad.sharedInstance.showAd) {
-            interstitial.maybeShowAdWith {
+            interstitial.maybeShowAdWith(with: self) {
                 self.performSegue(withIdentifier: "makePhoto", sender: self)
             }
         } else {
